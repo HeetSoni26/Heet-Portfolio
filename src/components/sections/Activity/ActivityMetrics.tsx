@@ -9,6 +9,7 @@ import {
   weeklyTrafficData, 
   otherMetrics 
 } from './activity.data';
+import { projects } from '../Work/work.data';
 
 // --- Count Up Numeric Component ---
 const CountUpNumber = memo(function CountUpNumber({ value, suffix = "" }: { value: number; suffix?: string }) {
@@ -239,8 +240,71 @@ export default function ActivityMetrics() {
   const cMetric = activityRings[1];
   const hMetric = activityRings[2];
 
-  const projectsPct = (pMetric.value / pMetric.target) * 100;
-  const commitsPct = (cMetric.value / cMetric.target) * 100;
+  // Dynamic state hooks for live activity values
+  const [projectCount] = useState(projects.length);
+  const [commitsGoalCount, setCommitsGoalCount] = useState(cMetric.value);
+  const [visitorCount, setVisitorCount] = useState(otherMetrics.visitorStats.value);
+  const [yearlyCommits, setYearlyCommits] = useState(otherMetrics.commitsThisYear.value);
+
+  // Fetch live stats on mount
+  useEffect(() => {
+    // 1. Fetch live page visits
+    const fetchVisitors = async () => {
+      try {
+        const res = await fetch('/api/visitors');
+        if (res.ok) {
+          const data = await res.json();
+          if (data && typeof data.uniqueVisitors === 'number') {
+            setVisitorCount(data.uniqueVisitors);
+          }
+        }
+      } catch (err) {
+        console.error('Failed to fetch visitors stats:', err);
+      }
+    };
+
+    // 2. Fetch live GitHub contributions
+    const fetchContributions = async () => {
+      try {
+        const res = await fetch('/api/github-contributions');
+        if (res.ok) {
+          const data = await res.json();
+          if (data && typeof data.totalContributions === 'number') {
+            setYearlyCommits(data.totalContributions);
+
+            // Sum commits in the last 30 days for this month's commits ring
+            if (Array.isArray(data.weeks)) {
+              let recentCommits = 0;
+              const thirtyDaysAgo = new Date();
+              thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+
+              for (const week of data.weeks) {
+                if (Array.isArray(week.contributionDays)) {
+                  for (const day of week.contributionDays) {
+                    const dayDate = new Date(day.date);
+                    if (dayDate >= thirtyDaysAgo) {
+                      recentCommits += day.contributionCount;
+                    }
+                  }
+                }
+              }
+              if (recentCommits > 0) {
+                setCommitsGoalCount(recentCommits);
+              }
+            }
+          }
+        }
+      } catch (err) {
+        console.error('Failed to fetch contributions stats:', err);
+      }
+    };
+
+    fetchVisitors();
+    fetchContributions();
+  }, []);
+
+  const projectsPct = (projectCount / pMetric.target) * 100;
+  const commitsPct = (commitsGoalCount / cMetric.target) * 100;
   const hoursPct = (hMetric.value / hMetric.target) * 100;
 
   return (
@@ -333,7 +397,7 @@ export default function ActivityMetrics() {
                 </div>
                 <div className="text-right">
                   <span className="block text-sm font-bold text-white font-outfit">
-                    <CountUpNumber value={pMetric.value} /> / {pMetric.target}
+                    <CountUpNumber value={projectCount} /> / {pMetric.target}
                   </span>
                   <span className="block text-[9px] text-[#FF2D55] font-bold font-outfit">{Math.round(projectsPct)}% Complete</span>
                 </div>
@@ -350,7 +414,7 @@ export default function ActivityMetrics() {
                 </div>
                 <div className="text-right">
                   <span className="block text-sm font-bold text-white font-outfit">
-                    <CountUpNumber value={cMetric.value} /> / {cMetric.target}
+                    <CountUpNumber value={commitsGoalCount} /> / {cMetric.target}
                   </span>
                   <span className="block text-[9px] text-[#30D158] font-bold font-outfit">{Math.round(commitsPct)}% Complete</span>
                 </div>
@@ -392,7 +456,7 @@ export default function ActivityMetrics() {
                 <TrendingUp size={16} className="text-[#30D158]" />
               </div>
               <h3 className="text-3xl font-extrabold text-white tracking-tight font-outfit">
-                <CountUpNumber value={otherMetrics.visitorStats.value} suffix="+" />
+                <CountUpNumber value={visitorCount} suffix="+" />
               </h3>
               <p className="text-[11px] text-white/40 mt-1 leading-normal font-outfit">
                 {otherMetrics.visitorStats.description}
@@ -484,7 +548,7 @@ export default function ActivityMetrics() {
                 <ArrowUpRight size={16} className="text-[#a855f7]/60 group-hover:text-[#a855f7] transition-colors" />
               </div>
               <h3 className="text-3xl font-extrabold text-white tracking-tight font-outfit">
-                <CountUpNumber value={otherMetrics.commitsThisYear.value} /> <span className="text-sm font-semibold text-white/40 font-outfit">commits</span>
+                <CountUpNumber value={yearlyCommits} /> <span className="text-sm font-semibold text-white/40 font-outfit">commits</span>
               </h3>
               <p className="text-[11px] text-white/40 mt-1 leading-normal font-outfit">
                 {otherMetrics.commitsThisYear.description}
