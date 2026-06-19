@@ -33,7 +33,7 @@ const InfoCards = memo(function InfoCards() {
     <div className="grid grid-cols-2 gap-2 xs:gap-3 sm:gap-4 md:gap-5 w-full">
       {/* Left Box - Visitor Analytics */}
       <GlowCard
-        className="bg-[#141414] border border-white/[0.06] rounded-xl xs:rounded-2xl sm:rounded-3xl"
+        className="bg-gradient-to-br from-[#1c1c1f]/80 to-[#0e0e10]/80 border border-white/[0.08] rounded-xl xs:rounded-2xl sm:rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1.5px_0_0_rgba(255,255,255,0.05)] backdrop-blur-xl"
         glowColor="rgba(255, 140, 0, 0.7)"
         glowSize={200}
       >
@@ -79,7 +79,7 @@ const InfoCards = memo(function InfoCards() {
 
       {/* Right Box - Contact */}
       <GlowCard
-        className="bg-[#141414] border border-white/[0.06] rounded-xl xs:rounded-2xl sm:rounded-3xl"
+        className="bg-gradient-to-br from-[#1c1c1f]/80 to-[#0e0e10]/80 border border-white/[0.08] rounded-xl xs:rounded-2xl sm:rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1.5px_0_0_rgba(255,255,255,0.05)] backdrop-blur-xl"
         glowColor="rgba(255, 100, 150, 0.7)"
         glowSize={200}
       >

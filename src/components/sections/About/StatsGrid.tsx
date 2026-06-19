@@ -181,7 +181,7 @@ export default function StatsGrid() {
       {stats.map((stat, index) => (
         <GlowCard
           key={stat.label}
-          className="bg-[#141414] border border-white/[0.06] rounded-xl xs:rounded-2xl sm:rounded-3xl"
+          className="bg-gradient-to-br from-[#1c1c1f]/80 to-[#0e0e10]/80 border border-white/[0.08] rounded-xl xs:rounded-2xl sm:rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1.5px_0_0_rgba(255,255,255,0.05)] backdrop-blur-xl"
           glowColor={stat.color}
           glowSize={180}
         >

@@ -92,10 +92,10 @@ const ProjectCard = memo(function ProjectCard({ project, index }: ProjectCardPro
   const [isHovered, setIsHovered] = useState(false);
   const [toast, setToast] = useState<{ message: string; type: 'info' | 'error' } | null>(null);
 
-  // Auto-hide toast notifications
+  // Auto-hide toast notifications after 2 seconds
   useEffect(() => {
     if (toast) {
-      const timer = setTimeout(() => setToast(null), 3000);
+      const timer = setTimeout(() => setToast(null), 2000);
       return () => clearTimeout(timer);
     }
   }, [toast]);
@@ -289,32 +289,47 @@ const ProjectCard = memo(function ProjectCard({ project, index }: ProjectCardPro
         </div>
       </div>
 
-      {/* Floating iOS-style Toast Banners */}
+      {/* iOS-style Inner Card Alert Overlay */}
       <AnimatePresence>
         {toast && (
           <motion.div
-            initial={{ opacity: 0, y: 15, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
-            className="fixed bottom-8 left-1/2 -translate-x-1/2 z-[100] flex items-center gap-3 px-5 py-3 rounded-2xl bg-[#1d1d1f]/95 border border-white/10 backdrop-blur-xl shadow-2xl min-w-[320px] max-w-[90vw]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="absolute inset-0 z-50 flex flex-col items-center justify-center p-6 bg-black/90 backdrop-blur-md rounded-[28px]"
+            onClick={(e) => {
+              e.stopPropagation();
+              setToast(null); // Allow click-to-dismiss
+            }}
           >
-            <div 
-              className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center"
-              style={{ background: `rgba(${project.color}, 0.2)` }}
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0, y: 10 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.9, opacity: 0, y: 10 }}
+              transition={{ type: 'spring', stiffness: 450, damping: 25 }}
+              className="flex flex-col items-center text-center max-w-[85%] select-none pointer-events-none"
             >
-              <Info size={16} style={{ color: brandColor }} />
-            </div>
-            <p className="text-sm font-medium text-white/90 leading-tight flex-1">
-              {toast.message}
-            </p>
-            <button 
-              onClick={() => setToast(null)}
-              className="text-white/40 hover:text-white/60 transition-colors ml-2 cursor-pointer"
-            >
-              <svg width="10" height="10" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L11 11M1 11L11 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-              </svg>
-            </button>
+              {/* App Icon Glow */}
+              <div 
+                className="w-11 h-11 rounded-full flex items-center justify-center mb-3"
+                style={{ 
+                  background: `rgba(${project.color}, 0.15)`,
+                  border: `1px solid rgba(${project.color}, 0.3)`
+                }}
+              >
+                <Info size={18} style={{ color: brandColor }} />
+              </div>
+              <h4 className="text-sm font-bold text-white mb-1 font-outfit">
+                Project Update
+              </h4>
+              <p className="text-[11px] sm:text-xs text-white/70 leading-relaxed font-outfit">
+                {toast.message}
+              </p>
+              
+              <span className="text-[9px] text-white/30 mt-4 font-outfit">
+                Closing shortly...
+              </span>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
