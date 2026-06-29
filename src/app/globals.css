@@ -8,7 +8,8 @@
 /* =====================================================
    LENIS SMOOTH SCROLL STYLES
    ===================================================== */
-html.lenis, html.lenis body {
+html.lenis,
+html.lenis body {
   height: auto;
 }
 
@@ -32,6 +33,7 @@ html.lenis, html.lenis body {
    CUSTOM CURSOR
    ===================================================== */
 @media (hover: hover) and (pointer: fine) {
+
   html.custom-cursor-enabled,
   html.custom-cursor-enabled body,
   html.custom-cursor-enabled a,
@@ -106,9 +108,10 @@ html.lenis, html.lenis body {
 
 .custom-cursor-ring-visual.is-hovered {
   transform: scale(1.6);
-  border-color: #FF1493; /* Symmetrical theme pink */
+  border-color: #FF1493;
+  /* Symmetrical theme pink */
   background: rgba(255, 20, 147, 0.08);
-  box-shadow: 
+  box-shadow:
     0 0 0 1px rgba(255, 20, 147, 0.2) inset,
     0 0 20px rgba(255, 20, 147, 0.4);
 }
@@ -120,9 +123,10 @@ html.lenis, html.lenis body {
 
 .custom-cursor-ring-visual.is-clicked {
   transform: scale(0.9);
-  border-color: #39d353; /* Click feedback green */
+  border-color: #39d353;
+  /* Click feedback green */
   background: rgba(57, 211, 83, 0.12);
-  box-shadow: 
+  box-shadow:
     0 0 0 1px rgba(57, 211, 83, 0.2) inset,
     0 0 14px rgba(57, 211, 83, 0.4);
 }
@@ -147,6 +151,8 @@ html.lenis, html.lenis body {
   html {
     overflow-x: hidden;
     scroll-padding-top: 0;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.864) transparent;
   }
 
   body {
@@ -168,31 +174,26 @@ html.lenis, html.lenis body {
   ::selection {
     @apply bg-primary text-black;
   }
+
   ::-moz-selection {
     @apply bg-primary text-black;
   }
 
-  /* Scrollbar */
-  ::-webkit-scrollbar {
-    @apply w-2;
-  }
-  ::-webkit-scrollbar-track {
-    @apply bg-background;
-  }
-  ::-webkit-scrollbar-thumb {
-    @apply bg-primary rounded;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    @apply bg-secondary;
-  }
 
   /* Typography */
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-bold leading-tight;
   }
+
   p {
     @apply leading-relaxed;
   }
+
   a {
     @apply no-underline;
   }
@@ -202,6 +203,7 @@ html.lenis, html.lenis body {
    UTILITIES LAYER — Reusable utility classes
    ===================================================== */
 @layer utilities {
+
   /* Gradient text */
   .text-gradient {
     background: linear-gradient(135deg, #FF8C00 0%, #FF5F00 100%);
@@ -241,6 +243,7 @@ html.lenis, html.lenis body {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
@@ -279,7 +282,7 @@ html.lenis, html.lenis body {
   .github-scrollbar::-webkit-scrollbar {
     height: 4px;
   }
-  
+
   .github-scrollbar::-webkit-scrollbar-track {
     margin: 0 4px;
   }
@@ -298,6 +301,7 @@ html.lenis, html.lenis body {
     background-position 0.5s cubic-bezier(0.16, 1, 0.3, 1),
     filter 0.3s ease;
 }
+
 .btn-primary:hover {
   background-position: 100% 100%;
   box-shadow:
@@ -305,6 +309,7 @@ html.lenis, html.lenis body {
     0 0 60px rgba(255, 140, 0, 0.14),
     0 0 0 1px rgba(255, 255, 255, 0.12) inset;
 }
+
 .btn-primary:active {
   filter: brightness(0.92);
 }
@@ -320,6 +325,7 @@ html.lenis, html.lenis body {
     background 0.4s cubic-bezier(0.16, 1, 0.3, 1),
     box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
 .btn-secondary:hover {
   background: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.25);
@@ -327,6 +333,7 @@ html.lenis, html.lenis body {
     0 4px 20px rgba(255, 255, 255, 0.06),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
+
 .btn-secondary:active {
   background: rgba(255, 255, 255, 0.06);
 }
@@ -348,13 +355,21 @@ html.lenis, html.lenis body {
 }
 
 @media (min-width: 640px) {
-  .marquee-text { padding: 0 1.5rem; }
+  .marquee-text {
+    padding: 0 1.5rem;
+  }
 }
+
 @media (min-width: 768px) {
-  .marquee-text { padding: 0 2rem; }
+  .marquee-text {
+    padding: 0 2rem;
+  }
 }
+
 @media (min-width: 1024px) {
-  .marquee-text { padding: 0 2.5rem; }
+  .marquee-text {
+    padding: 0 2.5rem;
+  }
 }
 
 /* ── Marquee Strip Containers ── */
@@ -372,13 +387,24 @@ html.lenis, html.lenis body {
 }
 
 @media (min-width: 640px) {
-  .marquee-strip-inner { margin: 0 -12rem; padding: 1.1rem 0; }
+  .marquee-strip-inner {
+    margin: 0 -12rem;
+    padding: 1.1rem 0;
+  }
 }
+
 @media (min-width: 768px) {
-  .marquee-strip-inner { margin: 0 -16rem; padding: 1.35rem 0; }
+  .marquee-strip-inner {
+    margin: 0 -16rem;
+    padding: 1.35rem 0;
+  }
 }
+
 @media (min-width: 1024px) {
-  .marquee-strip-inner { margin: 0 -20rem; padding: 1.6rem 0; }
+  .marquee-strip-inner {
+    margin: 0 -20rem;
+    padding: 1.6rem 0;
+  }
 }
 
 /* ── Strip Background Variants ── */
@@ -397,25 +423,34 @@ html.lenis, html.lenis body {
 }
 
 @media (min-width: 640px) {
-  .marquee-strip-enhanced { margin: 0 -14rem; padding: 1rem 0; }
+  .marquee-strip-enhanced {
+    margin: 0 -14rem;
+    padding: 1rem 0;
+  }
 }
+
 @media (min-width: 768px) {
-  .marquee-strip-enhanced { margin: 0 -18rem; padding: 1.15rem 0; }
+  .marquee-strip-enhanced {
+    margin: 0 -18rem;
+    padding: 1.15rem 0;
+  }
 }
+
 @media (min-width: 1024px) {
-  .marquee-strip-enhanced { margin: 0 -22rem; padding: 1.35rem 0; }
+  .marquee-strip-enhanced {
+    margin: 0 -22rem;
+    padding: 1.35rem 0;
+  }
 }
 
 /* Secondary strip — dark glassmorphism */
 .marquee-strip-secondary {
-  background: linear-gradient(
-    90deg,
-    rgba(20, 20, 22, 0.95) 0%,
-    rgba(28, 28, 30, 0.98) 25%,
-    rgba(35, 35, 38, 0.95) 50%,
-    rgba(28, 28, 30, 0.98) 75%,
-    rgba(20, 20, 22, 0.95) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(20, 20, 22, 0.95) 0%,
+      rgba(28, 28, 30, 0.98) 25%,
+      rgba(35, 35, 38, 0.95) 50%,
+      rgba(28, 28, 30, 0.98) 75%,
+      rgba(20, 20, 22, 0.95) 100%);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow:
@@ -442,13 +477,21 @@ html.lenis, html.lenis body {
 }
 
 @media (min-width: 640px) {
-  .marquee-text-enhanced { padding: 0 1.25rem; }
+  .marquee-text-enhanced {
+    padding: 0 1.25rem;
+  }
 }
+
 @media (min-width: 768px) {
-  .marquee-text-enhanced { padding: 0 1.5rem; }
+  .marquee-text-enhanced {
+    padding: 0 1.5rem;
+  }
 }
+
 @media (min-width: 1024px) {
-  .marquee-text-enhanced { padding: 0 2rem; }
+  .marquee-text-enhanced {
+    padding: 0 2rem;
+  }
 }
 
 /* Marquee separator diamond */
@@ -460,10 +503,17 @@ html.lenis, html.lenis body {
 }
 
 @media (min-width: 640px) {
-  .marquee-separator { font-size: 0.875rem; padding: 0 1rem; }
+  .marquee-separator {
+    font-size: 0.875rem;
+    padding: 0 1rem;
+  }
 }
+
 @media (min-width: 768px) {
-  .marquee-separator { font-size: 1rem; padding: 0 1.25rem; }
+  .marquee-separator {
+    font-size: 1rem;
+    padding: 0 1.25rem;
+  }
 }
 
 /* =====================================================
@@ -488,56 +538,90 @@ html.lenis, html.lenis body {
 }
 
 .aurora-orb-1 {
-  width: 700px; height: 700px;
+  width: 700px;
+  height: 700px;
   background: #1e3a8a;
   opacity: 0.35;
-  top: -10%; left: -5%;
+  top: -10%;
+  left: -5%;
   animation: aurora-float-1 15s ease-in-out infinite alternate;
 }
 
 .aurora-orb-2 {
-  width: 600px; height: 600px;
+  width: 600px;
+  height: 600px;
   background: #5b21b6;
   opacity: 0.4;
-  top: 20%; right: -10%;
+  top: 20%;
+  right: -10%;
   animation: aurora-float-2 18s ease-in-out infinite alternate;
   animation-delay: -3s;
 }
 
 .aurora-orb-3 {
-  width: 800px; height: 800px;
+  width: 800px;
+  height: 800px;
   background: #065f46;
   opacity: 0.3;
-  bottom: -15%; left: 15%;
+  bottom: -15%;
+  left: 15%;
   animation: aurora-float-3 20s ease-in-out infinite alternate;
   animation-delay: -7s;
 }
 
 .aurora-orb-4 {
-  width: 650px; height: 650px;
+  width: 650px;
+  height: 650px;
   background: #831843;
   opacity: 0.35;
-  bottom: 10%; right: 20%;
+  bottom: 10%;
+  right: 20%;
   animation: aurora-float-4 16s ease-in-out infinite alternate;
   animation-delay: -5s;
 }
 
 .aurora-orb-5 {
-  width: 750px; height: 750px;
+  width: 750px;
+  height: 750px;
   background: #0f766e;
   opacity: 0.25;
-  top: 40%; left: 40%;
+  top: 40%;
+  left: 40%;
   animation: aurora-float-5 14s ease-in-out infinite alternate;
   animation-delay: -9s;
 }
 
 /* Mobile — smaller orbs for performance */
 @media (max-width: 768px) {
-  .aurora-orb-1 { width: 400px; height: 400px; filter: blur(80px); }
-  .aurora-orb-2 { width: 350px; height: 350px; filter: blur(80px); }
-  .aurora-orb-3 { width: 450px; height: 450px; filter: blur(80px); }
-  .aurora-orb-4 { width: 380px; height: 380px; filter: blur(80px); }
-  .aurora-orb-5 { width: 420px; height: 420px; filter: blur(80px); }
+  .aurora-orb-1 {
+    width: 400px;
+    height: 400px;
+    filter: blur(80px);
+  }
+
+  .aurora-orb-2 {
+    width: 350px;
+    height: 350px;
+    filter: blur(80px);
+  }
+
+  .aurora-orb-3 {
+    width: 450px;
+    height: 450px;
+    filter: blur(80px);
+  }
+
+  .aurora-orb-4 {
+    width: 380px;
+    height: 380px;
+    filter: blur(80px);
+  }
+
+  .aurora-orb-5 {
+    width: 420px;
+    height: 420px;
+    filter: blur(80px);
+  }
 }
 
 /* =====================================================
@@ -553,6 +637,7 @@ html.lenis, html.lenis body {
   0% {
     --angle: 0deg;
   }
+
   100% {
     --angle: 360deg;
   }
@@ -564,37 +649,30 @@ html.lenis, html.lenis body {
   z-index: 10;
 }
 
-.glowing-border-btn::before,
 .glowing-border-btn::after {
   content: "";
   position: absolute;
-  inset: -1.5px; /* Border thickness */
+  inset: -1px;
+  /* Thinner border outline */
   z-index: -1;
   background: conic-gradient(from var(--angle), #FF8C00, #FF5F00, #0F0E0E 30%, #0F0E0E 70%, #FF5F00, #FF8C00);
-  border-radius: inherit; /* Dynamically inherits the button's rounded-full border radius */
+  border-radius: inherit;
+  /* Dynamically inherits the button's rounded-full border radius */
   animation: animate-angle 3.5s linear infinite;
   transition: opacity 0.3s ease, filter 0.3s ease;
+  opacity: 0.95;
 }
 
 .glowing-border-btn::before {
-  opacity: 0.55;
-  filter: blur(12px);
+  display: none;
+  /* Completely remove the wide backdrop blur glow */
 }
 
-.glowing-border-btn::after {
-  opacity: 0.95;
-}
-
-/* Hover effects: Speed up the rotation and amplify the glow */
-.glowing-border-btn:hover::before {
-  opacity: 0.95;
-  filter: blur(16px);
-  animation-duration: 1.5s;
-}
-
+/* Hover effects: Speed up rotation and add a subtle glow directly to the border itself */
 .glowing-border-btn:hover::after {
   opacity: 1;
   animation-duration: 1.5s;
+  filter: drop-shadow(0 0 2.5px rgba(255, 106, 28, 0.8));
 }
 
 /* Green version (GitHub Activity) */
@@ -673,4 +751,63 @@ html.lenis, html.lenis body {
 .glowing-border-btn-blue:hover::after {
   opacity: 1;
   animation-duration: 1.5s;
+}
+
+/* Rotating Navbar Border Keyframe */
+@keyframes navbar-border-spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.animate-navbar-border-spin {
+  animation: navbar-border-spin 6s linear infinite;
+}
+
+/* =====================================================
+   GLOBAL PREMIUM GLOWING SCROLLBAR WITH BLURRED ENDS
+   (Placed globally outside @layer blocks to avoid resets)
+   ===================================================== */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.45) transparent;
+}
+
+/* Webkit scrollbar container */
+::-webkit-scrollbar {
+  width: 16px;
+  /* Broad width to contain the glow outline without clipping */
+  height: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  /* Fully invisible track */
+}
+
+/* Webkit scrollbar thumb (white glow line with faded blurred ends) */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.45) 8%, rgba(255, 255, 255, 0.45) 92%, transparent 100%);
+  border-radius: 9999px;
+  border: 5px solid transparent;
+  /* Creates a thin 6px floating thumb line in the middle */
+  background-clip: padding-box;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), inset 0 0 3px rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+/* Hover state: amplify the glowing intensity */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.9) 8%, rgba(255, 255, 255, 0.9) 92%, transparent 100%);
+  background-clip: padding-box;
+  box-shadow: 0 0 18px rgba(255, 255, 255, 1), inset 0 0 5px rgba(255, 255, 255, 0.6);
+}
+
+/* Bento Card initial state for scroll reveal (overridden by GSAP inline styles) */
+.about-bento-card {
+  opacity: 0;
 }

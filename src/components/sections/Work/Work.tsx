@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, useCallback, memo, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useCallback, memo, useMemo, useEffect, useRef } from 'react';
+import { motion, AnimatePresence, useMotionValue, useTransform, animate, useInView } from 'framer-motion';
 import { projects } from './work.data';
 import ProjectCard from './ProjectCard';
 
@@ -9,57 +9,59 @@ const INITIAL_PROJECTS_COUNT = 3;
 const categories = ['All', 'AI & ML', 'Full-Stack', 'Web Apps'] as const;
 type Category = typeof categories[number];
 
+// Scroll-triggered counter helper component
+const Counter = memo(function Counter({ value, duration = 1.8 }: { value: number; duration?: number }) {
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (latest) => Math.round(latest));
+  const ref = useRef<HTMLSpanElement>(null);
+  const inView = useInView(ref, { once: false, margin: "-10%" });
+
+  useEffect(() => {
+    if (inView) {
+      const controls = animate(count, value, {
+        duration: duration,
+        ease: 'easeOut',
+      });
+      return () => controls.stop();
+    } else {
+      count.set(0);
+    }
+  }, [inView, count, value, duration]);
+
+  return <motion.span ref={ref}>{rounded}</motion.span>;
+});
+
 // Memoized stats component
 const Stats = memo(function Stats() {
   return (
-    <div className="flex items-center justify-center gap-8 sm:gap-12 mt-8 sm:mt-10">
+    <div className="flex items-center justify-center gap-6 xs:gap-8 sm:gap-14 md:gap-16 mt-8 sm:mt-10 md:mt-12 select-none">
       <div className="text-center">
-        <span
-          className="block text-2xl sm:text-3xl font-bold font-outfit"
-          style={{
-            background: 'linear-gradient(135deg, #FF8C00, #FF1493)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text',
-          }}
-        >
-          {projects.length}
+        <span className="block text-4xl xs:text-5xl sm:text-6xl font-black font-outfit text-white tracking-tight leading-none mb-1.5 sm:mb-2">
+          <Counter value={projects.length} />
         </span>
-        <span className="text-[10px] sm:text-xs text-white/40 uppercase tracking-wider font-semibold">
+        <span className="text-[10px] sm:text-xs text-white/40 uppercase tracking-widest font-bold">
           Projects
         </span>
       </div>
-      <div className="w-px h-8 bg-white/10" />
+      
+      <div className="w-px h-10 sm:h-12 bg-white/10" />
+      
       <div className="text-center">
-        <span
-          className="block text-2xl sm:text-3xl font-bold font-outfit"
-          style={{
-            background: 'linear-gradient(135deg, #FF8C00, #FF1493)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text',
-          }}
-        >
-          15+
+        <span className="block text-4xl xs:text-5xl sm:text-6xl font-black font-outfit text-white tracking-tight leading-none mb-1.5 sm:mb-2">
+          <Counter value={15} />+
         </span>
-        <span className="text-[10px] sm:text-xs text-white/40 uppercase tracking-wider font-semibold">
+        <span className="text-[10px] sm:text-xs text-white/40 uppercase tracking-widest font-bold">
           Technologies
         </span>
       </div>
-      <div className="w-px h-8 bg-white/10" />
+      
+      <div className="w-px h-10 sm:h-12 bg-white/10" />
+      
       <div className="text-center">
-        <span
-          className="block text-2xl sm:text-3xl font-bold font-outfit"
-          style={{
-            background: 'linear-gradient(135deg, #FF8C00, #FF1493)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text',
-          }}
-        >
-          4
+        <span className="block text-4xl xs:text-5xl sm:text-6xl font-black font-outfit text-white tracking-tight leading-none mb-1.5 sm:mb-2">
+          <Counter value={4} />
         </span>
-        <span className="text-[10px] sm:text-xs text-white/40 uppercase tracking-wider font-semibold">
+        <span className="text-[10px] sm:text-xs text-white/40 uppercase tracking-widest font-bold">
           Industries
         </span>
       </div>
@@ -67,9 +69,117 @@ const Stats = memo(function Stats() {
   );
 });
 
+const headerContainerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.1,
+    }
+  }
+};
+
+const badgeVariants = {
+  hidden: { opacity: 0, scale: 0.7, y: 15 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: {
+      type: 'spring' as const,
+      stiffness: 350,
+      damping: 20,
+    }
+  }
+};
+
+const titleContainerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.05,
+    }
+  }
+};
+
+const wordVariants = {
+  hidden: { 
+    y: '105%', 
+    rotateX: 70,
+    opacity: 0
+  },
+  visible: {
+    y: '0%',
+    rotateX: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.8,
+      ease: [0.16, 1, 0.3, 1] as [number, number, number, number]
+    }
+  }
+};
+
+const descriptionVariants = {
+  hidden: { opacity: 0, y: 15 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: 'easeOut' as const
+    }
+  }
+};
+
+const lineVariants = {
+  hidden: { scaleX: 0, opacity: 0 },
+  visible: {
+    scaleX: 1,
+    opacity: 1,
+    transition: {
+      duration: 0.8,
+      ease: [0.22, 1, 0.36, 1] as [number, number, number, number]
+    }
+  }
+};
+
+const statsContainerVariants = {
+  hidden: { opacity: 0, y: 15 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      delay: 0.35,
+      ease: 'easeOut' as const
+    }
+  }
+};
+
+const projectHeadings = [
+  "Engineered Digital Products",
+  "Architected Software Solutions",
+  "Featured Creative Works",
+  "Crafted Code Creations",
+  "Designed Scalable Systems",
+  "Innovated Web Applications"
+];
+
 export default function Work() {
   const [activeCategory, setActiveCategory] = useState<Category>('All');
   const [showAll, setShowAll] = useState(false);
+  const [headingIndex, setHeadingIndex] = useState(0);
+
+  useEffect(() => {
+    // Pick random index on refresh/mount
+    const randomIndex = Math.floor(Math.random() * projectHeadings.length);
+    setHeadingIndex(randomIndex);
+
+    const interval = setInterval(() => {
+      setHeadingIndex((prev) => (prev + 1) % projectHeadings.length);
+    }, 300000); // 5 minutes
+
+    return () => clearInterval(interval);
+  }, []);
 
   // Filter projects dynamically based on category selection
   const filteredProjects = useMemo(() => {
@@ -105,12 +215,16 @@ export default function Work() {
   return (
     <section
       id="work"
-      className="relative py-16 sm:py-20 md:py-28 lg:py-32"
+      className="relative z-20 py-16 sm:py-20 md:py-28 lg:py-32 bg-[#0F0E0E] overflow-hidden"
       aria-label="Featured Projects Portfolio"
       itemScope
       itemType="https://schema.org/CreativeWork"
       style={{ contain: 'layout style' }}
     >
+
+
+
+      <div className="relative z-20">
       {/* SEO Microdata */}
       <meta itemProp="name" content="Featured Projects - Rameshwar Bhagwat Portfolio" />
       <meta
@@ -141,44 +255,53 @@ export default function Work() {
       </div>
 
       {/* Header Section */}
-      <div className="container mx-auto px-4 sm:px-6 mb-10 sm:mb-12">
+      <motion.div 
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, margin: "-10%" }}
+        variants={headerContainerVariants}
+        className="container mx-auto px-4 sm:px-6 mb-10 sm:mb-12"
+      >
         <div className="text-center max-w-4xl mx-auto">
           {/* Label */}
-          <motion.p
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase mb-3 sm:mb-4 font-outfit"
-            style={{
-              background: 'linear-gradient(90deg, #FF8C00, #FF1493)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-            }}
+          <motion.div
+            variants={badgeVariants}
+            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.06] mb-4 text-[#F43F5E] text-xs font-semibold tracking-wider uppercase font-outfit"
           >
-            Portfolio
-          </motion.p>
+            <div className="w-3.5 h-3.5 rounded-full bg-[#F43F5E] flex items-center justify-center text-[#0F0E0E] flex-shrink-0">
+              <svg className="w-[50%] h-[50%]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round">
+                <path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19" />
+              </svg>
+            </div>
+            <span>Portfolio</span>
+          </motion.div>
 
           {/* Main Heading */}
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.05 }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold uppercase tracking-[-0.02em] mb-4 sm:mb-5 font-outfit"
+            key={headingIndex}
+            initial="hidden"
+            animate="visible"
+            variants={titleContainerVariants}
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-[-0.02em] leading-[0.95] mb-4 sm:mb-5 flex flex-wrap justify-center gap-x-[0.25em] gap-y-[0.05em]"
+            style={{ perspective: 1200 }}
           >
-            <span className="text-white">Featured </span>
-            <span className="text-rainbow-gradient">Projects</span>
+            {projectHeadings[headingIndex].split(" ").map((word, i) => (
+              <span key={i} className="inline-block overflow-hidden py-1">
+                <motion.span
+                  variants={wordVariants}
+                  className="inline-block origin-top text-white"
+                  style={{ fontFamily: '"Plus Jakarta Sans", sans-serif', fontWeight: 900 }}
+                >
+                  {word}
+                </motion.span>
+              </span>
+            ))}
           </motion.h2>
 
           {/* Animated line */}
           <motion.div
             className="flex justify-center mb-5 sm:mb-6"
-            initial={{ scaleX: 0 }}
-            whileInView={{ scaleX: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+            variants={lineVariants}
             style={{ transformOrigin: 'center' }}
           >
             <div
@@ -192,10 +315,7 @@ export default function Work() {
 
           {/* Description */}
           <motion.p
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.15 }}
+            variants={descriptionVariants}
             className="text-sm sm:text-base md:text-lg text-white/50 leading-relaxed max-w-2xl mx-auto font-outfit"
           >
             A curated collection of full-stack applications showcasing modern web technologies, AI integrations, and native experiences.
@@ -203,15 +323,12 @@ export default function Work() {
 
           {/* Stats */}
           <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            variants={statsContainerVariants}
           >
             <Stats />
           </motion.div>
         </div>
-      </div>
+      </motion.div>
 
       {/* iOS Segmented Control Switcher */}
       <div className="flex justify-center mb-10 sm:mb-14 px-4 sm:px-0">
@@ -273,7 +390,10 @@ export default function Work() {
                 exit={{ opacity: 0, scale: 0.9, y: 20 }}
                 transition={{ duration: 0.4 }}
               >
-                <ProjectCard project={project} index={index} />
+                <ProjectCard 
+                  project={project} 
+                  index={index} 
+                />
               </motion.div>
             ))}
           </AnimatePresence>
@@ -319,6 +439,9 @@ export default function Work() {
           </motion.button>
         </div>
       )}
+
+      {/* iOS-Style Project Case Study Detail Modal Sheet */}
+      </div>
     </section>
   );
 }

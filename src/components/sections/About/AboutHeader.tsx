@@ -1,37 +1,42 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { memo } from 'react';
 
 const AboutHeader = memo(function AboutHeader() {
   return (
-    <motion.div
-      className="text-center mb-12 md:mb-16"
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-100px' }}
-      transition={{ 
-        duration: 1.2, 
-        ease: [0.16, 1, 0.3, 1],
-      }}
-    >
-      <p className="text-sm md:text-base uppercase tracking-wider text-muted mb-4">
-        Get to Know Me
-      </p>
+    <div className="text-center mb-12 md:mb-16 about-header-container">
+      {/* Badge container */}
+      <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.06] mb-4 text-[#38BDF8] text-xs font-semibold tracking-wider uppercase font-outfit about-badge opacity-0">
+        <div className="w-3.5 h-3.5 rounded-full bg-[#38BDF8] flex items-center justify-center text-[#0F0E0E] flex-shrink-0">
+          <svg className="w-[50%] h-[50%]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round">
+            <path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19" />
+          </svg>
+        </div>
+        <span>Get to Know Me</span>
+      </div>
+
+      {/* Title */}
       <h2
-        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-[-0.02em] leading-[0.95] uppercase text-white"
+        className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[96px] font-black tracking-[-0.03em] leading-[0.9] text-white about-title opacity-0"
         style={{
-          fontFamily: 'var(--font-jakarta), "Plus Jakarta Sans", sans-serif',
-          fontWeight: 800,
+          fontFamily: '"Plus Jakarta Sans", sans-serif',
         }}
       >
-        Turning Ideas Into{' '}
-        <span className="text-rainbow-gradient">
-          Reality
+        Turning ideas into{' '}
+        <span
+          className="font-bold px-1 text-white animate-pulse"
+          style={{
+            fontFamily: '"Plus Jakarta Sans", sans-serif',
+            textTransform: 'none',
+          }}
+        >
+          reality
         </span>
       </h2>
+
+      {/* Subtitle */}
       <p
-        className="text-lg sm:text-xl md:text-2xl mt-4 max-w-2xl mx-auto"
+        className="text-lg sm:text-xl md:text-2xl mt-4 max-w-2xl mx-auto about-subtitle opacity-0"
         style={{
           fontFamily: 'var(--font-playfair), "Playfair Display", Georgia, serif',
           color: 'rgba(255,255,255,0.7)',
@@ -39,7 +44,7 @@ const AboutHeader = memo(function AboutHeader() {
       >
         Developer by day, problem solver by nature. Let&apos;s build something amazing together.
       </p>
-    </motion.div>
+    </div>
   );
 });
 

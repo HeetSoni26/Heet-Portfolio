@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 import { Mail, Linkedin, Github, Instagram, MapPin, Sparkles, LucideIcon } from 'lucide-react';
 import { PERSONAL_INFO, SOCIAL_LINKS } from '@/lib/constants';
 import {
@@ -65,17 +64,12 @@ const ProfileCard = memo(function ProfileCard() {
 
   return (
     <GlowCard
-      className="bg-[#141414] border border-white/[0.06] rounded-xl xs:rounded-2xl sm:rounded-3xl w-full h-full"
+      className="bg-white/[0.01] backdrop-blur-md border border-white/[0.08] rounded-xl xs:rounded-2xl sm:rounded-3xl shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] w-full h-full"
       glowColor="rgba(249, 115, 22, 0.6)"
       glowSize={280}
+      maskBackground="rgba(15, 14, 14, 0.6)"
     >
-      <motion.div
-        className="relative p-4 xs:p-5 sm:p-6 md:p-8 h-full"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: '-80px' }}
-        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-      >
+      <div className="relative p-4 xs:p-5 sm:p-6 md:p-8 h-full">
         {/* Top accent line */}
         <div className="absolute top-0 left-4 right-4 xs:left-5 xs:right-5 sm:left-6 sm:right-6 md:left-8 md:right-8 h-[1px] bg-gradient-to-r from-transparent via-white/[0.08] to-transparent" />
 
@@ -91,7 +85,7 @@ const ProfileCard = memo(function ProfileCard() {
             }}
           />
           {/* Dark ring gap */}
-          <div className="absolute inset-0 rounded-full bg-[#141414]" />
+          <div className="absolute inset-0 rounded-full bg-[#080808]" />
           {/* Profile picture */}
           <div className="absolute inset-[2px] xs:inset-[3px] rounded-full overflow-hidden">
             <Image
@@ -104,7 +98,7 @@ const ProfileCard = memo(function ProfileCard() {
             />
           </div>
           {/* Online status dot */}
-          <div className="absolute bottom-0.5 right-0.5 xs:bottom-1 xs:right-1 sm:bottom-2 sm:right-2 w-3 h-3 xs:w-3.5 xs:h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 rounded-full bg-emerald-500 border-2 xs:border-[3px] border-[#141414] z-10">
+          <div className="absolute bottom-0.5 right-0.5 xs:bottom-1 xs:right-1 sm:bottom-2 sm:right-2 w-3 h-3 xs:w-3.5 xs:h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 rounded-full bg-emerald-500 border-2 xs:border-[3px] border-[#080808] z-10">
             <span className="absolute inset-0 rounded-full bg-emerald-500 animate-ping opacity-40" />
           </div>
         </div>
@@ -169,7 +163,7 @@ const ProfileCard = memo(function ProfileCard() {
           })}
         </div>
       </div>
-      </motion.div>
+      </div>
     </GlowCard>
   );
 });

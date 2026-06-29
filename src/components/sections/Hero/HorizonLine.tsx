@@ -1,16 +1,16 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useIntroAnimation } from '@/context/IntroAnimationContext';
 
 export default function HorizonLine() {
+  const { isIntroComplete } = useIntroAnimation();
+
   return (
     <div className="absolute bottom-0 left-0 w-full h-32 sm:h-48 z-[2] pointer-events-none">
       {/* Curved horizon line with glow */}
-      <motion.div
-        className="relative w-full h-full"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.5, delay: 1, ease: 'easeOut' }}
+      <div
+        className={`relative w-full h-full ${isIntroComplete ? 'hero-horizon-animated hero-horizon-glow' : 'opacity-0'}`}
       >
         {/* SVG Curved Line - Downward arc (sides low, center high) */}
         <svg
@@ -30,17 +30,17 @@ export default function HorizonLine() {
               <stop offset="85%" stopColor="#FF0000" stopOpacity="0.4" />
               <stop offset="100%" stopColor="#FF0000" stopOpacity="0" />
             </linearGradient>
-            
+
             {/* Glow filter */}
             <filter id="glow">
-              <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+              <feGaussianBlur stdDeviation="3" result="coloredBlur" />
               <feMerge>
-                <feMergeNode in="coloredBlur"/>
-                <feMergeNode in="SourceGraphic"/>
+                <feMergeNode in="coloredBlur" />
+                <feMergeNode in="SourceGraphic" />
               </feMerge>
             </filter>
           </defs>
-          
+
           {/* Main curved line - Downward arc (starts low, peaks in center, ends low) */}
           <path
             d="M 0 180 Q 600 20, 1200 180"
@@ -49,7 +49,7 @@ export default function HorizonLine() {
             fill="none"
             filter="url(#glow)"
           />
-          
+
           {/* Additional glow layer */}
           <path
             d="M 0 180 Q 600 20, 1200 180"
@@ -60,7 +60,7 @@ export default function HorizonLine() {
             style={{ filter: 'blur(8px)' }}
           />
         </svg>
-        
+
         {/* Pulse animation overlay */}
         <motion.div
           className="absolute inset-0"
@@ -88,11 +88,11 @@ export default function HorizonLine() {
             />
           </svg>
         </motion.div>
-      </motion.div>
-      
+      </div>
+
       {/* Fade upward gradient from the curve */}
       <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-primary/8 via-primary/3 to-transparent pointer-events-none" />
-      
+
       {/* Additional subtle glow spots at the bottom - Hidden on mobile for performance */}
       <div className="hidden sm:block absolute bottom-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       <div className="hidden sm:block absolute bottom-0 right-1/4 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />

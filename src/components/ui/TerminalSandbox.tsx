@@ -608,15 +608,15 @@ export default function TerminalSandbox() {
       {/* Symmetrical Floating Launcher Button (Bottom-Left) */}
       <motion.button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 left-6 z-50 w-14 h-14 rounded-full flex items-center justify-center backdrop-blur-md border border-white/[0.15]"
+        className="fixed bottom-6 left-[64px] md:left-[80px] z-50 w-14 h-14 rounded-full flex items-center justify-center backdrop-blur-md border border-white/[0.15]"
         style={{
           background: 'rgba(255, 255, 255, 0.08)',
           boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 0 rgba(255, 255, 255, 0.1)',
         }}
         whileHover={{ scale: 1.08, borderColor: 'rgba(255, 255, 255, 0.25)' }}
         whileTap={{ scale: 0.95 }}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: isOpen ? 0 : 1, y: isOpen ? 20 : 0, pointerEvents: isOpen ? 'none' : 'auto' }}
+        initial={{ opacity: 0, x: '-50%', y: 20 }}
+        animate={{ opacity: isOpen ? 0 : 1, x: '-50%', y: isOpen ? 20 : 0, pointerEvents: isOpen ? 'none' : 'auto' }}
         transition={{ duration: 0.2 }}
         aria-label="Open developer sandbox console"
       >

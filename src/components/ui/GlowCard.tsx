@@ -195,6 +195,11 @@ function GlowCard({
           opacity: isActive ? 1 : 0,
           transition: 'opacity 200ms',
           willChange: isActive ? 'auto' : 'opacity',
+          padding: '2px',
+          WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+          WebkitMaskComposite: 'xor',
+          mask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+          maskComposite: 'exclude',
         }}
       >
         {/* Radial gradient glow that follows cursor */}

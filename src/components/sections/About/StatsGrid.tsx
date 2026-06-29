@@ -181,9 +181,10 @@ export default function StatsGrid() {
       {stats.map((stat, index) => (
         <GlowCard
           key={stat.label}
-          className="bg-[#141414] border border-white/[0.06] rounded-xl xs:rounded-2xl sm:rounded-3xl"
+          className="bg-white/[0.01] backdrop-blur-md border border-white/[0.08] rounded-xl xs:rounded-2xl sm:rounded-3xl shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]"
           glowColor={stat.color}
           glowSize={180}
+          maskBackground="rgba(15, 14, 14, 0.6)"
         >
           <div className="p-2 xs:p-3 sm:p-4 md:p-5">
             <CircularProgress

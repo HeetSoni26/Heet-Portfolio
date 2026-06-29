@@ -25,6 +25,7 @@
   from {
     transform: translate3d(0, 0, 0);
   }
+
   to {
     transform: translate3d(-50%, 0, 0);
   }
@@ -34,6 +35,7 @@
   from {
     transform: translate3d(-50%, 0, 0);
   }
+
   to {
     transform: translate3d(0, 0, 0);
   }
@@ -62,9 +64,11 @@
   0% {
     transform: translate(0, 0) scale(1);
   }
+
   50% {
     transform: translate(30px, 40px) scale(1.1);
   }
+
   100% {
     transform: translate(-20px, 30px) scale(0.95);
   }
@@ -74,9 +78,11 @@
   0% {
     transform: translate(0, 0) scale(1);
   }
+
   50% {
     transform: translate(-40px, 30px) scale(1.15);
   }
+
   100% {
     transform: translate(25px, -35px) scale(0.9);
   }
@@ -86,9 +92,11 @@
   0% {
     transform: translate(0, 0) scale(1);
   }
+
   50% {
     transform: translate(35px, -25px) scale(1.08);
   }
+
   100% {
     transform: translate(-30px, 20px) scale(1.05);
   }
@@ -98,9 +106,11 @@
   0% {
     transform: translate(0, 0) scale(1);
   }
+
   50% {
     transform: translate(-25px, -40px) scale(0.92);
   }
+
   100% {
     transform: translate(40px, 25px) scale(1.12);
   }
@@ -110,10 +120,284 @@
   0% {
     transform: translate(0, 0) scale(1);
   }
+
   50% {
     transform: translate(20px, 35px) scale(1.05);
   }
+
   100% {
     transform: translate(-35px, -30px) scale(0.98);
   }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   HERO SECTION — Premium Choreographed Entrance Animations
+   
+   SEQUENCE (all triggered after stripe intro completes):
+   ──────────────────────────────────────────────────────
+   PHASE 1 (0s – 1.0s)  : Heading rows — dramatic 3D reveal, staggered
+   PHASE 2 (1.0s – 2.0s): Supporting elements — icons, diagonal text, button
+   PHASE 3 (2.0s – 2.8s): Navbar & Logo appear last
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+/* ───────────────────────────────────────────────────────────────────────────────
+   PHASE 1: HEADING — Cinematic 3D Perspective Reveal
+   Each row slides up from below with perspective tilt, scale & blur clearing.
+   ─────────────────────────────────────────────────────────────────────────────── */
+
+@keyframes hero-heading-row-reveal {
+  0% {
+    transform: translate3d(0, 130%, 0) rotateX(35deg) scale(0.92);
+    opacity: 0;
+    filter: blur(6px);
+  }
+
+  50% {
+    filter: blur(1px);
+    opacity: 1;
+  }
+
+  75% {
+    transform: translate3d(0, -3%, 0) rotateX(-2deg) scale(1.01);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) rotateX(0deg) scale(1);
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+/* ───────────────────────────────────────────────────────────────────────────────
+   PHASE 2: SUPPORTING ELEMENTS — Staggered after heading
+   ─────────────────────────────────────────────────────────────────────────────── */
+
+/* Diagonal text blocks — soft blur-fade entrance */
+@keyframes hero-diagonal-reveal {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translate3d(0, 16px, 0);
+  }
+
+  50% {
+    filter: blur(3px);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Social icons — bouncy scale-in pop */
+@keyframes hero-icon-pop {
+  0% {
+    transform: scale(0) rotate(-25deg);
+    opacity: 0;
+  }
+
+  65% {
+    transform: scale(1.2) rotate(4deg);
+    opacity: 1;
+  }
+
+  85% {
+    transform: scale(0.95) rotate(-1deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+/* Resume button — elastic scale-up and overshoot spring */
+@keyframes hero-btn-entrance {
+  0% {
+    transform: translate3d(0, 45px, 0) scale(0.75);
+    opacity: 0;
+    filter: blur(6px);
+  }
+
+  50% {
+    opacity: 0.5;
+    filter: blur(2px);
+  }
+
+  65% {
+    transform: translate3d(0, -8px, 0) scale(1.04);
+    opacity: 1;
+    filter: blur(0px);
+  }
+
+  82% {
+    transform: translate3d(0, 3px, 0) scale(0.98);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+/* Horizon line — grows up from bottom to its position with expansion */
+@keyframes hero-horizon-expand {
+  0% {
+    transform: translate3d(0, 90px, 0) scaleX(0.2) scaleY(0.5);
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) scaleX(1) scaleY(1);
+    opacity: 1;
+  }
+}
+
+/* Horizon glow — continuous subtle pulse */
+@keyframes hero-horizon-pulse {
+
+  0%,
+  100% {
+    opacity: 0.4;
+    box-shadow: 0 0 15px 2px rgba(255, 140, 0, 0.15);
+  }
+
+  50% {
+    opacity: 0.7;
+    box-shadow: 0 0 30px 4px rgba(255, 140, 0, 0.25);
+  }
+}
+
+/* ───────────────────────────────────────────────────────────────────────────────
+   PHASE 3: NAVBAR & LOGO — Appear last with smooth entrance
+   ─────────────────────────────────────────────────────────────────────────────── */
+
+/* Logo — elegant drop-in with overshoot bounce */
+@keyframes hero-logo-drop {
+  0% {
+    transform: translate3d(0, -70px, 0) scale(0.6);
+    opacity: 0;
+    filter: blur(6px);
+  }
+
+  55% {
+    transform: translate3d(0, 6px, 0) scale(1.08);
+    opacity: 1;
+    filter: blur(0px);
+  }
+
+  75% {
+    transform: translate3d(0, -3px, 0) scale(0.97);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+/* Navbar pill — slide-down with blur-to-sharp */
+@keyframes hero-nav-slide {
+  0% {
+    transform: translate3d(0, -50px, 0) scale(0.9);
+    opacity: 0;
+    filter: blur(8px);
+  }
+
+  60% {
+    filter: blur(1px);
+    opacity: 1;
+  }
+
+  80% {
+    transform: translate3d(0, 3px, 0) scale(1.01);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   UTILITY CLASSES — Apply to elements (delays set via --row-i / --icon-i vars)
+   
+   TIMING MAP:
+   ─────────────────────────────────────────────
+   Phase 1 — Heading rows:     0s, 0.18s, 0.36s
+   Phase 1 — Heading glow:     1.1s
+   Phase 2 — Horizon:          0.9s
+   Phase 2 — Diagonal left:    1.1s
+   Phase 2 — Diagonal right:   1.3s
+   Phase 2 — Social icons:     1.0s, 1.15s, 1.3s
+   Phase 2 — Resume button:    1.5s
+   Phase 3 — Logo:             2.0s
+   Phase 3 — Navbar:           2.2s
+   ─────────────────────────────────────────────
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+/* ── PHASE 1: Heading ── */
+
+/* Overflow-hidden mask for each heading row */
+.hero-row-mask {
+  overflow: hidden;
+  display: inline-flex;
+  perspective: 800px;
+}
+
+/* Heading row: 3D perspective slide-up — staggered via --row-i */
+.hero-row-animated {
+  animation: hero-heading-row-reveal 0.95s cubic-bezier(0.16, 1, 0.3, 1) calc(var(--row-i, 0) * 0.18s) both;
+  transform-origin: bottom center;
+}
+
+/* ── PHASE 2: Supporting Elements ── */
+
+/* Diagonal text blocks */
+.hero-diagonal-left {
+  animation: hero-diagonal-reveal 1.1s cubic-bezier(0.16, 1, 0.3, 1) 1.1s both;
+}
+
+.hero-diagonal-right {
+  animation: hero-diagonal-reveal 1.1s cubic-bezier(0.16, 1, 0.3, 1) 1.3s both;
+}
+
+/* Social icon links — staggered via --icon-i */
+.hero-social-icon {
+  animation: hero-icon-pop 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) calc(1.0s + var(--icon-i, 0) * 0.15s) both;
+}
+
+/* Resume CTA button */
+.hero-btn-animated {
+  animation: hero-btn-entrance 0.95s cubic-bezier(0.16, 1, 0.3, 1) 1.5s both;
+}
+
+/* Horizon line */
+.hero-horizon-animated {
+  transform-origin: center;
+  animation: hero-horizon-expand 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.9s both;
+}
+
+.hero-horizon-glow {
+  animation: hero-horizon-pulse 4s ease-in-out infinite 2.2s;
+}
+
+/* ── PHASE 3: Navbar & Logo (last) ── */
+
+.hero-logo-animated {
+  animation: hero-logo-drop 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.9s both;
+}
+
+.hero-nav-animated {
+  animation: hero-nav-slide 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.9s both;
 }

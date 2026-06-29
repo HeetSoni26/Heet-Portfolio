@@ -1,19 +1,71 @@
-'use client';
-
+import { useEffect, useRef } from 'react';
 import HeroContent from './HeroContent';
 import HeroBackground from './HeroBackground';
 import HeroStrips from './HeroStrips';
 import StructuredData from '@/components/seo/StructuredData';
 import { PERSONAL_INFO, SITE_URL, SOCIAL_LINKS, SEO_KEYWORDS } from '@/lib/constants';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+if (typeof window !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 export default function Hero() {
+  const heroRef = useRef<HTMLElement>(null);
+  const heroInnerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!heroRef.current || !heroInnerRef.current) return;
+
+    const ctx = gsap.context(() => {
+      // Animate the Hero content as we scroll down to About
+      gsap.fromTo(
+        heroInnerRef.current,
+        {
+          scale: 1,
+          y: 0,
+          opacity: 1,
+          filter: 'blur(0px)',
+        },
+        {
+          scale: 0.88,
+          y: -100,
+          opacity: 0,
+          filter: 'blur(12px)',
+          ease: 'none',
+          scrollTrigger: {
+            trigger: heroRef.current,
+            start: 'top top',
+            end: 'bottom top',
+            scrub: true,
+            invalidateOnRefresh: true,
+            onLeave: () => {
+              if (heroInnerRef.current) {
+                heroInnerRef.current.style.visibility = 'hidden';
+              }
+            },
+            onEnterBack: () => {
+              if (heroInnerRef.current) {
+                heroInnerRef.current.style.visibility = 'visible';
+              }
+            },
+          },
+        }
+      );
+    });
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <>
       <StructuredData />
 
       <section
         id="hero"
-        className="relative overflow-hidden pb-0 rounded-b-[40px] sm:rounded-b-[60px] mb-0"
+        ref={heroRef}
+        className="sticky top-0 z-10 overflow-hidden pb-0 mb-0 w-full"
         style={{ height: '100vh' }}
         aria-label={`${PERSONAL_INFO.name} - Full Stack & AI Developer Portfolio`}
         itemScope
@@ -156,11 +208,13 @@ export default function Hero() {
           }}
         />
 
-        <HeroStrips />
-        <HeroBackground />
+        <div ref={heroInnerRef} className="absolute inset-0 w-full h-full">
+          <HeroStrips />
+          <HeroBackground />
 
-        {/* Main content — uses SAME absolute inset-0 + flex center */}
-        <HeroContent />
+          {/* Main content — uses SAME absolute inset-0 + flex center */}
+          <HeroContent />
+        </div>
       </section>
     </>
   );

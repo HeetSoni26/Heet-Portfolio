@@ -1,6 +1,7 @@
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
+import { useRouter, usePathname } from 'next/navigation';
 import { NAV_LINKS } from '@/lib/constants';
 
 interface MobileMenuProps {
@@ -10,12 +11,18 @@ interface MobileMenuProps {
 }
 
 export default function MobileMenu({ isOpen, onClose, activeSection }: MobileMenuProps) {
+  const router = useRouter();
+  const pathname = usePathname();
+
   const scrollTo = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      onClose();
+    if (id === 'contact') {
+      router.push('/contact');
+    } else if (pathname !== '/') {
+      router.push('/#' + id);
+    } else {
+      window.dispatchEvent(new CustomEvent('trigger-nav-fade', { detail: { id } }));
     }
+    onClose();
   };
 
   return (

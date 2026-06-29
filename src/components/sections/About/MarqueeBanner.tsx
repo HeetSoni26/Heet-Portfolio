@@ -109,26 +109,14 @@ export default function MarqueeBanner() {
   return (
     <section
       ref={containerRef}
-      className="relative h-screen flex items-center justify-center overflow-hidden select-none"
+      className="relative h-[55vh] sm:h-[60vh] flex items-center justify-center overflow-hidden select-none"
       style={{
         backgroundColor: PORTFOLIO_BACKGROUND,
         contain: 'layout style paint',
         isolation: 'isolate',
       }}
     >
-      {/* Background glow - simplified to single element with CSS */}
-      <div 
-        className="absolute inset-0 pointer-events-none transition-opacity duration-1000"
-        style={{
-          opacity: isInView ? 1 : 0,
-          background: `
-            radial-gradient(ellipse 100% 60% at 50% 50%, rgba(255, 140, 0, 0.08) 0%, rgba(255, 95, 0, 0.04) 35%, transparent 70%),
-            radial-gradient(ellipse 80% 50% at 30% 50%, rgba(255, 95, 0, 0.06) 0%, transparent 50%),
-            radial-gradient(ellipse 70% 50% at 70% 50%, rgba(255, 20, 147, 0.05) 0%, transparent 50%)
-          `,
-        }}
-        aria-hidden="true"
-      />
+
 
       {/* Noise texture overlay - static, no animation */}
       <div
@@ -141,7 +129,7 @@ export default function MarqueeBanner() {
 
       {/* Top fade */}
       <div
-        className="absolute top-0 left-0 right-0 h-48 sm:h-60 pointer-events-none z-10"
+        className="absolute top-0 left-0 right-0 h-16 sm:h-24 pointer-events-none z-10"
         style={{
           background: `linear-gradient(to bottom, ${PORTFOLIO_BACKGROUND} 0%, ${PORTFOLIO_BACKGROUND} 20%, rgba(15,14,14,0.85) 60%, transparent 100%)`
         }}
@@ -149,7 +137,7 @@ export default function MarqueeBanner() {
       />
       {/* Bottom fade */}
       <div
-        className="absolute bottom-0 left-0 right-0 h-48 sm:h-60 pointer-events-none z-10"
+        className="absolute bottom-0 left-0 right-0 h-16 sm:h-24 pointer-events-none z-10"
         style={{
           background: `linear-gradient(to top, ${PORTFOLIO_BACKGROUND} 0%, ${PORTFOLIO_BACKGROUND} 20%, rgba(15,14,14,0.85) 60%, transparent 100%)`
         }}
@@ -168,7 +156,7 @@ export default function MarqueeBanner() {
           animate={isInView ? 'visible' : 'hidden'}
           transition={stripTransition(0.1)}
         >
-          <div className="marquee-strip-enhanced marquee-strip-fire-bg">
+          <div className="marquee-strip-enhanced marquee-strip-secondary">
             <MarqueeRow items={topRowRepeated} direction="right" duration={50} variant="primary" />
           </div>
         </motion.div>
@@ -188,105 +176,6 @@ export default function MarqueeBanner() {
           </div>
         </motion.div>
       </div>
-
-      {/* Corner accents - simplified to CSS transitions */}
-      <div
-        className="absolute top-24 left-8 sm:left-20 w-20 h-20 sm:w-32 sm:h-32 pointer-events-none z-[1] transition-all duration-1000 ease-out"
-        style={{
-          opacity: isInView ? 0.5 : 0,
-          transform: isInView ? 'scale(1) translate(0, 0)' : 'scale(0.3) translate(-50px, -50px)',
-        }}
-        aria-hidden="true"
-      >
-        <div
-          className="w-full h-full rounded-full blur-[20px]"
-          style={{ background: 'radial-gradient(circle, rgba(255, 140, 0, 0.32), transparent 70%)' }}
-        />
-      </div>
-
-      <div
-        className="absolute bottom-24 right-8 sm:right-20 w-24 h-24 sm:w-36 sm:h-36 pointer-events-none z-[1] transition-all duration-1000 ease-out delay-200"
-        style={{
-          opacity: isInView ? 0.4 : 0,
-          transform: isInView ? 'scale(1) translate(0, 0)' : 'scale(0.3) translate(50px, 50px)',
-        }}
-        aria-hidden="true"
-      >
-        <div
-          className="w-full h-full rounded-full blur-[25px]"
-          style={{ background: 'radial-gradient(circle, rgba(255, 20, 147, 0.3), transparent 70%)' }}
-        />
-      </div>
-
-      <div
-        className="absolute top-32 right-16 sm:right-32 w-16 h-16 sm:w-24 sm:h-24 pointer-events-none z-[1] transition-all duration-1000 ease-out delay-300"
-        style={{
-          opacity: isInView ? 0.3 : 0,
-          transform: isInView ? 'scale(1)' : 'scale(0)',
-        }}
-        aria-hidden="true"
-      >
-        <div
-          className="w-full h-full rounded-full blur-[15px]"
-          style={{ background: 'radial-gradient(circle, rgba(255, 149, 0, 0.35), transparent 70%)' }}
-        />
-      </div>
-
-      {/* Scroll hint - simplified */}
-      <div
-        className="absolute bottom-12 sm:bottom-16 left-1/2 -translate-x-1/2 z-[15] flex flex-col items-center gap-4 transition-all duration-700 ease-out"
-        style={{
-          opacity: isInView ? 1 : 0,
-          transform: isInView ? 'translateX(-50%) translateY(0)' : 'translateX(-50%) translateY(30px)',
-          transitionDelay: '0.8s',
-        }}
-      >
-        <span
-          className="text-[10px] sm:text-[11px] uppercase tracking-[0.35em] font-medium scroll-hint-pulse"
-          style={{
-            fontFamily: 'var(--font-jakarta)',
-            background: 'linear-gradient(90deg, rgba(255,255,255,0.25), rgba(255,255,255,0.15))',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text',
-          }}
-        >
-          Continue
-        </span>
-        <div
-          className="w-6 h-10 sm:w-7 sm:h-12 rounded-full flex justify-center pt-2.5"
-          style={{
-            background: 'rgba(255,255,255,0.03)',
-            border: '1px solid rgba(255,255,255,0.08)',
-            backdropFilter: 'blur(10px)',
-          }}
-        >
-          <div
-            className="w-1 h-2.5 rounded-full scroll-dot-animate"
-            style={{
-              background: 'linear-gradient(to bottom, rgba(255, 140, 0, 0.8), rgba(255, 20, 147, 0.4), transparent)',
-            }}
-          />
-        </div>
-      </div>
-
-      {/* CSS animations for scroll hint - injected once */}
-      <style jsx>{`
-        .scroll-hint-pulse {
-          animation: pulse-opacity 2.5s ease-in-out infinite;
-        }
-        .scroll-dot-animate {
-          animation: scroll-dot 1.8s ease-in-out infinite;
-        }
-        @keyframes pulse-opacity {
-          0%, 100% { opacity: 0.5; }
-          50% { opacity: 0.8; }
-        }
-        @keyframes scroll-dot {
-          0%, 100% { transform: translateY(0); opacity: 1; }
-          50% { transform: translateY(8px); opacity: 0.4; }
-        }
-      `}</style>
     </section>
   );
 }

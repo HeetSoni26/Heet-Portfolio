@@ -1,11 +1,114 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import Container from '@/components/layout/Container';
 import MarqueeRow from './MarqueeRow';
 import { skills } from './skills.data';
 
+const headerContainerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.1,
+    }
+  }
+};
+
+const badgeVariants = {
+  hidden: { opacity: 0, scale: 0.7, y: 15 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: {
+      type: 'spring' as const,
+      stiffness: 350,
+      damping: 20,
+    }
+  }
+};
+
+const titleContainerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.05,
+    }
+  }
+};
+
+const wordVariants = {
+  hidden: { 
+    y: '105%', 
+    rotateX: 70,
+    opacity: 0,
+  },
+  visible: {
+    y: '0%',
+    rotateX: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.8,
+      ease: [0.16, 1, 0.3, 1] as [number, number, number, number]
+    }
+  }
+};
+
+const descriptionVariants = {
+  hidden: { opacity: 0, y: 15 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: 'easeOut' as const
+    }
+  }
+};
+
+const dynamicWordVariants = {
+  enter: {
+    y: '100%',
+    rotateX: 75,
+    opacity: 0,
+  },
+  center: {
+    y: '0%',
+    rotateX: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.55,
+      ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
+    }
+  },
+  exit: {
+    y: '-100%',
+    rotateX: -75,
+    opacity: 0,
+    transition: {
+      duration: 0.45,
+      ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
+    }
+  }
+};
+
+const changingWords = ['master', 'engineer', 'architect', 'deploy', 'orchestrate', 'scale'];
+
 export default function Skills() {
+  const [isHeadingAnimated, setIsHeadingAnimated] = useState(false);
+  const [wordIndex, setWordIndex] = useState(0);
+
+  useEffect(() => {
+    if (!isHeadingAnimated) return;
+
+    const interval = setInterval(() => {
+      setWordIndex((prev) => (prev + 1) % changingWords.length);
+    }, 2200);
+
+    return () => clearInterval(interval);
+  }, [isHeadingAnimated]);
+
   // Split skills into two groups for different rows
   const midPoint = Math.ceil(skills.length / 2);
   const topRowSkills = skills.slice(0, midPoint);
@@ -14,11 +117,13 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="relative py-16 sm:py-20 md:py-28 px-4 sm:px-6 bg-[#0F0E0E] overflow-hidden"
+      className="relative z-20 py-16 sm:py-20 md:py-28 px-4 sm:px-6 bg-[#0F0E0E] overflow-hidden"
       aria-label="Technical Skills and Expertise"
       itemScope
       itemType="https://schema.org/ItemList"
     >
+
+      <div className="relative z-20">
       {/* SEO Microdata */}
       <meta itemProp="name" content="Technical Skills - Rameshwar Bhagwat" />
       <meta itemProp="description" content="Comprehensive list of programming languages, frameworks, and technologies mastered by Rameshwar Bhagwat including React, Next.js, TypeScript, Node.js, Python, and modern web development tools." />
@@ -116,26 +221,74 @@ export default function Skills() {
       {/* Particle Background - Removed for performance */}
       {/* <CustomParticleBackground color="100, 150, 255" particleCount={35} /> */}
 
-      {/* Subtle background glow - hidden on mobile */}
-      <div className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none" aria-hidden="true" />
-
       <Container>
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, margin: "-10%" }}
+          variants={headerContainerVariants}
+          onAnimationComplete={(definition) => {
+            if (definition === 'visible') {
+              setIsHeadingAnimated(true);
+            } else if (definition === 'hidden') {
+              setIsHeadingAnimated(false);
+              setWordIndex(0);
+            }
+          }}
           className="mb-10 sm:mb-12 md:mb-16 text-center"
         >
-          <p className="text-primary-gradient text-xs sm:text-sm font-semibold tracking-wider uppercase mb-2 sm:mb-3">My Arsenal</p>
-          <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold mb-2 sm:mb-3 md:mb-4 text-white px-2 uppercase tracking-[-0.02em]"
-            style={{ fontFamily: 'var(--font-jakarta), "Plus Jakarta Sans", sans-serif', fontWeight: 800 }}
+          <motion.div
+            variants={badgeVariants}
+            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.06] mb-4 text-[#FF9F0A] text-xs font-semibold tracking-wider uppercase font-outfit"
           >
-            Technologies <span className="text-rainbow-gradient">I Master</span>
-          </h2>
-          <p className="text-muted text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-4">Building modern web experiences with cutting-edge tools and frameworks</p>
+            <div className="w-3.5 h-3.5 rounded-full bg-[#FF9F0A] flex items-center justify-center text-[#0F0E0E] flex-shrink-0">
+              <svg className="w-[50%] h-[50%]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round">
+                <path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19" />
+              </svg>
+            </div>
+            <span>My Arsenal</span>
+          </motion.div>
+          
+          <motion.h2
+            variants={titleContainerVariants}
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-[-0.02em] leading-[0.95] text-white mb-2 sm:mb-3 md:mb-4 px-2 flex flex-wrap justify-center items-center gap-x-[0.25em] gap-y-[0.05em]"
+            style={{ perspective: 1200 }}
+          >
+            {"Technologies i".split(" ").map((word, i) => (
+              <span key={i} className="inline-block overflow-hidden py-1">
+                <motion.span
+                  variants={wordVariants}
+                  className="inline-block origin-top text-white"
+                  style={{ fontFamily: '"Plus Jakarta Sans", sans-serif', fontWeight: 800 }}
+                >
+                  {word}
+                </motion.span>
+              </span>
+            ))}
+            <span className="inline-flex justify-start overflow-hidden py-1 pr-6 relative w-[185px] xs:w-[215px] sm:w-[270px] md:w-[325px] lg:w-[380px] text-left">
+              <AnimatePresence mode="wait">
+                <motion.span
+                  key={changingWords[wordIndex]}
+                  variants={dynamicWordVariants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  className="inline-block origin-left text-white"
+                  style={{ fontFamily: '"Plus Jakarta Sans", sans-serif', fontWeight: 800 }}
+                >
+                  {changingWords[wordIndex]}
+                </motion.span>
+              </AnimatePresence>
+            </span>
+          </motion.h2>
+          
+          <motion.p 
+            variants={descriptionVariants}
+            className="text-muted text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-4"
+          >
+            Building modern web experiences with cutting-edge tools and frameworks
+          </motion.p>
         </motion.div>
 
         {/* Marquee Rows */}
@@ -155,6 +308,7 @@ export default function Skills() {
           <MarqueeRow skills={bottomRowSkills} speed={15} reverse />
         </motion.div>
       </Container>
+      </div>
     </section>
   );
 }

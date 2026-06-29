@@ -24,6 +24,114 @@ interface GitHubStats {
   currentStreak: number;
 }
 
+const headerContainerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.1,
+    }
+  }
+};
+
+const badgeVariants = {
+  hidden: { opacity: 0, scale: 0.7, y: 15 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: {
+      type: 'spring' as const,
+      stiffness: 350,
+      damping: 20,
+    }
+  }
+};
+
+const titleContainerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.05,
+    }
+  }
+};
+
+const wordVariants = {
+  hidden: { 
+    y: '105%', 
+    rotateX: 70,
+    opacity: 0,
+  },
+  visible: {
+    y: '0%',
+    rotateX: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.8,
+      ease: [0.16, 1, 0.3, 1] as [number, number, number, number]
+    }
+  }
+};
+
+const descriptionVariants = {
+  hidden: { opacity: 0, y: 15 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: 'easeOut' as const
+    }
+  }
+};
+
+const cardVariants = {
+  hidden: { 
+    opacity: 0, 
+    y: 40,
+    scale: 0.97
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      type: 'spring' as const,
+      stiffness: 100,
+      damping: 18,
+      mass: 0.9,
+      delay: 0.15
+    }
+  }
+};
+
+const gridContainerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.003,
+    }
+  }
+};
+
+const cellVariants = {
+  hidden: { 
+    scale: 0, 
+    opacity: 0,
+    rotateY: -30
+  },
+  visible: {
+    scale: 1,
+    opacity: 1,
+    rotateY: 0,
+    transition: {
+      type: 'spring' as const,
+      stiffness: 180,
+      damping: 14,
+    }
+  }
+};
+
 const generateMockData = (): GitHubStats => {
   const weeks: ContributionWeek[] = [];
   const today = new Date();
@@ -129,46 +237,61 @@ export default function GitHubContributions() {
   }
 
   return (
-    <section id="github" className="relative py-12 xs:py-16 sm:py-20 px-4 xs:px-5 sm:px-6 bg-[#0F0E0E] overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/4 w-48 xs:w-64 sm:w-96 h-48 xs:h-64 sm:h-96 bg-green-500/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-48 xs:w-64 sm:w-96 h-48 xs:h-64 sm:h-96 bg-primary/5 rounded-full blur-3xl" />
-      </div>
+    <section id="github" className="relative z-20 py-12 xs:py-16 sm:py-20 px-4 xs:px-5 sm:px-6 bg-[#0F0E0E] overflow-hidden">
 
-      <div className="relative z-10 max-w-5xl mx-auto">
+
+      <div className="relative z-20 max-w-5xl mx-auto">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, margin: "-10%" }}
+          variants={headerContainerVariants}
           className="text-center mb-8 xs:mb-10 sm:mb-12"
         >
-          <div className="inline-flex items-center gap-1.5 xs:gap-2 px-3 xs:px-4 py-1.5 xs:py-2 rounded-full bg-white/5 border border-white/10 mb-3 xs:mb-4">
+          <motion.div
+            variants={badgeVariants}
+            className="inline-flex items-center gap-1.5 xs:gap-2 px-3 xs:px-4 py-1.5 xs:py-2 rounded-full bg-white/5 border border-white/10 mb-3 xs:mb-4"
+          >
             <Github className="w-3.5 h-3.5 xs:w-4 xs:h-4 text-white/70" />
             <span className="text-[10px] xs:text-xs font-medium text-white/70 uppercase tracking-wider">Open Source</span>
-          </div>
-          <h2
-            className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-2 xs:mb-3 uppercase tracking-[-0.02em]"
-            style={{ fontFamily: 'var(--font-jakarta), "Plus Jakarta Sans", sans-serif', fontWeight: 800 }}
+          </motion.div>
+          
+          <motion.h2
+            variants={titleContainerVariants}
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-2 xs:mb-3 tracking-[-0.02em] leading-[0.95] flex flex-wrap justify-center gap-x-[0.25em] gap-y-[0.05em]"
+            style={{ perspective: 1200 }}
           >
-            GitHub <span className="text-rainbow-gradient">Activity</span>
-          </h2>
-          <p className="text-muted text-sm xs:text-base sm:text-lg max-w-2xl mx-auto px-2">
+            {"My code contributions".split(" ").map((word, i) => (
+              <span key={i} className="inline-block overflow-hidden py-1">
+                <motion.span
+                  variants={wordVariants}
+                  className="inline-block origin-top text-white"
+                  style={{ fontFamily: '"Plus Jakarta Sans", sans-serif', fontWeight: 800 }}
+                >
+                  {word}
+                </motion.span>
+              </span>
+            ))}
+          </motion.h2>
+          
+          <motion.p 
+            variants={descriptionVariants}
+            className="text-muted text-sm xs:text-base sm:text-lg max-w-2xl mx-auto px-2"
+          >
             Consistent contributions and continuous learning
-          </p>
+          </motion.p>
         </motion.div>
 
         {/* Contribution Heatmap */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="relative p-4 xs:p-5 sm:p-6 md:p-8 rounded-xl xs:rounded-2xl backdrop-blur-md bg-white/[0.02] border border-white/[0.08] overflow-hidden shadow-2xl"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, margin: "-10%" }}
+          variants={cardVariants}
+          className="relative p-4 xs:p-5 sm:p-6 md:p-8 rounded-xl xs:rounded-2xl backdrop-blur-xl bg-white/[0.01] border border-white/[0.08] overflow-hidden shadow-2xl"
           style={{
-            boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.37), inset 0 1px 0 0 rgba(255, 255, 255, 0.05)',
+            boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.05)',
           }}
         >
           {/* Subtle glow effect */}
@@ -201,7 +324,6 @@ export default function GitHubContributions() {
                 scrollbarWidth: 'thin',
                 scrollbarColor: 'rgba(57, 211, 83, 0.5) rgba(255, 255, 255, 0.05)',
               }}
-              data-lenis-prevent
             >
               <div className="inline-flex flex-col gap-1.5 xs:gap-2">
                 {/* Month labels at top */}
@@ -235,20 +357,19 @@ export default function GitHubContributions() {
                 </div>
 
                   {/* Contribution grid */}
-                  <div className="flex gap-[3px] xs:gap-1">
+                  <motion.div 
+                    variants={gridContainerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: false, margin: "-10%" }}
+                    className="flex gap-[3px] xs:gap-1"
+                  >
                     {stats.weeks.map((week, weekIndex) => (
                       <div key={weekIndex} className="flex flex-col gap-[3px] xs:gap-1">
-                        {week.contributionDays.map((day, dayIndex) => (
+                        {week.contributionDays.map((day) => (
                           <motion.div
                             key={day.date}
-                            initial={{ opacity: 0, scale: 0 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ 
-                              duration: 0.4,
-                              delay: weekIndex * 0.008 + dayIndex * 0.003,
-                              ease: [0.16, 1, 0.3, 1],
-                            }}
+                            variants={cellVariants}
                             whileHover={{ 
                               scale: 1.5, 
                               zIndex: 10,
@@ -268,7 +389,7 @@ export default function GitHubContributions() {
                         ))}
                       </div>
                     ))}
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             </div>

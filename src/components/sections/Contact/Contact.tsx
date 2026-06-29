@@ -1,33 +1,116 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import dynamic from 'next/dynamic';
-import { motion, AnimatePresence } from 'framer-motion';
-import ContactCard from './ContactCard';
+import { useEffect } from 'react';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { PERSONAL_INFO, SITE_URL } from '@/lib/constants';
 
-const EarthScene = dynamic(() => import('@/components/three/EarthScene'), {
-  ssr: false,
-  loading: () => null,
-});
+const headerContainerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.08,
+    }
+  }
+};
+
+const badgeVariants = {
+  hidden: { opacity: 0, scale: 0.7, y: 15 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: {
+      type: 'spring' as const,
+      stiffness: 350,
+      damping: 20,
+    }
+  }
+};
+
+const titleContainerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.04,
+    }
+  }
+};
+
+const wordVariants = {
+  hidden: { 
+    y: '105%', 
+    rotateX: 70,
+    opacity: 0,
+  },
+  visible: {
+    y: '0%',
+    rotateX: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.8,
+      ease: [0.16, 1, 0.3, 1] as [number, number, number, number]
+    }
+  }
+};
+
+const descriptionVariants = {
+  hidden: { opacity: 0, y: 15 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: 'easeOut' as const
+    }
+  }
+};
+
+const buttonVariants = {
+  hidden: { opacity: 0, scale: 0.9, y: 15 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: {
+      type: 'spring' as const,
+      stiffness: 200,
+      damping: 15,
+      mass: 0.9,
+    }
+  }
+};
 
 export default function Contact() {
-  const [isFormOpen, setIsFormOpen] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
-    const handleOpen = () => setIsFormOpen(true);
+    const handleOpen = () => {
+      router.push('/contact');
+    };
     window.addEventListener('open-contact-form', handleOpen);
     return () => window.removeEventListener('open-contact-form', handleOpen);
-  }, []);
+  }, [router]);
 
   return (
     <section
       id="contact"
-      className="relative min-h-screen flex items-center justify-center py-16 sm:py-24 md:py-32 px-4 sm:px-6 bg-[#0F0E0E] overflow-hidden"
+      className="relative z-20 min-h-[60vh] flex items-center justify-center pt-8 pb-20 sm:pt-12 sm:pb-28 px-4 sm:px-6 bg-[#0F0E0E] overflow-hidden"
       aria-label="Contact Information and Inquiry Form"
       itemScope
       itemType="https://schema.org/ContactPage"
     >
+      {/* Curved Grid Wave Background */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center pointer-events-none z-0 opacity-80 mix-blend-screen"
+        style={{
+          backgroundImage: 'url("/images/contact/grid backgorund.avif")',
+          maskImage: 'radial-gradient(circle at center, black 30%, transparent 75%)',
+          WebkitMaskImage: 'radial-gradient(circle at center, black 30%, transparent 75%)',
+        }}
+      />
+
       {/* SEO Microdata */}
       <meta itemProp="name" content="Contact Rameshwar Bhagwat - Full Stack Developer" />
       <meta itemProp="description" content="Get in touch with Rameshwar Bhagwat for full-time opportunities, freelance projects, or collaboration. Available for web development, React, Next.js, and full-stack development projects." />
@@ -132,35 +215,64 @@ export default function Contact() {
         </p>
       </div>
 
-      {/* 3D Earth Sphere — behind content, same pattern as Hero NeuralSphere */}
-      <div className="absolute inset-0 z-[1] flex items-center justify-center pointer-events-none" aria-hidden="true">
-        <div className="w-[280px] h-[280px] sm:w-[340px] sm:h-[340px] md:w-[420px] md:h-[420px] lg:w-[500px] lg:h-[500px] xl:w-[560px] xl:h-[560px]">
-          <EarthScene />
-        </div>
-      </div>
-
       {/* Bottom horizon fade */}
       <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-[#0F0E0E] to-transparent pointer-events-none" style={{ zIndex: 2 }} aria-hidden="true" />
 
-      <div className="relative z-10 max-w-4xl mx-auto text-center px-2">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, margin: "-10%" }}
+        variants={headerContainerVariants}
+        className="relative z-20 max-w-5xl mx-auto text-center px-2"
+      >
+        {/* Label */}
+        <motion.div
+          variants={badgeVariants}
+          className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.06] mb-6 text-[#10B981] text-xs font-semibold tracking-wider uppercase font-outfit"
+        >
+          <div className="w-3.5 h-3.5 rounded-full bg-[#10B981] flex items-center justify-center text-[#0F0E0E] flex-shrink-0">
+            <svg className="w-[50%] h-[50%]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round">
+              <path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19" />
+            </svg>
+          </div>
+          <span>Get in Touch</span>
+        </motion.div>
+
         {/* Cinematic Headline */}
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-[-0.02em] leading-tight text-white mb-4 sm:mb-6 uppercase"
-          style={{ fontFamily: 'var(--font-jakarta), "Plus Jakarta Sans", sans-serif', fontWeight: 800 }}
+          variants={titleContainerVariants}
+          className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-[-0.02em] leading-[0.95] text-white mb-4 sm:mb-6"
+          style={{ perspective: 1200 }}
         >
-          Let's Build Something{' '}
-          <span className="text-rainbow-gradient">Extraordinary</span>
+          <span className="block mb-1.5 sm:mb-2.5 flex flex-wrap justify-center gap-x-[0.25em] gap-y-[0.05em]">
+            {"Let's build something".split(" ").map((word, i) => (
+              <span key={i} className="inline-block overflow-hidden py-1">
+                <motion.span
+                  variants={wordVariants}
+                  className="inline-block origin-top text-white"
+                  style={{ fontFamily: '"Plus Jakarta Sans", sans-serif', fontWeight: 800 }}
+                >
+                  {word === "Let's" ? "Let's" : word}
+                </motion.span>
+              </span>
+            ))}
+          </span>
+          <span className="block overflow-hidden py-1">
+            <motion.span
+              variants={wordVariants}
+              className="inline-block origin-top text-white font-bold"
+              style={{
+                fontFamily: '"Plus Jakarta Sans", sans-serif',
+                textTransform: 'none',
+              }}
+            >
+              extraordinary
+            </motion.span>
+          </span>
         </motion.h2>
 
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94], delay: 0.1 }}
+          variants={descriptionVariants}
           className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-2xl mx-auto mb-8 sm:mb-12 px-2"
           style={{
             fontFamily: 'var(--font-instrument), Georgia, serif',
@@ -209,76 +321,37 @@ export default function Contact() {
         </motion.p>
 
         {/* Get in Touch Button */}
-        <motion.button
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94], delay: 0.2 }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          onClick={() => setIsFormOpen(true)}
-          className="group glowing-border-btn px-8 sm:px-10 py-3 sm:py-3.5 rounded-full font-semibold text-sm sm:text-base text-white transition-all duration-300 inline-flex items-center gap-2 sm:gap-3 opacity-90 hover:opacity-100"
-          aria-label="Open contact form"
-        >
-          {/* Inner dark background mask */}
-          <div className="absolute inset-0 rounded-full bg-[#0F0E0E]/95 backdrop-blur-xl z-0 pointer-events-none transition-colors duration-300 group-hover:bg-[#0F0E0E]" />
-
-          <span className="relative z-10">Get in Touch</span>
-          
-          {/* Arrow icon */}
-          <svg
-            className="relative z-10 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            aria-hidden="true"
+        <Link href="/contact" passHref legacyBehavior>
+          <motion.a
+            variants={buttonVariants}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="group glowing-border-btn px-8 sm:px-10 py-3 sm:py-3.5 rounded-full font-semibold text-sm sm:text-base text-white transition-all duration-300 inline-flex items-center gap-2 sm:gap-3 opacity-90 hover:opacity-100 cursor-pointer"
+            aria-label="Navigate to contact page"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M17 8l4 4m0 0l-4 4m4-4H3"
-            />
-          </svg>
-        </motion.button>
-      </div>
+            {/* Inner dark background mask */}
+            <div className="absolute inset-0 rounded-full bg-[#0F0E0E]/95 backdrop-blur-xl z-0 pointer-events-none transition-colors duration-300 group-hover:bg-[#0F0E0E]" />
 
-      {/* Contact Form Modal - iOS Style */}
-      <AnimatePresence>
-        {isFormOpen && (
-          <motion.div
-            key="contact-modal"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-          >
-            {/* Backdrop - Very light tint, background visible */}
-            <div
-              onClick={() => setIsFormOpen(false)}
-              className="fixed inset-0 z-50"
-              style={{
-                background: 'rgba(0, 0, 0, 0.25)',
-              }}
-              aria-label="Close contact form"
-            />
-
-            {/* Form Container - iOS Style */}
-            <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 pointer-events-none" role="dialog" aria-modal="true" aria-labelledby="contact-form-title">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95, y: 10 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.95, y: 10 }}
-                transition={{ duration: 0.25, ease: [0.23, 1, 0.32, 1] }}
-                className="w-full sm:max-w-4xl max-h-[90vh] sm:max-h-none overflow-y-auto pointer-events-auto relative rounded-t-[24px] sm:rounded-[24px]"
-                data-lenis-prevent
-              >
-                <ContactCard onClose={() => setIsFormOpen(false)} />
-              </motion.div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            <span className="relative z-10">Get in Touch</span>
+            
+            {/* Arrow icon */}
+            <svg
+              className="relative z-10 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+          </motion.a>
+        </Link>
+      </motion.div>
     </section>
   );
 }

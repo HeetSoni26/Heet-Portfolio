@@ -28,6 +28,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       asChild = false,
       children,
       disabled,
+      style,
       ...props
     },
     ref
@@ -178,6 +179,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         style={{
           x: springX,
           y: springY,
+          ...style,
         }}
         whileHover={{ scale: 1.03 }}
         whileTap={{ scale: 0.97 }}

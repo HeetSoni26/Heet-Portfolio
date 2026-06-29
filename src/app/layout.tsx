@@ -3,16 +3,11 @@ import { Geist, Geist_Mono, Bebas_Neue, Playfair_Display, Plus_Jakarta_Sans, Spa
 import "./globals.css";
 import "../styles/theme.css";
 import "../styles/animations.css";
-import Navbar from "@/components/layout/Navbar/Navbar";
-import Footer from "@/components/layout/Footer/Footer";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import { IntroAnimationProvider } from "@/context/IntroAnimationContext";
-import Chatbot from "@/components/ui/Chatbot";
-import TerminalSandbox from "@/components/ui/TerminalSandbox";
-import CustomCursor from "@/components/ui/CustomCursor";
 import SmoothScrollWrapper from "@/components/layout/SmoothScrollWrapper";
 import SuppressThreeWarnings from "@/components/utils/SuppressThreeWarnings";
-import MatrixRain from "@/components/ui/MatrixRain";
+import LayoutWrapper from "@/components/layout/LayoutWrapper";
 
 
 const geistSans = Geist({
@@ -267,7 +262,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
-        <title>Rameshwar Bhagwat | Full Stack & AI Developer</title>
         {/* Structured Data - Person Schema */}
         <script
           type="application/ld+json"
@@ -307,18 +301,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${bebasNeue.variable} ${playfairDisplay.variable} ${plusJakartaSans.variable} ${spaceGrotesk.variable} ${instrumentSerif.variable} ${outfit.variable} antialiased`}
         style={{ overflow: 'visible' }}
       >
-        <CustomCursor />
-        <MatrixRain />
         <IntroAnimationProvider>
           <SuppressThreeWarnings />
           <SmoothScrollWrapper>
-            <Navbar />
-            <main className="relative z-10" style={{ overflow: 'visible' }}>
-              {children}
-            </main>
-            <Footer />
-            <Chatbot />
-            <TerminalSandbox />
+            <LayoutWrapper>{children}</LayoutWrapper>
           </SmoothScrollWrapper>
         </IntroAnimationProvider>
       </body>

@@ -6,16 +6,62 @@ const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 interface ContributionDay {
   date: string;
   contributionCount: number;
+  color?: string;
 }
 
 interface ContributionWeek {
   contributionDays: ContributionDay[];
 }
 
+function generateServerMockData() {
+  const weeks: ContributionWeek[] = [];
+  const today = new Date();
+  let totalContributions = 0;
+
+  // Generate last 52 weeks of data
+  for (let week = 51; week >= 0; week--) {
+    const contributionDays: ContributionDay[] = [];
+    
+    for (let day = 0; day < 7; day++) {
+      const date = new Date(today);
+      date.setDate(date.getDate() - (week * 7 + (6 - day)));
+      
+      const count = Math.floor(Math.random() * 6); // Max 5 contributions for realistic look
+      totalContributions += count;
+      
+      let color = '#161b22';
+      if (count > 0) color = '#0e4429';
+      if (count > 1) color = '#006d32';
+      if (count > 3) color = '#26a641';
+      if (count > 4) color = '#39d353';
+      
+      contributionDays.push({
+        date: date.toISOString().split('T')[0],
+        contributionCount: count,
+        color,
+      });
+    }
+    
+    weeks.push({ contributionDays });
+  }
+
+  // Calculate streaks
+  const allDays = weeks.flatMap((week) => week.contributionDays);
+  const { currentStreak, longestStreak } = calculateStreaks(allDays);
+
+  return {
+    totalContributions,
+    weeks,
+    currentStreak,
+    longestStreak,
+  };
+}
+
 export async function GET() {
   try {
     if (!GITHUB_TOKEN) {
-      throw new Error('GitHub token not configured');
+      console.warn('GitHub token not configured. Returning server mock contributions.');
+      return NextResponse.json(generateServerMockData());
     }
 
     const query = `
@@ -51,13 +97,15 @@ export async function GET() {
     });
 
     if (!response.ok) {
-      throw new Error(`GitHub API error: ${response.status}`);
+      console.warn(`GitHub API returned response status ${response.status}. Returning server mock contributions.`);
+      return NextResponse.json(generateServerMockData());
     }
 
     const data = await response.json();
 
     if (data.errors) {
-      throw new Error(data.errors[0].message);
+      console.warn(`GitHub API returned GraphQL errors: ${data.errors[0].message}. Returning server mock contributions.`);
+      return NextResponse.json(generateServerMockData());
     }
 
     const calendar = data.data.user.contributionsCollection.contributionCalendar;
@@ -73,11 +121,8 @@ export async function GET() {
       longestStreak,
     });
   } catch (error) {
-    console.error('Error fetching GitHub contributions:', error);
-    return NextResponse.json(
-      { error: 'Failed to fetch GitHub contributions' },
-      { status: 500 }
-    );
+    console.error('Error fetching GitHub contributions, returning fallback mock data:', error);
+    return NextResponse.json(generateServerMockData());
   }
 }
 

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Github, Info } from 'lucide-react';
 import { Project } from './work.data';
 import { useState, memo, useCallback, useMemo, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import { 
   SiNextdotjs, 
   SiReact, 
@@ -40,7 +41,7 @@ import {
 import { TbApi } from 'react-icons/tb';
 
 // Brand color configurations for icons
-const techConfig: Record<string, { icon: React.ComponentType<{ size?: number; style?: React.CSSProperties; className?: string }>; color: string }> = {
+export const techConfig: Record<string, { icon: React.ComponentType<{ size?: number; style?: React.CSSProperties; className?: string }>; color: string }> = {
   'Next.js': { icon: SiNextdotjs, color: '#FFFFFF' },
   'Next.js (App Router)': { icon: SiNextdotjs, color: '#FFFFFF' },
   'React': { icon: SiReact, color: '#61DAFB' },
@@ -89,6 +90,7 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = memo(function ProjectCard({ project, index }: ProjectCardProps) {
+  const router = useRouter();
   const [isHovered, setIsHovered] = useState(false);
   const [toast, setToast] = useState<{ message: string; type: 'info' | 'error' } | null>(null);
 
@@ -139,9 +141,10 @@ const ProjectCard = memo(function ProjectCard({ project, index }: ProjectCardPro
 
   return (
     <motion.article
-      className="group relative overflow-hidden bg-[#161619]/70 backdrop-blur-xl border border-white/10 hover:border-white/20 rounded-[28px] flex flex-col h-full transition-colors duration-300"
+      className="group relative overflow-hidden bg-white/[0.01] backdrop-blur-xl border border-white/[0.08] hover:border-white/[0.15] rounded-[28px] flex flex-col h-full transition-all duration-300 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] cursor-pointer"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={() => router.push(`/projects/${project.id}`)}
       whileHover={{ y: -8, scale: 1.015 }}
       transition={{ type: 'spring', stiffness: 400, damping: 25 }}
       style={{
@@ -197,19 +200,28 @@ const ProjectCard = memo(function ProjectCard({ project, index }: ProjectCardPro
               />
             </div>
             {/* Title / Tagline */}
-            <div className="min-w-0 flex-1">
-              <span className="block text-[10px] tracking-wider text-white/40 uppercase font-bold font-outfit">
-                {project.tagline.split('for')[0].trim()}
-              </span>
-              <h3 
-                className="text-lg sm:text-xl font-bold tracking-tight font-outfit truncate transition-colors duration-300 mt-0.5"
-                style={{
-                  color: isHovered ? brandColor : '#FFFFFF'
-                }}
-                itemProp="name"
+            <div className="min-w-0 flex-1 flex justify-between items-start">
+              <div className="min-w-0 flex-1">
+                <span className="block text-[10px] tracking-wider text-white/40 uppercase font-bold font-outfit">
+                  {project.tagline.split('for')[0].trim()}
+                </span>
+                <h3 
+                  className="text-lg sm:text-xl font-bold tracking-tight font-outfit truncate transition-colors duration-300 mt-0.5"
+                  style={{
+                    color: isHovered ? brandColor : '#FFFFFF'
+                  }}
+                  itemProp="name"
+                >
+                  {project.title}
+                </h3>
+              </div>
+              <motion.div
+                animate={{ opacity: isHovered ? 1 : 0.3, x: isHovered ? 2 : 0 }}
+                transition={{ duration: 0.2 }}
+                className="text-white/40 flex-shrink-0 mt-2.5 ml-2"
               >
-                {project.title}
-              </h3>
+                <Info size={14} style={{ color: isHovered ? brandColor : 'rgba(255,255,255,0.4)' }} />
+              </motion.div>
             </div>
           </div>
 

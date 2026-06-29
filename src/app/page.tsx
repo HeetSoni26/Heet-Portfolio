@@ -3,6 +3,12 @@
 import { useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import Hero from '@/components/sections/Hero/Hero';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+if (typeof window !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 // Lazy load sections that are below the fold
 const About = dynamic(() => import('@/components/sections/About/About'), {
@@ -35,7 +41,45 @@ const Contact = dynamic(() => import('@/components/sections/Contact/Contact'), {
   ssr: true,
 });
 
+const MarqueeBanner = dynamic(() => import('@/components/sections/About/MarqueeBanner'), {
+  loading: () => <div className="h-screen bg-[#0F0E0E]" />,
+  ssr: true,
+});
+
 export default function Home() {
+  useEffect(() => {
+    // Scroll to section based on hash in URL on mount
+    const hash = window.location.hash;
+    if (hash) {
+      const id = hash.replace('#', '');
+      const timer = setTimeout(() => {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const lenis = (window as any).lenis;
+        
+        if (id === 'hero') {
+          if (lenis && typeof lenis.scrollTo === 'function') {
+            lenis.scrollTo(0, { immediate: true });
+          } else {
+            window.scrollTo({ top: 0, behavior: 'auto' });
+          }
+        } else {
+          const element = document.getElementById(id);
+          if (element) {
+            if (lenis && typeof lenis.scrollTo === 'function') {
+              lenis.scrollTo(element, { immediate: true });
+            } else {
+              element.scrollIntoView({ behavior: 'auto' });
+            }
+          }
+        }
+        
+        // Sync GSAP ScrollTrigger states after mount scroll
+        ScrollTrigger.update();
+      }, 600);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
   useEffect(() => {
     // Optimize scroll performance with passive listeners
     const optimizeScroll = () => {
@@ -72,6 +116,7 @@ export default function Home() {
       <Work />
       <ActivityMetrics />
       <GitHubContributions />
+      <MarqueeBanner />
       <Contact />
     </div>
   );

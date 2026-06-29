@@ -149,13 +149,22 @@ export default function Journey() {
             Experience
           </p>
           <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold mb-2 sm:mb-3 md:mb-4 text-white px-2 uppercase tracking-[-0.02em]"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-2 sm:mb-3 md:mb-4 text-white px-2 tracking-[-0.02em] leading-[0.95]"
             style={{
-              fontFamily: 'var(--font-jakarta), "Plus Jakarta Sans", sans-serif',
+              fontFamily: '"Plus Jakarta Sans", sans-serif',
               fontWeight: 800,
             }}
           >
-            My <span className="text-rainbow-gradient">Journey</span>
+            My career{' '}
+            <span
+              className="font-bold px-1 text-white"
+              style={{
+                fontFamily: '"Plus Jakarta Sans", sans-serif',
+                textTransform: 'none',
+              }}
+            >
+              journey
+            </span>
           </h2>
           <p className="text-white/50 text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
             A timeline of my professional growth and key milestones

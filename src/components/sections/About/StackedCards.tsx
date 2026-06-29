@@ -193,7 +193,16 @@ export default function StackedCards() {
           className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white uppercase tracking-[-0.02em]"
           style={{ fontFamily: 'var(--font-jakarta), "Plus Jakarta Sans", sans-serif' }}
         >
-          My <span className="text-rainbow-gradient">Expertise</span>
+          My{' '}
+          <span
+            className="text-rainbow-gradient italic font-bold px-1"
+            style={{
+              fontFamily: 'var(--font-instrument), Georgia, serif',
+              textTransform: 'none',
+            }}
+          >
+            Expertise
+          </span>
         </motion.h2>
       </div>
 
@@ -293,10 +302,10 @@ function ServiceCardItem({
       }}
     >
       <div
-        className="relative w-full h-full rounded-2xl overflow-hidden"
+        className="relative w-full h-full rounded-2xl overflow-hidden backdrop-blur-md"
         style={{
           boxShadow:
-            '0 25px 50px -12px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.05)',
+            '0 25px 50px -12px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.08)',
         }}
       >
         {/* Background Image - reduced opacity */}
@@ -305,7 +314,7 @@ function ServiceCardItem({
             src={card.image}
             alt={`${card.title} - Rameshwar Bhagwat's expertise`}
             fill
-            className="object-cover opacity-30"
+            className="object-cover opacity-20"
             sizes="(max-width: 640px) 260px, (max-width: 1024px) 220px, 260px"
             priority={index < 3}
           />
@@ -314,7 +323,7 @@ function ServiceCardItem({
             className="absolute inset-0"
             style={{
               background:
-                'linear-gradient(180deg, rgba(15,14,14,0.7) 0%, rgba(15,14,14,0.85) 50%, rgba(15,14,14,0.95) 100%)',
+                'linear-gradient(180deg, rgba(15,14,14,0.5) 0%, rgba(15,14,14,0.7) 50%, rgba(15,14,14,0.85) 100%)',
             }}
           />
         </div>
