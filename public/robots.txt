@@ -1,15 +1,11 @@
 # Allow all crawlers
 User-agent: *
 Allow: /
+Allow: /resume
+Allow: /contact
+Allow: /projects/
 Disallow: /api/
-
-# Disallow admin or private paths (if any)
-# Disallow: /admin/
-# Disallow: /api/
 
 # Sitemap location
 Sitemap: https://rameshwarbhagwat.me/sitemap.xml
 Host: https://rameshwarbhagwat.me
-
-# Crawl-delay (optional, helps prevent server overload)
-Crawl-delay: 1

@@ -14,19 +14,44 @@ export function generateSEO(
   const defaultKeywords = [
     'Rameshwar Bhagwat',
     'Rameshwar Bhagwat portfolio',
+    'Rameshwar Bhagwat developer',
+    'Rameshwar Bhagwat software engineer',
+    'Full Stack Developer',
+    'AI Developer',
+    'MERN Stack Developer',
     'Full Stack & AI Developer',
+    'AI Software Engineer',
+    'MERN Stack Developer portfolio',
+    'Full Stack Developer portfolio',
     'AI Developer India',
+    'Full Stack Developer India',
+    'Software Engineer India',
     'React Developer',
     'Next.js Developer',
     'TypeScript Developer',
+    'Node.js Developer',
+    'Python Developer',
+    'Database Engineer',
+    'PostgreSQL Developer',
+    'MongoDB Developer',
+    'Web Developer India',
+    'Yeola Developer',
+    'Maharashtra Developer',
     'AI-powered web applications',
     'Generative AI integration',
+    'SaaS Developer',
     'WebCraft',
     'Safecoast',
+    'Devory',
+    'Ml-Roadmap',
+    'Library Management System',
+    'WebCraft website builder',
+    'Safecoast coastal hazard tracker',
+    'Devory app',
     'AI ML Progress Tracker',
-    'WebCraft project',
-    'Safecoast project',
-    'AI ML Progress Tracker project',
+    'B.Tech IT Software Engineer',
+    'Scalable web architecture',
+    'React Next.js portfolio'
   ];
 
   return {
@@ -44,6 +69,37 @@ export function generateSEO(
     metadataBase: new URL(SITE_URL),
     alternates: {
       canonical: SITE_URL,
+    },
+    category: 'technology',
+    classification: 'Portfolio',
+    other: {
+      author: 'Rameshwar Bhagwat',
+      'geo.region': 'IN-MH',
+      'geo.placename': 'Yeola',
+      'msvalidate.01': 'A4F4F3D017DCEE9D5C80CF87569E9623',
+    },
+    icons: {
+      icon: [
+        { url: '/favicon.ico', sizes: '32x32' },
+      ],
+      shortcut: '/favicon.ico',
+      apple: [
+        { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+      ],
+      other: [
+        {
+          rel: 'icon',
+          type: 'image/png',
+          sizes: '192x192',
+          url: '/android-chrome-192x192.png',
+        },
+        {
+          rel: 'icon',
+          type: 'image/png',
+          sizes: '512x512',
+          url: '/android-chrome-512x512.png',
+        },
+      ],
     },
     openGraph: {
       title: pageTitle,
@@ -82,8 +138,7 @@ export function generateSEO(
     },
     verification: {
       google: 'ibL2p6r9xrTKR3U9o5zRTmVlFC4lAP_GheMlBWgOuGo',
-      // yandex: 'your-yandex-verification-code',
-      // bing: 'your-bing-verification-code',
     },
+    manifest: '/site.webmanifest',
   };
 }

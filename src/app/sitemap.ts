@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { projects } from "@/components/sections/Work/work.data";
 
 const DEFAULT_SITE_URL = "https://rameshwarbhagwat.me";
 
@@ -12,16 +13,35 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = resolveSiteUrl();
   const lastModified = new Date();
 
-  // Keep sitemap focused on canonical, indexable routes only.
-  const routes = [
+  // Main site routes
+  const staticRoutes = [
     {
       path: "",
       changeFrequency: "weekly" as const,
-      priority: 1,
+      priority: 1.0,
+    },
+    {
+      path: "/resume",
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    {
+      path: "/contact",
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
     },
   ];
 
-  return routes.map((route) => ({
+  // Dynamic project routes
+  const projectRoutes = projects.map((project) => ({
+    path: `/projects/${project.id}`,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  const allRoutes = [...staticRoutes, ...projectRoutes];
+
+  return allRoutes.map((route) => ({
     url: `${siteUrl}${route.path}`,
     lastModified,
     changeFrequency: route.changeFrequency,
