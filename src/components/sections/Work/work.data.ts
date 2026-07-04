@@ -207,5 +207,32 @@ export const projects: Project[] = [
     solution: "Designed complex Row Level Security (RLS) policies in PostgreSQL, exposing secure read-only aggregate views while restricting mutation queries behind isolated API routes.",
     metrics: ["RLS access leakage: 0%", "Analytical updates: Real-time", "Dashboard load index: A+"],
     screenshots: ["/images/projects/aiml-tracker.png", "/images/projects/aiml-tracker-hover.png"]
+  },
+  {
+    id: 8,
+    title: "Developer Portfolio",
+    tagline: "Ultra Performance 3D & Bento Personal Portfolio",
+    description: "An interactive developer portfolio built with Next.js 16 (Turbopack), featuring glassmorphic Bento grid layouts, real-time Upstash Redis visitor analytics, an iOS 18 Terminal CLI sandbox, and butter-smooth Lenis scroll dynamics.",
+    features: [
+      "Obsidian dark glassmorphism Bento Grid layout engine",
+      "Interactive ZSH-style iOS 18 Terminal Sandbox with CLI commands",
+      "Real-time Upstash Redis visitor analytics & GitHub activity heatmap",
+      "Exponential Lenis smooth momentum scroll & GSAP ticker sync",
+      "Responsive PDF Resume Viewer and interactive contact drawers"
+    ],
+    techStack: ["Next.js (App Router)", "TypeScript", "Tailwind CSS", "Framer Motion", "Three.js", "Upstash Redis"],
+    image: "/images/projects/portfolio.png",
+    hoverImage: "/images/projects/portfolio-hover.png",
+    liveUrl: "https://rameshwarbhagwat.me",
+    githubUrl: "",
+    color: "255, 140, 0",
+    longDescription: "This modern personal portfolio application showcases developer engineering capabilities, open-source projects, and design systems. Engineered with Next.js 16 (Turbopack) and TypeScript, it incorporates a customizable dark obsidian design system, real-time serverless visitor tracking, interactive 3D visual showcases, a custom terminal CLI sandbox, and butter-smooth Lenis scroll physics.",
+    role: "Creator, Full-Stack Developer & Designer",
+    timeline: "Ongoing (2026)",
+    category: "Personal Portfolio & Showcase",
+    challenges: "Achieving 60-120 FPS fluid animations, instant page loads, and zero scroll stutter despite rich graphics, canvas elements, particle fields, and real-time backend API polling.",
+    solution: "Implemented GPU layer promotions (translateZ), React.memo rendering boundaries, Lenis smooth scroll ticker binding with zero lag smoothing, and serverless edge caching via Upstash Redis.",
+    metrics: ["Lighthouse Performance: 99/100", "Scroll smoothness: 120 FPS", "Terminal CLI response: <10ms"],
+    screenshots: ["/images/projects/portfolio.png", "/images/projects/portfolio-hover.png"]
   }
 ];
