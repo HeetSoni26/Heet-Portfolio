@@ -120,11 +120,11 @@ export default function HeroContent() {
     spotlightY.set(0.5);
   };
 
-  // Derive spotlight background
+  // Derive spotlight background (subtle white highlight, zero orange)
   const spotlightBg = useTransform(
     [spotlightX, spotlightY],
     ([x, y]: number[]) =>
-      `radial-gradient(circle 90px at ${x * 100}% ${y * 100}%, rgba(255, 106, 28, 0.25), transparent)`
+      `radial-gradient(circle 90px at ${x * 100}% ${y * 100}%, rgba(255, 255, 255, 0.08), transparent)`
   );
 
   // Spotlight mouse track effect with cached rect and rAF throttling
@@ -428,14 +428,6 @@ export default function HeroContent() {
                 ? 'bg-white'
                 : 'bg-[#0F0E0E]/95 backdrop-blur-xl group-hover:bg-[#0F0E0E]'
               }`} />
-
-            {/* Spotlight hover glow */}
-            {!isReveal && (
-              <motion.div
-                className="absolute inset-0 pointer-events-none z-[1] opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"
-                style={{ background: spotlightBg }}
-              />
-            )}
 
             <span className="relative z-10">View Resume</span>
 

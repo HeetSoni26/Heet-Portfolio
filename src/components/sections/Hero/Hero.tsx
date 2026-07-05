@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import HeroContent from './HeroContent';
 import HeroBackground from './HeroBackground';
+import AvailableForWorkBadge from '@/components/ui/AvailableForWorkBadge';
 import StructuredData from '@/components/seo/StructuredData';
 import { PERSONAL_INFO, SITE_URL, SOCIAL_LINKS, SEO_KEYWORDS } from '@/lib/constants';
 import gsap from 'gsap';
@@ -212,6 +213,9 @@ export default function Hero() {
 
           {/* Main content — uses SAME absolute inset-0 + flex center */}
           <HeroContent />
+
+          {/* Docked Right Badge — Scoped strictly to Hero section */}
+          <AvailableForWorkBadge />
         </div>
       </section>
     </>
