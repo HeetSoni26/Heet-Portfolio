@@ -86,9 +86,17 @@ export default function IntroScreen() {
           signatureContainerRef.current.style.webkitMaskImage = 'none';
           return;
         }
-        const start = Math.max(0, progress - 15);
-        const end = Math.min(100, progress + 15);
-        const mask = `linear-gradient(to right, #000 0%, #000 ${start}%, transparent ${end}%, transparent 100%)`;
+        // Map progress (0 -> 100) to animated edge position (-12 -> 112) so starting text is 100% hidden
+        const currentEdge = -12 + (progress / 100) * 124;
+        const start = Math.max(0, currentEdge - 12);
+        const end = Math.min(100, Math.max(0, currentEdge + 12));
+
+        let mask: string;
+        if (currentEdge <= -12) {
+          mask = 'linear-gradient(to right, transparent 0%, transparent 100%)';
+        } else {
+          mask = `linear-gradient(to right, #000 0%, #000 ${Math.max(0, start)}%, transparent ${end}%, transparent 100%)`;
+        }
         signatureContainerRef.current.style.maskImage = mask;
         signatureContainerRef.current.style.webkitMaskImage = mask;
       };
@@ -110,13 +118,13 @@ export default function IntroScreen() {
         0
       );
 
-      // Phase 2 — Handwriting Reveal (0.3s - 2.5s) over 2.2 seconds
+      // Phase 2 — Handwriting Reveal (0.3s - 2.5s) over 2.2s at constant smooth speed
       tl.to(
         revealState,
         {
           progress: 100,
           duration: 2.2,
-          ease: 'power2.inOut',
+          ease: 'none',
           onUpdate: () => updateSoftMask(revealState.progress),
         },
         0.3
