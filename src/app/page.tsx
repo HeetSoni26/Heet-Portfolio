@@ -3,6 +3,8 @@
 import { useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import Hero from '@/components/sections/Hero/Hero';
+import IntroScreen from '@/components/sections/Hero/IntroScreen';
+import { useIntroAnimation } from '@/context/IntroAnimationContext';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -47,6 +49,8 @@ const MarqueeBanner = dynamic(() => import('@/components/sections/About/MarqueeB
 });
 
 export default function Home() {
+  const { isIntroComplete } = useIntroAnimation();
+
   useEffect(() => {
     // Scroll to section based on hash in URL on mount
     const hash = window.location.hash;
@@ -95,7 +99,10 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#0F0E0E]" style={{ willChange: 'auto' }}>
-      {/* Hero Section - Loads immediately */}
+      {/* Cinematic Intro Screen — plays once per session, then unmounts */}
+      {!isIntroComplete && <IntroScreen />}
+
+      {/* Hero Section - Always mounted (initializes during intro Phase 3) */}
       <Hero />
 
       {/* Below sections - Lazy loaded */}
@@ -109,3 +116,4 @@ export default function Home() {
     </div>
   );
 }
+
