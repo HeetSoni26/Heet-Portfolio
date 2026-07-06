@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState, useCallback } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import gsap from 'gsap';
 import { useIntroAnimation } from '@/context/IntroAnimationContext';
@@ -17,10 +17,10 @@ export default function IntroScreen() {
 
   // State
   const [isMounted, setIsMounted] = useState(false);
+  const [isSvgLoaded, setIsSvgLoaded] = useState(false);
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
-  const hasExitedRef = useRef(false);
 
-  // Mount guard (SSR-safe)
+  // Mount guard & motion preference check
   useEffect(() => {
     setIsMounted(true);
     setPrefersReducedMotion(
@@ -66,9 +66,18 @@ export default function IntroScreen() {
     };
   }, [isMounted, prefersReducedMotion, completeIntro]);
 
-  // Main GSAP Timeline
+  // Fallback timer: ensure isSvgLoaded becomes true quickly even if onLoad fires before React hydration
   useEffect(() => {
-    if (!isMounted || prefersReducedMotion) return;
+    if (!isMounted) return;
+    const timer = setTimeout(() => {
+      setIsSvgLoaded(true);
+    }, 60);
+    return () => clearTimeout(timer);
+  }, [isMounted]);
+
+  // Main GSAP Timeline — Runs once SVG is ready in the DOM
+  useEffect(() => {
+    if (!isMounted || !isSvgLoaded || prefersReducedMotion) return;
     if (!overlayRef.current || !signatureContainerRef.current) return;
 
     const ctx = gsap.context(() => {
@@ -86,7 +95,7 @@ export default function IntroScreen() {
           signatureContainerRef.current.style.webkitMaskImage = 'none';
           return;
         }
-        // Map progress (0 -> 100) to animated edge position (-12 -> 112) so starting text is 100% hidden
+        // Map progress (0 -> 100) to animated edge position (-12 -> 112) so starting text is 100% hidden on frame 0
         const currentEdge = -12 + (progress / 100) * 124;
         const start = Math.max(0, currentEdge - 12);
         const end = Math.min(100, Math.max(0, currentEdge + 12));
@@ -95,7 +104,7 @@ export default function IntroScreen() {
         if (currentEdge <= -12) {
           mask = 'linear-gradient(to right, transparent 0%, transparent 100%)';
         } else {
-          mask = `linear-gradient(to right, #000 0%, #000 ${Math.max(0, start)}%, transparent ${end}%, transparent 100%)`;
+          mask = `linear-gradient(to right, #ffffff 0%, #ffffff ${Math.max(0, start)}%, transparent ${end}%, transparent 100%)`;
         }
         signatureContainerRef.current.style.maskImage = mask;
         signatureContainerRef.current.style.webkitMaskImage = mask;
@@ -118,7 +127,7 @@ export default function IntroScreen() {
         0
       );
 
-      // Phase 2 — Handwriting Reveal (0.3s - 2.5s) over 2.2s at constant smooth speed
+      // Phase 2 — Handwriting Reveal (0.3s - 2.5s) over 2.2s at constant smooth speed across SVG calligraphy
       tl.to(
         revealState,
         {
@@ -149,7 +158,7 @@ export default function IntroScreen() {
       // 3. Smooth overlay fade out revealing Hero section from within (2.85s - 3.7s)
       // ═══════════════════════════════════════════════════════════
 
-      // Dramatic explosive zoom of signature text past the camera
+      // Dramatic explosive zoom of signature SVG past the camera
       tl.to(
         signatureWrapperRef.current,
         {
@@ -180,7 +189,7 @@ export default function IntroScreen() {
     return () => {
       ctx.revert();
     };
-  }, [isMounted, prefersReducedMotion, completeIntro]);
+  }, [isMounted, isSvgLoaded, prefersReducedMotion, completeIntro]);
 
   if (!isMounted) {
     return (
@@ -211,16 +220,16 @@ export default function IntroScreen() {
       >
         <div
           ref={signatureContainerRef}
-          className="relative"
+          className="relative flex items-center justify-center w-[52vw] max-w-[460px]"
+          style={{
+            aspectRatio: '832.725 / 236.312',
+          }}
         >
-          <Image
-            src="/rameshwar-signature.png"
+          <img
+            src="/rameshwar-signature.svg"
             alt="Rameshwar signature"
-            width={560}
-            height={200}
-            priority
-            unoptimized
-            className="w-[65vw] max-w-[560px] h-auto select-none"
+            onLoad={() => setIsSvgLoaded(true)}
+            className="w-full h-full object-contain brightness-0 invert select-none pointer-events-none"
             draggable={false}
           />
         </div>
