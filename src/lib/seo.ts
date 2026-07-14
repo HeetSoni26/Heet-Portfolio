@@ -79,27 +79,9 @@ export function generateSEO(
       'msvalidate.01': 'A4F4F3D017DCEE9D5C80CF87569E9623',
     },
     icons: {
-      icon: [
-        { url: '/favicon.ico', sizes: '32x32' },
-      ],
-      shortcut: '/favicon.ico',
-      apple: [
-        { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
-      ],
-      other: [
-        {
-          rel: 'icon',
-          type: 'image/png',
-          sizes: '192x192',
-          url: '/android-chrome-192x192.png',
-        },
-        {
-          rel: 'icon',
-          type: 'image/png',
-          sizes: '512x512',
-          url: '/android-chrome-512x512.png',
-        },
-      ],
+      icon: '/icon.svg',
+      shortcut: '/icon.svg',
+      apple: '/icon.svg',
     },
     openGraph: {
       title: pageTitle,
