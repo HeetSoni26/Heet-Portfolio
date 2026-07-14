@@ -134,47 +134,16 @@ export default function ResumePageContent() {
             </div>
           </div>
 
-          {/* Conditional Mobile PDF fallbacks */}
-          {isMobile ? (
-            <div className="flex flex-col items-center justify-center py-16 px-6 text-center rounded-2xl border border-dashed border-white/10 bg-white/[0.01]">
-              <div className="w-16 h-16 rounded-full bg-white/[0.03] border border-white/[0.08] flex items-center justify-center text-white/40 mb-6">
-                <FileText className="w-8 h-8 text-[#FF8C00]" />
-              </div>
-              <h3 className="text-lg font-bold text-white mb-2">Resume Preview</h3>
-              <p className="text-xs text-white/50 max-w-sm mb-8 leading-relaxed">
-                Mobile web browsers do not support rendering PDF documents directly. Click below to view the file or download it to your device.
-              </p>
-              <div className="flex flex-col gap-3 w-full max-w-xs">
-                <a
-                  href="/Resume/Heet_Soni_Resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 px-5 py-3 rounded-xl border border-white/[0.12] bg-white/[0.04] hover:bg-white/[0.08] text-sm font-bold transition-all duration-300"
-                >
-                  <ExternalLink size={16} />
-                  <span>Open in Browser</span>
-                </a>
-                <a
-                  href="/Resume/Heet_Soni_Resume.pdf"
-                  download="Heet_Soni_Resume.pdf"
-                  className="flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-[#FF8C00] to-[#F43F5E] shadow-md transition-all duration-300"
-                >
-                  <Download size={16} />
-                  <span>Download Resume</span>
-                </a>
-              </div>
+          {/* Temporary placeholder since Resume is removed */}
+          <div className="flex flex-col items-center justify-center py-32 px-6 text-center rounded-2xl border border-dashed border-white/10 bg-white/[0.01]">
+            <div className="w-16 h-16 rounded-full bg-white/[0.03] border border-white/[0.08] flex items-center justify-center text-white/40 mb-6">
+              <FileText className="w-8 h-8 text-[#FF8C00]" />
             </div>
-          ) : (
-            /* Desktop Frame - Clean PDF View without embedded top tools */
-            <div className="relative w-full h-[80vh] overflow-hidden rounded-2xl bg-[#09080A] border border-white/[0.06]">
-              <iframe
-                id="resume-pdf-frame"
-                src="/Resume/Heet_Soni_Resume.pdf#toolbar=0&navpanes=0&scrollbar=1&view=FitH"
-                className="w-full h-full border-0 bg-[#09080A]"
-                title="Heet Soni Curriculum Vitae"
-              />
-            </div>
-          )}
+            <h3 className="text-2xl font-bold text-white mb-2">In Progress, Developer are busy</h3>
+            <p className="text-sm text-white/50 max-w-md leading-relaxed">
+              Please check back later for the updated resume.
+            </p>
+          </div>
         </div>
 
         {/* Footer info/credentials */}
