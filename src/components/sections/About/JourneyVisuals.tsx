@@ -671,10 +671,10 @@ function AISchematic() {
 
             {/* Target Project nodes */}
             {[
-              { id: 1, cx: 30, cy: 35, label: 'ThinkVerse', color: '#FF9F0A', matched: false },
-              { id: 2, cx: 110, cy: 30, label: 'WebCraft', color: '#10B981', matched: false },
-              { id: 3, cx: 40, cy: 105, label: 'Safecoast', color: '#EF4444', matched: false },
-              { id: 4, cx: 105, cy: 100, label: 'Devory', color: '#30D158', matched: true },
+              { id: 1, cx: 30, cy: 35, label: 'TrafficIQ', color: '#FF9F0A', matched: false },
+              { id: 2, cx: 110, cy: 30, label: 'OpenBeats', color: '#10B981', matched: false },
+              { id: 3, cx: 40, cy: 105, label: 'EcoSphere', color: '#EF4444', matched: false },
+              { id: 4, cx: 105, cy: 100, label: 'RAGChat', color: '#30D158', matched: true },
             ].map((node) => {
               return (
                 <g key={node.id}>

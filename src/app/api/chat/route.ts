@@ -296,7 +296,7 @@ function generateResponse(intents: string[], message: string): string {
 
     case 'projects': {
       const { sections } = CHATBOT_CONTEXT;
-      const featuredProjects = (CHATBOT_CONTEXT as typeof CHATBOT_CONTEXT & { featuredProjects?: string[] }).featuredProjects || ['WebCraft', 'Safecoast'];
+      const featuredProjects = (CHATBOT_CONTEXT as typeof CHATBOT_CONTEXT & { featuredProjects?: string[] }).featuredProjects || ['OpenBeats', 'TrafficIQ'];
       const featuredSet = new Set(featuredProjects);
       const sortedProjects = [...CHATBOT_CONTEXT.projects].sort((a, b) => {
         const aFeatured = featuredSet.has(a.name) ? 0 : 1;

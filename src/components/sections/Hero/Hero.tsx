@@ -76,7 +76,7 @@ export default function Hero() {
 <meta itemProp="givenName" content="Heet" />
         <meta itemProp="familyName" content="Soni" />
         <meta itemProp="jobTitle" content="Full Stack & AI Developer" />
-        <meta itemProp="description" content={`${PERSONAL_INFO.name} is a Full Stack & AI Developer specializing in React, Next.js, TypeScript, Node.js, Python, and AI-powered product engineering. Featured projects include WebCraft, Safecoast, and AI ML Progress Tracker.`} />
+        <meta itemProp="description" content={`${PERSONAL_INFO.name} is a Full Stack & AI Developer specializing in React, Next.js, TypeScript, Node.js, Python, and AI-powered product engineering. Featured projects include OpenBeats, TrafficIQ, and EcoSphere.`} />
         <meta itemProp="url" content={SITE_URL} />
         <meta itemProp="email" content={PERSONAL_INFO.email} />
         <meta itemProp="telephone" content={PERSONAL_INFO.phone} />
@@ -121,8 +121,8 @@ export default function Hero() {
 
           <h2>Featured Projects by Heet Soni</h2>
           <ul>
-            <li>WebCraft - Modern website solution designed for business growth and technical SEO readiness</li>
-            <li>Safecoast - Coastal hazard intelligence platform focused on monitoring and risk awareness</li>
+            <li>OpenBeats - Open-source, beautiful music player app for Android</li>
+            <li>TrafficIQ - Autonomous traffic intelligence utilizing YOLOv8 computer vision</li>
           </ul>
 
           <h2>Heet Soni - Services</h2>
@@ -158,7 +158,7 @@ export default function Hero() {
           Heet Soni AI Developer, Heet Soni React Developer, Heet Soni Next.js Expert,
           Hire Heet Soni, Heet Soni Web Developer, Heet Soni Software Engineer,
           Best Full Stack Developer India, Top React Developer Gujarat, AI Developer Anand,
-          Heet Soni TypeScript, Heet Soni Node.js, Heet Soni Python Developer, WebCraft, Safecoast</p>
+          Heet Soni TypeScript, Heet Soni Node.js, Heet Soni Python Developer, OpenBeats, TrafficIQ</p>
         </div>
 
         {/* ─── WebSite Schema for Search Appearance ─── */}

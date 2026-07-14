@@ -5,7 +5,7 @@ import ProjectsPageContent from './ProjectsPageContent';
 export const metadata: Metadata = {
   title: 'All Projects | Heet Soni — Full Stack & AI Developer',
   description:
-    'Browse the complete portfolio of Heet Soni — full-stack, AI/ML, and web application projects including WebCraft, Safecoast, Devory, and the AI ML Progress Tracker. Filter by category, search, and explore detailed case studies.',
+    'Browse the complete portfolio of Heet Soni — full-stack, AI/ML, and web application projects including OpenBeats, TrafficIQ, EcoSphere, and the RAGChat. Filter by category, search, and explore detailed case studies.',
   keywords: [
     'Heet Soni projects',
     'full stack developer projects',

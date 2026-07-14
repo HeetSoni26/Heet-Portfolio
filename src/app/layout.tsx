@@ -85,7 +85,7 @@ export default function RootLayout({
     "url": siteUrl,
     "image": `${siteUrl}/images/profile/profile.jpeg`,
     "jobTitle": "Full Stack & AI Developer",
-    "description": "Heet Soni is a Full Stack & AI Developer building AI-powered web applications, with featured projects WebCraft and Safecoast.",
+    "description": "Heet Soni is a Full Stack & AI Developer building AI-powered web applications, with featured projects OpenBeats and TrafficIQ.",
     "email": "heetks2607@gmail.com",
     "telephone": "+91 99093 42367",
     "address": {
@@ -121,23 +121,23 @@ export default function RootLayout({
     "subjectOf": [
       {
         "@type": "CreativeWork",
-        "name": "WebCraft",
-        "description": "Website builder for modern businesses with SEO-ready architecture and performance-first engineering.",
+        "name": "OpenBeats",
+        "description": "Open-source Android music player prioritizing performance and user experience.",
       },
       {
         "@type": "CreativeWork",
-        "name": "Library Management System",
-        "description": "Full-stack relational catalog database built with Node.js and Express.js using strict transaction safety safeguards.",
+        "name": "TrafficIQ",
+        "description": "Autonomous traffic intelligence utilizing YOLOv8 computer vision for real-time traffic light optimization.",
       },
       {
         "@type": "CreativeWork",
-        "name": "Safecoast",
-        "description": "Coastal hazard intelligence platform focused on real-time monitoring and risk awareness.",
+        "name": "EcoSphere",
+        "description": "Comprehensive environmental tracking and visualization platform built with React and Tailwind CSS.",
       },
       {
         "@type": "CreativeWork",
-        "name": "Devory",
-        "description": "Premium workflow task management SaaS interface featuring custom real-time messaging structures.",
+        "name": "RAGChat",
+        "description": "AI-powered document chat assistant enabling interactive conversations with uploaded PDFs and texts.",
       }
     ]
   };
@@ -147,7 +147,7 @@ export default function RootLayout({
     "@type": "WebSite",
     "name": "Heet Soni Portfolio",
     "url": siteUrl,
-    "description": "Portfolio of Heet Soni showcasing full stack and AI-powered web projects, including WebCraft and Safecoast.",
+    "description": "Portfolio of Heet Soni showcasing full stack and AI-powered web projects, including OpenBeats and TrafficIQ.",
     "author": {
       "@type": "Person",
       "name": "Heet Soni"

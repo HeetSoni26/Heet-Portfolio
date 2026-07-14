@@ -44,7 +44,7 @@ export default function StructuredData() {
     "subjectOf": [
       {
         "@type": "CreativeWork",
-        "name": "WebCraft",
+        "name": "OpenBeats",
         "description": "A modern website solution focused on performance, business growth, and SEO-ready architecture."
       },
       {
@@ -88,7 +88,7 @@ export default function StructuredData() {
     },
     "areaServed": "Worldwide",
     "serviceType": "Full Stack & AI Development",
-    "keywords": "Heet Soni, Full Stack & AI Developer, WebCraft, Safecoast"
+    "keywords": "Heet Soni, Full Stack & AI Developer, OpenBeats, TrafficIQ"
   };
 
   const webpageSchema = {
@@ -119,7 +119,7 @@ export default function StructuredData() {
         "position": 1,
         "item": {
           "@type": "CreativeWork",
-          "name": "WebCraft",
+          "name": "OpenBeats",
           "description": "Modern business website solution with performance and SEO-ready architecture."
         }
       },

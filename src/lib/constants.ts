@@ -1,6 +1,6 @@
 export const SITE_NAME = 'Heet Soni - Portfolio';
 export const SITE_URL = 'https://heetportfolio.vercel.app';
-export const SITE_DESCRIPTION = 'Heet Soni is a Full Stack & AI Developer specializing in React, Next.js, TypeScript, Node.js, and AI-powered web applications. Explore featured projects like WebCraft, Safecoast, and AI ML Progress Tracker, focused on modern, scalable, and intelligent digital products.';
+export const SITE_DESCRIPTION = 'Heet Soni is a Full Stack & AI Developer specializing in React, Next.js, TypeScript, Node.js, and AI-powered web applications. Explore featured projects like OpenBeats, TrafficIQ, and EcoSphere, focused on modern, scalable, and intelligent digital products.';
 
 // SEO Keywords - Optimized for search ranking
 export const SEO_KEYWORDS = [
@@ -15,12 +15,12 @@ export const SEO_KEYWORDS = [
   'TypeScript Developer',
   'AI-powered web applications',
   'Generative AI integration',
-  'WebCraft',
-  'Safecoast',
-  'AI ML Progress Tracker',
-  'WebCraft project',
-  'Safecoast project',
-  'AI ML Progress Tracker project',
+  'OpenBeats',
+  'TrafficIQ',
+  'EcoSphere',
+  'OpenBeats project',
+  'TrafficIQ project',
+  'EcoSphere project',
   'Next.js portfolio',
   'MERN Stack Developer',
   'JavaScript Developer India',
@@ -51,7 +51,7 @@ export const PERSONAL_INFO = {
     countryCode: 'IN',
   },
   image: '/images/profile/profile.jpeg',
-  bio: 'Heet Soni is a Full Stack & AI Developer with expertise in React, Next.js, TypeScript, Node.js, and Python. Specializing in building scalable web applications and AI-powered solutions, with featured projects including WebCraft, Safecoast, and AI ML Progress Tracker.',
+  bio: 'Heet Soni is a Full Stack & AI Developer with expertise in React, Next.js, TypeScript, Node.js, and Python. Specializing in building scalable web applications and AI-powered solutions, with featured projects including OpenBeats, TrafficIQ, and EcoSphere.',
   shortBio: 'Full Stack & AI Developer specializing in React, Next.js, TypeScript, and AI-powered web applications.',
   expertise: [
     'Full Stack Development',

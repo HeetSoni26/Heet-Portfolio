@@ -406,7 +406,7 @@ export default function BentoGrid() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-white/10" />
             <div className="absolute bottom-1 left-1.5 right-1.5 flex items-center justify-between">
               <span className="text-[7.5px] font-mono font-bold text-white/90 truncate max-w-[70px]">
-                {projects[0]?.title || "WebCraft"}
+                {projects[0]?.title || "OpenBeats"}
               </span>
               <span className="w-1.5 h-1.5 rounded-full bg-[#30D158]" />
             </div>

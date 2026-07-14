@@ -221,7 +221,7 @@ export default function Work() {
       <meta itemProp="name" content="Featured Projects - Heet Soni Portfolio" />
       <meta
         itemProp="description"
-        content="Showcase of full-stack and AI-focused web development projects including WebCraft, Safecoast, and AI ML Progress Tracker, built with React, Next.js, TypeScript, and modern scalable architecture."
+        content="Showcase of full-stack and AI-focused web development projects including OpenBeats, TrafficIQ, and EcoSphere, built with React, Next.js, TypeScript, and modern scalable architecture."
       />
       <meta itemProp="author" content="Heet Soni" />
 
