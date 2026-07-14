@@ -1,26 +1,26 @@
-// Chatbot Knowledge Base - Comprehensive information about Rameshwar Bhagwat
+import { projects as workProjects } from '@/components/sections/Work/work.data';
+
+// Chatbot Knowledge Base - Comprehensive information about Heet Soni
 
 export const CHATBOT_CONTEXT = {
   // Personal Information
   personal: {
-    name: "Rameshwar Bhagwat",
-    firstName: "Rameshwar",
-    lastName: "Bhagwat",
-    nickname: "Ram",
-    jobTitle: "Full Stack & AI Developer",
-    tagline: "Building the future with code and AI",
-    email: "rameshwarbhagwat019@gmail.com",
-    phone: "+91-9699245170",
-    location: "Yeola, Maharashtra, India",
+    name: "Heet Soni",
+    firstName: "Heet",
+    lastName: "Soni",
+    nickname: "Heet",
+    jobTitle: "AI Engineer and Full-Stack Software Developer",
+    tagline: "Building intelligent software powered by Machine Learning, Computer Vision, LLMs, and modern web technologies",
+    email: "heetks2607@gmail.com",
+    phone: "+91 99093 42367",
+    location: "Anand, Gujarat, India",
     timezone: "IST (UTC+5:30)",
-    languages: ["English", "Hindi", "Marathi"],
-    bio: "I'm a Full Stack Developer and AI Engineer with expertise in React, Next.js, TypeScript, Node.js, and Python. I specialize in building scalable web applications, SaaS platforms, and AI-powered solutions. I'm passionate about creating innovative digital experiences that drive business growth.",
-    shortBio: "Full Stack Developer specializing in React, Next.js, and AI integration.",
-    currentStatus: "Currently pursuing B.Tech in Information Technology and building AI-powered web products like WebCraft, Safecoast, and Devory.",
-    yearsOfExperience: "1+",
-    projectsBuilt: "5+",
-    linesOfCode: "100,000+",
-    coffeeConsumed: "500+ cups",
+    languages: ["English", "Hindi", "Gujarati"],
+    bio: "Heet specializes in Artificial Intelligence, Machine Learning, Computer Vision, LLM-powered applications, backend engineering, and modern full-stack development. He builds intelligent software ranging from AI assistants and automation systems to scalable web applications and Android apps.",
+    shortBio: "AI Engineer & Full-Stack Software Developer.",
+    currentStatus: "Pursuing a B.Tech in Artificial Intelligence & Data Science at CVM University (Expected 2027) while preparing for a research-focused Master's in Computer Science.",
+    projectsBuilt: "14+",
+    technologiesUsed: "35+",
     availableForWork: true,
     workPreference: ["Remote", "Freelance", "Contract", "Full-time"],
     responseTime: "Usually within 24 hours",
@@ -78,132 +78,19 @@ export const CHATBOT_CONTEXT = {
   },
 
   // Detailed Projects
-  projects: [
-    {
-      name: "WebCraft",
-      type: "Agency Website",
-      description: "Website Builder for Modern Businesses - A client-focused web development solution helping businesses establish their digital presence.",
-      techStack: ["React", "Next.js", "Tailwind CSS", "Firebase", "Stripe"],
-      features: [
-        "Responsive website templates",
-        "Custom UI/UX design",
-        "SEO-ready architecture",
-        "CMS integration",
-        "Analytics dashboard",
-      ],
-      status: "Completed",
-    },
-    {
-      name: "Safecoast",
-      type: "Hackathon Project",
-      description: "Coastal Hazard Intelligence Platform that monitors and analyzes environmental risk factors for coastal communities in real-time.",
-      longDescription: "Built during a 48-hour hackathon, Safecoast addresses the critical need for early warning systems in coastal areas. It aggregates data from multiple weather APIs, satellite imagery, and historical patterns to predict and alert communities about potential hazards like cyclones, flooding, and erosion.",
-      techStack: ["Next.js", "TypeScript", "Node.js", "Tailwind CSS", "OpenWeather API", "Chart.js", "Mapbox"],
-      features: [
-        "Real-time hazard monitoring",
-        "Interactive data visualization",
-        "Predictive analysis algorithms",
-        "SMS/Email alert system",
-        "Historical data comparison",
-        "Mobile-responsive design",
-      ],
-      challenges: "Processing and visualizing large amounts of real-time data efficiently within tight time constraints.",
-      learnings: "Rapid prototyping, API integration, and working under pressure.",
-      status: "Completed - Hackathon Winner",
-      link: "https://safecoast.vercel.app",
-      github: "https://github.com/Rameshwar-bhagwat10/safecoast",
-    },
-    {
-      name: "Devory",
-      type: "SaaS Platform",
-      description: "AI-Powered Student Project Platform that helps students discover, build, and manage real-world technical projects with intelligent idea recommendations. It's designed to bridge the gap between learning and practical implementation.",
-      longDescription: "Devory is my flagship project - an AI-driven platform that solves a real problem I faced as a student: finding meaningful projects to build. It uses machine learning to recommend project ideas based on skill level, interests, and industry trends. Students can track their progress, collaborate with peers, and showcase their work to potential employers.",
-      techStack: ["Next.js 14", "TypeScript", "PostgreSQL", "Prisma", "Tailwind CSS", "OpenAI API", "Vercel"],
-      features: [
-        "AI-based project idea recommendations",
-        "Structured project workflow management",
-        "Progress tracking and milestones",
-        "Modern SaaS authentication",
-        "Team collaboration features",
-        "Portfolio showcase integration",
-      ],
-      challenges: "Building a scalable recommendation engine that provides relevant suggestions based on user preferences and market demand.",
-      learnings: "Advanced state management, AI API integration, and building production-ready SaaS applications.",
-      status: "Currently building",
-      link: "https://devory.io",
-      github: "Private",
-    },
-    {
-      name: "ThinkVerse",
-      type: "SaaS Platform",
-      description: "A structured idea management platform for entrepreneurs and creators to organize, develop, and execute their ideas systematically.",
-      longDescription: "ThinkVerse helps turn scattered thoughts into actionable plans. It provides frameworks for idea validation, market research organization, and execution planning. Perfect for solopreneurs and small teams who want to move from ideation to execution efficiently.",
-      techStack: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS", "Framer Motion"],
-      features: [
-        "Idea capture and organization",
-        "Validation frameworks",
-        "Progress tracking",
-        "Collaboration features",
-        "Export and sharing",
-      ],
-      challenges: "Creating intuitive UX for complex idea workflows.",
-      learnings: "User research, product design, and building habit-forming products.",
-      status: "Launched",
-      link: "https://thinkverse.app",
-      github: "Private",
-    },
-    {
-      name: "Spam Message Detection",
-      type: "ML Project",
-      description: "Machine Learning-based text classification system using Python to classify SMS messages as spam or legitimate with 98% accuracy.",
-      longDescription: "This project demonstrates practical NLP and machine learning skills. I built and compared multiple models (Naive Bayes, SVM, Random Forest) to find the optimal solution for spam detection. The system includes text preprocessing, feature extraction using TF-IDF, and model deployment.",
-      techStack: ["Python", "Scikit-learn", "Pandas", "NumPy", "NLTK", "Flask", "Streamlit"],
-      features: [
-        "Text preprocessing with NLP",
-        "Multiple ML model comparison",
-        "TF-IDF feature extraction",
-        "Real-time prediction API",
-        "Web interface for testing",
-        "98% classification accuracy",
-      ],
-      challenges: "Handling imbalanced datasets and optimizing model performance.",
-      learnings: "End-to-end ML pipeline development and model evaluation.",
-      status: "Completed",
-      github: "https://github.com/Rameshwar-bhagwat10/spam-detection",
-    },
-    {
-      name: "Moungiri Store",
-      type: "E-Commerce",
-      description: "Full-featured digital storefront for a local kirana business with complete e-commerce functionality including payments and inventory management.",
-      techStack: ["Next.js", "MongoDB", "Node.js", "Stripe", "Tailwind CSS", "Cloudinary"],
-      features: [
-        "Product catalog with search",
-        "Shopping cart and checkout",
-        "Stripe payment integration",
-        "Admin dashboard",
-        "Inventory management",
-        "Order tracking",
-      ],
-      challenges: "Building a complete e-commerce solution that's easy for non-technical users to manage.",
-      status: "Completed",
-    },
-    {
-      name: "Portfolio Website",
-      type: "Personal",
-      description: "This very portfolio you're viewing! Built with modern technologies and featuring interactive elements, animations, and this AI chatbot.",
-      techStack: ["Next.js 14", "TypeScript", "Tailwind CSS", "Framer Motion", "Vercel"],
-      features: [
-        "Interactive UI with animations",
-        "AI-powered chatbot",
-        "Responsive design",
-        "SEO optimized",
-        "Performance optimized",
-      ],
-      status: "Live",
-    },
-  ],
+  projects: workProjects.map(p => ({
+    name: p.title,
+    type: p.category,
+    description: p.description,
+    longDescription: p.longDescription,
+    techStack: p.techStack,
+    features: p.features || [],
+    status: "Completed",
+    link: p.liveUrl || '',
+    github: p.githubUrl || ''
+  })),
 
-  featuredProjects: ["WebCraft", "Safecoast"],
+  featuredProjects: ["Developer Portfolio", "Novabridge"],
 
   // Journey/Timeline with more details
   journey: [
@@ -305,11 +192,11 @@ export const CHATBOT_CONTEXT = {
 
   // Social Links
   social: {
-    github: "https://github.com/Rameshwar-bhagwat10",
-    linkedin: "https://linkedin.com/in/Rameshwarbhagwat",
-    twitter: "https://twitter.com/Rameshwarbhagwat",
-    portfolio: "https://rameshwarbhagwat.me",
-    email: "rameshwarbhagwat019@gmail.com",
+    github: "https://github.com/HeetSoni26",
+    linkedin: "https://www.linkedin.com/in/heet-soni-8a9082273/",
+    twitter: "https://twitter.com/heetsoni__",
+    portfolio: "https://heetportfolio.vercel.app",
+    email: "heetks2607@gmail.com",
   },
 
   // Fun facts and personality
@@ -396,11 +283,11 @@ export const CHATBOT_CONTEXT = {
   // Portfolio Section Links for navigation
   sections: {
     hero: { name: "Home", link: "#hero", description: "Welcome section with introduction" },
-    about: { name: "About Me", link: "#about", description: "Learn more about Rameshwar" },
+    about: { name: "About Me", link: "#about", description: "Learn more about Heet" },
     skills: { name: "Skills", link: "#skills", description: "Technologies and expertise" },
     projects: { name: "Projects", link: "#projects", description: "Portfolio of work" },
     journey: { name: "My Journey", link: "#journey", description: "Career timeline and experience" },
-    services: { name: "Services", link: "#services", description: "What Rameshwar offers" },
+    services: { name: "Services", link: "#services", description: "What Heet offers" },
     contact: { name: "Contact", link: "#contact", description: "Get in touch" },
   },
 };
@@ -408,11 +295,11 @@ export const CHATBOT_CONTEXT = {
 // Pre-computed responses for common questions (faster retrieval)
 export const QUICK_RESPONSES: Record<string, string> = {
   // Greetings
-  'hi': "Hey there! 👋 I'm Rameshwar's AI assistant. How can I help you learn more about him today?",
-  'hello': "Hello! Welcome to Rameshwar's portfolio. What would you like to know?",
-  'hey': "Hi! I'm here to tell you all about Rameshwar. Ask me anything!",
-  'good morning': "Good morning! ☀️ Welcome to Rameshwar's portfolio. How can I assist you today?",
-  'good afternoon': "Good afternoon! Welcome! What would you like to know about Rameshwar?",
+  'hi': "Hey there! 👋 I'm Heet's AI assistant. How can I help you learn more about him today?",
+  'hello': "Hello! Welcome to Heet's portfolio. What would you like to know?",
+  'hey': "Hi! I'm here to tell you all about Heet. Ask me anything!",
+  'good morning': "Good morning! ☀️ Welcome to Heet's portfolio. How can I assist you today?",
+  'good afternoon': "Good afternoon! Welcome! What would you like to know about Heet?",
   'good evening': "Good evening! 🌙 Thanks for visiting. How can I help you?",
 
   // Identity Questions
@@ -421,97 +308,96 @@ export const QUICK_RESPONSES: Record<string, string> = {
   'what is your name': `I'm **${CHATBOT_CONTEXT.personal.name}'s AI assistant**. ${CHATBOT_CONTEXT.personal.name} is a ${CHATBOT_CONTEXT.personal.jobTitle}.`,
 
   // About Questions
-  'who are you': `I'm an AI assistant for **Rameshwar Bhagwat**, a ${CHATBOT_CONTEXT.personal.jobTitle} based in ${CHATBOT_CONTEXT.personal.location}. I can tell you about his skills, projects, experience, and more!`,
-  'who is rameshwar': `**Rameshwar Bhagwat** is a ${CHATBOT_CONTEXT.personal.jobTitle} with ${CHATBOT_CONTEXT.personal.yearsOfExperience} years of experience. ${CHATBOT_CONTEXT.personal.bio}`,
-  'tell me about yourself': `**Rameshwar Bhagwat** is a ${CHATBOT_CONTEXT.personal.jobTitle} based in ${CHATBOT_CONTEXT.personal.location}.\n\n${CHATBOT_CONTEXT.personal.bio}\n\n📊 **Quick Stats:**\n• ${CHATBOT_CONTEXT.personal.yearsOfExperience} years of experience\n• ${CHATBOT_CONTEXT.personal.projectsBuilt} projects built\n• Currently: ${CHATBOT_CONTEXT.personal.currentStatus}`,
-  'tell me about rameshwar': `**Rameshwar Bhagwat** is a passionate ${CHATBOT_CONTEXT.personal.jobTitle} with ${CHATBOT_CONTEXT.personal.yearsOfExperience} years of experience building scalable web applications and AI-powered solutions.\n\n${CHATBOT_CONTEXT.personal.bio}`,
-  'introduce yourself': `Hi! I'm the AI assistant for **Rameshwar Bhagwat**. Rameshwar is a ${CHATBOT_CONTEXT.personal.jobTitle} who specializes in building modern web applications and AI solutions. I can help you learn about his skills, projects, and how to work with him!`,
-  'what do you do': `Rameshwar is a **${CHATBOT_CONTEXT.personal.jobTitle}** who builds:\n\n• Modern web applications with React/Next.js\n• AI-powered solutions and chatbots\n• SaaS platforms like Devory\n• Full-stack applications with scalable backends\n\nHe's passionate about creating innovative digital experiences!`,
+  'who are you': `I'm an AI assistant for **Heet Soni**, an ${CHATBOT_CONTEXT.personal.jobTitle} based in ${CHATBOT_CONTEXT.personal.location}. I can tell you about his skills, projects, and research ambitions!`,
+  'who is Heet': `**Heet Soni** is an ${CHATBOT_CONTEXT.personal.jobTitle}. ${CHATBOT_CONTEXT.personal.bio}`,
+  'tell me about yourself': `**Heet Soni** is an ${CHATBOT_CONTEXT.personal.jobTitle} based in ${CHATBOT_CONTEXT.personal.location}.\n\n${CHATBOT_CONTEXT.personal.bio}\n\nHe is ${CHATBOT_CONTEXT.personal.currentStatus}\n\n📊 **Quick Stats:**\n• B.Tech AI & Data Science (Expected 2027)\n• AI-focused portfolio\n• ${CHATBOT_CONTEXT.personal.projectsBuilt} projects\n• ${CHATBOT_CONTEXT.personal.technologiesUsed} technologies`,
+  'tell me about Heet': `**Heet Soni** is a passionate ${CHATBOT_CONTEXT.personal.jobTitle} focused on building practical AI products, open-source projects, and intelligent systems with real-world impact.\n\n${CHATBOT_CONTEXT.personal.bio}`,
+  'introduce yourself': `Hi! I'm the AI assistant for **Heet Soni**. Heet is an ${CHATBOT_CONTEXT.personal.jobTitle} who specializes in building modern web applications, AI solutions, and intelligent systems. I can help you learn about his skills, projects, and how to work with him!`,
+  'what do you do': `Heet is an **${CHATBOT_CONTEXT.personal.jobTitle}** who builds:\n\n• AI-powered applications & intelligent automation systems\n• Computer Vision projects\n• Full-stack SaaS platforms\n• Android applications & backend APIs\n\nHis long-term goal is to pursue a thesis-based Master's in Computer Science and contribute to AI research.`,
 
   // Contact Questions
-  'email': `📧 You can reach Rameshwar at: **${CHATBOT_CONTEXT.personal.email}**`,
-  'phone': `📱 Rameshwar's phone number is: **${CHATBOT_CONTEXT.personal.phone}**`,
-  'phone number': `📱 Rameshwar's phone number is: **${CHATBOT_CONTEXT.personal.phone}**`,
+  'email': `📧 You can reach Heet at: **${CHATBOT_CONTEXT.personal.email}**`,
+  'phone': `📱 Heet's phone number is: **${CHATBOT_CONTEXT.personal.phone}**`,
+  'phone number': `📱 Heet's phone number is: **${CHATBOT_CONTEXT.personal.phone}**`,
   'contact': `**Get in Touch:**\n\n📧 Email: ${CHATBOT_CONTEXT.personal.email}\n📱 Phone: ${CHATBOT_CONTEXT.personal.phone}\n\n👉 [Go to Contact Section](#contact)`,
-  'how can i contact you': `**Contact Rameshwar:**\n\n📧 Email: ${CHATBOT_CONTEXT.personal.email}\n📱 Phone: ${CHATBOT_CONTEXT.personal.phone}\n💼 LinkedIn: ${CHATBOT_CONTEXT.social.linkedin}\n\n👉 [Go to Contact Section](#contact)`,
-  'how to reach you': `**Reach out to Rameshwar:**\n\n📧 Email: ${CHATBOT_CONTEXT.personal.email}\n📱 Phone: ${CHATBOT_CONTEXT.personal.phone}\n\nHe typically responds within ${CHATBOT_CONTEXT.personal.responseTime}!`,
+  'how can i contact you': `**Contact Heet:**\n\n📧 Email: ${CHATBOT_CONTEXT.personal.email}\n📱 Phone: ${CHATBOT_CONTEXT.personal.phone}\n💼 LinkedIn: ${CHATBOT_CONTEXT.social.linkedin}\n\n👉 [Go to Contact Section](#contact)`,
+  'how to reach you': `**Reach out to Heet:**\n\n📧 Email: ${CHATBOT_CONTEXT.personal.email}\n📱 Phone: ${CHATBOT_CONTEXT.personal.phone}\n\nHe typically responds within ${CHATBOT_CONTEXT.personal.responseTime}!`,
 
   // Location Questions
-  'location': `📍 Rameshwar is based in **${CHATBOT_CONTEXT.personal.location}**, but works remotely with clients worldwide!`,
-  'where are you from': `📍 Rameshwar is from **${CHATBOT_CONTEXT.personal.location}**. He's available for remote work globally!`,
-  'where do you live': `📍 Rameshwar lives in **${CHATBOT_CONTEXT.personal.location}**. He works remotely with clients from all over the world!`,
-  'where are you located': `📍 Rameshwar is located in **${CHATBOT_CONTEXT.personal.location}**.\n\n🌍 Timezone: ${CHATBOT_CONTEXT.personal.timezone}\n🏠 Work Style: Remote-first`,
-  'which country': `🇮🇳 Rameshwar is based in **India**, specifically in ${CHATBOT_CONTEXT.personal.location}. He works with clients worldwide!`,
+  'location': `📍 Heet is based in **${CHATBOT_CONTEXT.personal.location}**, but works remotely with clients worldwide!`,
+  'where are you from': `📍 Heet is from **${CHATBOT_CONTEXT.personal.location}**. He's available for remote work globally!`,
+  'where do you live': `📍 Heet lives in **${CHATBOT_CONTEXT.personal.location}**. He works remotely with clients from all over the world!`,
+  'where are you located': `📍 Heet is located in **${CHATBOT_CONTEXT.personal.location}**.\n\n🌍 Timezone: ${CHATBOT_CONTEXT.personal.timezone}\n🏠 Work Style: Remote-first`,
+  'which country': `🇮🇳 Heet is based in **India**, specifically in ${CHATBOT_CONTEXT.personal.location}. He works with clients worldwide!`,
 
   // Availability & Hiring
   'available': CHATBOT_CONTEXT.personal.availableForWork
-    ? "✅ **Yes!** Rameshwar is currently available for freelance, contract, and full-time opportunities. Reach out to discuss your project!"
-    : "⏳ Rameshwar is currently busy with existing commitments, but feel free to reach out for future projects.",
+    ? "✅ **Yes!** Heet is currently available for freelance, contract, and full-time opportunities. Reach out to discuss your project!"
+    : "⏳ Heet is currently busy with existing commitments, but feel free to reach out for future projects.",
   'are you available': CHATBOT_CONTEXT.personal.availableForWork
-    ? "✅ **Yes!** Rameshwar is currently available for new projects and opportunities!"
+    ? "✅ **Yes!** Heet is currently available for new projects and opportunities!"
     : "⏳ Currently busy, but open to discussing future opportunities.",
-  'can i hire you': `Yes! Rameshwar is ${CHATBOT_CONTEXT.personal.availableForWork ? '**currently available**' : 'open to opportunities'}.\n\n**To hire:**\n1. Go to the Contact Section\n2. Send a message describing your project\n3. He'll respond within ${CHATBOT_CONTEXT.personal.responseTime}\n\n👉 [Go to Contact Section](#contact)`,
-  'how can i hire you': `**How to Hire Rameshwar:**\n\n1. 📝 Visit the Contact Section\n2. 💬 Describe your project requirements\n3. 📧 Or email directly: ${CHATBOT_CONTEXT.personal.email}\n\nHe responds within ${CHATBOT_CONTEXT.personal.responseTime}!\n\n👉 [Go to Contact Section](#contact)`,
-  'hire': `**Hire Rameshwar:**\n\n✅ Currently available for:\n${CHATBOT_CONTEXT.personal.workPreference.map(w => `• ${w}`).join('\n')}\n\n📧 Email: ${CHATBOT_CONTEXT.personal.email}\n👉 [Go to Contact Section](#contact)`,
-  'looking for developer': `**Great!** Rameshwar is a ${CHATBOT_CONTEXT.personal.jobTitle} available for hire!\n\n**Services:**\n• Full Stack Development\n• AI/ML Integration\n• SaaS Development\n• API Development\n\n👉 [Go to Contact Section](#contact)`,
-  'need a developer': "**Rameshwar can help!** He's an experienced Full Stack & AI Developer.\n\n👉 [Go to Contact Section](#contact) to discuss your project!",
+  'can i hire you': `Yes! Heet is ${CHATBOT_CONTEXT.personal.availableForWork ? '**currently available**' : 'open to opportunities'}.\n\n**To hire:**\n1. Go to the Contact Section\n2. Send a message describing your project\n3. He'll respond within ${CHATBOT_CONTEXT.personal.responseTime}\n\n👉 [Go to Contact Section](#contact)`,
+  'how can i hire you': `**How to Hire Heet:**\n\n1. 📝 Visit the Contact Section\n2. 💬 Describe your project requirements\n3. 📧 Or email directly: ${CHATBOT_CONTEXT.personal.email}\n\nHe responds within ${CHATBOT_CONTEXT.personal.responseTime}!\n\n👉 [Go to Contact Section](#contact)`,
+  'hire': `**Hire Heet:**\n\n✅ Currently available for:\n${CHATBOT_CONTEXT.personal.workPreference.map(w => `• ${w}`).join('\n')}\n\n📧 Email: ${CHATBOT_CONTEXT.personal.email}\n👉 [Go to Contact Section](#contact)`,
+  'looking for developer': `**Great!** Heet is a ${CHATBOT_CONTEXT.personal.jobTitle} available for hire!\n\n**Services:**\n• Full Stack Development\n• AI/ML Integration\n• SaaS Development\n• API Development\n\n👉 [Go to Contact Section](#contact)`,
+  'need a developer': "**Heet can help!** He's an experienced Full Stack & AI Developer.\n\n👉 [Go to Contact Section](#contact) to discuss your project!",
 
   // Skills Questions
-  'what are your skills': `**Rameshwar's Key Skills:**\n\n🎨 **Frontend:** React, Next.js, TypeScript, Tailwind CSS\n⚙️ **Backend:** Node.js, Python, Express, FastAPI\n🗄️ **Database:** PostgreSQL, MongoDB, Prisma\n🤖 **AI/ML:** OpenAI, LangChain, TensorFlow\n☁️ **Cloud:** Vercel, AWS, Docker\n\n👉 [View All Skills](#skills)`,
-  'tech stack': `**Rameshwar's Tech Stack:**\n\n🎨 **Frontend:** React, Next.js, TypeScript, Tailwind CSS, Framer Motion\n⚙️ **Backend:** Node.js, Python, Express.js, FastAPI\n🗄️ **Databases:** PostgreSQL, MongoDB, Supabase\n🤖 **AI/ML:** OpenAI API, LangChain, TensorFlow\n☁️ **DevOps:** Vercel, AWS, Docker, GitHub Actions\n\n**Favorite Stack:** Next.js + TypeScript + Tailwind + PostgreSQL`,
-  'what technologies do you use': `**Technologies Rameshwar Uses:**\n\n• **Languages:** JavaScript, TypeScript, Python\n• **Frontend:** React, Next.js, Tailwind CSS\n• **Backend:** Node.js, Express, FastAPI\n• **Databases:** PostgreSQL, MongoDB\n• **AI/ML:** OpenAI, LangChain, TensorFlow\n\n👉 [View All Skills](#skills)`,
-  'favorite stack': "🛠️ Rameshwar's favorite stack is **Next.js + TypeScript + Tailwind CSS + PostgreSQL**. He loves the developer experience and performance this combination provides!",
-  'what is your favorite technology': "🛠️ Rameshwar's favorite technologies are **Next.js** for frontend, **Node.js/Python** for backend, and **PostgreSQL** for database. For AI projects, he loves using **OpenAI API** and **LangChain**!",
-  'best at': "Rameshwar excels at **Full Stack Development** (React/Next.js) and **AI/ML Integration**. He's built production applications used by real users!",
-  'what are you best at': "Rameshwar is best at:\n\n🥇 **Full Stack Development** with React/Next.js\n🥈 **AI/ML Integration** for intelligent features\n🥉 **SaaS Platform Development**\n\nHe's shipped 10+ production projects!",
+  'what are your skills': `My expertise spans AI Engineering, Full-Stack Development, Backend Systems, Android Development, and Intelligent Automation.\n\nRather than listing every technology here, I'd recommend checking out the Skills section of my portfolio. It provides a complete breakdown of my technologies, proficiency, and areas of expertise in a much more visual and organized way.\n\n👉 [View All Skills](#skills)`,
+  'tech stack': `I work across Artificial Intelligence, Machine Learning, Computer Vision, modern Full-Stack Development, backend engineering, and mobile development.\n\nYou can explore the Skills section for a complete interactive overview of my technologies and expertise.\n\n👉 [View All Skills](#skills)`,
+  'what technologies do you use': `My expertise spans AI Engineering, Full-Stack Development, Backend Systems, Android Development, and Intelligent Automation.\n\nRather than listing every technology here, I'd recommend checking out the Skills section of my portfolio. It provides a complete breakdown of my technologies in a visual and organized way.\n\n👉 [View All Skills](#skills)`,
+  'favorite stack': "🛠️ Heet's favorite stack heavily features **Python, PyTorch, LangGraph, Next.js, and PostgreSQL**. He loves tools that support both advanced AI research and high-performance web development!",
+  'what is your favorite technology': "🛠️ Heet's favorite technologies are **PyTorch** and **LangGraph** for AI, **Next.js** for frontend, and **FastAPI** for backend. He is deeply focused on building AI products and intelligent software.",
+  'best at': "Heet excels at **AI Engineering**, **Machine Learning**, **Computer Vision**, and **Full Stack Development**. He builds intelligent software that solves real-world problems!",
+  'what are you best at': "Heet is best at:\n\n🥇 **Artificial Intelligence & Machine Learning**\n🥈 **Full-Stack Software Development**\n🥉 **Intelligent Automation & Computer Vision**\n\nHe's shipped 8+ production AI products and web platforms!",
 
   // Project Questions
-  'show me your projects': `**Rameshwar's Projects:**\n\n🌐 **WebCraft** - Website Builder for Modern Businesses\n🌊 **Safecoast** - Coastal Hazard Intelligence (Hackathon Winner)\n🚀 **Devory** - AI-Powered Student Project Platform\n🛒 **Moungiri Store** - E-commerce Platform\n📱 **Spam Detection** - ML Classification System\n\n👉 [View All Projects](#projects)`,
-  'what projects have you built': `**Projects Built by Rameshwar:**\n\n1. **WebCraft** - Modern business web solution\n2. **Safecoast** - Real-time coastal hazard monitoring\n3. **Devory** - AI-driven student project platform\n4. **Moungiri Store** - Full e-commerce solution\n5. **Spam Detection** - ML text classification\n\n👉 [View All Projects](#projects)`,
-  'your work': `**Rameshwar's Work:**\n\nHe has built ${CHATBOT_CONTEXT.personal.projectsBuilt} production projects including AI applications and full-stack web products.\n\n**Featured:** WebCraft, Safecoast\n\n👉 [View Projects](#projects)`,
-  'portfolio': `**Rameshwar's Portfolio:**\n\nIncludes ${CHATBOT_CONTEXT.personal.projectsBuilt} projects ranging from AI-powered SaaS platforms to e-commerce solutions.\n\n👉 [View All Projects](#projects)`,
-  'what have you built': `**What Rameshwar Has Built:**\n\n🌐 Client-focused websites (WebCraft)\n🌊 Real-time monitoring apps (Safecoast)\n🚀 SaaS platforms (Devory)\n🛒 E-commerce solutions (Moungiri Store)\n🤖 AI/ML applications (Spam Detection)\n\n👉 [View Projects](#projects)`,
+  'show me your projects': `**Heet's Projects:**\n\n🌐 **WebCraft** - Website Builder for Modern Businesses\n🌊 **Safecoast** - Coastal Hazard Intelligence (Hackathon Winner)\n🚀 **Devory** - AI-Powered Student Project Platform\n🛒 **Moungiri Store** - E-commerce Platform\n📱 **Spam Detection** - ML Classification System\n\n👉 [View All Projects](#projects)`,
+  'what projects have you built': `**Projects Built by Heet:**\n\n1. **WebCraft** - Modern business web solution\n2. **Safecoast** - Real-time coastal hazard monitoring\n3. **Devory** - AI-driven student project platform\n4. **Moungiri Store** - Full e-commerce solution\n5. **Spam Detection** - ML text classification\n\n👉 [View All Projects](#projects)`,
+  'your work': `**Heet's Work:**\n\nHe has built ${CHATBOT_CONTEXT.personal.projectsBuilt} production projects including AI applications and full-stack web products.\n\n**Featured:** WebCraft, Safecoast\n\n👉 [View Projects](#projects)`,
+  'portfolio': `**Heet's Portfolio:**\n\nIncludes ${CHATBOT_CONTEXT.personal.projectsBuilt} projects ranging from AI-powered SaaS platforms to e-commerce solutions.\n\n👉 [View All Projects](#projects)`,
+  'what have you built': `**What Heet Has Built:**\n\n🌐 Client-focused websites (WebCraft)\n🌊 Real-time monitoring apps (Safecoast)\n🚀 SaaS platforms (Devory)\n🛒 E-commerce solutions (Moungiri Store)\n🤖 AI/ML applications (Spam Detection)\n\n👉 [View Projects](#projects)`,
 
   // Specific Projects
   'tell me about devory': `**🚀 Devory - AI-Powered Student Project Platform**\n\n${CHATBOT_CONTEXT.projects[0].longDescription}\n\n**Tech:** Next.js, TypeScript, PostgreSQL, OpenAI\n**Status:** Currently building\n\n👉 [View Projects](#projects)`,
-  'what is devory': `**Devory** is Rameshwar's flagship project - an AI-driven platform that helps students discover, build, and manage real-world technical projects.\n\n**Features:**\n• AI project recommendations\n• Progress tracking\n• Portfolio integration\n\n👉 [View Projects](#projects)`,
+  'what is devory': `**Devory** is Heet's flagship project - an AI-driven platform that helps students discover, build, and manage real-world technical projects.\n\n**Features:**\n• AI project recommendations\n• Progress tracking\n• Portfolio integration\n\n👉 [View Projects](#projects)`,
   'tell me about safecoast': `**🌊 Safecoast - Coastal Hazard Intelligence**\n\nBuilt in a 48-hour hackathon, it monitors environmental risk factors for coastal communities.\n\n**Tech:** Next.js, Node.js, OpenWeather API\n**Achievement:** Hackathon Winner! 🏆\n\n👉 [View Projects](#projects)`,
   'tell me about thinkverse': `**💡 ThinkVerse - Idea Management Platform**\n\nA structured platform for entrepreneurs to organize, develop, and execute ideas systematically.\n\n**Tech:** Next.js, Supabase, Framer Motion\n**Status:** Launched\n\n👉 [View Projects](#projects)`,
 
   // Services Questions
-  'what services do you offer': `**Services Rameshwar Offers:**\n\n🌐 Full Stack Web Development\n🤖 AI/ML Integration\n📦 SaaS Platform Development\n🔗 API Design & Development\n🗄️ Database Design\n⚡ Performance Optimization\n🎨 UI/UX Development\n💬 Technical Consultation\n\n👉 [View Services](#services)`,
-  'services': `**Rameshwar's Services:**\n\n• Full Stack Web Development\n• AI/ML Integration\n• SaaS Development\n• API Development\n• Database Design\n• UI/UX Development\n\n👉 [View Services](#services)`,
-  'what can you do for me': `**How Rameshwar Can Help:**\n\n✅ Build custom web applications\n✅ Integrate AI features into your app\n✅ Design scalable databases\n✅ Create beautiful, responsive UIs\n✅ Optimize your application performance\n\n👉 [Contact for details](#contact)`,
-  'can you build a website': "**Yes!** Rameshwar builds modern, responsive websites with:\n\n• React/Next.js\n• Custom designs\n• SEO optimization\n• Fast performance\n\n👉 [Go to Contact Section](#contact) to discuss your project!",
-  'can you build an app': "**Absolutely!** Rameshwar can build:\n\n• Web applications (React/Next.js)\n• Full-stack apps with databases\n• AI-powered applications\n• SaaS platforms\n\n👉 [Go to Contact Section](#contact)",
-  'do you do freelance': `**Yes!** Rameshwar is available for freelance work.\n\n**Work Types:**\n${CHATBOT_CONTEXT.personal.workPreference.map(w => `• ${w}`).join('\n')}\n\n👉 [Contact to discuss](#contact)`,
+  'what services do you offer': `**Services Heet Offers:**\n\n🌐 Full Stack Web Development\n🤖 AI/ML Integration\n📦 SaaS Platform Development\n🔗 API Design & Development\n🗄️ Database Design\n⚡ Performance Optimization\n🎨 UI/UX Development\n💬 Technical Consultation\n\n👉 [View Services](#services)`,
+  'services': `**Heet's Services:**\n\n• Full Stack Web Development\n• AI/ML Integration\n• SaaS Development\n• API Development\n• Database Design\n• UI/UX Development\n\n👉 [View Services](#services)`,
+  'what can you do for me': `**How Heet Can Help:**\n\n✅ Build custom web applications\n✅ Integrate AI features into your app\n✅ Design scalable databases\n✅ Create beautiful, responsive UIs\n✅ Optimize your application performance\n\n👉 [Contact for details](#contact)`,
+  'can you build a website': "**Yes!** Heet builds modern, responsive websites with:\n\n• React/Next.js\n• Custom designs\n• SEO optimization\n• Fast performance\n\n👉 [Go to Contact Section](#contact) to discuss your project!",
+  'can you build an app': "**Absolutely!** Heet can build:\n\n• Web applications (React/Next.js)\n• Full-stack apps with databases\n• AI-powered applications\n• SaaS platforms\n\n👉 [Go to Contact Section](#contact)",
+  'do you do freelance': `**Yes!** Heet is available for freelance work.\n\n**Work Types:**\n${CHATBOT_CONTEXT.personal.workPreference.map(w => `• ${w}`).join('\n')}\n\n👉 [Contact to discuss](#contact)`,
 
   // Experience Questions
-  'experience': `**Rameshwar's Experience:**\n\n📅 ${CHATBOT_CONTEXT.personal.yearsOfExperience} years in software development\n🚀 ${CHATBOT_CONTEXT.personal.projectsBuilt} projects shipped\n🏆 Hackathon winner\n🎓 B.Tech in IT (Pursuing)\n\n👉 [View Journey](#journey)`,
-  'how much experience': `Rameshwar has **${CHATBOT_CONTEXT.personal.yearsOfExperience} years** of hands-on experience in full-stack development and AI/ML.\n\nHe has built ${CHATBOT_CONTEXT.personal.projectsBuilt} production projects!`,
-  'years of experience': `📅 **${CHATBOT_CONTEXT.personal.yearsOfExperience} Years** of development experience.\n\nRameshwar started coding in 2022 and has been building production applications ever since!`,
-  'your journey': `**Rameshwar's Journey:**\n\n2022 - Started web development\n2023 - Learned React & Backend\n2024 - Started B.Tech, built production apps\n2025 - Launched ThinkVerse SaaS\n2026 - Building Devory (AI-powered)\n\n👉 [View Full Journey](#journey)`,
-  'how did you start coding': "Rameshwar started coding in **2022** with HTML, CSS, and JavaScript. His curiosity led him to React, then full-stack development, and now AI/ML integration. He believes in learning by building real projects!",
+  'experience': `**Heet's Background:**\n\n🚀 ${CHATBOT_CONTEXT.personal.projectsBuilt} projects shipped\n🤖 Building AI products and intelligent software\n🎓 B.Tech in AI & Data Science (Pursuing)\n\n👉 [View Journey](#journey)`,
+  'how much experience': `Heet has built **${CHATBOT_CONTEXT.personal.projectsBuilt} production projects** focusing heavily on full-stack development and AI/ML. He is currently pursuing a B.Tech in Artificial Intelligence & Data Science (Expected 2027).`,
+  'years of experience': `Heet has built a strong AI-focused portfolio with **${CHATBOT_CONTEXT.personal.projectsBuilt} production projects** using ${CHATBOT_CONTEXT.personal.technologiesUsed} technologies!`,
+  'your journey': `**Heet's Journey:**\n\n2022 - The Curiosity Phase\n2023 - Engineering Foundation (B.Tech AI & Data Science)\n2024 - Full-Stack Developer\n2025 - AI Exploration\n2026 - AI Product Development\n2027 - Research & Graduate Journey`,
 
   // Education
-  'education': `**Education:**\n\n🎓 B.Tech in Information Technology (Pursuing)\n📚 Self-taught developer since 2022\n🌐 Continuous learning through building projects\n\nRameshwar believes in learning by doing!`,
-  'where did you study': `🎓 Rameshwar is pursuing **B.Tech in Information Technology**.\n\nHe's also self-taught through online resources, documentation, and building real projects!`,
-  'your qualification': `**Qualifications:**\n\n🎓 B.Tech in Information Technology (Pursuing)\n💻 ${CHATBOT_CONTEXT.personal.yearsOfExperience}+ years practical experience\n🚀 ${CHATBOT_CONTEXT.personal.projectsBuilt} production projects\n🏆 Hackathon winner`,
+  'education': `**Education:**\n\n🎓 B.Tech in Artificial Intelligence & Data Science (CVM University, Expected 2027)\n\nHeet is preparing for a research-focused Master's in Computer Science and believes in learning by building impactful AI products!`,
+  'where did you study': `🎓 Heet is pursuing a **B.Tech in Artificial Intelligence & Data Science** at CVM University.\n\nHis long-term goal is to pursue a thesis-based Master's in Computer Science!`,
+  'your qualification': `**Qualifications:**\n\n🎓 B.Tech in AI & Data Science (Expected 2027)\n🤖 AI-focused portfolio\n🚀 ${CHATBOT_CONTEXT.personal.projectsBuilt} production projects`,
 
   // Pricing
   'pricing': `**Pricing Information:**\n\n💬 Consultation: Free initial consultation\n⏰ Hourly: $30-80 based on complexity\n📦 Projects: Custom quotes\n🔄 Retainer: Monthly packages available\n\n👉 [Contact for quote](#contact)`,
-  'how much do you charge': `**Rameshwar's Rates:**\n\n• **Hourly:** $30-80 (based on complexity)\n• **Projects:** Custom quotes\n• **Consultation:** Free initial call\n\nReach out with your requirements for a specific quote!\n\n👉 [Contact](#contact)`,
+  'how much do you charge': `**Heet's Rates:**\n\n• **Hourly:** $30-80 (based on complexity)\n• **Projects:** Custom quotes\n• **Consultation:** Free initial call\n\nReach out with your requirements for a specific quote!\n\n👉 [Contact](#contact)`,
   'rates': `**Rates:**\n\nHourly: $30-80 depending on project complexity\nProjects: Custom quotes based on scope\n\n👉 [Get a Quote](#contact)`,
-  'your rate': `Rameshwar's hourly rate ranges from **$30-80** depending on project complexity. For fixed-price projects, he provides custom quotes.\n\n👉 [Contact for Quote](#contact)`,
+  'your rate': `Heet's hourly rate ranges from **$30-80** depending on project complexity. For fixed-price projects, he provides custom quotes.\n\n👉 [Contact for Quote](#contact)`,
 
   // Social Links
-  'github': `🐙 **GitHub:** ${CHATBOT_CONTEXT.social.github}\n\nCheck out Rameshwar's open source projects and code!`,
-  'linkedin': `💼 **LinkedIn:** ${CHATBOT_CONTEXT.social.linkedin}\n\nConnect with Rameshwar professionally!`,
+  'github': `🐙 **GitHub:** ${CHATBOT_CONTEXT.social.github}\n\nCheck out Heet's open source projects and code!`,
+  'linkedin': `💼 **LinkedIn:** ${CHATBOT_CONTEXT.social.linkedin}\n\nConnect with Heet professionally!`,
   'twitter': `🐦 **Twitter:** ${CHATBOT_CONTEXT.social.twitter}\n\nFollow for tech insights and updates!`,
-  'social links': `**Connect with Rameshwar:**\n\n🐙 GitHub: ${CHATBOT_CONTEXT.social.github}\n💼 LinkedIn: ${CHATBOT_CONTEXT.social.linkedin}\n🐦 Twitter: ${CHATBOT_CONTEXT.social.twitter}\n🌐 Portfolio: ${CHATBOT_CONTEXT.social.portfolio}`,
+  'social links': `**Connect with Heet:**\n\n🐙 GitHub: ${CHATBOT_CONTEXT.social.github}\n💼 LinkedIn: ${CHATBOT_CONTEXT.social.linkedin}\n🐦 Twitter: ${CHATBOT_CONTEXT.social.twitter}\n🌐 Portfolio: ${CHATBOT_CONTEXT.social.portfolio}`,
 
   // Navigation
-  'show all sections': `**📍 Portfolio Sections:**\n\n• [🏠 Home](#hero) - Welcome section\n• [👤 About Me](#about) - Learn about Rameshwar\n• [🛠️ Skills](#skills) - Technologies & expertise\n• [🚀 Projects](#projects) - Portfolio of work\n• [📅 My Journey](#journey) - Career timeline\n• [💼 Services](#services) - What he offers\n• [📧 Contact](#contact) - Get in touch`,
+  'show all sections': `**📍 Portfolio Sections:**\n\n• [🏠 Home](#hero) - Welcome section\n• [👤 About Me](#about) - Learn about Heet\n• [🛠️ Skills](#skills) - Technologies & expertise\n• [🚀 Projects](#projects) - Portfolio of work\n• [📅 My Journey](#journey) - Career timeline\n• [💼 Services](#services) - What he offers\n• [📧 Contact](#contact) - Get in touch`,
   'sections': `**Portfolio Sections:**\n\n• [Home](#hero)\n• [About](#about)\n• [Skills](#skills)\n• [Projects](#projects)\n• [Journey](#journey)\n• [Services](#services)\n• [Contact](#contact)`,
   'navigate': `**Navigate the Portfolio:**\n\n👉 [About Me](#about)\n👉 [Skills](#skills)\n👉 [Projects](#projects)\n👉 [Services](#services)\n👉 [Contact](#contact)`,
   'go to projects': `👉 Click here to view projects: [View Projects](#projects)`,
@@ -520,54 +406,54 @@ export const QUICK_RESPONSES: Record<string, string> = {
   'go to about': `👉 Click here to learn more: [About Me](#about)`,
 
   // Work Process
-  'how do you work': `**Rameshwar's Work Process:**\n\n1️⃣ **Discovery** - Understanding requirements\n2️⃣ **Planning** - Creating roadmap\n3️⃣ **Development** - Building with updates\n4️⃣ **Testing** - Ensuring quality\n5️⃣ **Launch** - Deploying to production\n6️⃣ **Support** - Ongoing maintenance`,
-  'your process': `**How Rameshwar Works:**\n\n1. Free consultation to understand needs\n2. Detailed proposal & timeline\n3. Development with regular updates\n4. Testing & quality assurance\n5. Launch & deployment\n6. Post-launch support`,
+  'how do you work': `**Heet's Work Process:**\n\n1️⃣ **Discovery** - Understanding requirements\n2️⃣ **Planning** - Creating roadmap\n3️⃣ **Development** - Building with updates\n4️⃣ **Testing** - Ensuring quality\n5️⃣ **Launch** - Deploying to production\n6️⃣ **Support** - Ongoing maintenance`,
+  'your process': `**How Heet Works:**\n\n1. Free consultation to understand needs\n2. Detailed proposal & timeline\n3. Development with regular updates\n4. Testing & quality assurance\n5. Launch & deployment\n6. Post-launch support`,
   'work process': `**Development Process:**\n\n• Discovery: Understanding your vision\n• Planning: Technical specifications\n• Development: Iterative building\n• Testing: Quality assurance\n• Launch: Production deployment\n• Support: Ongoing maintenance`,
 
   // Fun Facts
   'fun fact': CHATBOT_CONTEXT.funFacts[Math.floor(Math.random() * CHATBOT_CONTEXT.funFacts.length)],
-  'tell me something interesting': `**Fun Fact:** ${CHATBOT_CONTEXT.funFacts[Math.floor(Math.random() * CHATBOT_CONTEXT.funFacts.length)]}\n\nWant to know more about Rameshwar?`,
-  'hobbies': `**Rameshwar's Interests:**\n\n• Building SaaS products\n• AI/ML exploration\n• Open source contribution\n• Learning new technologies\n• System design\n\nCoding is both his work and passion!`,
+  'tell me something interesting': `**Fun Fact:** ${CHATBOT_CONTEXT.funFacts[Math.floor(Math.random() * CHATBOT_CONTEXT.funFacts.length)]}\n\nWant to know more about Heet?`,
+  'hobbies': `**Heet's Interests:**\n\n• Building SaaS products\n• AI/ML exploration\n• Open source contribution\n• Learning new technologies\n• System design\n\nCoding is both his work and passion!`,
 
   // Common Questions
-  'why should i hire you': `**Why Hire Rameshwar?**\n\n✅ ${CHATBOT_CONTEXT.personal.yearsOfExperience}+ years of experience\n✅ ${CHATBOT_CONTEXT.personal.projectsBuilt}+ production projects\n✅ Full-stack + AI expertise\n✅ Quick response time\n✅ Quality-focused approach\n✅ Clear communication\n\n👉 [Let's Discuss](#contact)`,
-  'what makes you different': `**What Sets Rameshwar Apart:**\n\n🎯 Full-stack + AI/ML skills\n🚀 Focus on shipping real products\n💡 Modern tech stack expertise\n📈 Performance-oriented development\n🤝 Clear communication & reliability\n\nHe builds things that work and scale!`,
-  'do you work remotely': `**Yes!** Rameshwar works remotely with clients worldwide.\n\n🌍 Available for global projects\n⏰ Flexible with timezones\n💬 Clear async communication\n\n👉 [Start a Project](#contact)`,
-  'timezone': `🕐 Rameshwar's Timezone: **${CHATBOT_CONTEXT.personal.timezone}**\n\nHe's flexible and works with clients across different timezones!`,
-  'languages you speak': `**Languages Rameshwar Speaks:**\n\n• English (Professional)\n• Hindi (Native)\n• Marathi (Native)`,
+  'why should i hire you': `**Why Hire Heet?**\n\n✅ True AI Engineer + Full-Stack expertise\n✅ ${CHATBOT_CONTEXT.personal.projectsBuilt} production projects\n✅ Focus on intelligent software and research\n✅ Modern tech stack (${CHATBOT_CONTEXT.personal.technologiesUsed} technologies)\n✅ Quality-focused approach & clear communication\n\n👉 [Let's Discuss](#contact)`,
+  'what makes you different': `**What Sets Heet Apart:**\n\n🎯 AI-first mindset combined with robust Full-Stack skills\n🚀 Focus on shipping practical AI products and intelligent software\n💡 Strong theoretical foundation in ML/CV with real-world application\n📈 Research-oriented and deeply technical\n\nHe builds intelligent systems that solve real-world problems!`,
+  'do you work remotely': `**Yes!** Heet works remotely with clients worldwide.\n\n🌍 Available for global projects\n⏰ Flexible with timezones\n💬 Clear async communication\n\n👉 [Start a Project](#contact)`,
+  'timezone': `🕐 Heet's Timezone: **${CHATBOT_CONTEXT.personal.timezone}**\n\nHe's flexible and works with clients across different timezones!`,
+  'languages you speak': `**Languages Heet Speaks:**\n\n• English (Professional)\n• Hindi (Native)\n• Marathi (Native)`,
 };
 
 // Response templates for common intents
 export const RESPONSE_TEMPLATES = {
   greeting: [
-    "Hey there! 👋 I'm Rameshwar's AI assistant. How can I help you learn more about him today?",
-    "Hello! Welcome to Rameshwar's portfolio. What would you like to know?",
-    "Hi! I'm here to tell you all about Rameshwar. Ask me anything!",
-    "Hey! Great to meet you. I can tell you about Rameshwar's skills, projects, experience, and more. What interests you?",
+    "Hey there! 👋 I'm Heet's AI assistant. How can I help you learn more about him today?",
+    "Hello! Welcome to Heet's portfolio. What would you like to know?",
+    "Hi! I'm here to tell you all about Heet. Ask me anything!",
+    "Hey! Great to meet you. I can tell you about Heet's skills, projects, experience, and more. What interests you?",
   ],
 
   farewell: [
-    "Thanks for chatting! Feel free to reach out to Rameshwar at rameshwarbhagwat019@gmail.com. Have a great day! 👋",
-    "Goodbye! Don't hesitate to contact Rameshwar if you have any opportunities or questions.",
-    "Take care! Rameshwar would love to hear from you. Connect on LinkedIn or send an email!",
+    "Thanks for chatting! Feel free to reach out to Heet at heetks2607@gmail.com. Have a great day! 👋",
+    "Goodbye! Don't hesitate to contact Heet if you have any opportunities or questions.",
+    "Take care! Heet would love to hear from you. Connect on LinkedIn or send an email!",
     "Thanks for visiting! Hope this was helpful. Reach out anytime! 🙌",
   ],
 
   unknown: [
-    "I'm not sure about that specific question. Try asking about:\n\n• Skills & tech stack\n• Projects\n• Services\n• Contact info\n• How to hire\n\nOr reach out to Rameshwar at rameshwarbhagwat019@gmail.com!",
-    "That's an interesting question! I can help with questions about Rameshwar's:\n\n• Skills & expertise\n• Projects & portfolio\n• Services & pricing\n• Contact & hiring\n\nWhat would you like to know?",
-    "I don't have specific info on that, but try asking about skills, projects, or services! Or contact Rameshwar directly.",
+    "I'm not sure about that specific question. Try asking about:\n\n• Skills & tech stack\n• Projects\n• Services\n• Contact info\n• How to hire\n\nOr reach out to Heet at heetks2607@gmail.com!",
+    "That's an interesting question! I can help with questions about Heet's:\n\n• Skills & expertise\n• Projects & portfolio\n• Services & pricing\n• Contact & hiring\n\nWhat would you like to know?",
+    "I don't have specific info on that, but try asking about skills, projects, or services! Or contact Heet directly.",
   ],
 
   thanks: [
-    "You're welcome! 😊 Let me know if you have any other questions about Rameshwar.",
-    "Happy to help! Feel free to explore more or reach out to Rameshwar directly.",
+    "You're welcome! 😊 Let me know if you have any other questions about Heet.",
+    "Happy to help! Feel free to explore more or reach out to Heet directly.",
     "Glad I could help! Is there anything else you'd like to know?",
     "Anytime! 🙌 Feel free to ask more questions or visit the Contact section.",
   ],
 
   capabilities: [
-    "**I can tell you about:**\n\n• 👤 Rameshwar's background & bio\n• 🛠️ Skills and tech stack\n• 🚀 Projects (WebCraft, Safecoast, Devory)\n• 📅 Experience and journey\n• 💼 Services offered\n• 📧 How to contact or hire\n• 🔗 Social links\n\nWhat would you like to know?",
+    "**I can tell you about:**\n\n• 👤 Heet's background & bio\n• 🛠️ Skills and tech stack\n• 🚀 Projects (WebCraft, Safecoast, Devory)\n• 📅 Experience and journey\n• 💼 Services offered\n• 📧 How to contact or hire\n• 🔗 Social links\n\nWhat would you like to know?",
   ],
 };
 
@@ -586,7 +472,7 @@ export const INTENT_KEYWORDS: Record<string, string[]> = {
   capabilities: ["what can you do", "help me", "what do you know", "what can i ask", "how can you help", "capabilities", "what are you"],
 
   // About/Introduction
-  about: ["about", "who", "tell me", "yourself", "rameshwar", "introduce", "introduction", "what do you do", "describe", "overview", "summary", "bio", "background"],
+  about: ["about", "who", "tell me", "yourself", "Heet", "introduce", "introduction", "what do you do", "describe", "overview", "summary", "bio", "background"],
   identity: ["name", "your name", "what is your name", "who am i talking to"],
 
   // Skills
@@ -723,3 +609,4 @@ export const SUGGESTION_CHAINS: Record<string, string[]> = {
   // Unknown response suggestions
   unknown: ["Tell me about yourself", "What are your skills?", "Show me your projects"],
 };
+

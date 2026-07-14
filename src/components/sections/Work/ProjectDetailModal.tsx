@@ -242,7 +242,7 @@ export default function ProjectDetailModal({ project, onClose }: ProjectDetailMo
   const restOfText = project.longDescription.slice(1);
 
   const cloneCommand = useMemo(() => {
-    return `git clone ${project.githubUrl || 'https://github.com/Rameshwar-bhagwat10/portfolio.git'}\ncd ${project.title.toLowerCase().replace(/\s+/g, '-')}\nnpm install\nnpm run dev`;
+    return `git clone ${project.githubUrl || 'https://github.com/HeetSoni26/portfolio.git'}\ncd ${project.title.toLowerCase().replace(/\s+/g, '-')}\nnpm install\nnpm run dev`;
   }, [project.githubUrl, project.title]);
 
   const handleCopyCommand = useCallback(() => {

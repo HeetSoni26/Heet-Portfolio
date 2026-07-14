@@ -193,8 +193,8 @@ After deploying:
 - [ ] Visit site in Firefox - check favicon
 - [ ] Visit site in Safari - check favicon
 - [ ] Test on mobile - check home screen icon
-- [ ] Verify: https://rameshwarbhagwat.me/favicon.ico loads
-- [ ] Verify: https://rameshwarbhagwat.me/favicon-32x32.png loads
+- [ ] Verify: https://Heetbhagwat.me/favicon.ico loads
+- [ ] Verify: https://Heetbhagwat.me/favicon-32x32.png loads
 - [ ] Use checker: https://realfavicongenerator.net/favicon_checker
 
 ---

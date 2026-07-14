@@ -94,7 +94,7 @@ Safari: Cmd + Shift + N
 
 ### 4. Verify Favicon
 - Check browser tab → Should show your logo
-- Visit: `https://rameshwarbhagwat.me/icon.svg` → Should display your logo
+- Visit: `https://Heetbhagwat.me/icon.svg` → Should display your logo
 
 ---
 
@@ -132,7 +132,7 @@ Next.js 13+ uses file-based metadata conventions:
 - [ ] Safari (iOS) → Check tab icon
 
 ### Direct URL Test:
-- [ ] Visit: `https://rameshwarbhagwat.me/icon.svg`
+- [ ] Visit: `https://Heetbhagwat.me/icon.svg`
 - [ ] Should display your logo
 
 ### Bookmark Test:
@@ -163,7 +163,7 @@ Next.js 13+ uses file-based metadata conventions:
 
 **Step 3: Check Favicon URL**
 ```
-Visit: https://rameshwarbhagwat.me/icon.svg
+Visit: https://Heetbhagwat.me/icon.svg
 
 Should show: Your logo
 If 404: Deployment not complete yet

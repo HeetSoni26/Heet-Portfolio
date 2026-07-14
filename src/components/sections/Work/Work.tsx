@@ -7,7 +7,7 @@ import { projects } from './work.data';
 import ProjectCard from './ProjectCard';
 
 const INITIAL_PROJECTS_COUNT = 3;
-const categories = ['All', 'AI & ML', 'Full-Stack', 'Web Apps'] as const;
+const categories = ['All', 'AI', 'Research', 'Android', 'Web'] as const;
 type Category = typeof categories[number];
 
 // Scroll-triggered counter helper component
@@ -39,18 +39,7 @@ const Stats = memo(function Stats() {
           <Counter value={projects.length} />
         </span>
         <span className="text-[10px] sm:text-xs text-white/40 uppercase tracking-widest font-bold">
-          Projects
-        </span>
-      </div>
-      
-      <div className="w-px h-10 sm:h-12 bg-white/10" />
-      
-      <div className="text-center">
-        <span className="block text-4xl xs:text-5xl sm:text-6xl font-black font-outfit text-white tracking-tight leading-none mb-1.5 sm:mb-2">
-          <Counter value={15} />+
-        </span>
-        <span className="text-[10px] sm:text-xs text-white/40 uppercase tracking-widest font-bold">
-          Technologies
+          Featured Projects
         </span>
       </div>
       
@@ -61,7 +50,18 @@ const Stats = memo(function Stats() {
           <Counter value={4} />
         </span>
         <span className="text-[10px] sm:text-xs text-white/40 uppercase tracking-widest font-bold">
-          Industries
+          AI Systems
+        </span>
+      </div>
+      
+      <div className="w-px h-10 sm:h-12 bg-white/10" />
+      
+      <div className="text-center">
+        <span className="block text-4xl xs:text-5xl sm:text-6xl font-black font-outfit text-white tracking-tight leading-none mb-1.5 sm:mb-2">
+          <Counter value={20} />+
+        </span>
+        <span className="text-[10px] sm:text-xs text-white/40 uppercase tracking-widest font-bold">
+          Tech Stack
         </span>
       </div>
     </div>
@@ -155,12 +155,8 @@ const statsContainerVariants = {
 };
 
 const projectHeadings = [
-  "Engineered Digital Products",
-  "Architected Software Solutions",
-  "Featured Creative Works",
-  "Crafted Code Creations",
-  "Designed Scalable Systems",
-  "Innovated Web Applications"
+  "Projects Built Around AI, Research & Software Engineering",
+  "AI Systems & Software Engineering Projects"
 ];
 
 export default function Work() {
@@ -185,20 +181,17 @@ export default function Work() {
   const filteredProjects = useMemo(() => {
     return projects.filter((project) => {
       if (activeCategory === 'All') return true;
-      if (activeCategory === 'AI & ML') {
-        return project.techStack.some((t) =>
-          ['Python', 'Scikit-learn', 'TensorFlow', 'OpenAI API'].includes(t)
-        );
+      if (activeCategory === 'AI') {
+        return project.category.includes('AI') || project.category.includes('Machine Learning') || project.category.includes('LLM');
       }
-      if (activeCategory === 'Full-Stack') {
-        return project.techStack.some((t) =>
-          ['Node.js', 'Express.js', 'MySQL', 'MongoDB', 'PostgreSQL', 'Supabase (PostgreSQL + Auth)', 'Prisma'].includes(t)
-        );
+      if (activeCategory === 'Research') {
+        return project.category.includes('Research') || project.category.includes('Computer Vision');
       }
-      if (activeCategory === 'Web Apps') {
-        return project.techStack.some((t) =>
-          ['Next.js', 'React', 'Tailwind CSS'].includes(t)
-        );
+      if (activeCategory === 'Android') {
+        return project.category.includes('Android');
+      }
+      if (activeCategory === 'Web') {
+        return project.category.includes('Web');
       }
       return true;
     });
@@ -225,18 +218,18 @@ export default function Work() {
 
       <div className="relative z-20">
       {/* SEO Microdata */}
-      <meta itemProp="name" content="Featured Projects - Rameshwar Bhagwat Portfolio" />
+      <meta itemProp="name" content="Featured Projects - Heet Soni Portfolio" />
       <meta
         itemProp="description"
         content="Showcase of full-stack and AI-focused web development projects including WebCraft, Safecoast, and AI ML Progress Tracker, built with React, Next.js, TypeScript, and modern scalable architecture."
       />
-      <meta itemProp="author" content="Rameshwar Bhagwat" />
+      <meta itemProp="author" content="Heet Soni" />
 
       {/* Hidden SEO Content */}
       <div className="sr-only">
         <h2>Featured Projects Portfolio - Full Stack & AI Web Development</h2>
         <p>
-          Explore a curated collection of production-ready applications built by Rameshwar
+          Explore a curated collection of production-ready applications built by Heet
           Bhagwat, highlighting modern full stack engineering and AI-focused product development.
         </p>
         <h3>Project Highlights</h3>
@@ -261,7 +254,7 @@ export default function Work() {
         variants={headerContainerVariants}
         className="container mx-auto px-4 sm:px-6 mb-10 sm:mb-12"
       >
-        <div className="text-center max-w-4xl mx-auto">
+        <div className="text-center max-w-6xl mx-auto">
           {/* Label */}
           <motion.div
             variants={badgeVariants}
@@ -272,7 +265,7 @@ export default function Work() {
                 <path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19" />
               </svg>
             </div>
-            <span>Portfolio</span>
+            <span>FEATURED WORK</span>
           </motion.div>
 
           {/* Main Heading */}
@@ -281,7 +274,7 @@ export default function Work() {
             initial="hidden"
             animate="visible"
             variants={titleContainerVariants}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-[-0.02em] leading-[0.95] mb-4 sm:mb-5 flex flex-wrap justify-center gap-x-[0.25em] gap-y-[0.05em]"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-[-0.02em] leading-[1.1] mb-4 sm:mb-5 flex flex-wrap justify-center gap-x-[0.2em] gap-y-[0.1em]"
             style={{ perspective: 1200 }}
           >
             {projectHeadings[headingIndex].split(" ").map((word, i) => (
@@ -317,7 +310,7 @@ export default function Work() {
             variants={descriptionVariants}
             className="text-sm sm:text-base md:text-lg text-white/50 leading-relaxed max-w-2xl mx-auto font-outfit"
           >
-            A curated collection of full-stack applications showcasing modern web technologies, AI integrations, and native experiences.
+            Projects spanning Artificial Intelligence, Software Engineering, Web Development, Android Applications, and Business Automation.
           </motion.p>
 
           {/* Stats */}
@@ -331,7 +324,7 @@ export default function Work() {
 
       {/* iOS Segmented Control Switcher */}
       <div className="flex justify-center mb-10 sm:mb-14 px-4 sm:px-0">
-        <div className="relative flex items-center bg-[#0d0d0f]/80 backdrop-blur-xl border border-white/[0.06] rounded-full p-[3px] max-w-md w-full sm:w-auto overflow-hidden">
+        <div className="relative flex items-center bg-[#0d0d0f]/80 backdrop-blur-xl border border-white/[0.06] rounded-full p-[3px] max-w-full w-full sm:w-auto overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           {categories.map((cat, idx) => {
             const isActive = activeCategory === cat;
             const isNextActive = categories[idx + 1] === activeCategory;
@@ -342,7 +335,7 @@ export default function Work() {
                 <motion.button
                   whileTap={{ scale: 0.96 }}
                   onClick={() => handleCategoryChange(cat)}
-                  className={`relative flex-1 sm:flex-initial w-full sm:w-auto px-4 sm:px-6 py-2 text-xs sm:text-[13px] font-semibold rounded-full text-center cursor-pointer transition-all duration-200 z-[1] select-none font-outfit ${
+                  className={`relative flex-1 sm:flex-initial w-full sm:w-auto px-4 sm:px-6 py-2 text-xs sm:text-[13px] font-semibold rounded-full text-center cursor-pointer transition-all duration-200 z-[1] select-none font-outfit whitespace-nowrap ${
                     isActive ? 'text-neutral-950 font-bold' : 'text-white/60 hover:text-white/90'
                   }`}
                 >
@@ -443,3 +436,4 @@ export default function Work() {
     </section>
   );
 }
+

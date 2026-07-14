@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-const GITHUB_USERNAME = 'Rameshwar-bhagwat10';
+const GITHUB_USERNAME = 'HeetSoni26';
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 
 interface GitCommit {
@@ -20,7 +20,7 @@ export async function GET() {
         headers: {
           'Authorization': `Bearer ${GITHUB_TOKEN}`,
           'Accept': 'application/vnd.github.v3+json',
-          'User-Agent': 'Rameshwar-Portfolio-CLI',
+          'User-Agent': 'Heet-Portfolio-CLI',
         },
         next: { revalidate: 1800 }, // Cache for 30 minutes
       });
@@ -86,49 +86,49 @@ function getMockCommits(): GitCommit[] {
       message: 'feat: add interactive retro developer sandbox CLI console 🚀',
       repo: 'Ram-PortFolio',
       date: getPastDateStr(0),
-      url: 'https://github.com/Rameshwar-bhagwat10/Ram-PortFolio',
+      url: 'https://github.com/HeetSoni26/Ram-PortFolio',
     },
     {
       sha: '8a9c3e2',
       message: 'style: enhance iOS chatbot bubble gradients and message layouts',
       repo: 'Ram-PortFolio',
       date: getPastDateStr(1),
-      url: 'https://github.com/Rameshwar-bhagwat10/Ram-PortFolio',
+      url: 'https://github.com/HeetSoni26/Ram-PortFolio',
     },
     {
       sha: '3b8d4e1',
       message: 'perf: optimize Three.js NeuralSphere rendering performance and inertia calculations',
       repo: 'Ram-PortFolio',
       date: getPastDateStr(2),
-      url: 'https://github.com/Rameshwar-bhagwat10/Ram-PortFolio',
+      url: 'https://github.com/HeetSoni26/Ram-PortFolio',
     },
     {
       sha: '9c2f4d8',
       message: 'fix: handle visitor tracker edge-cases with Redis connection dropouts',
       repo: 'Ram-PortFolio',
       date: getPastDateStr(4),
-      url: 'https://github.com/Rameshwar-bhagwat10/Ram-PortFolio',
+      url: 'https://github.com/HeetSoni26/Ram-PortFolio',
     },
     {
       sha: 'e5a1b7c',
       message: 'chore: implement structured metadata and microdata schemas for standard SEO',
       repo: 'Ram-PortFolio',
       date: getPastDateStr(5),
-      url: 'https://github.com/Rameshwar-bhagwat10/Ram-PortFolio',
+      url: 'https://github.com/HeetSoni26/Ram-PortFolio',
     },
     {
       sha: 'a6b2c9d',
       message: 'feat: integrate email notification system using Nodemailer SMTP relay',
       repo: 'Ram-PortFolio',
       date: getPastDateStr(7),
-      url: 'https://github.com/Rameshwar-bhagwat10/Ram-PortFolio',
+      url: 'https://github.com/HeetSoni26/Ram-PortFolio',
     },
     {
       sha: 'd3f7e9a',
       message: 'refactor: modularize codebase sections and lazy-load heavy subcomponents',
       repo: 'Ram-PortFolio',
       date: getPastDateStr(9),
-      url: 'https://github.com/Rameshwar-bhagwat10/Ram-PortFolio',
+      url: 'https://github.com/HeetSoni26/Ram-PortFolio',
     }
   ];
 }

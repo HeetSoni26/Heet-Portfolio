@@ -113,10 +113,10 @@ export default function NeonCursorTrail() {
           trail[trail.length - 1].x,
           trail[trail.length - 1].y
         );
-        gradient.addColorStop(0, 'rgba(255, 0, 0, 0)');
-        gradient.addColorStop(0.3, 'rgba(255, 20, 147, 0.6)');
-        gradient.addColorStop(0.7, 'rgba(255, 140, 0, 0.8)');
-        gradient.addColorStop(1, 'rgba(255, 140, 0, 1)');
+        gradient.addColorStop(0, 'rgba(255, 96, 0, 0)');
+        gradient.addColorStop(0.3, 'rgba(255, 96, 0, 0.6)');
+        gradient.addColorStop(0.7, 'rgba(255, 96, 0, 0.8)');
+        gradient.addColorStop(1, 'rgba(255, 96, 0, 1)');
 
         // Draw outer glow
         ctx.save();
@@ -125,7 +125,7 @@ export default function NeonCursorTrail() {
         ctx.lineWidth = 6;
         ctx.lineCap = 'round';
         ctx.lineJoin = 'round';
-        ctx.shadowColor = 'rgba(255, 20, 147, 0.5)';
+        ctx.shadowColor = 'rgba(255, 96, 0, 0.5)';
         ctx.shadowBlur = 15;
         ctx.globalAlpha = 0.4;
         ctx.stroke();
@@ -138,7 +138,7 @@ export default function NeonCursorTrail() {
         ctx.lineWidth = 2.5;
         ctx.lineCap = 'round';
         ctx.lineJoin = 'round';
-        ctx.shadowColor = 'rgba(255, 140, 0, 0.8)';
+        ctx.shadowColor = 'rgba(255, 96, 0, 0.8)';
         ctx.shadowBlur = 8;
         ctx.globalAlpha = 0.9;
         ctx.stroke();
@@ -158,8 +158,8 @@ export default function NeonCursorTrail() {
           particle.x, particle.y, size * 2
         );
         particleGradient.addColorStop(0, `rgba(255, 255, 255, ${opacity})`);
-        particleGradient.addColorStop(0.4, `rgba(255, 140, 0, ${opacity * 0.8})`);
-        particleGradient.addColorStop(1, `rgba(255, 20, 147, 0)`);
+        particleGradient.addColorStop(0.4, `rgba(255, 96, 0, ${opacity * 0.8})`);
+        particleGradient.addColorStop(1, `rgba(255, 96, 0, 0)`);
 
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, size * 2, 0, Math.PI * 2);
@@ -169,8 +169,8 @@ export default function NeonCursorTrail() {
         // Particle core
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, size * 0.4, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255, 255, 255, ${opacity})`;
-        ctx.shadowColor = 'rgba(255, 140, 0, 0.8)';
+        ctx.fillStyle = `rgba(255, 96, 0, ${opacity})`;
+        ctx.shadowColor = 'rgba(255, 96, 0, 0.8)';
         ctx.shadowBlur = 4;
         ctx.fill();
         ctx.shadowBlur = 0;
@@ -183,9 +183,9 @@ export default function NeonCursorTrail() {
           mouseRef.current.x, mouseRef.current.y, 8
         );
         cursorGradient.addColorStop(0, 'rgba(255, 255, 255, 1)');
-        cursorGradient.addColorStop(0.3, 'rgba(255, 140, 0, 0.9)');
-        cursorGradient.addColorStop(0.7, 'rgba(255, 20, 147, 0.6)');
-        cursorGradient.addColorStop(1, 'rgba(255, 0, 0, 0)');
+        cursorGradient.addColorStop(0.3, 'rgba(255, 96, 0, 0.9)');
+        cursorGradient.addColorStop(0.7, 'rgba(255, 96, 0, 0.6)');
+        cursorGradient.addColorStop(1, 'rgba(255, 96, 0, 0)');
 
         ctx.beginPath();
         ctx.arc(mouseRef.current.x, mouseRef.current.y, 8, 0, Math.PI * 2);
@@ -195,8 +195,8 @@ export default function NeonCursorTrail() {
         // Inner bright core
         ctx.beginPath();
         ctx.arc(mouseRef.current.x, mouseRef.current.y, 2, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(255, 255, 255, 1)';
-        ctx.shadowColor = 'rgba(255, 140, 0, 1)';
+        ctx.fillStyle = 'rgba(255, 96, 0, 1)';
+        ctx.shadowColor = 'rgba(255, 96, 0, 1)';
         ctx.shadowBlur = 6;
         ctx.fill();
         ctx.shadowBlur = 0;

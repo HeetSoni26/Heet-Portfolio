@@ -22,12 +22,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!project) {
     return {
-      title: 'Project Not Found | Rameshwar Bhagwat',
+      title: 'Project Not Found | Heet Soni',
       description: 'The requested project case study could not be located.',
     };
   }
 
-  const title = `${project.title} - ${project.tagline} | Rameshwar Bhagwat Case Study`;
+  const title = `${project.title} - ${project.tagline} | Heet Soni Case Study`;
   const description = `${project.title}: ${project.description} Engineered with ${project.techStack.join(', ')}. Discover features, challenges, and implementation metrics.`;
 
   return {
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       `${project.title} case study`,
       `${project.title} developer`,
       ...project.techStack,
-      'Rameshwar Bhagwat projects',
+      'Heet Soni projects',
       'full stack developer portfolio'
     ],
     openGraph: {
@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description,
       type: 'article',
       publishedTime: '2026-06-29T00:00:00.000Z',
-      authors: ['Rameshwar Bhagwat'],
+      authors: ['Heet Soni'],
       images: [
         {
           url: project.image,

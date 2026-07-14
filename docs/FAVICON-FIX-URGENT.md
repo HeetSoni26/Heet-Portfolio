@@ -85,13 +85,13 @@ public/
    - Or use Incognito mode
 
 4. **Test favicon:**
-   - Visit: https://rameshwarbhagwat.me
+   - Visit: https://Heetbhagwat.me
    - Check browser tab for favicon
-   - Test: https://rameshwarbhagwat.me/favicon.ico (should load)
+   - Test: https://Heetbhagwat.me/favicon.ico (should load)
 
 5. **Verify with tools:**
    - https://realfavicongenerator.net/favicon_checker
-   - Enter: rameshwarbhagwat.me
+   - Enter: Heetbhagwat.me
    - Should show all green checkmarks
 
 ---
@@ -114,7 +114,7 @@ After fixing favicon:
 
 1. **Google Search Console:**
    - Go to: https://search.google.com/search-console
-   - Select property: rameshwarbhagwat.me
+   - Select property: Heetbhagwat.me
    - URL Inspection → Enter homepage URL
    - Click "Request Indexing"
 
@@ -134,8 +134,8 @@ After fixing favicon:
 ## 🆘 If Still Not Working
 
 1. **Check file accessibility:**
-   - https://rameshwarbhagwat.me/favicon.ico
-   - https://rameshwarbhagwat.me/favicon-32x32.png
+   - https://Heetbhagwat.me/favicon.ico
+   - https://Heetbhagwat.me/favicon-32x32.png
    - All should return 200 OK
 
 2. **Check file sizes:**

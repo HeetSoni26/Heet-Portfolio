@@ -249,7 +249,7 @@ export default function HeroContent() {
             color: isReveal ? 'rgba(0, 0, 0, 0.5)' : 'rgba(255, 255, 255, 0.5)',
           }}
         >
-          RAMESHWAR BHAGWAT • ARCHITECTING MODERN,<br />SCALABLE WEB PLATFORMS WITH PREMIUM LOGIC.
+HEET SONI • ARCHITECTING MODERN,<br />SCALABLE WEB PLATFORMS WITH PREMIUM LOGIC.
         </div>
 
         {/* Floating Description Right (Bottom-Right area) */}
@@ -273,7 +273,7 @@ export default function HeroContent() {
             textShadow: isReveal ? 'none' : '0 0 12px rgba(255, 255, 255, 0.25)',
             transition: 'color 0.3s ease, text-shadow 0.3s ease',
           }}
-          aria-label="AI & Web Software Developer Rameshwar Bhagwat"
+          aria-label="AI & Web Software Developer Heet Soni"
         >
           {/* Row 1: AI & WEB + GitHub */}
           <div className="flex items-center gap-x-3 sm:gap-x-4 md:gap-x-6 relative">
@@ -288,7 +288,7 @@ export default function HeroContent() {
             </div>
             {/* Outline GitHub Icon */}
             <a
-              href="https://github.com/Rameshwar-bhagwat10"
+              href="https://github.com/HeetSoni26"
               target="_blank"
               rel="noopener noreferrer"
               className={`cursor-pointer transition-all duration-300 hover:scale-115 ${isIntroComplete ? 'hero-social-icon' : 'opacity-0'} ${isReveal
@@ -299,7 +299,7 @@ export default function HeroContent() {
                 pointerEvents: isReveal ? 'none' : 'auto',
                 '--icon-i': 0,
               } as React.CSSProperties}
-              aria-label="Rameshwar Bhagwat on GitHub"
+              aria-label="Heet Soni on GitHub"
             >
               <svg
                 className="w-[0.52em] h-[0.52em] transition-colors duration-300"
@@ -319,7 +319,7 @@ export default function HeroContent() {
           <div className="flex items-center gap-x-2 sm:gap-x-4 md:gap-x-6 mt-2 relative">
             {/* Outline LinkedIn Icon */}
             <a
-              href="https://www.linkedin.com/in/rameshwar-bhagwat-888540328"
+              href="https://www.linkedin.com/in/heet-soni-8a9082273/"
               target="_blank"
               rel="noopener noreferrer"
               className={`cursor-pointer transition-all duration-300 hover:scale-115 ${isIntroComplete ? 'hero-social-icon' : 'opacity-0'} ${isReveal
@@ -330,7 +330,7 @@ export default function HeroContent() {
                 pointerEvents: isReveal ? 'none' : 'auto',
                 '--icon-i': 1,
               } as React.CSSProperties}
-              aria-label="Rameshwar Bhagwat on LinkedIn"
+              aria-label="Heet Soni on LinkedIn"
             >
               <svg
                 className="w-[0.52em] h-[0.52em] transition-colors duration-300"
@@ -370,7 +370,7 @@ export default function HeroContent() {
             </div>
             {/* Outline Instagram Icon */}
             <a
-              href="https://www.instagram.com/imram111_/"
+              href="https://www.instagram.com/heetsoni__/"
               target="_blank"
               rel="noopener noreferrer"
               className={`cursor-pointer transition-all duration-300 hover:scale-115 ${isIntroComplete ? 'hero-social-icon' : 'opacity-0'} ${isReveal
@@ -381,7 +381,7 @@ export default function HeroContent() {
                 pointerEvents: isReveal ? 'none' : 'auto',
                 '--icon-i': 2,
               } as React.CSSProperties}
-              aria-label="Rameshwar Bhagwat on Instagram"
+              aria-label="Heet Soni on Instagram"
             >
               <svg
                 className="w-[0.52em] h-[0.52em] transition-colors duration-300"
@@ -403,7 +403,7 @@ export default function HeroContent() {
         {/* CTA Buttons */}
         <motion.nav
           className={`flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 sm:px-0 mt-8 sm:mt-10 md:mt-12 z-30 ${isIntroComplete ? 'hero-btn-animated' : 'opacity-0'}`}
-          aria-label="Primary navigation - View portfolio or contact Rameshwar Bhagwat"
+          aria-label="Primary navigation - View portfolio or contact Heet Soni"
         >
           <Link href={isReveal ? '#' : '/resume'}>
             <motion.div
@@ -411,7 +411,7 @@ export default function HeroContent() {
                   ? 'glowing-border-btn-black text-black'
                   : 'glowing-border-btn-white text-white'
                 }`}
-              aria-label="View Rameshwar Bhagwat's Resume"
+              aria-label="View Heet Soni's Resume"
               onMouseMove={isReveal ? undefined : handleButtonMouseMove}
               onMouseLeave={isReveal ? undefined : handleButtonMouseLeave}
               style={{
@@ -489,7 +489,7 @@ export default function HeroContent() {
           mask: 'url(#fluid-mask)',
           WebkitMask: 'url(#fluid-mask)',
           pointerEvents: 'none',
-          backgroundColor: '#ffffff',
+          backgroundColor: '#ff6000',
           willChange: 'opacity',
           contain: 'layout paint',
         }}
@@ -533,3 +533,4 @@ export default function HeroContent() {
     </div>
   );
 }
+

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This guide will help you add a custom domain (like `rameshwarbhagwat.com`) to your portfolio hosted on Vercel.
+This guide will help you add a custom domain (like `Heetbhagwat.com`) to your portfolio hosted on Vercel.
 
 ---
 
@@ -41,10 +41,10 @@ Before starting, you need:
    - Google integration
 
 **Suggested Domain Names:**
-- `rameshwarbhagwat.com`
-- `rameshwar.dev`
+- `Heetbhagwat.com`
+- `Heet.dev`
 - `rbhagwat.com`
-- `rameshwarb.tech`
+- `Heetb.tech`
 
 ### Option 2: Free Domain
 
@@ -73,8 +73,8 @@ Before starting, you need:
 
 1. In the "Domains" section, you'll see a text input
 2. Enter your domain name:
-   - For root domain: `rameshwarbhagwat.com`
-   - For subdomain: `www.rameshwarbhagwat.com`
+   - For root domain: `Heetbhagwat.com`
+   - For subdomain: `www.Heetbhagwat.com`
    - For both: Add them separately
 
 3. Click **"Add"**
@@ -83,15 +83,15 @@ Before starting, you need:
 
 Vercel will ask you to configure the domain. You'll see options:
 
-**Option A: Add both `rameshwarbhagwat.com` and `www.rameshwarbhagwat.com`**
+**Option A: Add both `Heetbhagwat.com` and `www.Heetbhagwat.com`**
 - Recommended for best coverage
 - Users can access via both URLs
 
-**Option B: Add only root domain `rameshwarbhagwat.com`**
+**Option B: Add only root domain `Heetbhagwat.com`**
 - Simpler setup
 - Redirect www to root
 
-**Option C: Add only `www.rameshwarbhagwat.com`**
+**Option C: Add only `www.Heetbhagwat.com`**
 - Less common
 - Redirect root to www
 
@@ -107,7 +107,7 @@ After adding the domain, Vercel will show you DNS records to add. You need to co
 
 Vercel will show something like this:
 
-#### For Root Domain (`rameshwarbhagwat.com`):
+#### For Root Domain (`Heetbhagwat.com`):
 
 **Option 1: A Record (Most Common)**
 ```
@@ -125,7 +125,7 @@ Value: cname.vercel-dns.com
 TTL: 3600
 ```
 
-#### For WWW Subdomain (`www.rameshwarbhagwat.com`):
+#### For WWW Subdomain (`www.Heetbhagwat.com`):
 
 ```
 Type: CNAME
@@ -236,7 +236,7 @@ After adding DNS records:
 ### Check DNS Propagation:
 
 1. Go to https://dnschecker.org
-2. Enter your domain: `rameshwarbhagwat.com`
+2. Enter your domain: `Heetbhagwat.com`
 3. Select type: `A`
 4. Click **"Search"**
 5. Should show `76.76.21.21` globally
@@ -282,13 +282,13 @@ After domain is active, update your environment variables:
 1. Go to **Settings** → **Environment Variables**
 2. Find `NEXT_PUBLIC_APP_URL`
 3. Click **"Edit"**
-4. Change value to: `https://rameshwarbhagwat.com`
+4. Change value to: `https://Heetbhagwat.com`
 5. Click **"Save"**
 
 ### Also Update:
 
-- `NEXT_PUBLIC_SITE_URL` → `https://rameshwarbhagwat.com`
-- `SMTP_FROM` → `noreply@rameshwarbhagwat.com` (optional)
+- `NEXT_PUBLIC_SITE_URL` → `https://Heetbhagwat.com`
+- `SMTP_FROM` → `noreply@Heetbhagwat.com` (optional)
 - `ADMIN_EMAIL` → Keep as is or update
 
 ### Redeploy:
@@ -304,12 +304,12 @@ After domain is active, update your environment variables:
 If you added multiple domains (root + www):
 
 1. Go to **Settings** → **Domains**
-2. Find your preferred domain (e.g., `rameshwarbhagwat.com`)
+2. Find your preferred domain (e.g., `Heetbhagwat.com`)
 3. Click **three dots (...)** next to it
 4. Click **"Set as Primary"**
 5. All other domains will redirect to this one
 
-**Recommendation**: Set root domain (`rameshwarbhagwat.com`) as primary
+**Recommendation**: Set root domain (`Heetbhagwat.com`) as primary
 
 ---
 
@@ -319,20 +319,20 @@ After setup is complete:
 
 ### 1. Test Root Domain
 ```
-Visit: https://rameshwarbhagwat.com
+Visit: https://Heetbhagwat.com
 Should: Load your portfolio with HTTPS
 ```
 
 ### 2. Test WWW Subdomain
 ```
-Visit: https://www.rameshwarbhagwat.com
+Visit: https://www.Heetbhagwat.com
 Should: Redirect to root or load portfolio
 ```
 
 ### 3. Test HTTP Redirect
 ```
-Visit: http://rameshwarbhagwat.com
-Should: Redirect to https://rameshwarbhagwat.com
+Visit: http://Heetbhagwat.com
+Should: Redirect to https://Heetbhagwat.com
 ```
 
 ### 4. Test Old Vercel URL
@@ -403,7 +403,7 @@ To redirect:
 ### Update Your Profiles:
 
 1. **GitHub Profile**
-   - Add website: `https://rameshwarbhagwat.com`
+   - Add website: `https://Heetbhagwat.com`
 
 2. **LinkedIn**
    - Update contact info with new URL
@@ -418,7 +418,7 @@ To redirect:
 
 1. **Google Search Console**
    - Add new property with custom domain
-   - Submit sitemap: `https://rameshwarbhagwat.com/sitemap.xml`
+   - Submit sitemap: `https://Heetbhagwat.com/sitemap.xml`
 
 2. **Bing Webmaster Tools**
    - Add site
@@ -440,7 +440,7 @@ To redirect:
 
 ### 3. Set Up Email Forwarding
 - Many registrars offer free email forwarding
-- Forward `contact@rameshwarbhagwat.com` to your Gmail
+- Forward `contact@Heetbhagwat.com` to your Gmail
 - Looks more professional
 
 ### 4. Consider Cloudflare
@@ -482,7 +482,7 @@ Your portfolio is now accessible at your custom domain with:
 - ✅ Global CDN
 - ✅ Professional URL
 
-Share your portfolio: `https://rameshwarbhagwat.com` 🚀
+Share your portfolio: `https://Heetbhagwat.com` 🚀
 
 ---
 

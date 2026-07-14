@@ -15,7 +15,6 @@ import {
   SiJavascript,
   SiGithub,
   SiVercel,
-  SiPostman,
   SiSupabase,
   SiKotlin,
   SiFirebase,
@@ -25,18 +24,18 @@ import {
   SiNumpy,
   SiScikitlearn,
   SiAndroidstudio,
-  SiTauri,
   SiTensorflow,
   SiPytorch,
-  SiRedis,
   SiGraphql,
-  SiRedux,
   SiThreedotjs,
   SiFastapi,
+  SiOpencv,
+  SiJupyter,
+  SiGithubactions,
 } from 'react-icons/si';
-import { FaJava } from 'react-icons/fa';
 import { VscVscode } from "react-icons/vsc";
-import { FaAws } from "react-icons/fa6";
+import { FaRobot, FaNetworkWired } from "react-icons/fa6";
+import { TbApi } from "react-icons/tb";
 export interface Skill {
   name: string;
   icon: IconType;
@@ -51,7 +50,6 @@ export const skills: Skill[] = [
   { name: 'Node.js', icon: SiNodedotjs, color: '#5FA04E' },
   { name: 'Python', icon: SiPython, color: '#3776AB' },
   { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#06B6D4' },
-  { name: 'Redux', icon: SiRedux, color: '#764ABC' },
   { name: 'GraphQL', icon: SiGraphql, color: '#E10098' },
   { name: 'Express', icon: SiExpress, color: '#FFFFFF' },
   { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
@@ -59,9 +57,7 @@ export const skills: Skill[] = [
   { name: 'Prisma', icon: SiPrisma, color: '#5A67D8' },
   { name: 'Supabase', icon: SiSupabase, color: '#3ECF8E' },
   { name: 'Firebase', icon: SiFirebase, color: '#FFCA28' },
-  { name: 'Redis', icon: SiRedis, color: '#DC382D' },
   { name: 'Docker', icon: SiDocker, color: '#2496ED' },
-  { name: 'AWS', icon: FaAws, color: '#FF9900' },
   { name: 'Vercel', icon: SiVercel, color: '#FFFFFF' },
   { name: 'TensorFlow', icon: SiTensorflow, color: '#FF6F00' },
   { name: 'PyTorch', icon: SiPytorch, color: '#EE4C2C' },
@@ -70,13 +66,16 @@ export const skills: Skill[] = [
   { name: 'NumPy', icon: SiNumpy, color: '#4DABCF' },
   { name: 'Scikit-learn', icon: SiScikitlearn, color: '#F7931E' },
   { name: 'Three.js', icon: SiThreedotjs, color: '#FFFFFF' },
-  { name: 'Java', icon: FaJava, color: '#5382A1' },
   { name: 'Kotlin', icon: SiKotlin, color: '#7F52FF' },
   { name: 'Android Studio', icon: SiAndroidstudio, color: '#3DDC84' },
-  { name: 'Tauri', icon: SiTauri, color: '#24C8DB' },
   { name: 'Stripe', icon: SiStripe, color: '#635BFF' },
   { name: 'Git', icon: SiGit, color: '#F05032' },
   { name: 'GitHub', icon: SiGithub, color: '#FFFFFF' },
-  { name: 'Postman', icon: SiPostman, color: '#FF6C37' },
   { name: 'VS Code', icon: VscVscode, color: '#007ACC' },
+  { name: 'OpenCV', icon: SiOpencv, color: '#5C3EE8' },
+  { name: 'Ultralytic YOLOv8', icon: FaRobot, color: '#00FFFF' },
+  { name: 'ZeroMQ', icon: FaNetworkWired, color: '#DF0000' },
+  { name: 'REST API', icon: TbApi, color: '#009688' },
+  { name: 'GitHub Actions', icon: SiGithubactions, color: '#2088FF' },
+  { name: 'Jupyter Notebooks', icon: SiJupyter, color: '#F37626' },
 ];

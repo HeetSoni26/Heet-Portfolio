@@ -16,6 +16,10 @@ import {
   ArrowRight,
   Briefcase,
   Star,
+  BrainCircuit,
+  Server,
+  Workflow,
+  Smartphone,
   LucideIcon
 } from 'lucide-react';
 
@@ -203,6 +207,7 @@ interface ExpertiseItem {
     projects: string;
     experience: string;
   };
+  ctaText: string;
 }
 
 // Expertise configurations type definitions
@@ -402,133 +407,134 @@ export default function ExpertiseShowcase() {
   const overallExp = useMemo(() => currentYear - 2025, [currentYear]);
 
   const expertiseData = useMemo<ExpertiseItem[]>(() => {
-    const fullstackCount = projects.filter(p => 
-      p.techStack.some(t => ['React', 'Next.js', 'Node.js', 'Express.js', 'Express', 'Supabase (PostgreSQL + Auth)', 'TypeScript', 'MongoDB', 'MySQL'].includes(t))
-    ).length;
-
-    const aiCount = projects.filter(p => 
-      p.techStack.some(t => ['Python', 'OpenAI API', 'Scikit-learn', 'NLTK', 'Pandas', 'NumPy'].includes(t))
-    ).length;
-
-    const creativeCount = projects.filter(p => 
-      p.techStack.some(t => ['React', 'Next.js', 'Tailwind CSS', 'Framer Motion', 'GSAP'].includes(t))
-    ).length;
-
-    const saasCount = projects.filter(p => 
-      p.category?.toLowerCase().includes('saas') || 
-      p.category?.toLowerCase().includes('commerce') || 
-      p.techStack.some(t => ['Stripe', 'Supabase (PostgreSQL + Auth)', 'Supabase'].includes(t))
-    ).length;
-
-    const apiCount = projects.filter(p => 
-      p.techStack.some(t => ['Node.js', 'Express.js', 'Express', 'MySQL', 'Supabase (PostgreSQL + Auth)', 'REST API', 'PostgreSQL', 'Prisma'].includes(t))
-    ).length;
-
     return [
       {
-        id: 'fullstack',
-        icon: Layers,
-        title: 'Full Stack Development',
-        subtitle: 'End-to-End Web Applications',
-        description: 'Building complete, transaction-safe web platforms with robust database schemas, secure session management, and highly optimized search capabilities. I focus on creating high-performance, modular architectures.',
+        id: 'ai',
+        icon: BrainCircuit,
+        title: 'AI Engineering',
+        subtitle: 'LLMs • Multi-Agent Systems • Computer Vision',
+        description: 'Building AI-powered applications using Large Language Models, Computer Vision, Retrieval-Augmented Generation (RAG), intelligent automation, and machine learning to solve real-world problems.',
         techStack: [
-          { name: 'React', color: '#61DAFB', level: 95 },
-          { name: 'Next.js', color: '#ffffff', level: 95 },
-          { name: 'Node.js', color: '#339933', level: 90 },
-          { name: 'TypeScript', color: '#3178C6', level: 92 },
-          { name: 'MongoDB', color: '#47A248', level: 88 },
-          { name: 'MySQL', color: '#336791', level: 85 },
+          { name: 'Python', color: '#3776AB', level: 88 },
+          { name: 'PyTorch', color: '#EE4C2C', level: 84 },
+          { name: 'LangGraph', color: '#F00000', level: 80 },
+          { name: 'FastAPI', color: '#009688', level: 86 },
+          { name: 'OpenCV', color: '#5C3EE8', level: 82 },
+          { name: 'YOLOv8', color: '#00FFFF', level: 80 },
+        ],
+        highlights: [
+          'Multi-Agent AI Systems',
+          'RAG Pipelines',
+          'LLM Applications',
+          'Computer Vision',
+          'AI Workflow Automation',
+          'AI Research Prototypes',
+        ],
+        stats: { projects: `8+ Projects`, experience: `10+ Tech` },
+        ctaText: "Let's build an intelligent AI product."
+      },
+      {
+        id: 'web',
+        icon: Code2,
+        title: 'Web Development',
+        subtitle: 'Modern Websites & Web Applications',
+        description: 'Developing rich user interfaces with fluid animations, custom layouts, and interactive visuals for high-performance web applications.',
+        techStack: [
+          { name: 'Next.js', color: '#ffffff', level: 90 },
+          { name: 'React', color: '#61DAFB', level: 90 },
+          { name: 'TypeScript', color: '#3178C6', level: 86 },
+          { name: 'Tailwind CSS', color: '#06B6D4', level: 92 },
+          { name: 'Three.js', color: '#000000', level: 82 },
+          { name: 'JavaScript', color: '#F7DF1E', level: 90 },
         ],
         highlights: [
           'Production Next.js (App Router) & React architectures',
-          'Transaction-safe database operations (MySQL, MongoDB, PostgreSQL)',
-          'Performance optimization (Lighthouse audits & fast page load)',
-          'Responsive MERN & Next.js layouts with clean state flows',
-        ],
-        stats: { projects: `${fullstackCount} Projects`, experience: `${currentYear - 2025}+ Years` },
-      },
-      {
-        id: 'ai',
-        icon: Cpu,
-        title: 'AI & ML Integration',
-        subtitle: 'Intelligent Systems',
-        description: 'Integrating cutting-edge language models and text classifiers into production-ready platforms. I build semantic search tools, conversational agents, and data preprocessing pipelines.',
-        techStack: [
-          { name: 'OpenAI', color: '#00A67E', level: 88 },
-          { name: 'Python', color: '#3776AB', level: 90 },
-          { name: 'Scikit-learn', color: '#FF6F00', level: 82 },
-          { name: 'NLTK', color: '#3B82F6', level: 85 },
-        ],
-        highlights: [
-          'Intelligent recommendation engines (Devory)',
-          'NLP text classification & spam filtering (Spam Detection)',
-          'OpenAI Function Calling & structured JSON parsing',
-          'Semantic caching & LLM rate-limit management',
-        ],
-        stats: { projects: `${aiCount} Projects`, experience: `1.5 Years` },
-      },
-      {
-        id: 'creative',
-        icon: Sparkles,
-        title: 'Creative Development',
-        subtitle: 'Premium Interfaces',
-        description: 'Developing rich user interfaces with fluid animations, custom layouts, and interactive visuals. I combine clean styling conventions with visual choreography to create highly polished portfolio sites.',
-        techStack: [
-          { name: 'Framer Motion', color: '#BB4B96', level: 92 },
-          { name: 'Tailwind CSS', color: '#06B6D4', level: 95 },
-          { name: 'CSS Grid/Flexbox', color: '#FF5733', level: 95 },
-          { name: 'GSAP', color: '#88CE02', level: 80 },
-        ],
-        highlights: [
-          'Fluid transition animations & page fades (Journey Timeline)',
-          'Dynamic parallax & sticky-scroll layouts',
-          'Micro-animations, spring physics & hover feedbacks',
+          'Responsive MERN & Next.js layouts',
+          'Fluid transition animations & page fades',
+          'Performance optimization (Lighthouse audits)',
           'Zero-layout-shift responsive components',
+          'Interactive UI & Motion Design',
         ],
-        stats: { projects: `${creativeCount} Projects`, experience: `${currentYear - 2025}+ Years` },
+        stats: { projects: `6+ Projects`, experience: `12+ Tech` },
+        ctaText: "Want an unforgettable web experience?"
       },
       {
-        id: 'saas',
-        icon: Cloud,
-        title: 'SaaS Platforms',
-        subtitle: 'Scale & Multi-Tenancy',
-        description: 'Engineering SaaS-style dashboards with secure authentication, isolated tenant workspaces, and real-time activity metrics. Built with a focus on data privacy and analytics.',
+        id: 'software',
+        icon: Server,
+        title: 'Software Development',
+        subtitle: 'Backend • APIs • Scalable Systems',
+        description: 'Designing scalable software solutions, backend services, APIs, and business systems focused on reliability, maintainability, and performance.',
         techStack: [
-          { name: 'Supabase', color: '#3ECF8E', level: 88 },
-          { name: 'Stripe', color: '#635BFF', level: 85 },
-          { name: 'MongoDB', color: '#47A248', level: 88 },
-          { name: 'Auth / RLS', color: '#F00000', level: 90 },
+          { name: 'Python', color: '#3776AB', level: 88 },
+          { name: 'FastAPI', color: '#009688', level: 86 },
+          { name: 'Node.js', color: '#339933', level: 82 },
+          { name: 'REST APIs', color: '#009688', level: 90 },
+          { name: 'PostgreSQL', color: '#336791', level: 82 },
+          { name: 'Docker', color: '#2496ED', level: 78 },
         ],
         highlights: [
-          'Multi-user progress dashboards & trackers (AI/ML Tracker)',
-          'Stripe webhook checkout & stock pipelines (Moungiri Store)',
-          'Row Level Security (RLS) policies in PostgreSQL',
-          'Real-time activity logs & metric counters',
+          'Backend APIs',
+          'Database Design',
+          'Authentication',
+          'System Architecture',
+          'Performance Optimization',
+          'Scalable Services',
         ],
-        stats: { projects: `${saasCount} Projects`, experience: `${currentYear - 2025}+ Years` },
+        stats: { projects: `5+ Projects`, experience: `8+ Tech` },
+        ctaText: "Need scalable backend infrastructure?"
       },
       {
-        id: 'api',
-        icon: Code2,
-        title: 'API & System Design',
-        subtitle: 'Robust Backend Systems',
-        description: 'Designing modular backend systems and RESTful APIs with clean folder architecture. I construct secure endpoints, write analytical database queries, and integrate third-party webhooks.',
+        id: 'automation',
+        icon: Workflow,
+        title: 'AI Automation',
+        subtitle: 'AI Agents • Workflow Automation • API Integrations',
+        description: 'Engineering intelligent workflows that connect various APIs and services to automate repetitive tasks and optimize business operations.',
         techStack: [
-          { name: 'REST', color: '#009688', level: 92 },
-          { name: 'Express.js', color: '#ffffff', level: 90 },
-          { name: 'MySQL Triggers', color: '#336791', level: 85 },
-          { name: 'PostgreSQL', color: '#2D3748', level: 88 },
+          { name: 'Python', color: '#3776AB', level: 88 },
+          { name: 'FastAPI', color: '#009688', level: 86 },
+          { name: 'REST APIs', color: '#009688', level: 90 },
+          { name: 'GitHub Actions', color: '#2088FF', level: 76 },
+          { name: 'Webhooks', color: '#ffffff', level: 82 },
+          { name: 'ZeroMQ', color: '#DF0000', level: 74 },
         ],
         highlights: [
-          'Secure endpoints & token authentication',
-          'Automated database triggers & transaction safety (DBMS project)',
-          'Integration of OpenWeather & OpenAI API services (Safecoast)',
-          'Clean MVC backend folder architecture',
+          'AI Agents',
+          'Workflow Automation',
+          'API Orchestration',
+          'Event-driven Systems',
+          'Scheduled Tasks',
+          'Integrations',
         ],
-        stats: { projects: `${apiCount} Projects`, experience: `${currentYear - 2025}+ Years` },
+        stats: { projects: `4+ Projects`, experience: `8+ Tech` },
+        ctaText: "Ready to automate your workflow?"
+      },
+      {
+        id: 'android',
+        icon: Smartphone,
+        title: 'Mobile Applications',
+        subtitle: 'Kotlin • Offline Apps • Media Applications',
+        description: 'Building native mobile applications for Android with clean architecture, robust state management, and seamless API integrations.',
+        techStack: [
+          { name: 'Kotlin', color: '#7F52FF', level: 80 },
+          { name: 'Android Studio', color: '#3DDC84', level: 75 },
+          { name: 'Firebase', color: '#FFCA28', level: 78 },
+          { name: 'REST APIs', color: '#009688', level: 80 },
+          { name: 'Media APIs', color: '#E91E63', level: 75 },
+          { name: 'XML UI', color: '#F44336', level: 75 },
+        ],
+        highlights: [
+          'Offline Applications',
+          'Native Android',
+          'API Integration',
+          'Media Playback',
+          'Local Storage',
+          'Play Protect Ready',
+        ],
+        stats: { projects: `3+ Projects`, experience: `5+ Tech` },
+        ctaText: "Have an app idea?"
       },
     ];
-  }, [currentYear]);
+  }, []);
 
   const activeItem = expertiseData[activeIndex];
 
@@ -562,9 +568,9 @@ export default function ExpertiseShowcase() {
           
           <motion.h2
             variants={titleContainerVariants}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05] text-white max-w-2xl mx-auto font-jakarta flex flex-wrap justify-center gap-x-[0.25em] gap-y-[0.05em]"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05] text-white max-w-4xl mx-auto font-jakarta flex flex-wrap justify-center gap-x-[0.25em] gap-y-[0.05em]"
           >
-            {"Professional disciplines engineered for high performance.".split(" ").map((word, i) => (
+            {"Building Intelligent Software across AI, Automation, Web and Mobile.".split(" ").map((word, i) => (
               <span key={i} className="inline-block overflow-hidden py-0.5">
                 <motion.span
                   variants={wordVariants}
@@ -628,15 +634,15 @@ export default function ExpertiseShowcase() {
             {/* Footer - Compact Stats Row */}
             <div className="relative z-10 flex lg:flex-row items-center gap-3 mt-6 pt-4 border-t border-white/[0.04]">
               <div className="flex items-center gap-2 px-3.5 py-2.5 rounded-[16px] bg-[#0E0D0D] border border-white/[0.03] flex-1 justify-center lg:justify-start">
-                <Clock className="w-3.5 h-3.5 text-[#C2EF3A]" />
+                <Target className="w-3.5 h-3.5 text-[#C2EF3A]" />
                 <span className="text-[10px] font-bold font-mono text-white/55 uppercase tracking-wide whitespace-nowrap">
-                  {overallExp < 10 ? `0${overallExp}` : overallExp}+ Years Exp
+                  8+ Projects
                 </span>
               </div>
               <div className="flex items-center gap-2 px-3.5 py-2.5 rounded-[16px] bg-[#0E0D0D] border border-white/[0.03] flex-1 justify-center lg:justify-start">
-                <Target className="w-3.5 h-3.5 text-[#C2EF3A]" />
+                <Code2 className="w-3.5 h-3.5 text-[#C2EF3A]" />
                 <span className="text-[10px] font-bold font-mono text-white/55 uppercase tracking-wide whitespace-nowrap">
-                  {projects.length < 10 ? `0${projects.length}` : projects.length}+ Projects
+                  20+ Technologies
                 </span>
               </div>
             </div>
@@ -903,25 +909,25 @@ const PreviewContent = memo(function PreviewContent({ item }: { item: ExpertiseI
         <div className="flex flex-col xs:flex-row items-start xs:items-center justify-between gap-4">
           <div className="flex items-center gap-3 hover:translate-x-0.5 transition-transform duration-200">
             <div
-              className="w-10 h-10 rounded-[12px] flex items-center justify-center border hover:scale-110 transition-transform duration-200 bg-[#C2EF3A]/10 border-[#C2EF3A]/20 text-[#C2EF3A]"
+              className="flex-shrink-0 w-10 h-10 rounded-[12px] flex items-center justify-center border hover:scale-110 transition-transform duration-200 bg-[#C2EF3A]/10 border-[#C2EF3A]/20 text-[#C2EF3A]"
             >
               <MessageSquare className="w-5 h-5" />
             </div>
             <div>
-              <p className="text-[12px] sm:text-[13px] font-bold text-white font-jakarta">Interested in this service?</p>
-              <p className="text-[10px] sm:text-[11px] text-white/30 font-jakarta">Let&apos;s discuss your project</p>
+              <p className="text-[12px] sm:text-[13px] font-bold text-white font-jakarta">{item.ctaText}</p>
+              <p className="text-[10px] sm:text-[11px] text-[#C2EF3A] font-jakarta tracking-wide">LET&apos;S DISCUSS YOUR PROJECT</p>
             </div>
           </div>
           <a
             href="#contact"
-            className="group flex items-center gap-2 px-4 py-2.5 rounded-[16px] border border-white/[0.05] hover:border-[#C2EF3A]/30 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 w-full xs:w-auto justify-center xs:justify-start"
+            className="group flex items-center gap-2 px-4 py-2.5 rounded-[16px] border border-white/[0.05] hover:border-[#C2EF3A]/30 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 w-full xs:w-auto justify-center xs:justify-start whitespace-nowrap flex-shrink-0"
             style={{
               background: 'linear-gradient(135deg, rgba(194, 239, 58, 0.1) 0%, rgba(194, 239, 58, 0.02) 100%)',
               boxShadow: '0 2px 12px rgba(194, 239, 58, 0.05)',
             }}
           >
             <span className="text-[12px] font-bold text-white/85 group-hover:text-white transition-colors duration-200 font-jakarta">
-              Get in Touch
+              Start a Project
             </span>
             <NavbarArrowRight />
           </a>

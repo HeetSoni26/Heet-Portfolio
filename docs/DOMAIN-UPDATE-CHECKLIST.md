@@ -1,8 +1,8 @@
-# ✅ Domain Updated to rameshwarbhagwat.me
+# ✅ Domain Updated to Heetbhagwat.me
 
 ## Files Updated
 
-All references to your domain have been updated to `rameshwarbhagwat.me`:
+All references to your domain have been updated to `Heetbhagwat.me`:
 
 ### Core Configuration Files:
 1. ✅ `src/lib/constants.ts` - Site URL constant
@@ -28,38 +28,38 @@ After deployment, update these in Vercel Dashboard:
 ### 1. NEXT_PUBLIC_SITE_URL
 ```
 Name: NEXT_PUBLIC_SITE_URL
-Value: https://rameshwarbhagwat.me
+Value: https://Heetbhagwat.me
 Environment: Production, Preview, Development
 ```
 
 ### 2. NEXT_PUBLIC_APP_URL
 ```
 Name: NEXT_PUBLIC_APP_URL
-Value: https://rameshwarbhagwat.me
+Value: https://Heetbhagwat.me
 Environment: Production, Preview, Development
 ```
 
 ### 3. SMTP_FROM (Optional - for professional emails)
 ```
 Name: SMTP_FROM
-Value: noreply@rameshwarbhagwat.me
+Value: noreply@Heetbhagwat.me
 Environment: Production, Preview, Development
 ```
 
 ---
 
-## DNS Configuration for rameshwarbhagwat.me
+## DNS Configuration for Heetbhagwat.me
 
 ### Step 1: Add Domain in Vercel
 
 1. Go to Vercel Dashboard → Your Project
 2. Click **Settings** → **Domains**
-3. Add domain: `rameshwarbhagwat.me`
-4. Also add: `www.rameshwarbhagwat.me`
+3. Add domain: `Heetbhagwat.me`
+4. Also add: `www.Heetbhagwat.me`
 
 ### Step 2: Configure DNS Records
 
-Go to your domain registrar (where you bought rameshwarbhagwat.me):
+Go to your domain registrar (where you bought Heetbhagwat.me):
 
 #### A Record (Root Domain):
 ```
@@ -81,7 +81,7 @@ TTL: 3600
 
 - Typical time: 10 minutes to 2 hours
 - Check status: https://dnschecker.org
-- Enter: `rameshwarbhagwat.me`
+- Enter: `Heetbhagwat.me`
 
 ### Step 4: Verify in Vercel
 
@@ -97,8 +97,8 @@ TTL: 3600
 
 In Vercel Dashboard:
 - Settings → Environment Variables
-- Update `NEXT_PUBLIC_SITE_URL` to `https://rameshwarbhagwat.me`
-- Update `NEXT_PUBLIC_APP_URL` to `https://rameshwarbhagwat.me`
+- Update `NEXT_PUBLIC_SITE_URL` to `https://Heetbhagwat.me`
+- Update `NEXT_PUBLIC_APP_URL` to `https://Heetbhagwat.me`
 
 ### 2. Redeploy
 
@@ -109,21 +109,21 @@ In Vercel Dashboard:
 ### 3. Test Your Domain
 
 Visit these URLs to verify:
-- ✅ https://rameshwarbhagwat.me (should load portfolio)
-- ✅ https://www.rameshwarbhagwat.me (should redirect or load)
-- ✅ http://rameshwarbhagwat.me (should redirect to HTTPS)
-- ✅ https://rameshwarbhagwat.me/sitemap.xml (should show sitemap)
-- ✅ https://rameshwarbhagwat.me/robots.txt (should show robots.txt)
+- ✅ https://Heetbhagwat.me (should load portfolio)
+- ✅ https://www.Heetbhagwat.me (should redirect or load)
+- ✅ http://Heetbhagwat.me (should redirect to HTTPS)
+- ✅ https://Heetbhagwat.me/sitemap.xml (should show sitemap)
+- ✅ https://Heetbhagwat.me/robots.txt (should show robots.txt)
 
 ### 4. Submit to Search Engines
 
 **Google Search Console:**
-1. Add property: `https://rameshwarbhagwat.me`
+1. Add property: `https://Heetbhagwat.me`
 2. Verify ownership
-3. Submit sitemap: `https://rameshwarbhagwat.me/sitemap.xml`
+3. Submit sitemap: `https://Heetbhagwat.me/sitemap.xml`
 
 **Bing Webmaster Tools:**
-1. Add site: `https://rameshwarbhagwat.me`
+1. Add site: `https://Heetbhagwat.me`
 2. Verify ownership
 3. Submit sitemap
 
@@ -143,9 +143,9 @@ Visit these URLs to verify:
 Many registrars offer free email forwarding:
 
 **Forward these to your Gmail:**
-- `contact@rameshwarbhagwat.me` → rameshwarbhagwat019@gmail.com
-- `hello@rameshwarbhagwat.me` → rameshwarbhagwat019@gmail.com
-- `noreply@rameshwarbhagwat.me` → rameshwarbhagwat019@gmail.com
+- `contact@Heetbhagwat.me` → Heetbhagwat019@gmail.com
+- `hello@Heetbhagwat.me` → Heetbhagwat019@gmail.com
+- `noreply@Heetbhagwat.me` → Heetbhagwat019@gmail.com
 
 This makes your contact form emails look more professional!
 
@@ -154,7 +154,7 @@ This makes your contact form emails look more professional!
 ## What Changed in Email Templates
 
 The auto-reply email now includes:
-- Portfolio link: `https://rameshwarbhagwat.me`
+- Portfolio link: `https://Heetbhagwat.me`
 - Professional "View Portfolio" button
 - Consistent branding with your domain
 
@@ -164,7 +164,7 @@ The auto-reply email now includes:
 
 After domain is active and redeployed:
 
-- [ ] Visit https://rameshwarbhagwat.me
+- [ ] Visit https://Heetbhagwat.me
 - [ ] Check HTTPS is working (padlock icon)
 - [ ] Test contact form submission
 - [ ] Verify auto-reply email has correct domain
@@ -204,7 +204,7 @@ After domain is active and redeployed:
 
 ## Summary
 
-✅ **Domain**: rameshwarbhagwat.me
+✅ **Domain**: Heetbhagwat.me
 ✅ **Updated**: 9 files across the codebase
 ✅ **Email**: Auto-reply template updated
 ✅ **SEO**: Sitemap and robots.txt updated
@@ -217,4 +217,4 @@ After domain is active and redeployed:
 4. Redeploy
 5. Test everything
 
-Your portfolio will be live at https://rameshwarbhagwat.me! 🚀
+Your portfolio will be live at https://Heetbhagwat.me! 🚀

@@ -1,7 +1,7 @@
 # Bing Favicon Fix - Complete Guide
 
 ## Issue
-Favicon not showing in Bing search results for "rameshwar bhagwat portfolio"
+Favicon not showing in Bing search results for "Heet Soni portfolio"
 
 ## Root Cause
 Bing/Microsoft search engines have specific requirements for favicons:
@@ -73,14 +73,14 @@ Added multiple icon sizes for better compatibility:
 
 1. Go to [Bing Webmaster Tools](https://www.bing.com/webmasters)
 2. Sign in with Microsoft account
-3. Add your site: `https://rameshwarbhagwat.me`
+3. Add your site: `https://Heetbhagwat.me`
 4. Choose verification method:
    - **Option A:** Add meta tag (already prepared in metadata)
    - **Option B:** Upload XML file
    - **Option C:** Add CNAME record
 
 5. After verification, submit your sitemap:
-   - URL: `https://rameshwarbhagwat.me/sitemap.xml`
+   - URL: `https://Heetbhagwat.me/sitemap.xml`
 
 6. Request URL inspection for homepage
 
@@ -88,7 +88,7 @@ Added multiple icon sizes for better compatibility:
 
 **Method 1: Bing Webmaster Tools**
 1. Go to Site Explorer → URL Inspection
-2. Enter: `https://rameshwarbhagwat.me`
+2. Enter: `https://Heetbhagwat.me`
 3. Click "Request Indexing"
 
 **Method 2: Submit URL Directly**
@@ -105,9 +105,9 @@ Verify these files exist and are accessible:
 - ✅ `/site.webmanifest` - Updated
 
 Test accessibility:
-- https://rameshwarbhagwat.me/favicon.ico
-- https://rameshwarbhagwat.me/favicon.svg
-- https://rameshwarbhagwat.me/browserconfig.xml
+- https://Heetbhagwat.me/favicon.ico
+- https://Heetbhagwat.me/favicon.svg
+- https://Heetbhagwat.me/browserconfig.xml
 
 ---
 
@@ -131,7 +131,7 @@ Test accessibility:
 
 ### Test 1: Browser Tab
 ✅ Should work immediately after deployment
-- Open: https://rameshwarbhagwat.me
+- Open: https://Heetbhagwat.me
 - Check browser tab for favicon
 
 ### Test 2: Favicon Checker Tools
@@ -141,7 +141,7 @@ Use these tools to verify:
 
 ### Test 3: Bing Cache
 Check when Bing last crawled your site:
-1. Search: `url:rameshwarbhagwat.me` in Bing
+1. Search: `url:Heetbhagwat.me` in Bing
 2. Click "Cached" link
 3. Check date
 

@@ -73,8 +73,8 @@ export default function Hero() {
       >
         {/* ─── Primary Schema.org Person Microdata ─── */}
         <meta itemProp="name" content={PERSONAL_INFO.name} />
-        <meta itemProp="givenName" content="Rameshwar" />
-        <meta itemProp="familyName" content="Bhagwat" />
+<meta itemProp="givenName" content="Heet" />
+        <meta itemProp="familyName" content="Soni" />
         <meta itemProp="jobTitle" content="Full Stack & AI Developer" />
         <meta itemProp="description" content={`${PERSONAL_INFO.name} is a Full Stack & AI Developer specializing in React, Next.js, TypeScript, Node.js, Python, and AI-powered product engineering. Featured projects include WebCraft, Safecoast, and AI ML Progress Tracker.`} />
         <meta itemProp="url" content={SITE_URL} />
@@ -98,17 +98,17 @@ export default function Hero() {
 
         {/* ─── Hidden SEO Content for Search Engines ─── */}
         <div className="sr-only">
-          <h1>Rameshwar Bhagwat - Full Stack & AI Developer</h1>
+          <h1>Heet Soni - Full Stack & AI Developer</h1>
 
-          <h2>About Rameshwar Bhagwat</h2>
+          <h2>About Heet Soni</h2>
           <p>
-            Rameshwar Bhagwat is a highly skilled Full Stack & AI Developer based in {PERSONAL_INFO.location.city}, {PERSONAL_INFO.location.state}, {PERSONAL_INFO.location.country}.
-            With expertise in modern web technologies, Rameshwar Bhagwat specializes in building scalable, high-performance web applications and AI-powered platforms.
+            Heet Soni is a highly skilled Full Stack & AI Developer based in {PERSONAL_INFO.location.city}, {PERSONAL_INFO.location.state}, {PERSONAL_INFO.location.country}.
+            With expertise in modern web technologies, Heet Soni specializes in building scalable, high-performance web applications and AI-powered platforms.
           </p>
 
-          <h2>Rameshwar Bhagwat - Professional Skills</h2>
+          <h2>Heet Soni - Professional Skills</h2>
           <p>
-            As a Full Stack Developer, Rameshwar Bhagwat is proficient in:
+            As a Full Stack Developer, Heet Soni is proficient in:
           </p>
           <ul>
             <li>Frontend Development: React.js, Next.js, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS</li>
@@ -119,46 +119,46 @@ export default function Hero() {
             <li>SaaS and AI Product Development: scalable architecture, performance optimization, and intelligent features</li>
           </ul>
 
-          <h2>Featured Projects by Rameshwar Bhagwat</h2>
+          <h2>Featured Projects by Heet Soni</h2>
           <ul>
             <li>WebCraft - Modern website solution designed for business growth and technical SEO readiness</li>
             <li>Safecoast - Coastal hazard intelligence platform focused on monitoring and risk awareness</li>
           </ul>
 
-          <h2>Rameshwar Bhagwat - Services</h2>
+          <h2>Heet Soni - Services</h2>
           <p>
-            Rameshwar Bhagwat offers professional services including:
+            Heet Soni offers professional services including:
           </p>
           <ul>
-            <li>Full Stack Web Development by Rameshwar Bhagwat</li>
-            <li>AI-Powered Application Development by Rameshwar Bhagwat</li>
-            <li>SaaS Platform Development by Rameshwar Bhagwat</li>
-            <li>React & Next.js Development by Rameshwar Bhagwat</li>
-            <li>Custom Web Application Development by Rameshwar Bhagwat</li>
-            <li>API Development & Integration by Rameshwar Bhagwat</li>
-            <li>E-commerce Solutions by Rameshwar Bhagwat</li>
-            <li>Performance Optimization by Rameshwar Bhagwat</li>
+            <li>Full Stack Web Development by Heet Soni</li>
+            <li>AI-Powered Application Development by Heet Soni</li>
+            <li>SaaS Platform Development by Heet Soni</li>
+            <li>React & Next.js Development by Heet Soni</li>
+            <li>Custom Web Application Development by Heet Soni</li>
+            <li>API Development & Integration by Heet Soni</li>
+            <li>E-commerce Solutions by Heet Soni</li>
+            <li>Performance Optimization by Heet Soni</li>
           </ul>
 
-          <h2>Why Choose Rameshwar Bhagwat?</h2>
+          <h2>Why Choose Heet Soni?</h2>
           <p>
-            Rameshwar Bhagwat combines technical expertise with creative problem-solving to deliver exceptional digital solutions.
+            Heet Soni combines technical expertise with creative problem-solving to deliver exceptional digital solutions.
             Whether you need a Full Stack Developer for your startup, an AI Engineer to integrate machine learning capabilities,
-            or a Web Developer to build your next big project, Rameshwar Bhagwat has the skills and experience to bring your vision to life.
+            or a Web Developer to build your next big project, Heet Soni has the skills and experience to bring your vision to life.
           </p>
 
-          <h2>Contact Rameshwar Bhagwat</h2>
+          <h2>Contact Heet Soni</h2>
           <p>
-            Looking to hire a Full Stack Developer? Contact Rameshwar Bhagwat at {PERSONAL_INFO.email} or {PERSONAL_INFO.phone}.
-            Rameshwar Bhagwat is available for freelance projects, full-time opportunities, and consulting work.
+            Looking to hire a Full Stack Developer? Contact Heet Soni at {PERSONAL_INFO.email} or {PERSONAL_INFO.phone}.
+            Heet Soni is available for freelance projects, full-time opportunities, and consulting work.
           </p>
 
           <h3>Keywords</h3>
-          <p>{SEO_KEYWORDS.join(', ')}, Rameshwar Bhagwat Portfolio, Rameshwar Bhagwat Developer, Rameshwar Bhagwat Full Stack,
-          Rameshwar Bhagwat AI Developer, Rameshwar Bhagwat React Developer, Rameshwar Bhagwat Next.js Expert,
-          Hire Rameshwar Bhagwat, Rameshwar Bhagwat Web Developer, Rameshwar Bhagwat Software Engineer,
-          Best Full Stack Developer India, Top React Developer Maharashtra, AI Developer Yeola,
-          Rameshwar Bhagwat TypeScript, Rameshwar Bhagwat Node.js, Rameshwar Bhagwat Python Developer, WebCraft, Safecoast</p>
+          <p>{SEO_KEYWORDS.join(', ')}, Heet Soni Portfolio, Heet Soni Developer, Heet Soni Full Stack,
+          Heet Soni AI Developer, Heet Soni React Developer, Heet Soni Next.js Expert,
+          Hire Heet Soni, Heet Soni Web Developer, Heet Soni Software Engineer,
+          Best Full Stack Developer India, Top React Developer Gujarat, AI Developer Anand,
+          Heet Soni TypeScript, Heet Soni Node.js, Heet Soni Python Developer, WebCraft, Safecoast</p>
         </div>
 
         {/* ─── WebSite Schema for Search Appearance ─── */}
@@ -168,13 +168,13 @@ export default function Hero() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              "name": "Rameshwar Bhagwat - Full Stack & AI Developer Portfolio",
-              "alternateName": ["Rameshwar Bhagwat", "Rameshwar Bhagwat Developer", "Rameshwar Bhagwat Portfolio"],
+              "name": "Heet Soni - Full Stack & AI Developer Portfolio",
+              "alternateName": ["Heet Soni", "Heet Soni Developer", "Heet Soni Portfolio"],
               "url": SITE_URL,
-              "description": "Official portfolio of Rameshwar Bhagwat, a Full Stack & AI Developer specializing in React, Next.js, TypeScript, and AI-powered web applications.",
+              "description": "Official portfolio of Heet Soni, a Full Stack & AI Developer specializing in React, Next.js, TypeScript, and AI-powered web applications.",
               "author": {
                 "@type": "Person",
-                "name": "Rameshwar Bhagwat",
+                "name": "Heet Soni",
                 "jobTitle": "Full Stack & AI Developer",
                 "url": SITE_URL
               },
@@ -194,11 +194,11 @@ export default function Hero() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
-              "name": "Rameshwar Bhagwat - Full Stack & AI Development Services",
-              "description": "Professional Full Stack Development, AI Engineering, and Web Development services by Rameshwar Bhagwat",
+              "name": "Heet Soni - Full Stack & AI Development Services",
+              "description": "Professional Full Stack Development, AI Engineering, and Web Development services by Heet Soni",
               "provider": {
                 "@type": "Person",
-                "name": "Rameshwar Bhagwat",
+                "name": "Heet Soni",
                 "jobTitle": "Full Stack & AI Developer"
               },
               "serviceType": ["Full Stack Development", "AI Engineering", "Web Development", "SaaS Development", "React Development", "Next.js Development"],
@@ -221,3 +221,4 @@ export default function Hero() {
     </>
   );
 }
+

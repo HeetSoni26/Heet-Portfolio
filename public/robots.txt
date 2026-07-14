@@ -7,5 +7,5 @@ Allow: /projects/
 Disallow: /api/
 
 # Sitemap location
-Sitemap: https://rameshwarbhagwat.me/sitemap.xml
-Host: https://rameshwarbhagwat.me
+Sitemap: https://heetportfolio.vercel.app/sitemap.xml
+Host: https://heetportfolio.vercel.app

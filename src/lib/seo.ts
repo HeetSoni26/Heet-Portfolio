@@ -12,10 +12,10 @@ export function generateSEO(
   const pageImage = image || `${SITE_URL}/og-image.png`;
   
   const defaultKeywords = [
-    'Rameshwar Bhagwat',
-    'Rameshwar Bhagwat portfolio',
-    'Rameshwar Bhagwat developer',
-    'Rameshwar Bhagwat software engineer',
+    'Heet Soni',
+    'Heet Soni portfolio',
+    'Heet Soni developer',
+    'Heet Soni software engineer',
     'Full Stack Developer',
     'AI Developer',
     'MERN Stack Developer',
@@ -35,8 +35,8 @@ export function generateSEO(
     'PostgreSQL Developer',
     'MongoDB Developer',
     'Web Developer India',
-    'Yeola Developer',
-    'Maharashtra Developer',
+    'Anand Developer',
+    'Gujarat Developer',
     'AI-powered web applications',
     'Generative AI integration',
     'SaaS Developer',
@@ -58,9 +58,9 @@ export function generateSEO(
     title: pageTitle,
     description: pageDescription,
     keywords: keywords || defaultKeywords,
-    authors: [{ name: 'Rameshwar Bhagwat', url: SITE_URL }],
-    creator: 'Rameshwar Bhagwat',
-    publisher: 'Rameshwar Bhagwat',
+    authors: [{ name: 'Heet Soni', url: SITE_URL }],
+    creator: 'Heet Soni',
+    publisher: 'Heet Soni',
     formatDetection: {
       email: false,
       address: false,
@@ -73,9 +73,9 @@ export function generateSEO(
     category: 'technology',
     classification: 'Portfolio',
     other: {
-      author: 'Rameshwar Bhagwat',
-      'geo.region': 'IN-MH',
-      'geo.placename': 'Yeola',
+      author: 'Heet Soni',
+      'geo.region': 'IN-GJ',
+      'geo.placename': 'Anand',
       'msvalidate.01': 'A4F4F3D017DCEE9D5C80CF87569E9623',
     },
     icons: {
@@ -122,8 +122,8 @@ export function generateSEO(
       title: pageTitle,
       description: pageDescription,
       images: [pageImage],
-      creator: '@imram111_',
-      site: '@imram111_',
+      creator: '@HeetSoni26',
+      site: '@HeetSoni26',
     },
     robots: {
       index: true,
@@ -142,3 +142,4 @@ export function generateSEO(
     manifest: '/site.webmanifest',
   };
 }
+

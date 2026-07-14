@@ -1,13 +1,13 @@
-export const SITE_NAME = 'Rameshwar Bhagwat - Full Stack & AI Developer';
-export const SITE_URL = 'https://rameshwarbhagwat.me';
-export const SITE_DESCRIPTION = 'Rameshwar Bhagwat is a Full Stack & AI Developer specializing in React, Next.js, TypeScript, Node.js, and AI-powered web applications. Explore featured projects like WebCraft, Safecoast, and AI ML Progress Tracker, focused on modern, scalable, and intelligent digital products.';
+export const SITE_NAME = 'Heet Soni - Portfolio';
+export const SITE_URL = 'https://heetportfolio.vercel.app';
+export const SITE_DESCRIPTION = 'Heet Soni is a Full Stack & AI Developer specializing in React, Next.js, TypeScript, Node.js, and AI-powered web applications. Explore featured projects like WebCraft, Safecoast, and AI ML Progress Tracker, focused on modern, scalable, and intelligent digital products.';
 
 // SEO Keywords - Optimized for search ranking
 export const SEO_KEYWORDS = [
-  'Rameshwar Bhagwat',
-  'Rameshwar Bhagwat portfolio',
-  'Rameshwar Bhagwat AI Developer',
-  'Rameshwar Bhagwat Full Stack Developer',
+  'Heet Soni',
+  'Heet Soni portfolio',
+  'Heet Soni AI Developer',
+  'Heet Soni Full Stack Developer',
   'Full Stack & AI Developer',
   'AI Developer India',
   'AI Engineer portfolio',
@@ -30,10 +30,10 @@ export const SEO_KEYWORDS = [
 
 // Personal Information - SEO Optimized
 export const PERSONAL_INFO = {
-  name: 'Rameshwar Bhagwat',
-  firstName: 'Rameshwar',
-  lastName: 'Bhagwat',
-  jobTitle: 'Full Stack & AI Developer',
+  name: 'Heet Soni',
+  firstName: 'Heet',
+  lastName: 'Soni',
+  jobTitle: 'AI Engineer and Software Developer',
   alternateJobTitles: [
     'Full Stack Developer',
     'AI Engineer',
@@ -42,16 +42,16 @@ export const PERSONAL_INFO = {
     'Software Engineer',
     'Web Developer',
   ],
-  email: 'rameshwarbhagwat019@gmail.com',
-  phone: '+91-9699245170',
+  email: 'heetks2607@gmail.com',
+  phone: '+91 99093 42367',
   location: {
-    city: 'Yeola',
-    state: 'Maharashtra',
+    city: 'Anand',
+    state: 'Gujarat',
     country: 'India',
     countryCode: 'IN',
   },
   image: '/images/profile/profile.jpeg',
-  bio: 'Rameshwar Bhagwat is a Full Stack & AI Developer with expertise in React, Next.js, TypeScript, Node.js, and Python. Specializing in building scalable web applications and AI-powered solutions, with featured projects including WebCraft, Safecoast, and AI ML Progress Tracker.',
+  bio: 'Heet Soni is a Full Stack & AI Developer with expertise in React, Next.js, TypeScript, Node.js, and Python. Specializing in building scalable web applications and AI-powered solutions, with featured projects including WebCraft, Safecoast, and AI ML Progress Tracker.',
   shortBio: 'Full Stack & AI Developer specializing in React, Next.js, TypeScript, and AI-powered web applications.',
   expertise: [
     'Full Stack Development',
@@ -76,7 +76,8 @@ export const NAV_LINKS = [
 ];
 
 export const SOCIAL_LINKS = [
-  { name: 'GitHub', url: 'https://github.com/Rameshwar-bhagwat10' },
-  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/rameshwar-bhagwat-888540328' },
-  { name: 'Instagram', url: 'https://www.instagram.com/imram111_/' },
+  { name: 'GitHub', url: 'https://github.com/HeetSoni26' },
+  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/heet-soni-8a9082273/' },
+  { name: 'Instagram', url: 'https://www.instagram.com/heetsoni__/' },
 ];
+

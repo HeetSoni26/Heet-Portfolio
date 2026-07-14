@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 import { projects } from "@/components/sections/Work/work.data";
 
-const DEFAULT_SITE_URL = "https://rameshwarbhagwat.me";
+const DEFAULT_SITE_URL = "https://heetportfolio.vercel.app";
 
 function resolveSiteUrl(): string {
   const envUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();

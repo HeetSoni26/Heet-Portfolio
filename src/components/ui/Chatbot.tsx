@@ -134,7 +134,7 @@ export default function Chatbot() {
       setMessages([
         {
           id: '1',
-          content: "Hey there! 👋 I'm Rameshwar's AI assistant. I can tell you all about his skills, projects, experience, and more. What would you like to know?",
+          content: "Hey there! 👋 I'm Heet's AI assistant. I can tell you all about his skills, projects, experience, and more. What would you like to know?",
           role: 'assistant',
           timestamp: new Date(),
         },
@@ -182,7 +182,7 @@ export default function Chatbot() {
     } catch {
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
-        content: "Sorry, I'm having trouble responding right now. Please try again or contact Rameshwar directly at rameshwarbhagwat019@gmail.com",
+        content: "Sorry, I'm having trouble responding right now. Please try again or contact Heet directly at heetks2607@gmail.com",
         role: 'assistant',
         timestamp: new Date(),
       };

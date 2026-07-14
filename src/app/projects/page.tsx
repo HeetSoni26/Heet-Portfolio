@@ -3,11 +3,11 @@ import { projects } from '@/components/sections/Work/work.data';
 import ProjectsPageContent from './ProjectsPageContent';
 
 export const metadata: Metadata = {
-  title: 'All Projects | Rameshwar Bhagwat — Full Stack & AI Developer',
+  title: 'All Projects | Heet Soni — Full Stack & AI Developer',
   description:
-    'Browse the complete portfolio of Rameshwar Bhagwat — full-stack, AI/ML, and web application projects including WebCraft, Safecoast, Devory, and the AI ML Progress Tracker. Filter by category, search, and explore detailed case studies.',
+    'Browse the complete portfolio of Heet Soni — full-stack, AI/ML, and web application projects including WebCraft, Safecoast, Devory, and the AI ML Progress Tracker. Filter by category, search, and explore detailed case studies.',
   keywords: [
-    'Rameshwar Bhagwat projects',
+    'Heet Soni projects',
     'full stack developer projects',
     'AI ML projects',
     'Next.js projects',
@@ -19,24 +19,24 @@ export const metadata: Metadata = {
     canonical: '/projects',
   },
   openGraph: {
-    title: 'All Projects | Rameshwar Bhagwat',
+    title: 'All Projects | Heet Soni',
     description:
-      'Explore the full collection of full-stack and AI-focused engineering projects built by Rameshwar Bhagwat.',
+      'Explore the full collection of full-stack and AI-focused engineering projects built by Heet Soni.',
     type: 'website',
     images: [
       {
         url: projects[0]?.image ?? '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Rameshwar Bhagwat Projects',
+        alt: 'Heet Soni Projects',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'All Projects | Rameshwar Bhagwat',
+    title: 'All Projects | Heet Soni',
     description:
-      'Explore the full collection of full-stack and AI-focused engineering projects built by Rameshwar Bhagwat.',
+      'Explore the full collection of full-stack and AI-focused engineering projects built by Heet Soni.',
   },
 };
 
@@ -45,7 +45,7 @@ export default function ProjectsPage() {
   const itemListSchema = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'Rameshwar Bhagwat — Projects',
+    name: 'Heet Soni — Projects',
     description:
       'Complete list of full-stack and AI-focused web development projects.',
     numberOfItems: projects.length,
@@ -57,7 +57,7 @@ export default function ProjectsPage() {
         name: project.title,
         description: project.description,
         applicationCategory: project.category,
-        url: `https://rameshwarbhagwat.me/projects/${project.id}`,
+        url: `https://heetportfolio.vercel.app/projects/${project.id}`,
         operatingSystem: 'Web',
       },
     })),
@@ -73,3 +73,4 @@ export default function ProjectsPage() {
     </>
   );
 }
+

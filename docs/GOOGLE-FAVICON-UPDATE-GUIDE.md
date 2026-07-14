@@ -38,12 +38,12 @@ Google requires:
 - ✅ File must be `favicon.ico` or PNG
 - ✅ Size: 16x16, 32x32, or 48x48 pixels (multiples of 16)
 - ✅ File size: < 100KB
-- ✅ Accessible at: https://rameshwarbhagwat.me/favicon.ico
+- ✅ Accessible at: https://Heetbhagwat.me/favicon.ico
 - ✅ Returns 200 OK status (not 404)
 - ✅ Same domain as website
 
 **Check yours:**
-1. Open: https://rameshwarbhagwat.me/favicon.ico
+1. Open: https://Heetbhagwat.me/favicon.ico
 2. Should load your logo (not 404 error)
 3. File should be small (< 100KB)
 
@@ -55,19 +55,19 @@ Google requires:
 
 1. Go to: https://search.google.com/search-console
 
-2. Select property: `rameshwarbhagwat.me`
+2. Select property: `Heetbhagwat.me`
 
 3. Click "URL Inspection" (left sidebar)
 
-4. Enter: `https://rameshwarbhagwat.me`
+4. Enter: `https://Heetbhagwat.me`
 
 5. Click "Request Indexing"
 
 6. Wait for confirmation
 
 7. **Repeat for these URLs:**
-   - https://rameshwarbhagwat.me/
-   - https://rameshwarbhagwat.me/favicon.ico
+   - https://Heetbhagwat.me/
+   - https://Heetbhagwat.me/favicon.ico
 
 **Method B: Submit Sitemap**
 
@@ -113,11 +113,11 @@ User-agent: *
 Allow: /
 Allow: /favicon.ico
 
-Sitemap: https://rameshwarbhagwat.me/sitemap.xml
+Sitemap: https://Heetbhagwat.me/sitemap.xml
 ```
 
 **Check in browser:**
-1. Open: https://rameshwarbhagwat.me/robots.txt
+1. Open: https://Heetbhagwat.me/robots.txt
 2. Make sure it doesn't have: `Disallow: /favicon.ico`
 
 ---
@@ -141,7 +141,7 @@ Sitemap: https://rameshwarbhagwat.me/sitemap.xml
 
 ### Method 1: Check Google Cache
 
-1. Search: `site:rameshwarbhagwat.me`
+1. Search: `site:Heetbhagwat.me`
 2. Click the 3 dots next to result
 3. Click "Cached"
 4. Check the date - if recent, Google has crawled
@@ -156,7 +156,7 @@ Sitemap: https://rameshwarbhagwat.me/sitemap.xml
 ### Method 3: Use Google's Rich Results Test
 
 1. Go to: https://search.google.com/test/rich-results
-2. Enter: https://rameshwarbhagwat.me
+2. Enter: https://Heetbhagwat.me
 3. Check if favicon is detected
 
 ---
@@ -175,7 +175,7 @@ Sitemap: https://rameshwarbhagwat.me/sitemap.xml
 **Fix:**
 1. Check file size: Should be < 100KB
 2. Verify format: ICO or PNG only
-3. Test URL: https://rameshwarbhagwat.me/favicon.ico
+3. Test URL: https://Heetbhagwat.me/favicon.ico
 4. Check robots.txt: Should allow favicon
 
 ---
@@ -213,8 +213,8 @@ Sitemap: https://rameshwarbhagwat.me/sitemap.xml
 ## 🎯 Best Practices for Faster Updates
 
 1. **Keep favicon.ico in root:**
-   - ✅ https://rameshwarbhagwat.me/favicon.ico
-   - ❌ https://rameshwarbhagwat.me/images/favicon.ico
+   - ✅ https://Heetbhagwat.me/favicon.ico
+   - ❌ https://Heetbhagwat.me/images/favicon.ico
 
 2. **Use standard sizes:**
    - ✅ 16x16, 32x32, 48x48
@@ -269,7 +269,7 @@ Mobile search results also show favicons, but:
 
 Do these NOW to speed up the process:
 
-- [ ] Verify favicon loads: https://rameshwarbhagwat.me/favicon.ico
+- [ ] Verify favicon loads: https://Heetbhagwat.me/favicon.ico
 - [ ] Check file size (should be < 100KB)
 - [ ] Verify robots.txt allows favicon
 - [ ] Request indexing in Google Search Console

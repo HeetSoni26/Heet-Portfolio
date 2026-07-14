@@ -30,7 +30,7 @@ interface ProjectsPageContentProps {
   projects: Project[];
 }
 
-const categories = ['All', 'AI & ML', 'Full-Stack', 'Web Apps'] as const;
+const categories = ['All', 'AI', 'Research', 'Android', 'Web'] as const;
 type Category = (typeof categories)[number];
 
 type SortMode = 'featured' | 'newest' | 'oldest' | 'az';
@@ -156,28 +156,17 @@ const ProjectListItem = memo(function ProjectListItem({ project, index }: { proj
 // Shared category matcher — mirrors the logic used in the Work section
 function matchesCategory(project: Project, category: Category): boolean {
   if (category === 'All') return true;
-  if (category === 'AI & ML') {
-    return project.techStack.some((t) =>
-      ['Python', 'Scikit-learn', 'TensorFlow', 'OpenAI API', 'NLTK', 'Pandas', 'NumPy'].includes(t)
-    );
+  if (category === 'AI') {
+    return project.category.includes('AI') || project.category.includes('Machine Learning') || project.category.includes('LLM');
   }
-  if (category === 'Full-Stack') {
-    return project.techStack.some((t) =>
-      [
-        'Node.js',
-        'Express.js',
-        'MySQL',
-        'MongoDB',
-        'PostgreSQL',
-        'Supabase (PostgreSQL + Auth)',
-        'Prisma',
-      ].includes(t)
-    );
+  if (category === 'Research') {
+    return project.category.includes('Research') || project.category.includes('Computer Vision');
   }
-  if (category === 'Web Apps') {
-    return project.techStack.some((t) =>
-      ['Next.js', 'Next.js (App Router)', 'React', 'Tailwind CSS'].includes(t)
-    );
+  if (category === 'Android') {
+    return project.category.includes('Android');
+  }
+  if (category === 'Web') {
+    return project.category.includes('Web');
   }
   return true;
 }
@@ -535,44 +524,50 @@ export default function ProjectsPageContent({ projects }: ProjectsPageContentPro
           </div>
         </motion.div>
 
-        {/* ── Category filter (centered glass pills) ── */}
+        {/* ── Category filter ── */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="flex justify-center mb-10 sm:mb-12"
+          className="flex justify-center mb-10 sm:mb-14 px-4 sm:px-0"
         >
-          <div
-            className="inline-flex items-center gap-1 rounded-full p-1 border border-white/10 max-w-full overflow-x-auto"
-            style={glassStyle}
-          >
-            {categories.map((cat) => {
+          <div className="relative flex items-center bg-[#0d0d0f]/80 backdrop-blur-xl border border-white/[0.06] rounded-full p-[3px] max-w-full w-full sm:w-auto overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+            {categories.map((cat, idx) => {
               const isActive = activeCategory === cat;
+              const isNextActive = categories[idx + 1] === activeCategory;
+              const showDivider = idx < categories.length - 1 && !isActive && !isNextActive;
+
               return (
-                <motion.button
-                  key={cat}
-                  whileTap={{ scale: 0.96 }}
-                  onClick={() => setActiveCategory(cat)}
-                  className={`relative whitespace-nowrap px-5 py-2 rounded-full text-xs sm:text-[13px] font-semibold transition-colors z-[1] select-none font-outfit flex items-center gap-1.5 cursor-pointer ${
-                    isActive ? 'text-white' : 'text-white/55 hover:text-white/90'
-                  }`}
-                >
-                  {isActive && (
-                    <motion.div
-                      layoutId="projects-active-pill"
-                      className="absolute inset-0 rounded-full bg-white/[0.1] border border-white/10 z-[-1]"
-                      transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-                    />
-                  )}
-                  <span>{cat}</span>
-                  <span
-                    className={`text-[10px] font-mono px-1.5 py-0.5 rounded-full leading-none ${
-                      isActive ? 'bg-white/15 text-white/70' : 'bg-white/[0.06] text-white/40'
+                <div key={cat} className="flex-1 sm:flex-initial flex items-center">
+                  <motion.button
+                    whileTap={{ scale: 0.96 }}
+                    onClick={() => setActiveCategory(cat)}
+                    className={`relative flex-1 sm:flex-initial w-full sm:w-auto px-4 sm:px-6 py-2 text-xs sm:text-[13px] font-semibold rounded-full text-center cursor-pointer transition-all duration-200 z-[1] select-none font-outfit whitespace-nowrap ${
+                      isActive ? 'text-neutral-950 font-bold' : 'text-white/60 hover:text-white/90'
                     }`}
                   >
-                    {categoryCounts[cat]}
-                  </span>
-                </motion.button>
+                    {isActive && (
+                      <motion.div
+                        layoutId="projects-active-pill"
+                        className="absolute inset-0 bg-white rounded-full z-[-1]"
+                        style={{
+                          boxShadow: '0 2px 6px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.1), inset 0 0.5px 0 rgba(255, 255, 255, 0.4)',
+                        }}
+                        transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                      />
+                    )}
+                    {cat}
+                  </motion.button>
+                  {/* iOS-style vertical divider */}
+                  {idx < categories.length - 1 && (
+                    <div
+                      className="w-[1px] h-3.5 bg-white/[0.08] self-center transition-all duration-200"
+                      style={{
+                        opacity: showDivider ? 1 : 0,
+                      }}
+                    />
+                  )}
+                </div>
               );
             })}
           </div>

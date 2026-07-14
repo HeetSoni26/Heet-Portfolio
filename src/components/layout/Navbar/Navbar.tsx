@@ -69,7 +69,7 @@ export default function Navbar() {
           initial={{ y: -40, opacity: 0 }}
           animate={isIntroComplete ? { y: 0, opacity: 1 } : { y: -40, opacity: 0 }}
           transition={{ duration: 0.8, delay: isIntroComplete && !hasPlayedIntro ? 0.9 : 0, ease: [0.34, 1.56, 0.64, 1] }}
-          className={`fixed top-6 left-6 md:left-10 z-50 cursor-pointer w-20 h-20 ${isIntroComplete && !hasPlayedIntro ? 'hero-logo-animated' : ''}`}
+          className={`fixed top-6 left-6 md:left-10 z-50 cursor-pointer flex items-center justify-center ${isIntroComplete && !hasPlayedIntro ? 'hero-logo-animated' : ''}`}
           onClick={() => {
             if (pathname === '/') {
               window.dispatchEvent(new CustomEvent('trigger-nav-fade', { detail: { id: 'hero' } }));
@@ -79,14 +79,15 @@ export default function Navbar() {
           }}
           whileHover={{ scale: 1.1 }}
         >
-          <Image
-            src="/icons/logo.svg"
-            alt="Rameshwar Bhagwat Logo"
-            width={80}
-            height={80}
-            className="w-full h-full object-contain"
-            priority
-          />
+          <span
+            className="text-white select-none pointer-events-none felipa-regular"
+            style={{
+              fontSize: "52px",
+              lineHeight: 1,
+            }}
+          >
+            HS
+          </span>
         </motion.div>
       </div>
 
@@ -171,7 +172,7 @@ export default function Navbar() {
           </div>
           {/* Logo */}
           <div
-            className="cursor-pointer flex-shrink-0"
+            className="cursor-pointer flex-shrink-0 flex items-center justify-center"
             onClick={() => {
               if (pathname === '/') {
                 window.dispatchEvent(new CustomEvent('trigger-nav-fade', { detail: { id: 'hero' } }));
@@ -180,13 +181,15 @@ export default function Navbar() {
               }
             }}
           >
-            <Image
-              src="/icons/logo.svg"
-              alt="Rameshwar Bhagwat Logo"
-              width={40}
-              height={40}
-              priority
-            />
+            <span
+              className="text-white select-none pointer-events-none felipa-regular"
+              style={{
+                fontSize: "52px",
+                lineHeight: 1,
+              }}
+            >
+              HS
+            </span>
           </div>
 
           {/* Mobile Menu Toggle */}

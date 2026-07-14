@@ -84,7 +84,7 @@ export default function ResumePageContent() {
                 <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[#FF8C00] to-[#F43F5E]" />
               </div>
               <h1 className="text-xl sm:text-2xl font-black tracking-tight text-white uppercase mt-0.5 font-jakarta">
-                Rameshwar Bhagwat
+                Heet Soni
               </h1>
             </div>
           </div>
@@ -93,7 +93,7 @@ export default function ResumePageContent() {
           <div className="flex items-center gap-3 w-full sm:w-auto">
             {/* Open in New Tab */}
             <a
-              href="/Resume/Rameshwar_Bhagwat_Resume.pdf"
+              href="/Resume/Heet_Soni_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 sm:flex-initial flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-white/[0.08] bg-white/[0.03] hover:bg-white/[0.08] hover:border-white/[0.16] text-xs font-bold text-white/80 hover:text-white transition-all duration-300 active:scale-[0.97]"
@@ -104,8 +104,8 @@ export default function ResumePageContent() {
 
             {/* Primary Download Button */}
             <a
-              href="/Resume/Rameshwar_Bhagwat_Resume.pdf"
-              download="Rameshwar_Bhagwat_Resume.pdf"
+              href="/Resume/Heet_Soni_Resume.pdf"
+              download="Heet_Soni_Resume.pdf"
               className="relative overflow-hidden flex-1 sm:flex-initial flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-[#FF8C00] to-[#F43F5E] hover:opacity-90 active:scale-[0.97] transition-all duration-300 cursor-pointer shadow-lg shadow-orange-500/10 font-jakarta"
             >
               <Download size={14} />
@@ -146,7 +146,7 @@ export default function ResumePageContent() {
               </p>
               <div className="flex flex-col gap-3 w-full max-w-xs">
                 <a
-                  href="/Resume/Rameshwar_Bhagwat_Resume.pdf"
+                  href="/Resume/Heet_Soni_Resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 px-5 py-3 rounded-xl border border-white/[0.12] bg-white/[0.04] hover:bg-white/[0.08] text-sm font-bold transition-all duration-300"
@@ -155,8 +155,8 @@ export default function ResumePageContent() {
                   <span>Open in Browser</span>
                 </a>
                 <a
-                  href="/Resume/Rameshwar_Bhagwat_Resume.pdf"
-                  download="Rameshwar_Bhagwat_Resume.pdf"
+                  href="/Resume/Heet_Soni_Resume.pdf"
+                  download="Heet_Soni_Resume.pdf"
                   className="flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-[#FF8C00] to-[#F43F5E] shadow-md transition-all duration-300"
                 >
                   <Download size={16} />
@@ -169,9 +169,9 @@ export default function ResumePageContent() {
             <div className="relative w-full h-[80vh] overflow-hidden rounded-2xl bg-[#09080A] border border-white/[0.06]">
               <iframe
                 id="resume-pdf-frame"
-                src="/Resume/Rameshwar_Bhagwat_Resume.pdf#toolbar=0&navpanes=0&scrollbar=1&view=FitH"
+                src="/Resume/Heet_Soni_Resume.pdf#toolbar=0&navpanes=0&scrollbar=1&view=FitH"
                 className="w-full h-full border-0 bg-[#09080A]"
-                title="Rameshwar Bhagwat Curriculum Vitae"
+                title="Heet Soni Curriculum Vitae"
               />
             </div>
           )}
@@ -181,11 +181,11 @@ export default function ResumePageContent() {
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mt-8 text-[11px] font-mono text-white/35">
           <div className="flex items-center gap-1.5">
             <Sparkles className="w-3.5 h-3.5 text-[#FF8C00]" />
-            <span>Rameshwar Bhagwat • IT Engineering</span>
+            <span>Heet Soni • Full Stack Developer</span>
           </div>
           <div className="flex gap-4">
-            <a href="https://github.com/Rameshwar-bhagwat10" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">GitHub</a>
-            <a href="https://www.linkedin.com/in/rameshwar-bhagwat-888540328" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
+            <a href="https://github.com/HeetSoni26" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">GitHub</a>
+            <a href="https://www.linkedin.com/in/heet-soni-8a9082273/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
           </div>
         </div>
 
@@ -193,3 +193,4 @@ export default function ResumePageContent() {
     </section>
   );
 }
+

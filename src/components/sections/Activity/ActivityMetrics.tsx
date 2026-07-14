@@ -3,8 +3,8 @@
 import { useEffect, useState, memo, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import {
-  SiReact, SiNextdotjs, SiTypescript,
-  SiOpenai, SiPostgresql, SiPrisma
+  SiOpenai, SiTensorflow, SiPytorch,
+  SiPython, SiOpencv, SiJupyter
 } from 'react-icons/si';
 import GlowCard, { GlowCardGroup } from '@/components/ui/GlowCard';
 
@@ -166,12 +166,12 @@ const SmoothLineChart = memo(function SmoothLineChart() {
 // --- Tool Badges Cluster Component ---
 const ToolBadgeCloud = memo(function ToolBadgeCloud() {
   const tools = useMemo(() => [
-    { icon: SiNextdotjs, color: '#FFFFFF', top: '10%', left: '10%' },
-    { icon: SiReact, color: '#61DAFB', top: '5%', left: '42%' },
-    { icon: SiTypescript, color: '#3178C6', top: '15%', left: '72%' },
-    { icon: SiOpenai, color: '#10A37F', top: '50%', left: '15%' },
-    { icon: SiPostgresql, color: '#4169E1', top: '60%', left: '48%' },
-    { icon: SiPrisma, color: '#5A67D8', top: '45%', left: '78%' },
+    { icon: SiOpenai, color: '#10A37F', top: '5%', left: '5%' },
+    { icon: SiTensorflow, color: '#FF6F00', top: '2%', left: '42%' },
+    { icon: SiPytorch, color: '#EE4C2C', top: '8%', left: '76%' },
+    { icon: SiPython, color: '#3776AB', top: '58%', left: '12%' },
+    { icon: SiOpencv, color: '#5C3EE8', top: '55%', left: '48%' },
+    { icon: SiJupyter, color: '#F37626', top: '60%', left: '82%' },
   ], []);
 
   return (
@@ -272,9 +272,9 @@ export default function ActivityMetrics() {
   }, []);
 
   const serviceTags = [
-    'WebCraft SaaS', 'Devory AI Platform', 'Safecoast Intelligence', 
-    'AI/ML Progress Tracker', 'Next.js & React', 'Supabase Integration', 
-    'Geospatial Dashboards', 'Relational DB Architecture'
+    'AI Applications', 'LLMs', 'RAG Systems', 
+    'Business Automation', 'Full Stack Development', 'Computer Vision', 
+    'Software development', 'Android Apps'
   ];
 
   return (
@@ -305,7 +305,7 @@ export default function ActivityMetrics() {
             transition={{ duration: 0.5, delay: 0.05 }}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05] text-white max-w-2xl mx-auto font-jakarta"
           >
-            Engineering robust products designed for business growth.
+            Building AI-powered Software, Automation, and Intelligent Systems.
           </motion.h2>
         </div>
 
@@ -328,13 +328,13 @@ export default function ActivityMetrics() {
               <ActivityBarChart />
               <div>
                 <span className="text-[9px] font-mono font-bold tracking-[0.15em] text-white/30 uppercase block mb-1">
-                  SaaS Build
+                  WEB DEVELOPMENT
                 </span>
                 <h3 className="text-base sm:text-lg font-bold text-white tracking-tight leading-snug font-jakarta">
-                  Cost-effective development
+                  Modern Web Applications
                 </h3>
                 <p className="text-[11px] text-white/50 mt-1 leading-relaxed font-jakarta">
-                  Optimized web builders and e-commerce platforms serving {visitorCount > 0 ? `${visitorCount.toLocaleString()}+` : '4,850+'} visitors.
+                  Responsive websites, dashboards, admin panels, SaaS platforms and business portals built for performance.
                 </p>
               </div>
             </motion.div>
@@ -356,13 +356,13 @@ export default function ActivityMetrics() {
               <NotificationIsland />
               <div>
                 <span className="text-[9px] font-mono font-bold tracking-[0.15em] text-white/30 uppercase block mb-1">
-                  Custom Logic
+                  SOFTWARE DEVELOPMENT
                 </span>
                 <h3 className="text-base sm:text-lg font-bold text-white tracking-tight leading-snug font-jakarta">
-                  Tailor-made systems
+                  Custom Software Solutions
                 </h3>
                 <p className="text-[11px] text-white/50 mt-1 leading-relaxed font-jakarta">
-                  Coastal modeling tools and transaction-safe DBMS engines.
+                  Desktop software, internal business tools and scalable backend systems tailored to real workflows.
                 </p>
               </div>
             </motion.div>
@@ -384,13 +384,13 @@ export default function ActivityMetrics() {
               <SmoothLineChart />
               <div>
                 <span className="text-[9px] font-mono font-bold tracking-[0.15em] text-white/30 uppercase block mb-1">
-                  Performance
+                  AUTOMATION
                 </span>
                 <h3 className="text-base sm:text-lg font-bold text-white tracking-tight leading-snug font-jakarta">
-                  Scalable SaaS backend
+                  Business Automation
                 </h3>
                 <p className="text-[11px] text-white/50 mt-1 leading-relaxed font-jakarta">
-                  Serverless edge hosting maintaining sub-12ms queries under heavy load.
+                  Automate repetitive workflows, integrate APIs, build AI assistants and reduce manual operations.
                 </p>
               </div>
             </motion.div>
@@ -416,13 +416,13 @@ export default function ActivityMetrics() {
             >
               <div className="flex-1 min-w-0 pr-2">
                 <span className="text-[9px] font-mono font-bold tracking-[0.15em] text-white/30 uppercase block mb-1">
-                  AI Integration
+                  ARTIFICIAL INTELLIGENCE
                 </span>
                 <h3 className="text-base sm:text-lg font-bold text-white tracking-tight leading-snug font-jakarta">
-                  AI roadmap workflows
+                  AI & Machine Learning
                 </h3>
                 <p className="text-[11px] text-white/50 mt-1 leading-relaxed font-jakarta">
-                  OpenAI roadmaps and structured project mentoring in Devory.
+                  LLMs, Computer Vision, RAG systems, intelligent agents and AI-powered applications.
                 </p>
               </div>
               <ToolBadgeCloud />
@@ -444,13 +444,13 @@ export default function ActivityMetrics() {
             >
               <div className="flex-1 min-w-0 pr-2">
                 <span className="text-[9px] font-mono font-bold tracking-[0.15em] text-white/30 uppercase block mb-1">
-                  Collaboration
+                  MOBILE DEVELOPMENT
                 </span>
                 <h3 className="text-base sm:text-lg font-bold text-white tracking-tight leading-snug font-jakarta">
-                  Real-time study tracker
+                  Android Applications
                 </h3>
                 <p className="text-[11px] text-white/50 mt-1 leading-relaxed font-jakarta">
-                  Supabase progress dashboards with real-time peer synchronization.
+                  Native Android applications built with Kotlin for modern mobile experiences.
                 </p>
               </div>
               <TrackerVisual />

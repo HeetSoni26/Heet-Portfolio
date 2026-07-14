@@ -187,12 +187,19 @@ const ProjectCard = memo(function ProjectCard({ project, index }: ProjectCardPro
               <span className="block text-[10px] font-bold font-mono tracking-widest bg-gradient-to-r from-[#FF8C00] to-[#F43F5E] bg-clip-text text-transparent uppercase mb-0.5">
                 {project.tagline.split('for')[0].trim()}
               </span>
-              <h3 
-                className="text-lg sm:text-xl font-bold tracking-tight font-jakarta text-white truncate transition-colors duration-300"
-                itemProp="name"
-              >
-                {project.title}
-              </h3>
+              <div className="flex flex-col gap-1">
+                <h3 
+                  className="text-lg sm:text-xl font-bold tracking-tight font-jakarta text-white truncate transition-colors duration-300"
+                  itemProp="name"
+                >
+                  {project.title}
+                </h3>
+                {project.statusBadge && (
+                  <span className="inline-block self-start text-[9px] px-2 py-0.5 rounded-full border border-white/20 text-white/80 bg-white/5 tracking-wider font-mono">
+                    {project.statusBadge}
+                  </span>
+                )}
+              </div>
             </div>
 
             {/* iOS Info Interactive Button */}
@@ -252,7 +259,7 @@ const ProjectCard = memo(function ProjectCard({ project, index }: ProjectCardPro
               onClick={handleLiveClick}
               className="flex-1 bg-gradient-to-r from-[#FF8C00] to-[#F43F5E] hover:opacity-90 active:scale-95 text-white font-bold font-outfit text-xs py-2 px-4 rounded-full transition-all duration-200 select-none text-center cursor-pointer shadow-[0_4px_16px_rgba(244,63,94,0.35)]"
             >
-              Live App
+              {project.primaryButtonText || "Live App"}
             </motion.button>
 
             {/* iOS Secondary Frosted Code Button */}
@@ -262,7 +269,7 @@ const ProjectCard = memo(function ProjectCard({ project, index }: ProjectCardPro
               className="flex-1 bg-white/[0.06] hover:bg-white/[0.12] border border-white/[0.08] text-white/90 font-semibold font-outfit text-xs py-2 px-4 rounded-full transition-all duration-200 flex items-center justify-center gap-1.5 select-none cursor-pointer"
             >
               <Github size={13} className="text-white/80" />
-              <span>Source</span>
+              <span>{project.secondaryButtonText || "Source"}</span>
             </motion.button>
           </nav>
         </div>

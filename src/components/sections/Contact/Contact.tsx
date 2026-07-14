@@ -112,8 +112,8 @@ export default function Contact() {
       />
 
       {/* SEO Microdata */}
-      <meta itemProp="name" content="Contact Rameshwar Bhagwat - Full Stack Developer" />
-      <meta itemProp="description" content="Get in touch with Rameshwar Bhagwat for full-time opportunities, freelance projects, or collaboration. Available for web development, React, Next.js, and full-stack development projects." />
+      <meta itemProp="name" content="Contact Heet Soni - Full Stack Developer" />
+      <meta itemProp="description" content="Get in touch with Heet Soni for full-time opportunities, freelance projects, or collaboration. Available for web development, React, Next.js, and full-stack development projects." />
       <meta itemProp="url" content={`${SITE_URL}#contact`} />
 
       {/* Contact Information Schema */}
@@ -133,11 +133,11 @@ export default function Contact() {
 
       {/* Hidden SEO Content */}
       <div className="sr-only">
-        <h2>Contact Rameshwar Bhagwat - Full Stack Developer</h2>
+        <h2>Contact Heet Soni - Full Stack Developer</h2>
         
         <h3>Get in Touch</h3>
         <p>
-          Rameshwar Bhagwat is available for full-time roles, freelance projects, and consulting opportunities. 
+          Heet Soni is available for full-time roles, freelance projects, and consulting opportunities. 
           With expertise in React, Next.js, TypeScript, Node.js, and modern web development, 
           he helps startups and enterprises build scalable, high-performance web applications.
         </p>
@@ -355,3 +355,4 @@ export default function Contact() {
     </section>
   );
 }
+

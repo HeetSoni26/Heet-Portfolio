@@ -16,8 +16,8 @@ const QUICK_RESPONSE_INTENTS: Record<string, string> = {
   // About
   'name': 'identity', 'your name': 'identity', 'what is your name': 'identity',
   'who am i talking to': 'identity',
-  'who are you': 'about', 'who is rameshwar': 'about', 'tell me about yourself': 'about',
-  'tell me about rameshwar': 'about', 'introduce yourself': 'about', 'what do you do': 'about',
+  'who are you': 'about', 'who is Heet': 'about', 'tell me about yourself': 'about',
+  'tell me about Heet': 'about', 'introduce yourself': 'about', 'what do you do': 'about',
 
   // Contact
   'email': 'contact', 'phone': 'contact', 'phone number': 'contact', 'contact': 'contact',
@@ -206,31 +206,22 @@ function generateResponse(intents: string[], message: string): string {
     case 'about': {
       const { personal, sections } = CHATBOT_CONTEXT;
       responses.push(
-        `**${personal.name}** is a ${personal.jobTitle} based in ${personal.location}.\n\n` +
         `${personal.bio}\n\n` +
         `📊 **Quick Stats:**\n` +
-        `• ${personal.yearsOfExperience} years of experience\n` +
+        `• ${personal.currentStatus}\n` +
+        `• AI-focused portfolio\n` +
         `• ${personal.projectsBuilt} projects built\n` +
-        `• Currently: ${personal.currentStatus}\n\n` +
+        `• ${personal.technologiesUsed} technologies\n\n` +
         `👉 **Quick Link:** [Learn More About Me](${sections.about.link})`
       );
       break;
     }
 
     case 'skills': {
-      const { skills, sections } = CHATBOT_CONTEXT;
-      const frontendSkills = [...skills.frontend.frameworks, ...skills.frontend.languages].slice(0, 6);
-      const backendSkills = [...skills.backend.frameworks, ...skills.backend.languages].slice(0, 4);
-      const aiSkills = skills.ai_ml.frameworks.slice(0, 4);
-
+      const { sections } = CHATBOT_CONTEXT;
       responses.push(
-        `**Rameshwar's Tech Stack:**\n\n` +
-        `🎨 **Frontend:** ${frontendSkills.join(', ')}\n` +
-        `⚙️ **Backend:** ${backendSkills.join(', ')}\n` +
-        `🗄️ **Databases:** ${skills.databases.sql.slice(0, 2).concat(skills.databases.nosql.slice(0, 2)).join(', ')}\n` +
-        `🤖 **AI/ML:** ${aiSkills.join(', ')}\n` +
-        `☁️ **DevOps:** ${skills.devops.cloud.slice(0, 4).join(', ')}\n\n` +
-        `His favorite stack is **Next.js + TypeScript + Tailwind CSS + PostgreSQL**!\n\n` +
+        `My expertise spans AI Engineering, Full-Stack Development, Backend Systems, Android Development, and Intelligent Automation.\n\n` +
+        `Rather than listing every technology here, I'd recommend checking out the Skills section of my portfolio. It provides a complete breakdown of my technologies, proficiency, and areas of expertise in a much more visual and organized way.\n\n` +
         `👉 **Quick Link:** [View All Skills](${sections.skills.link})`
       );
       break;
@@ -245,7 +236,7 @@ function generateResponse(intents: string[], message: string): string {
         `🎨 **Styling:** ${frontend.styling.join(', ')}\n` +
         `✨ **Animation:** ${frontend.animation.join(', ')}\n` +
         `📦 **State Management:** ${frontend.stateManagement.join(', ')}\n\n` +
-        `Rameshwar specializes in building responsive, performant, and beautiful user interfaces.`
+        `Heet specializes in building responsive, performant, and beautiful user interfaces.`
       );
       break;
     }
@@ -271,7 +262,7 @@ function generateResponse(intents: string[], message: string): string {
         `📄 **NoSQL:** ${databases.nosql.join(', ')}\n` +
         `🔧 **ORMs:** ${databases.orm.join(', ')}\n` +
         `☁️ **Cloud DBs:** ${databases.cloud.join(', ')}\n\n` +
-        `Rameshwar designs efficient schemas, writes optimized queries, and handles database migrations.`
+        `Heet designs efficient schemas, writes optimized queries, and handles database migrations.`
       );
       break;
     }
@@ -285,7 +276,7 @@ function generateResponse(intents: string[], message: string): string {
         `📊 **Tools:** ${ai_ml.tools.join(', ')}\n` +
         `🔌 **APIs:** ${ai_ml.apis.join(', ')}\n\n` +
         `**Specializations:** ${ai_ml.specializations.join(', ')}\n\n` +
-        `Rameshwar integrates AI capabilities into production applications, like this very chatbot!`
+        `Heet integrates AI capabilities into production applications, like this very chatbot!`
       );
       break;
     }
@@ -319,7 +310,7 @@ function generateResponse(intents: string[], message: string): string {
         .join('\n');
 
       responses.push(
-        `**Rameshwar's Projects:**\n\n${projectList}\n\n` +
+        `**Heet's Projects:**\n\n${projectList}\n\n` +
         `Ask me about any specific project for more details!\n\n` +
         `👉 **Quick Link:** [View All Projects](${sections.projects.link})`
       );
@@ -397,15 +388,15 @@ function generateResponse(intents: string[], message: string): string {
     }
 
     case 'experience': {
-      const { journey, personal } = CHATBOT_CONTEXT;
+      const { journey } = CHATBOT_CONTEXT;
       const journeyText = journey
         .map(j => `**${j.year}** - *${j.title}*\n${j.description}`)
         .join('\n\n');
 
       responses.push(
-        `**Rameshwar's Journey (${personal.yearsOfExperience} years)**\n\n` +
+        `**Heet's Journey**\n\n` +
         `${journeyText}\n\n` +
-        `From curiosity to building production applications - it's been an exciting ride!`
+        `From curiosity to building intelligent production applications - it's been an exciting ride!`
       );
       break;
     }
@@ -414,7 +405,7 @@ function generateResponse(intents: string[], message: string): string {
       responses.push(
         `**Education:**\n\n` +
         `🎓 **B.Tech in Information Technology** (Currently pursuing)\n\n` +
-        `Rameshwar started coding in 2022 and has been continuously learning and building since then. ` +
+        `Heet started coding in 2022 and has been continuously learning and building since then. ` +
         `He believes in learning by doing - every project teaches something new.\n\n` +
         `**Self-Learning:** Online courses, documentation, open source, and building real projects.`
       );
@@ -449,17 +440,17 @@ function generateResponse(intents: string[], message: string): string {
     case 'hire': {
       const { personal, sections } = CHATBOT_CONTEXT;
       const available = personal.availableForWork
-        ? "✅ **Yes, Rameshwar is currently available for work!**"
-        : "⏳ Rameshwar is currently busy with existing commitments.";
+        ? "✅ **Yes, Heet is currently available for work!**"
+        : "⏳ Heet is currently busy with existing commitments.";
 
       responses.push(
-        `**Hire Rameshwar**\n\n` +
+        `**Hire Heet**\n\n` +
         `${available}\n\n` +
         `**Work Preferences:** ${personal.workPreference.join(', ')}\n\n` +
         `**How to hire:**\n` +
         `1. Go to the **Contact Section** to send a message\n` +
         `2. Or email directly at ${personal.email}\n` +
-        `3. Rameshwar responds within ${personal.responseTime}\n\n` +
+        `3. Heet responds within ${personal.responseTime}\n\n` +
         `👉 **Quick Link:** [Go to Contact Section](${sections.contact.link})\n\n` +
         `**Explore the Portfolio:**\n` +
         `• [View Projects](${sections.projects.link}) - See his work\n` +
@@ -504,7 +495,7 @@ function generateResponse(intents: string[], message: string): string {
         .join('\n');
 
       responses.push(
-        `**How Rameshwar Works:**\n\n` +
+        `**How Heet Works:**\n\n` +
         `${processText}\n\n` +
         `Clear communication and regular updates throughout the process!`
       );
@@ -535,7 +526,7 @@ function generateResponse(intents: string[], message: string): string {
         `📍 **Location:** ${personal.location}\n` +
         `🌍 **Timezone:** ${personal.timezone}\n` +
         `🏠 **Work Style:** Remote-first\n\n` +
-        `Rameshwar works with clients worldwide and is flexible with timezones!`
+        `Heet works with clients worldwide and is flexible with timezones!`
       );
       break;
     }
@@ -544,7 +535,7 @@ function generateResponse(intents: string[], message: string): string {
       const { personal } = CHATBOT_CONTEXT;
       responses.push(
         personal.availableForWork
-          ? `✅ **Currently Available!**\n\nRameshwar is open for:\n${personal.workPreference.map(w => `• ${w}`).join('\n')}\n\nReach out at ${personal.email} to discuss your project!`
+          ? `✅ **Currently Available!**\n\nHeet is open for:\n${personal.workPreference.map(w => `• ${w}`).join('\n')}\n\nReach out at ${personal.email} to discuss your project!`
           : `⏳ Currently busy with existing commitments, but feel free to reach out for future opportunities at ${personal.email}`
       );
       break;
@@ -553,7 +544,7 @@ function generateResponse(intents: string[], message: string): string {
     case 'social': {
       const { social } = CHATBOT_CONTEXT;
       responses.push(
-        `**Connect with Rameshwar:**\n\n` +
+        `**Connect with Heet:**\n\n` +
         `🐙 **GitHub:** ${social.github}\n` +
         `💼 **LinkedIn:** ${social.linkedin}\n` +
         `🐦 **Twitter:** ${social.twitter}\n` +
@@ -571,14 +562,14 @@ function generateResponse(intents: string[], message: string): string {
       responses.push(
         `**Fun Fact:** ${randomFact}\n\n` +
         `**Interests:** ${interests}\n\n` +
-        `Outside of coding, Rameshwar loves exploring new technologies and building products that solve real problems!`
+        `Outside of coding, Heet loves exploring new technologies and building products that solve real problems!`
       );
       break;
     }
 
     case 'favorite': {
       responses.push(
-        `**Rameshwar's Favorites:**\n\n` +
+        `**Heet's Favorites:**\n\n` +
         `🛠️ **Stack:** Next.js + TypeScript + Tailwind CSS + PostgreSQL\n` +
         `⚛️ **Framework:** Next.js (for its DX and performance)\n` +
         `💅 **Styling:** Tailwind CSS (utility-first FTW!)\n` +
@@ -610,7 +601,7 @@ function generateResponse(intents: string[], message: string): string {
       if (lowerMessage.includes('?')) {
         return RESPONSE_TEMPLATES.unknown[Math.floor(Math.random() * RESPONSE_TEMPLATES.unknown.length)];
       }
-      return "I'm here to help! Try asking about Rameshwar's skills, projects, experience, or how to contact him.";
+      return "I'm here to help! Try asking about Heet's skills, projects, experience, or how to contact him.";
   }
 
   return responses.length > 0

@@ -312,7 +312,7 @@ function ServiceCardItem({
         <div className="absolute inset-0">
           <Image
             src={card.image}
-            alt={`${card.title} - Rameshwar Bhagwat's expertise`}
+            alt={`${card.title} - Heet Soni's expertise`}
             fill
             className="object-cover opacity-20"
             sizes="(max-width: 640px) 260px, (max-width: 1024px) 220px, 260px"
@@ -416,3 +416,4 @@ function ServiceCardItem({
     </motion.div>
   );
 }
+

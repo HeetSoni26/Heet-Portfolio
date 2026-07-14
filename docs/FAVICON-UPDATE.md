@@ -167,7 +167,7 @@ convert public/favicon.svg -resize 180x180 public/apple-touch-icon.png
 1. **Clear cache** (most common issue)
 2. **Wait 5 minutes** after deployment
 3. **Try incognito mode**
-4. **Check URL directly**: `https://rameshwarbhagwat.me/favicon.svg`
+4. **Check URL directly**: `https://Heetbhagwat.me/favicon.svg`
 5. **Hard refresh**: Ctrl+Shift+R
 
 ### Old Favicon Still Showing?

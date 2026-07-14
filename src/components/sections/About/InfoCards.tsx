@@ -7,8 +7,8 @@ import { Copy, Check } from 'lucide-react';
 import { useVisitorTracking } from '@/hooks/useVisitorTracking';
 import GlowCard from '@/components/ui/GlowCard';
 
-const EMAIL = 'rameshwarbhagwat019@gmail.com';
-const EMAIL_NAME = 'rameshwarbhagwat019';
+const EMAIL = 'heetks2607@gmail.com';
+const EMAIL_NAME = 'heetks2607';
 
 // Grid background style (static, no need to recreate)
 const gridBackgroundStyle = {
@@ -102,14 +102,15 @@ const InfoCards = memo(function InfoCards() {
           {/* Logo */}
           <div className="flex justify-center mb-1 xs:mb-1.5 sm:mb-2">
             <div className="relative">
-              <Image
-                src="/icons/logo.svg"
-                alt="Rameshwar Bhagwat Portfolio Logo"
-                width={50}
-                height={50}
-                className="hover:scale-110 transition-transform duration-300 w-[32px] xs:w-[40px] sm:w-[50px] md:w-[60px] h-[32px] xs:h-[40px] sm:h-[50px] md:h-[60px]"
-                style={{ filter: 'brightness(0) saturate(100%) invert(13%) sepia(98%) saturate(7471%) hue-rotate(0deg) brightness(98%) contrast(118%)' }}
-              />
+              <span
+                className="text-white select-none pointer-events-none hover:scale-115 transition-transform duration-300 block felipa-regular"
+                style={{
+                  fontSize: "52px",
+                  lineHeight: 1,
+                }}
+              >
+                HS
+              </span>
             </div>
           </div>
 

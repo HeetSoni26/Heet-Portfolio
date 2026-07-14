@@ -1,8 +1,8 @@
-# 🚀 Rameshwar Bhagwat - Portfolio
+# 🚀 Heet Soni - Portfolio
 
 Modern, high-performance portfolio website built with Next.js 16, TypeScript, and Tailwind CSS.
 
-**Live Site**: [https://rameshwarbhagwat.me](https://rameshwarbhagwat.me)
+**Live Site**: [https://Heetbhagwat.me](https://Heetbhagwat.me)
 
 ---
 
@@ -37,7 +37,7 @@ Modern, high-performance portfolio website built with Next.js 16, TypeScript, an
 
 ### Deployment
 - **Hosting**: Vercel
-- **Domain**: rameshwarbhagwat.me
+- **Domain**: Heetbhagwat.me
 - **SSL**: Automatic (Let's Encrypt)
 
 ---
@@ -53,7 +53,7 @@ Modern, high-performance portfolio website built with Next.js 16, TypeScript, an
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/Rameshwar-bhagwat10/Ram-PortFolio.git
+git clone https://github.com/Heet-bhagwat10/Ram-PortFolio.git
 cd Ram-PortFolio
 ```
 
@@ -74,7 +74,7 @@ SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
 SMTP_USER=your_email@gmail.com
 SMTP_PASS=your_app_password
-SMTP_FROM=noreply@rameshwarbhagwat.me
+SMTP_FROM=noreply@Heetbhagwat.me
 ADMIN_EMAIL=your_email@gmail.com
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
 ```
@@ -261,11 +261,11 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 👤 Author
 
-**Rameshwar Bhagwat**
-- Website: [rameshwarbhagwat.me](https://rameshwarbhagwat.me)
-- Email: rameshwarbhagwat019@gmail.com
-- GitHub: [@Rameshwar-bhagwat10](https://github.com/Rameshwar-bhagwat10)
-- LinkedIn: [Rameshwar Bhagwat](https://linkedin.com/in/rameshwar-bhagwat)
+**Heet Soni**
+- Website: [Heetbhagwat.me](https://Heetbhagwat.me)
+- Email: Heetbhagwat019@gmail.com
+- GitHub: [@Heet-bhagwat10](https://github.com/Heet-bhagwat10)
+- LinkedIn: [Heet Soni](https://linkedin.com/in/Heet-bhagwat)
 
 ---
 
@@ -283,8 +283,8 @@ This project is open source and available under the [MIT License](LICENSE).
 
 For detailed guides and troubleshooting:
 - 📚 [Documentation](./docs/README.md)
-- 🐛 [Issues](https://github.com/Rameshwar-bhagwat10/Ram-PortFolio/issues)
+- 🐛 [Issues](https://github.com/Heet-bhagwat10/Ram-PortFolio/issues)
 
 ---
 
-**Built with ❤️ by Rameshwar Bhagwat**
+**Built with ❤️ by Heet Soni**

@@ -22,7 +22,7 @@ git push origin master
 ```
 
 ✅ **Checkpoint:** Your code should be on GitHub at:
-`https://github.com/Rameshwar-bhagwat10/Ram-PortFolio`
+`https://github.com/Heet-bhagwat10/Ram-PortFolio`
 
 ---
 
@@ -112,7 +112,7 @@ Environment: Production, Preview, Development
 #### **Variable 6: SMTP_USER**
 ```
 Name: SMTP_USER
-Value: rameshwarbhagwat019@gmail.com
+Value: Heetbhagwat019@gmail.com
 Environment: Production, Preview, Development
 ```
 
@@ -127,14 +127,14 @@ Environment: Production, Preview, Development
 #### **Variable 8: SMTP_FROM**
 ```
 Name: SMTP_FROM
-Value: noreply@rameshwarbhagwat.com
+Value: noreply@Heetbhagwat.com
 Environment: Production, Preview, Development
 ```
 
 #### **Variable 9: ADMIN_EMAIL**
 ```
 Name: ADMIN_EMAIL
-Value: rameshwarbhagwat019@gmail.com
+Value: Heetbhagwat019@gmail.com
 Environment: Production, Preview, Development
 ```
 
@@ -154,11 +154,11 @@ Environment: Production, Preview, Development
 ### Step 1: Buy a Domain (if you don't have one)
 - Recommended: [Namecheap](https://namecheap.com), [GoDaddy](https://godaddy.com), or [Google Domains](https://domains.google)
 - Cost: ~$10-15/year
-- Suggested: `rameshwarbhagwat.com` or `rameshwar.dev`
+- Suggested: `Heetbhagwat.com` or `Heet.dev`
 
 ### Step 2: Add Domain in Vercel
 1. In your project, go to **"Settings"** → **"Domains"**
-2. Enter your domain: `rameshwarbhagwat.com`
+2. Enter your domain: `Heetbhagwat.com`
 3. Click **"Add"**
 
 ### Step 3: Configure DNS
@@ -186,7 +186,7 @@ TTL: Automatic
 ### Step 4: Update NEXT_PUBLIC_SITE_URL
 1. Go back to Vercel → Settings → Environment Variables
 2. Edit `NEXT_PUBLIC_SITE_URL`
-3. Change to: `https://rameshwarbhagwat.com`
+3. Change to: `https://Heetbhagwat.com`
 4. Save and redeploy
 
 ✅ **Checkpoint:** Your portfolio is now on your custom domain!
@@ -226,7 +226,7 @@ TTL: Automatic
 ### Step 1: Add Property
 1. Go to [Google Search Console](https://search.google.com/search-console)
 2. Click **"Add Property"**
-3. Enter: `https://rameshwarbhagwat.com` (or your Vercel URL)
+3. Enter: `https://Heetbhagwat.com` (or your Vercel URL)
 4. Click **"Continue"**
 
 ### Step 2: Verify Ownership
@@ -314,7 +314,7 @@ TTL: Automatic
 #### GitHub
 1. Go to your GitHub profile
 2. Edit profile
-3. Add website: `https://rameshwarbhagwat.com`
+3. Add website: `https://Heetbhagwat.com`
 
 #### LinkedIn
 1. Edit your LinkedIn profile
@@ -406,7 +406,7 @@ After deployment, bookmark these:
 - Vercel Dashboard: https://vercel.com/dashboard
 - Google Search Console: https://search.google.com/search-console
 - Your Live Site: https://your-domain.com
-- GitHub Repo: https://github.com/Rameshwar-bhagwat10/Ram-PortFolio
+- GitHub Repo: https://github.com/Heet-bhagwat10/Ram-PortFolio
 
 ---
 

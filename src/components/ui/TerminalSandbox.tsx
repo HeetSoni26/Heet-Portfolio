@@ -95,16 +95,16 @@ export default function TerminalSandbox() {
     <div className="space-y-2 select-none">
       <div className={`${activeTheme.primaryColor} font-mono text-[9px] leading-3 sm:text-[11px] sm:leading-4 opacity-95`}>
         <pre className="whitespace-pre overflow-x-auto scrollbar-none font-bold">
-          {`██████╗  █████╗ ███╗   ███╗     ██████╗██╗     ██╗
-██╔══██╗██╔══██╗████╗ ████║    ██╔════╝██║     ██║
-██████╔╝███████║██╔████╔██║    ██║     ██║     ██║
-██╔══██╗██╔══██║██║╚██╔╝██║    ██║     ██║     ██║
-██║  ██║██║  ██║██║ ╚═╝ ██║    ╚██████╗███████╗██║
-╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝     ╚═════╝╚══════╝╚═╝`}
+          {`██╗  ██╗███████╗███████╗████████╗
+██║  ██║██╔════╝██╔════╝╚══██╔══╝
+███████║█████╗  █████╗     ██║
+██╔══██║██╔══╝  ██╔══╝     ██║
+██║  ██║███████╗███████╗   ██║
+╚═╝  ╚═╝╚══════╝╚══════╝   ╚═╝`}
         </pre>
       </div>
       <div className="flex items-center gap-2 text-white/50 text-[10px] sm:text-xs font-semibold">
-        <span>RAMESHWAR CLI v2.4</span>
+        <span>Heet CLI v2.4</span>
         <span>•</span>
         <span className="text-[#30D158] font-mono">ONLINE</span>
       </div>
@@ -300,7 +300,7 @@ export default function TerminalSandbox() {
                   <div><span className="text-white font-bold inline-block w-20">neofetch</span> <span className="text-white/40">System info dashboard</span></div>
                   <div><span className="text-[#39d353] font-bold inline-block w-20">hack</span> <span className="text-white/40">Cyberpunk hack simulator</span></div>
                   <div><span className="text-[#00f0ff] font-bold inline-block w-20">matrix</span> <span className="text-white/40">Katakana digital rain</span></div>
-                  <div><span className="text-white font-bold inline-block w-20">weather</span> <span className="text-white/40">Yeola weather report</span></div>
+                  <div><span className="text-white font-bold inline-block w-20">weather</span> <span className="text-white/40">Anand weather report</span></div>
                   <div><span className="text-white font-bold inline-block w-20">quote</span> <span className="text-white/40">Developer inspiration</span></div>
                   <div><span className="text-white font-bold inline-block w-20">theme</span> <span className="text-white/40">matrix|amber|dracula</span></div>
                   <div><span className="text-white font-bold inline-block w-20">clear</span> <span className="text-white/40">Clear console logs</span></div>
@@ -318,9 +318,9 @@ export default function TerminalSandbox() {
             type: 'output',
             text: (
               <div className="space-y-1 text-white/80 py-0.5 text-xs sm:text-sm">
-                <p><span className="text-[#FF8C00] font-bold">Name:</span> Rameshwar Bhagwat</p>
+                <p><span className="text-[#FF8C00] font-bold">Name:</span> Heet Soni</p>
                 <p><span className="text-[#FF8C00] font-bold">Title:</span> Full Stack & AI Developer</p>
-                <p><span className="text-[#FF8C00] font-bold">Location:</span> Yeola, Maharashtra, India (IST)</p>
+                <p><span className="text-[#FF8C00] font-bold">Location:</span> Anand, Gujarat, India (IST)</p>
                 <p><span className="text-[#FF8C00] font-bold">Bio:</span> Creative engineer building high-performance web systems and AI integrations.</p>
               </div>
             )
@@ -477,7 +477,7 @@ export default function TerminalSandbox() {
         \\___/`}
                 </pre>
                 <div className="space-y-0.5 text-white/80">
-                  <p><span className={`${activeTheme.accentColor} font-bold`}>OS:</span> RameshwarOS v2.4 (iOS Hybrid)</p>
+                  <p><span className={`${activeTheme.accentColor} font-bold`}>OS:</span> HeetOS v2.4 (iOS Hybrid)</p>
                   <p><span className={`${activeTheme.accentColor} font-bold`}>Host:</span> Portfolio Web Console</p>
                   <p><span className={`${activeTheme.accentColor} font-bold`}>Kernel:</span> React 19 + Next.js 16 (Turbopack)</p>
                   <p><span className={`${activeTheme.accentColor} font-bold`}>Shell:</span> zsh-sandbox v2.4</p>
@@ -497,7 +497,7 @@ export default function TerminalSandbox() {
             type: 'output',
             text: (
               <div className="py-1 text-xs font-mono text-white/80">
-                <p className="text-emerald-400 font-bold mb-1">WEATHER: Yeola, Maharashtra, India</p>
+                <p className="text-emerald-400 font-bold mb-1">WEATHER: Anand, Gujarat, India</p>
                 <pre className="leading-tight text-[11px]">
                   {`    \\   /      Today:   ☀️  Clear Sky (28°C / 82.4°F)
      .-.       Mon:     🌤️  Light Clouds (29°C)
@@ -530,7 +530,7 @@ export default function TerminalSandbox() {
       case 'sudo clear':
         setLogs(prev => [
           ...prev,
-          { type: 'error', text: '🔒 guest is not in the sudoers file. This incident will be reported to Rameshwar.' }
+          { type: 'error', text: '🔒 guest is not in the sudoers file. This incident will be reported to Heet.' }
         ]);
         break;
 
@@ -582,7 +582,7 @@ export default function TerminalSandbox() {
                   <span>DECRYPTION SUCCESSFUL — ACCESS GRANTED</span>
                 </div>
                 <div className="space-y-1 text-[11px] sm:text-xs text-white/90">
-                  <p><span className="text-[#39d353] font-bold">NAME:</span> Rameshwar Bhagwat</p>
+                  <p><span className="text-[#39d353] font-bold">NAME:</span> Heet Soni</p>
                   <p><span className="text-[#39d353] font-bold">ROLE:</span> Full Stack & AI Developer</p>
                   <p><span className="text-[#39d353] font-bold">SPECIALTY:</span> React 19 • Next.js 16 • TypeScript • AI Systems</p>
                   <p><span className="text-[#39d353] font-bold">STATUS:</span> Open for Software Engineering Roles & Freelance!</p>
@@ -761,7 +761,7 @@ export default function TerminalSandbox() {
                   <div key={index} className="text-xs sm:text-sm leading-relaxed whitespace-pre-wrap break-all">
                     {log.type === 'input' && (
                       <div className="flex items-start">
-                        <span className={`${activeTheme.promptColor} font-bold mr-2 select-none`}>guest@rameshwar.me:~$</span>
+                        <span className={`${activeTheme.promptColor} font-bold mr-2 select-none`}>guest@heet.me:~$</span>
                         <span className="text-white font-medium">{log.text}</span>
                       </div>
                     )}
@@ -790,7 +790,7 @@ export default function TerminalSandbox() {
               {/* Input Panel Prompt */}
               <div className="p-4 bg-white/[0.02] border-t border-white/[0.08]">
                 <div className="flex items-center">
-                  <span className={`${activeTheme.promptColor} font-bold text-xs sm:text-sm mr-2 select-none`}>guest@rameshwar.me:~$</span>
+                  <span className={`${activeTheme.promptColor} font-bold text-xs sm:text-sm mr-2 select-none`}>guest@heet.me:~$</span>
                   <div className="relative flex-1 flex items-center">
                     <input
                       ref={inputRef}

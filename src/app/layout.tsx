@@ -69,7 +69,7 @@ const outfit = Outfit({
   preload: true,
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://rameshwarbhagwat.me';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://heetportfolio.vercel.app';
 
 export const metadata: Metadata = generateSEO();
 
@@ -81,23 +81,23 @@ export default function RootLayout({
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Rameshwar Bhagwat",
+    "name": "Heet Soni",
     "url": siteUrl,
     "image": `${siteUrl}/images/profile/profile.jpeg`,
     "jobTitle": "Full Stack & AI Developer",
-    "description": "Rameshwar Bhagwat is a Full Stack & AI Developer building AI-powered web applications, with featured projects WebCraft and Safecoast.",
-    "email": "rameshwarbhagwat019@gmail.com",
-    "telephone": "+91-9699245170",
+    "description": "Heet Soni is a Full Stack & AI Developer building AI-powered web applications, with featured projects WebCraft and Safecoast.",
+    "email": "heetks2607@gmail.com",
+    "telephone": "+91 99093 42367",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Yeola",
-      "addressRegion": "Maharashtra",
+      "addressLocality": "Anand",
+      "addressRegion": "Gujarat",
       "addressCountry": "IN"
     },
     "sameAs": [
-      "https://github.com/Rameshwar-bhagwat10",
-      "https://www.linkedin.com/in/rameshwar-bhagwat-888540328",
-      "https://twitter.com/imram111_"
+      "https://github.com/HeetSoni26",
+      "https://www.linkedin.com/in/heet-soni-8a9082273/",
+      "https://twitter.com/heetsoni__"
     ],
     "knowsAbout": [
       "Full Stack Development",
@@ -145,12 +145,12 @@ export default function RootLayout({
   const websiteStructuredData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Rameshwar Bhagwat Portfolio",
+    "name": "Heet Soni Portfolio",
     "url": siteUrl,
-    "description": "Portfolio of Rameshwar Bhagwat showcasing full stack and AI-powered web projects, including WebCraft and Safecoast.",
+    "description": "Portfolio of Heet Soni showcasing full stack and AI-powered web projects, including WebCraft and Safecoast.",
     "author": {
       "@type": "Person",
-      "name": "Rameshwar Bhagwat"
+      "name": "Heet Soni"
     },
     "potentialAction": {
       "@type": "SearchAction",
@@ -195,6 +195,8 @@ export default function RootLayout({
         {/* Preconnect to external domains for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Felipa&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap" rel="stylesheet" />
 
         {/* DNS Prefetch for faster resource loading */}
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />

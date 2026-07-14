@@ -17,7 +17,7 @@ export default function IntroScreen() {
 
   // State
   const [isMounted, setIsMounted] = useState(false);
-  const [isSvgLoaded, setIsSvgLoaded] = useState(false);
+  const [isSvgLoaded, setIsSvgLoaded] = useState(true);
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
   // Mount guard & motion preference check
@@ -220,18 +220,22 @@ export default function IntroScreen() {
       >
         <div
           ref={signatureContainerRef}
-          className="relative flex items-center justify-center w-[52vw] max-w-[460px]"
+          className="relative flex items-center justify-center"
           style={{
-            aspectRatio: '832.725 / 236.312',
+            width: "auto",
+            height: "auto",
           }}
         >
-          <img
-            src="/rameshwar-signature.svg"
-            alt="Rameshwar signature"
-            onLoad={() => setIsSvgLoaded(true)}
-            className="w-full h-full object-contain brightness-0 invert select-none pointer-events-none"
-            draggable={false}
-          />
+          <div
+            className="text-white select-none pointer-events-none"
+            style={{
+              fontFamily: "'Mea Culpa', cursive",
+              fontSize: "clamp(3.5rem, 12vw, 8rem)",
+              whiteSpace: "nowrap",
+            }}
+          >
+            Heet Soni
+          </div>
         </div>
       </div>
     </div>

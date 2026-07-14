@@ -4,10 +4,10 @@ import { Github, Linkedin, Instagram, Mail, ArrowUp, MapPin } from 'lucide-react
 import { motion } from 'framer-motion';
 
 const socialLinks = [
-  { name: 'GitHub', url: 'https://github.com/Rameshwar-bhagwat10', icon: Github, color: '#FFFFFF' },
-  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/rameshwar-bhagwat-888540328', icon: Linkedin, color: '#0A66C2' },
-  { name: 'Instagram', url: 'https://www.instagram.com/imram111_/', icon: Instagram, color: '#E4405F' },
-  { name: 'Email', url: 'mailto:rameshwarbhagwat019@gmail.com', icon: Mail, color: '#30D158' },
+  { name: 'GitHub', url: 'https://github.com/HeetSoni26', icon: Github, color: '#FFFFFF' },
+  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/heet-soni-8a9082273/', icon: Linkedin, color: '#0A66C2' },
+  { name: 'Instagram', url: 'https://www.instagram.com/heetsoni__/', icon: Instagram, color: '#E4405F' },
+  { name: 'Email', url: 'mailto:heetks2607@gmail.com', icon: Mail, color: '#30D158' },
 ];
 
 export default function Footer() {
@@ -52,8 +52,8 @@ export default function Footer() {
                   className="text-lg sm:text-xl font-medium tracking-tight select-none"
                   style={{ fontFamily: 'var(--font-instrument), Georgia, serif', textTransform: 'none' }}
                 >
-                  <span className="text-white">Rameshwar</span>{' '}
-                  <span className="text-white italic">Bhagwat</span>
+                  <span className="text-white">Heet</span>{' '}
+                  <span className="text-white italic">Soni</span>
                 </span>
                 
                 {/* Available for Projects / Pulse indicator */}
@@ -143,7 +143,7 @@ export default function Footer() {
                 }}
               >
                 <MapPin size={11} className="text-[#BF5AF2]" />
-                <span>Yeola, Maharashtra, India</span>
+                <span>Anand, Gujarat, India</span>
               </div>
             </div>
             

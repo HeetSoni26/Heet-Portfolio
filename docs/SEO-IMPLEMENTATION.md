@@ -191,7 +191,7 @@ npm run start
 - Social media previews working
 
 ### Short-term (1-3 months)
-- Ranking for branded keywords ("Rameshwar Bhagwat")
+- Ranking for branded keywords ("Heet Soni")
 - Project pages indexed
 - Improved click-through rates
 

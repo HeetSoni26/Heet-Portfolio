@@ -9,7 +9,7 @@
 
 ### 7. ✅ FAQ Schema
 - Created `src/components/sections/FAQ/FAQ.tsx`
-- Added 6 FAQs about Rameshwar Bhagwat
+- Added 6 FAQs about Heet Soni
 - Includes JSON-LD FAQ schema
 - Added to main page
 
@@ -60,12 +60,12 @@
 
 ---
 
-#### 2. Create Brand Page `/about-rameshwar-bhagwat`
+#### 2. Create Brand Page `/about-Heet-bhagwat`
 **Status:** Not started
 
 **Requirements:**
 - 800-1200 words content
-- Mention "Rameshwar Bhagwat" 10-15 times naturally
+- Mention "Heet Soni" 10-15 times naturally
 - Include:
   - Education (IT Engineering)
   - Projects (Devory, ThinkVerse, Safecoast, etc.)
@@ -83,9 +83,9 @@
 
 **Action Required:**
 1. Go to [Google Search Console](https://search.google.com/search-console)
-2. Add property: `rameshwarbhagwat.me`
+2. Add property: `Heetbhagwat.me`
 3. Verification should succeed automatically (code already in metadata)
-4. Submit sitemap: `https://rameshwarbhagwat.me/sitemap.xml`
+4. Submit sitemap: `https://Heetbhagwat.me/sitemap.xml`
 5. Request indexing for main page
 
 **Impact:** Essential for monitoring search performance
@@ -118,7 +118,7 @@
 
 **Remaining:**
 - Add link from About section to brand page (once created)
-- Add "Learn more about Rameshwar Bhagwat" CTA
+- Add "Learn more about Heet Soni" CTA
 - Cross-link between sections
 
 **Impact:** Improves SEO and user navigation
@@ -183,12 +183,12 @@
    - Add property and submit sitemap
 
 3. **Create Brand Page** (1-2 hours)
-   - Create `src/app/about-rameshwar-bhagwat/page.tsx`
+   - Create `src/app/about-Heet-bhagwat/page.tsx`
    - Write 800-1200 words about your journey
    - Add internal link from homepage
 
 **After These 3 Tasks:**
-Your portfolio will be 100% SEO optimized and ready to rank #1 for "Rameshwar Bhagwat"!
+Your portfolio will be 100% SEO optimized and ready to rank #1 for "Heet Soni"!
 
 ---
 
@@ -196,11 +196,11 @@ Your portfolio will be 100% SEO optimized and ready to rank #1 for "Rameshwar Bh
 
 After completing remaining tasks:
 
-- [ ] OG image displays at: https://rameshwarbhagwat.me/og-image.png
+- [ ] OG image displays at: https://Heetbhagwat.me/og-image.png
 - [ ] Test OG image: https://www.opengraph.xyz/
 - [ ] Google Search Console verified
 - [ ] Sitemap submitted to GSC
-- [ ] Brand page accessible: https://rameshwarbhagwat.me/about-rameshwar-bhagwat
+- [ ] Brand page accessible: https://Heetbhagwat.me/about-Heet-bhagwat
 - [ ] Internal link to brand page added
 - [ ] Run Lighthouse audit (aim for 95+ SEO score)
 - [ ] Test structured data: https://validator.schema.org/

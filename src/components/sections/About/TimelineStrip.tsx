@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef, memo } from 'react';
-import { Code2, Briefcase, GraduationCap, Rocket, Award, LucideIcon } from 'lucide-react';
+import { Code2, Briefcase, GraduationCap, Rocket, Award, Brain, Bot, Microscope, Laptop, LucideIcon } from 'lucide-react';
 
 interface Milestone {
   year: string;
@@ -20,29 +20,35 @@ const milestones: Milestone[] = [
     icon: Code2,
   },
   {
-    year: '2024',
+    year: '2023',
     title: 'Engineering Foundation',
-    description: 'Started B.Tech in Information Technology. Diving deep into data structures, algorithms, and software engineering principles. Building full-stack applications with React, Node.js, and databases.',
+    description: 'Began pursuing a B.Tech in Artificial Intelligence & Data Science at CVM University. Built a strong foundation in programming, algorithms, databases and machine learning while exploring modern web technologies.',
     icon: GraduationCap,
   },
   {
+    year: '2024',
+    title: 'Full-Stack Developer',
+    description: 'Built modern web applications with React, Next.js, TypeScript and backend technologies. Learned databases, APIs and production-ready development while creating real-world projects.',
+    icon: Laptop,
+  },
+  {
     year: '2025',
-    title: 'Product Builder',
-    description: 'Launched ThinkVerse - a SaaS platform for structured idea management. Learned product development, user experience design, and the importance of shipping real products to real users.',
-    icon: Briefcase,
+    title: 'AI Exploration',
+    description: 'Transitioned into Artificial Intelligence through machine learning, computer vision, LLMs and open-source contributions. Started building intelligent software beyond traditional web applications.',
+    icon: Brain,
   },
   {
     year: '2026',
-    title: 'AI Development',
-    description: 'Currently building Devory, an AI-driven platform helping students showcase and manage their projects. Exploring machine learning, natural language processing, and intelligent automation.',
-    icon: Award,
+    title: 'AI Product Development',
+    description: 'Building AI-powered products including OpenBeats, Event Horizon and intelligent automation systems while strengthening expertise in backend engineering and computer vision.',
+    icon: Bot,
     isCurrent: true,
   },
   {
     year: '2027',
-    title: 'Scaling Vision',
-    description: 'Aiming to master advanced AI/ML systems and production-grade engineering. Goal: Build technology that impacts millions and contribute to open-source communities.',
-    icon: Rocket,
+    title: 'Research & Graduate Journey',
+    description: 'Preparing for thesis-based graduate studies, AI research publications and building advanced intelligent systems with real-world impact.',
+    icon: Microscope,
   },
 ];
 
@@ -326,7 +332,7 @@ export default function TimelineStrip() {
           variants={titleContainerVariants}
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-[-0.02em] leading-[0.95] text-white flex flex-wrap justify-center gap-x-[0.25em] gap-y-[0.05em]"
         >
-          {"Tracing my path".split(" ").map((word, i) => (
+          {"Growing Into an AI Engineer".split(" ").map((word, i) => (
             <span key={i} className="inline-block overflow-hidden py-0.5">
               <motion.span
                 variants={wordVariants}

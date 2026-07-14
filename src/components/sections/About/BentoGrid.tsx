@@ -296,10 +296,10 @@ export default function BentoGrid() {
             <div className="absolute inset-0 bg-[#0c0b0b]/15 pointer-events-none" />
             <Image
               src="/images/profile/profile.jpeg"
-              alt="Rameshwar Bhagwat"
-              width={160}
-              height={160}
-              className="w-full h-full object-cover"
+              alt="Heet Soni"
+              fill
+              className="object-cover"
+              sizes="(max-w-96px) 100vw, 96px"
               priority
             />
           </div>
@@ -307,13 +307,13 @@ export default function BentoGrid() {
           {/* Bio text */}
           <div className="text-center sm:text-left flex flex-col justify-center flex-1">
             <span className="text-[10px] font-mono font-medium tracking-[0.15em] text-white/30 uppercase block mb-1">
-              A Full Stack Developer
+              AI Engineer
             </span>
             <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight leading-tight mb-2">
-              Rameshwar Bhagwat.
+              Heet Soni.
             </h2>
             <p className="text-xs sm:text-sm text-white/50 leading-relaxed max-w-xs">
-              I craft high-performance web applications and AI-driven products with elegant layouts.
+              I design and deploy AI agents, LLM applications, RAG pipelines, and production-ready AI systems.
             </p>
           </div>
         </div>
@@ -494,10 +494,10 @@ export default function BentoGrid() {
           {/* Right Services 2x2 grid of small capsules */}
           <div className="grid grid-cols-2 gap-2 w-full sm:w-auto max-w-[280px]">
             {[
-              { icon: Code, label: 'Web Apps', color: '#38BDF8' },
-              { icon: Brain, label: 'AI Integrations', color: '#FF9F0A' },
-              { icon: Database, label: 'Backends', color: '#34D399' },
-              { icon: Cpu, label: 'Systems', color: '#A78BFA' },
+              { icon: Code, label: 'Software Development', color: '#38BDF8' },
+              { icon: Brain, label: 'AI Solutions', color: '#FF9F0A' },
+              { icon: Database, label: 'Business Automation', color: '#34D399' },
+              { icon: Cpu, label: 'Web Development', color: '#A78BFA' },
             ].map((item, idx) => {
               const Icon = item.icon;
               return (
@@ -583,9 +583,9 @@ export default function BentoGrid() {
         {/* Row of stats cards (raised) */}
         <div className="flex gap-3 sm:gap-4 w-full h-full pt-1.5">
           {[
-            { value: `0${new Date().getFullYear() - 2025}+`, label: 'Years', sublabel: 'Experience' },
+            { value: '2+', label: 'Years', sublabel: 'Experience' },
             { value: `${skills.length}+`, label: 'Tech Stack', sublabel: 'Skills' },
-            { value: `0${projects.length}+`, label: 'Total', sublabel: 'Projects' },
+            { value: `${projects.length}+`, label: 'Total', sublabel: 'Projects' },
           ].map((stat, idx) => (
             <div
               key={idx}
@@ -639,3 +639,4 @@ export default function BentoGrid() {
     </BentoGlowGroup>
   );
 }
+

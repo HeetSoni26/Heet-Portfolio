@@ -49,7 +49,7 @@ export default function AuroraMeshBackground() {
     window.addEventListener('mousemove', handleMouseMove, { passive: true });
 
     // Initialize liquid blobs
-    // Warm accent colors matching Rameshwar's branding: Orange, Rose, Crimson, Purple
+    // Warm accent colors matching Heet's branding: Orange, Rose, Crimson, Purple
     const blobs: Blob[] = [
       {
         x: canvas.width * 0.2,

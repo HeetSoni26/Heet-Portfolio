@@ -13,7 +13,7 @@ Complete documentation for deploying, configuring, and maintaining your portfoli
 
 ### Domain Configuration
 - **[Custom Domain Setup](./CUSTOM-DOMAIN-SETUP.md)** - Add your custom domain to Vercel
-- **[Domain Update Checklist](./DOMAIN-UPDATE-CHECKLIST.md)** - Domain configuration for rameshwarbhagwat.me
+- **[Domain Update Checklist](./DOMAIN-UPDATE-CHECKLIST.md)** - Domain configuration for Heetbhagwat.me
 
 ---
 
@@ -61,7 +61,7 @@ Complete documentation for deploying, configuring, and maintaining your portfoli
    - Domain verification
 
 5. [Domain Update Checklist](./DOMAIN-UPDATE-CHECKLIST.md)
-   - Files updated for rameshwarbhagwat.me
+   - Files updated for Heetbhagwat.me
    - Environment variables
    - Testing checklist
 
@@ -150,4 +150,4 @@ If you encounter issues:
 ---
 
 **Last Updated**: February 28, 2026
-**Portfolio**: https://rameshwarbhagwat.me
+**Portfolio**: https://Heetbhagwat.me

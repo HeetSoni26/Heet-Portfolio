@@ -44,7 +44,7 @@ interface SocialLinkItem {
 }
 
 const socialLinks: SocialLinkItem[] = [
-  { name: 'Email', icon: Mail, href: `mailto:${PERSONAL_INFO.email}`, label: 'Email Rameshwar Bhagwat', isExternal: false },
+  { name: 'Email', icon: Mail, href: `mailto:${PERSONAL_INFO.email}`, label: 'Email Heet Soni', isExternal: false },
   { name: 'LinkedIn', icon: Linkedin, href: linkedInUrl, label: 'LinkedIn Profile', isExternal: true },
   { name: 'GitHub', icon: Github, href: gitHubUrl, label: 'GitHub Profile', isExternal: true },
   { name: 'Instagram', icon: Instagram, href: instagramUrl, label: 'Instagram Profile', isExternal: true },
@@ -169,3 +169,4 @@ const ProfileCard = memo(function ProfileCard() {
 });
 
 export default ProfileCard;
+

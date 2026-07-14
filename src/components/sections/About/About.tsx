@@ -82,7 +82,7 @@ export default function About() {
       id="about"
       ref={aboutRef}
       className="relative z-20 w-full bg-[#0F0E0E] overflow-x-clip pb-12 rounded-t-[32px] md:rounded-t-[48px] lg:rounded-t-[64px] border-t border-white/15 shadow-[0_-24px_48px_rgba(0,0,0,0.8)]"
-      aria-label="About Rameshwar Bhagwat - Full Stack & AI Developer"
+      aria-label="About Heet Soni - Full Stack & AI Developer"
       itemScope
       itemType="https://schema.org/Person"
     >
@@ -90,10 +90,10 @@ export default function About() {
       <meta itemProp="name" content={PERSONAL_INFO.name} />
       <meta itemProp="jobTitle" content={PERSONAL_INFO.jobTitle} />
       <meta itemProp="description" content={PERSONAL_INFO.bio} />
-      <meta itemProp="url" content="https://rameshwarbhagwat.me" />
+      <meta itemProp="url" content="https://heetportfolio.vercel.app" />
       <meta itemProp="email" content={PERSONAL_INFO.email} />
       <meta itemProp="telephone" content={PERSONAL_INFO.phone} />
-      <meta itemProp="image" content={`https://rameshwarbhagwat.me${PERSONAL_INFO.image}`} />
+      <meta itemProp="image" content={`https://heetportfolio.vercel.app${PERSONAL_INFO.image}`} />
 
       {/* Address Schema */}
       <div itemProp="address" itemScope itemType="https://schema.org/PostalAddress" className="hidden">
@@ -117,7 +117,7 @@ export default function About() {
       {/* Occupation Schema */}
       <div itemProp="hasOccupation" itemScope itemType="https://schema.org/Occupation" className="hidden">
         <meta itemProp="name" content="Full Stack Developer" />
-        <meta itemProp="occupationLocation" content="Yeola, Maharashtra, India" />
+        <meta itemProp="occupationLocation" content="Anand, Gujarat, India" />
         <meta itemProp="skills" content="React, Next.js, TypeScript, Node.js, JavaScript, MongoDB, Express.js" />
         <meta itemProp="experienceRequirements" content="1+ years" />
       </div>
@@ -142,15 +142,15 @@ export default function About() {
           <Container>
             {/* Hidden SEO Content */}
             <div className="sr-only">
-              <h2>About Rameshwar Bhagwat - Full Stack & AI Developer</h2>
+              <h2>About Heet Soni - Full Stack & AI Developer</h2>
               <p>
-                Rameshwar Bhagwat is a Full Stack & AI Developer based in Yeola, Maharashtra, India,
+                Heet Soni is a Full Stack & AI Developer based in Anand, Gujarat, India,
                 specializing in React, Next.js, TypeScript, and modern web technologies.
-                With 1+ years of experience, Rameshwar Bhagwat builds scalable web applications and AI-driven products
-                like Devory and ThinkVerse. The Rameshwar Bhagwat portfolio showcases expertise in full-stack development,
+                With 1+ years of experience, Heet Soni builds scalable web applications and AI-driven products
+                like Devory and ThinkVerse. The Heet Soni portfolio showcases expertise in full-stack development,
                 machine learning integration, and SaaS platform development.
               </p>
-              <h3>Rameshwar Bhagwat - Core Skills and Expertise</h3>
+              <h3>Heet Soni - Core Skills and Expertise</h3>
               <ul>
                 <li>Full Stack Development with MERN Stack (MongoDB, Express.js, React, Node.js)</li>
                 <li>Frontend Development: React, Next.js, TypeScript, JavaScript, HTML5, CSS3</li>
@@ -161,10 +161,10 @@ export default function About() {
                 <li>AI/ML Integration: TensorFlow, Python, Machine Learning APIs</li>
                 <li>System Design and Architecture</li>
               </ul>
-              <h3>Rameshwar Bhagwat - Professional Experience</h3>
+              <h3>Heet Soni - Professional Experience</h3>
               <p>
-                Rameshwar Bhagwat has 1+ years of professional experience in web development, having worked on 7 projects
-                with happy clients. Notable projects by Rameshwar Bhagwat include Devory (AI-powered SaaS platform) and ThinkVerse (collaborative platform).
+                Heet Soni has 1+ years of professional experience in web development, having worked on 7 projects
+                with happy clients. Notable projects by Heet Soni include Devory (AI-powered SaaS platform) and ThinkVerse (collaborative platform).
               </p>
               <h3>Achievements</h3>
               <ul>
@@ -174,12 +174,12 @@ export default function About() {
                 <li>Mentored junior developers</li>
                 <li>IT Engineering background</li>
               </ul>
-              <h3>Contact Rameshwar Bhagwat</h3>
+              <h3>Contact Heet Soni</h3>
               <address>
-                <p>Location: Yeola, Maharashtra, India</p>
-                <p>Email: rameshwarbhagwat019@gmail.com</p>
-                <p>Phone: +91 9699245170</p>
-                <p>Rameshwar Bhagwat is open to remote opportunities worldwide</p>
+                <p>Location: Anand, Gujarat, India</p>
+                <p>Email: heetks2607@gmail.com</p>
+                <p>Phone: +91 99093 42367</p>
+                <p>Heet Soni is open to remote opportunities worldwide</p>
               </address>
             </div>
 
@@ -214,3 +214,4 @@ export default function About() {
     </section>
   );
 }
+

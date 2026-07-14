@@ -88,7 +88,7 @@ export default function StructuredData() {
     },
     "areaServed": "Worldwide",
     "serviceType": "Full Stack & AI Development",
-    "keywords": "Rameshwar Bhagwat, Full Stack & AI Developer, WebCraft, Safecoast"
+    "keywords": "Heet Soni, Full Stack & AI Developer, WebCraft, Safecoast"
   };
 
   const webpageSchema = {
@@ -213,3 +213,4 @@ export default function StructuredData() {
     </>
   );
 }
+
