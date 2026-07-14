@@ -181,7 +181,7 @@ export default function ResumePageContent() {
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mt-8 text-[11px] font-mono text-white/35">
           <div className="flex items-center gap-1.5">
             <Sparkles className="w-3.5 h-3.5 text-[#FF8C00]" />
-            <span>Heet Soni • Full Stack Developer</span>
+            <span>Heet Soni • AI Engineer</span>
           </div>
           <div className="flex gap-4">
             <a href="https://github.com/HeetSoni26" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">GitHub</a>

@@ -38,7 +38,7 @@ export const projects: Project[] = [
     techStack: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
     image: "/images/projects/portfolio1.png",
     hoverImage: "/images/projects/portfolio2.png",
-    liveUrl: "https://heet-portfolio.vercel.app",
+    liveUrl: "https://heet-portfolio-two.vercel.app",
     githubUrl: "https://github.com/HeetSoni26/Portfolio",
     primaryButtonText: "Live Demo",
     secondaryButtonText: "GitHub",
