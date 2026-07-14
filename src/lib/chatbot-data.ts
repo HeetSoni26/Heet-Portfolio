@@ -353,17 +353,17 @@ export const QUICK_RESPONSES: Record<string, string> = {
   'what are you best at': "Heet is best at:\n\n🥇 **Artificial Intelligence & Machine Learning**\n🥈 **Full-Stack Software Development**\n🥉 **Intelligent Automation & Computer Vision**\n\nHe's shipped 8+ production AI products and web platforms!",
 
   // Project Questions
-  'show me your projects': `**Heet's Projects:**\n\n🌐 **WebCraft** - Website Builder for Modern Businesses\n🌊 **Safecoast** - Coastal Hazard Intelligence (Hackathon Winner)\n🚀 **Devory** - AI-Powered Student Project Platform\n🛒 **Moungiri Store** - E-commerce Platform\n📱 **Spam Detection** - ML Classification System\n\n👉 [View All Projects](#projects)`,
-  'what projects have you built': `**Projects Built by Heet:**\n\n1. **WebCraft** - Modern business web solution\n2. **Safecoast** - Real-time coastal hazard monitoring\n3. **Devory** - AI-driven student project platform\n4. **Moungiri Store** - Full e-commerce solution\n5. **Spam Detection** - ML text classification\n\n👉 [View All Projects](#projects)`,
-  'your work': `**Heet's Work:**\n\nHe has built ${CHATBOT_CONTEXT.personal.projectsBuilt} production projects including AI applications and full-stack web products.\n\n**Featured:** WebCraft, Safecoast\n\n👉 [View Projects](#projects)`,
-  'portfolio': `**Heet's Portfolio:**\n\nIncludes ${CHATBOT_CONTEXT.personal.projectsBuilt} projects ranging from AI-powered SaaS platforms to e-commerce solutions.\n\n👉 [View All Projects](#projects)`,
-  'what have you built': `**What Heet Has Built:**\n\n🌐 Client-focused websites (WebCraft)\n🌊 Real-time monitoring apps (Safecoast)\n🚀 SaaS platforms (Devory)\n🛒 E-commerce solutions (Moungiri Store)\n🤖 AI/ML applications (Spam Detection)\n\n👉 [View Projects](#projects)`,
+  'show me your projects': `**Heet's Projects:**\n\n🎵 **OpenBeats** - Open-source Music Player\n🚗 **TrafficIQ** - Autonomous Traffic Intelligence\n🌍 **EcoSphere** - Environmental Tracking Platform\n🤖 **RAGChat** - AI Document Chat Assistant\n📱 **Spam Email Classifier** - ML Detection System\n\n👉 [View All Projects](#projects)`,
+  'what projects have you built': `**Projects Built by Heet:**\n\n1. **OpenBeats** - Open-source Music Player\n2. **TrafficIQ** - Autonomous Traffic Intelligence\n3. **EcoSphere** - Environmental Tracking Platform\n4. **RAGChat** - AI Document Chat Assistant\n5. **Spam Email Classifier** - ML Detection System\n\n👉 [View All Projects](#projects)`,
+  'your work': `**Heet's Work:**\n\nHe has built ${CHATBOT_CONTEXT.personal.projectsBuilt} production projects including AI applications and full-stack web products.\n\n**Featured:** OpenBeats, TrafficIQ\n\n👉 [View Projects](#projects)`,
+  'portfolio': `**Heet's Portfolio:**\n\nIncludes ${CHATBOT_CONTEXT.personal.projectsBuilt} projects ranging from AI-powered applications to web platforms.\n\n👉 [View All Projects](#projects)`,
+  'what have you built': `**What Heet Has Built:**\n\n🎵 Mobile apps (OpenBeats)\n🚗 AI Systems (TrafficIQ)\n🌍 Web platforms (EcoSphere)\n🤖 AI assistants (RAGChat)\n📱 ML models (Spam Email Classifier)\n\n👉 [View Projects](#projects)`,
 
   // Specific Projects
-  'tell me about devory': `**🚀 Devory - AI-Powered Student Project Platform**\n\n${CHATBOT_CONTEXT.projects[0].longDescription}\n\n**Tech:** Next.js, TypeScript, PostgreSQL, OpenAI\n**Status:** Currently building\n\n👉 [View Projects](#projects)`,
-  'what is devory': `**Devory** is Heet's flagship project - an AI-driven platform that helps students discover, build, and manage real-world technical projects.\n\n**Features:**\n• AI project recommendations\n• Progress tracking\n• Portfolio integration\n\n👉 [View Projects](#projects)`,
-  'tell me about safecoast': `**🌊 Safecoast - Coastal Hazard Intelligence**\n\nBuilt in a 48-hour hackathon, it monitors environmental risk factors for coastal communities.\n\n**Tech:** Next.js, Node.js, OpenWeather API\n**Achievement:** Hackathon Winner! 🏆\n\n👉 [View Projects](#projects)`,
-  'tell me about thinkverse': `**💡 ThinkVerse - Idea Management Platform**\n\nA structured platform for entrepreneurs to organize, develop, and execute ideas systematically.\n\n**Tech:** Next.js, Supabase, Framer Motion\n**Status:** Launched\n\n👉 [View Projects](#projects)`,
+  'tell me about openbeats': `**🎵 OpenBeats - Open-source Music Player**\n\nA beautiful music player app for Android.\n\n**Tech:** Kotlin, Android SDK\n**Status:** Completed\n\n👉 [View Projects](#projects)`,
+  'what is openbeats': `**OpenBeats** is Heet's Android app - a beautiful, open-source music player.\n\n**Features:**\n• Local playback\n• Clean UI\n• Responsive design\n\n👉 [View Projects](#projects)`,
+  'tell me about trafficiq': `**🚗 TrafficIQ - Autonomous Traffic Intelligence**\n\nAn AI-powered system that optimizes traffic lights based on real-time vehicle density.\n\n**Tech:** Python, YOLOv8, OpenCV\n**Status:** Completed\n\n👉 [View Projects](#projects)`,
+  'tell me about ecosphere': `**🌍 EcoSphere - Environmental Tracking Platform**\n\nA comprehensive platform for tracking and visualizing environmental data and metrics.\n\n**Tech:** React, Tailwind CSS\n**Status:** Launched\n\n👉 [View Projects](#projects)`,
 
   // Services Questions
   'what services do you offer': `**Services Heet Offers:**\n\n🌐 Full Stack Web Development\n🤖 AI/ML Integration\n📦 SaaS Platform Development\n🔗 API Design & Development\n🗄️ Database Design\n⚡ Performance Optimization\n🎨 UI/UX Development\n💬 Technical Consultation\n\n👉 [View Services](#services)`,
@@ -545,18 +545,19 @@ export const SUGGESTION_CHAINS: Record<string, string[]> = {
   database: ["What about DevOps?", "Show me your projects", "How can I hire you?"],
 
   // After AI/ML response
-  ai: ["Tell me about WebCraft", "Tell me about Safecoast", "How can I hire you?"],
+  ai: ["Tell me about OpenBeats", "Tell me about TrafficIQ", "How can I hire you?"],
 
   // After DevOps response
   devops: ["Show me your projects", "What services do you offer?", "How can I contact you?"],
 
   // After projects response
-  projects: ["Tell me about WebCraft", "Tell me about Safecoast", "How can I hire you?"],
+  projects: ["Tell me about OpenBeats", "Tell me about TrafficIQ", "How can I hire you?"],
 
   // After specific project responses
-  devory: ["What tech did you use?", "Tell me about Safecoast", "How can I hire you?"],
-  safecoast: ["Tell me about WebCraft", "Tell me about Devory", "What are your skills?"],
-  thinkverse: ["Tell me about WebCraft", "Show me your projects", "How can I hire you?"],
+  openbeats: ["What tech did you use?", "Tell me about TrafficIQ", "How can I hire you?"],
+  trafficiq: ["Tell me about OpenBeats", "Tell me about EcoSphere", "What are your skills?"],
+  ecosphere: ["Tell me about OpenBeats", "Show me your projects", "How can I hire you?"],
+  ragchat: ["What other projects?", "Do you work with AI?", "How can I hire you?"],
   spam: ["What other projects?", "Do you work with AI?", "How can I hire you?"],
   ecommerce: ["Show me your projects", "What services do you offer?", "How can I contact you?"],
 
