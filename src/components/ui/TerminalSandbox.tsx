@@ -361,16 +361,16 @@ export default function TerminalSandbox() {
             text: (
               <div className="space-y-2 py-0.5 text-xs">
                 <div className="border-l-2 border-[#FF8C00] pl-2.5">
-                  <h4 className="text-white font-bold">1. WebCraft</h4>
-                  <p className="text-white/60 text-[11px]">High-performance Next.js site builder with SEO-ready architecture.</p>
+                  <h4 className="text-white font-bold">1. OpenBeats</h4>
+                  <p className="text-white/60 text-[11px]">Open-source, beautiful music player app for Android.</p>
                 </div>
                 <div className="border-l-2 border-[#30D158] pl-2.5">
-                  <h4 className="text-white font-bold">2. Safecoast</h4>
-                  <p className="text-white/60 text-[11px]">Geospatial risk assessment platform with real-time mapping.</p>
+                  <h4 className="text-white font-bold">2. TrafficIQ</h4>
+                  <p className="text-white/60 text-[11px]">Autonomous traffic intelligence utilizing YOLOv8 computer vision.</p>
                 </div>
                 <div className="border-l-2 border-[#0A84FF] pl-2.5">
-                  <h4 className="text-white font-bold">3. Devory</h4>
-                  <p className="text-white/60 text-[11px]">SaaS workflow task management interface with instant chat.</p>
+                  <h4 className="text-white font-bold">3. EcoSphere</h4>
+                  <p className="text-white/60 text-[11px]">Comprehensive environmental tracking and visualization platform.</p>
                 </div>
               </div>
             )
