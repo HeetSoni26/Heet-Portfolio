@@ -134,15 +134,13 @@ export default function ResumePageContent() {
             </div>
           </div>
 
-          {/* Temporary placeholder since Resume is removed */}
-          <div className="flex flex-col items-center justify-center py-32 px-6 text-center rounded-2xl border border-dashed border-white/10 bg-white/[0.01]">
-            <div className="w-16 h-16 rounded-full bg-white/[0.03] border border-white/[0.08] flex items-center justify-center text-white/40 mb-6">
-              <FileText className="w-8 h-8 text-[#FF8C00]" />
-            </div>
-            <h3 className="text-2xl font-bold text-white mb-2">In Progress, Developer are busy</h3>
-            <p className="text-sm text-white/50 max-w-md leading-relaxed">
-              Please check back later for the updated resume.
-            </p>
+          {/* PDF Viewer */}
+          <div className="w-full h-[60vh] sm:h-[75vh] rounded-2xl overflow-hidden bg-white/5 relative z-10 border border-white/5">
+            <iframe 
+              src="/Resume/Heet_Soni_Resume.pdf" 
+              className="w-full h-full border-none"
+              title="Heet Soni Resume"
+            />
           </div>
         </div>
 
