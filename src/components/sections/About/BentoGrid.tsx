@@ -344,7 +344,7 @@ export default function BentoGrid() {
               <span className={`relative inline-flex rounded-full h-2 w-2 ${stats.usingFallback ? 'bg-[#38BDF8]' : 'bg-emerald-500'}`}></span>
             </div>
             <span className={`text-[10px] font-mono font-semibold tracking-wider uppercase ${stats.usingFallback ? 'text-[#38BDF8]' : 'text-emerald-400'}`}>
-              {stats.usingFallback ? 'System Active' : 'Live Now'}
+              {stats.usingFallback ? 'System Active' : 'Visitor Count'}
             </span>
           </div>
 

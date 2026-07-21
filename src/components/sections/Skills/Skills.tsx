@@ -266,7 +266,7 @@ export default function Skills() {
                 </motion.span>
               </span>
             ))}
-            <span className="inline-flex justify-start overflow-hidden py-1 pr-6 relative w-[185px] xs:w-[215px] sm:w-[270px] md:w-[325px] lg:w-[380px] text-left">
+            <span className="inline-flex justify-start overflow-hidden py-1 pr-6 relative w-[205px] xs:w-[235px] sm:w-[290px] md:w-[345px] lg:w-[400px] text-left">
               <AnimatePresence mode="wait">
                 <motion.span
                   key={changingWords[wordIndex]}
