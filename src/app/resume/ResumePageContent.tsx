@@ -133,12 +133,32 @@ export default function ResumePageContent() {
             </div>
           </div>
 
-          {/* Embedded resume viewer */}
-          <iframe
-            src="/Resume/Heet_Soni_Resume.pdf#toolbar=0&view=FitH"
-            title="Heet Soni Resume"
-            className="w-full h-[85vh] min-h-[700px] rounded-2xl border border-white/[0.06] bg-white"
-          />
+          {/* Embedded resume viewer — images on mobile (browsers don't render PDFs in iframes), PDF embed on desktop */}
+          {isMobile ? (
+            <div className="flex flex-col gap-4">
+              <img
+                src="/Resume/resume-page-1.png"
+                alt="Heet Soni Resume - Page 1"
+                className="w-full rounded-2xl border border-white/[0.08]"
+                loading="eager"
+              />
+              <img
+                src="/Resume/resume-page-2.png"
+                alt="Heet Soni Resume - Page 2"
+                className="w-full rounded-2xl border border-white/[0.08]"
+                loading="lazy"
+              />
+              <p className="text-center text-xs text-white/40 font-mono">
+                Use the Download PDF button above for the full document.
+              </p>
+            </div>
+          ) : (
+            <iframe
+              src="/Resume/Heet_Soni_Resume.pdf#toolbar=0&view=FitH"
+              title="Heet Soni Resume"
+              className="w-full h-[85vh] min-h-[700px] rounded-2xl border border-white/[0.06] bg-white"
+            />
+          )}
         </div>
 
         {/* Footer info/credentials */}
