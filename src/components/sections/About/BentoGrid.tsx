@@ -583,7 +583,7 @@ export default function BentoGrid() {
         {/* Row of stats cards (raised) */}
         <div className="flex gap-3 sm:gap-4 w-full h-full pt-1.5">
           {[
-            { value: '2+', label: 'Years', sublabel: 'Experience' },
+            { value: '4+', label: 'Years', sublabel: 'Experience' },
             { value: `${skills.length}+`, label: 'Tech Stack', sublabel: 'Skills' },
             { value: `${projects.length}+`, label: 'Total', sublabel: 'Projects' },
           ].map((stat, idx) => (
