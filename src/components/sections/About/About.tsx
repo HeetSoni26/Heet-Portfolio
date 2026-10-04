@@ -168,11 +168,11 @@ export default function About() {
               </p>
               <h3>Achievements</h3>
               <ul>
-                <li>Built scalable web applications serving thousands of users</li>
-                <li>Contributed to open-source projects</li>
-                <li>Technical blog writer sharing knowledge with the developer community</li>
-                <li>Mentored junior developers</li>
-                <li>IT Engineering background</li>
+                <li>Top 0.2% in PromptWars AI challenge (43,260 participants)</li>
+                <li>Contributed to open-source projects including VAJRA</li>
+                <li>Completed Google ML Crash Course and Google DeepMind's Small Language Model course</li>
+                <li>AI Intern at Codec Technologies</li>
+                <li>B.Tech in Artificial Intelligence &amp; Data Science background</li>
               </ul>
               <h3>Contact Heet Soni</h3>
               <address>
