@@ -97,7 +97,7 @@ export default function RootLayout({
     "sameAs": [
       "https://github.com/HeetSoni26",
       "https://www.linkedin.com/in/heet-soni-8a9082273/",
-      "https://twitter.com/heetsoni__"
+      "https://www.instagram.com/heetsoni__/"
     ],
     "knowsAbout": [
       "Full Stack Development",
@@ -108,15 +108,18 @@ export default function RootLayout({
       "TypeScript",
       "Node.js",
       "Python",
-      "SaaS Development",
-      "MERN Stack",
+      "PyTorch",
+      "LangGraph",
+      "Computer Vision",
+      "RAG Systems",
+      "FastAPI",
       "RESTful API Design",
       "Database Optimization",
       "DevOps & CI/CD"
     ],
     "alumniOf": {
       "@type": "EducationalOrganization",
-      "name": "B.Tech IT"
+      "name": "A. D. Patel Institute of Technology (ADIT), CVM University"
     },
     "subjectOf": [
       {
@@ -151,14 +154,6 @@ export default function RootLayout({
     "author": {
       "@type": "Person",
       "name": "Heet Soni"
-    },
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": `${siteUrl}/?q={search_term_string}`
-      },
-      "query-input": "required name=search_term_string"
     }
   };
 

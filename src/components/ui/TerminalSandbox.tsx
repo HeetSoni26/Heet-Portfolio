@@ -391,7 +391,12 @@ export default function TerminalSandbox() {
                 text: (
                   <div className="space-y-1.5 py-0.5 font-mono text-[11px] max-h-48 overflow-y-auto pr-1">
                     <p className={`${activeTheme.primaryColor} font-bold`}>Latest git commits activity:</p>
-                    {commits.map((c, i) => (
+                    {commits.length === 0 ? (
+                      <p className="text-white/50 pl-2">
+                        No recent public commits fetched right now (GitHub API quiet or rate-limited). Try `projects` for real work.
+                      </p>
+                    ) : (
+                      commits.map((c, i) => (
                       <div key={i} className="pl-2 border-l border-white/10 py-0.5">
                         <div className="flex justify-between items-center text-[10px]">
                           <span className="text-yellow-400 font-bold hover:underline">
@@ -401,7 +406,8 @@ export default function TerminalSandbox() {
                         </div>
                         <p className="text-white/80">{c.message}</p>
                       </div>
-                    ))}
+                      ))
+                    )}
                   </div>
                 )
               }

@@ -147,12 +147,12 @@ export default function About() {
                 Heet Soni is a Full Stack & AI Developer based in Anand, Gujarat, India,
                 specializing in React, Next.js, TypeScript, and modern web technologies.
                 With 1+ years of experience, Heet Soni builds scalable web applications and AI-driven products
-                like Devory and ThinkVerse. The Heet Soni portfolio showcases expertise in full-stack development,
-                machine learning integration, and SaaS platform development.
+                like OpenBeats and TrafficIQ. The Heet Soni portfolio showcases expertise in full-stack development,
+                machine learning integration, and AI product development.
               </p>
               <h3>Heet Soni - Core Skills and Expertise</h3>
               <ul>
-                <li>Full Stack Development with MERN Stack (MongoDB, Express.js, React, Node.js)</li>
+                <li>Full Stack Development with Next.js, React, TypeScript, and Node.js</li>
                 <li>Frontend Development: React, Next.js, TypeScript, JavaScript, HTML5, CSS3</li>
                 <li>Backend Development: Node.js, Express.js, RESTful API Design</li>
                 <li>Database: MongoDB, PostgreSQL, MySQL, Database Optimization</li>
@@ -163,8 +163,8 @@ export default function About() {
               </ul>
               <h3>Heet Soni - Professional Experience</h3>
               <p>
-                Heet Soni has 1+ years of professional experience in web development, having worked on 7 projects
-                with happy clients. Notable projects by Heet Soni include Devory (AI-powered SaaS platform) and ThinkVerse (collaborative platform).
+                Heet Soni has hands-on development experience since 2022, having built 14+ production-grade projects
+                across AI, web, and Android. Notable projects by Heet Soni include OpenBeats (open-source Android music player) and TrafficIQ (AI-powered traffic intelligence system).
               </p>
               <h3>Achievements</h3>
               <ul>

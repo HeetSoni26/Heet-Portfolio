@@ -88,26 +88,10 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-## 📚 Documentation
-
-Complete documentation is available in the [`docs/`](./docs) folder:
-
-### Quick Links
-- 🚀 **[Vercel Deployment Guide](./docs/VERCEL-DEPLOYMENT-GUIDE.md)** - Deploy to production
-- ✅ **[Production Checklist](./docs/PRODUCTION-CHECKLIST.md)** - Pre-deployment verification
-- 🌐 **[Custom Domain Setup](./docs/CUSTOM-DOMAIN-SETUP.md)** - Configure your domain
-- 📊 **[Redis Setup Guide](./docs/QUICK-REDIS-SETUP.md)** - Enable visitor tracking
-- 🔍 **[SEO Implementation](./docs/SEO-IMPLEMENTATION.md)** - SEO optimization
-
-**[View All Documentation →](./docs/README.md)**
-
----
-
 ## 📁 Project Structure
 
 ```
 portfolio/
-├── docs/                      # Documentation files
 ├── public/                    # Static assets
 │   ├── images/               # Images and graphics
 │   ├── icons/                # Icons and logos
@@ -161,8 +145,6 @@ npm run lint         # Run ESLint
 2. Import project in [Vercel Dashboard](https://vercel.com/dashboard)
 3. Add environment variables
 4. Deploy!
-
-**Detailed Guide**: [Vercel Deployment Guide](./docs/VERCEL-DEPLOYMENT-GUIDE.md)
 
 ### Environment Variables for Production
 
@@ -244,7 +226,7 @@ npm run build
 ```
 
 ### Visitor Counter Not Working
-See [Visitor Counter Fix](./docs/VISITOR-COUNTER-FIX.md)
+Check that the Upstash Redis environment variables (`UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN`) are set in Vercel, and that a visitor record exists in the KV store.
 
 ### Email Not Sending
 1. Verify SMTP credentials
@@ -281,8 +263,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 📞 Support
 
-For detailed guides and troubleshooting:
-- 📚 [Documentation](./docs/README.md)
+Found a bug or have a suggestion?
 - 🐛 [Issues](https://github.com/HeetSoni26/Heet-Portfolio/issues)
 
 ---

@@ -104,38 +104,38 @@ export const CHATBOT_CONTEXT = {
     {
       year: "2023",
       title: "Deep Dive",
-      description: "Expanded into React ecosystem and backend development. Started understanding databases and APIs.",
-      achievements: ["First React project", "Learned Node.js", "Built first full-stack app"],
+      description: "Expanded into the React ecosystem and backend development while starting my B.Tech in Artificial Intelligence & Data Science at ADIT, CVM University. Started understanding databases and APIs.",
+      achievements: ["Started B.Tech in AI & Data Science", "First React project", "Built first full-stack app"],
       skills_learned: ["React", "Node.js", "MongoDB", "REST APIs"],
     },
     {
       year: "2024",
       title: "Engineering Foundation",
-      description: "Started B.Tech in Information Technology. Diving deep into data structures, algorithms, and software engineering principles. Building full-stack applications with React, Node.js, and databases.",
-      achievements: ["Started B.Tech", "Built multiple production apps", "Won first hackathon"],
-      skills_learned: ["DSA", "System Design", "TypeScript", "PostgreSQL"],
+      description: "Deep in the B.Tech curriculum — data structures, algorithms, and machine learning foundations — while building full-stack applications with React, Node.js, and databases.",
+      achievements: ["AI & DS coursework", "Built multiple production apps", "First hackathon experience"],
+      skills_learned: ["DSA", "Machine Learning", "TypeScript", "PostgreSQL"],
     },
     {
       year: "2025",
-      title: "Product Builder",
-      description: "Launched ThinkVerse - a SaaS platform for structured idea management. Learned product development, user experience design, and the importance of shipping real products to real users.",
-      achievements: ["Launched ThinkVerse", "First paying customers", "Learned product management"],
-      skills_learned: ["Product Development", "UX Design", "SaaS Architecture", "Marketing"],
+      title: "Full-Stack Developer",
+      description: "Shipped 5+ full-stack web products for real use cases — business platforms, client sites, and this portfolio. Went deep into React, Next.js, TypeScript, and backend engineering.",
+      achievements: ["Shipped 5+ full-stack projects", "Built this AI-powered portfolio", "Open-source contributions"],
+      skills_learned: ["Next.js", "TypeScript", "PostgreSQL", "System Design"],
     },
     {
       year: "2026",
-      title: "AI Development",
-      description: "Currently building Devory, an AI-driven platform helping students showcase and manage their projects. Exploring machine learning, natural language processing, and intelligent automation.",
-      achievements: ["Building Devory", "AI/ML integration expertise", "Growing developer community"],
-      skills_learned: ["OpenAI API", "LangChain", "ML Systems", "AI Integration"],
+      title: "AI Engineering & Internships",
+      description: "AI intern at Codec Technologies — implemented ML models from scratch (MLPs, NLP spam classification). Built VAJRA, an open-source foundation LLM framework, and TrafficIQ, a multi-agent traffic intelligence system. Completed Google's ML Crash Course and Google DeepMind's Small Language Model course.",
+      achievements: ["AI Intern @ Codec Technologies", "Building VAJRA — foundation LLM framework", "Top 0.2% in PromptWars AI challenge"],
+      skills_learned: ["PyTorch", "LangGraph", "FastAPI", "Computer Vision", "RAG"],
       isCurrent: true,
     },
     {
       year: "2027",
-      title: "Scaling Vision",
-      description: "Aiming to master advanced AI/ML systems and production-grade engineering. Goal: Build technology that impacts millions and contribute to open-source communities.",
-      achievements: ["Goals: Scale Devory", "Open source contributions", "Tech leadership"],
-      skills_learned: ["System Architecture", "Team Leadership", "Open Source"],
+      title: "Research & Graduate Journey",
+      description: "Preparing for thesis-based graduate studies in computer science while building production-grade AI systems. Goal: contribute to AI research and open-source communities.",
+      achievements: ["Graduate studies preparation", "AI research publications goal", "Open source contributions"],
+      skills_learned: ["System Architecture", "Research Writing", "Open Source"],
     },
   ],
 
@@ -228,8 +228,8 @@ export const CHATBOT_CONTEXT = {
   // Testimonials/Achievements
   achievements: [
     "Built and launched multiple production applications",
-    "Hackathon winner with Safecoast project",
-    "3+ years of development experience",
+    "Top 0.2% in PromptWars AI challenge (43,260 participants)",
+    "4+ years of development experience",
     "Successfully delivered projects for clients",
     "Growing expertise in AI/ML integration",
   ],
@@ -453,7 +453,7 @@ export const RESPONSE_TEMPLATES = {
   ],
 
   capabilities: [
-    "**I can tell you about:**\n\n• 👤 Heet's background & bio\n• 🛠️ Skills and tech stack\n• 🚀 Projects (WebCraft, Safecoast, Devory)\n• 📅 Experience and journey\n• 💼 Services offered\n• 📧 How to contact or hire\n• 🔗 Social links\n\nWhat would you like to know?",
+    "**I can tell you about:**\n\n• 👤 Heet's background & bio\n• 🛠️ Skills and tech stack\n• 🚀 Projects (OpenBeats, TrafficIQ, RAGChat)\n• 📅 Experience and journey\n• 💼 Services offered\n• 📧 How to contact or hire\n• 🔗 Social links\n\nWhat would you like to know?",
   ],
 };
 
@@ -485,11 +485,7 @@ export const INTENT_KEYWORDS: Record<string, string[]> = {
 
   // Projects
   projects: ["projects", "work", "portfolio", "built", "created", "developed", "apps", "applications", "showcase", "examples", "case studies", "what have you built", "show me"],
-  devory: ["devory", "student project platform", "ai platform", "project management"],
-  safecoast: ["safecoast", "safe coast", "coastal", "hazard", "hackathon", "weather", "monitoring"],
-  thinkverse: ["thinkverse", "think verse", "idea management", "idea platform", "ideas"],
-  spam: ["spam", "spam detection", "message detection", "sms", "classification", "ml project"],
-  ecommerce: ["ecommerce", "e-commerce", "store", "shop", "moungiri", "online store", "shopping"],
+  spam: ["spam", "spam detection", "spam classifier", "email classification", "sms", "classification", "ml project"],
 
   // Experience
   experience: ["experience", "years", "background", "career", "journey", "history", "timeline", "story", "how long", "worked"],
@@ -536,7 +532,7 @@ export const SUGGESTION_CHAINS: Record<string, string[]> = {
   skills: ["Tell me about frontend", "What databases do you use?", "Show me your projects"],
 
   // After frontend response
-  frontend: ["What about backend?", "Do you work with AI?", "Tell me about WebCraft"],
+  frontend: ["What about backend?", "Do you work with AI?", "Tell me about TrafficIQ"],
 
   // After backend response
   backend: ["What databases do you use?", "Show me your projects", "What services do you offer?"],

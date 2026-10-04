@@ -67,7 +67,13 @@ export default function Navbar() {
       <div className="hidden md:block">
         <motion.div
           initial={{ y: -40, opacity: 0 }}
-          animate={isIntroComplete ? { y: 0, opacity: 1 } : { y: -40, opacity: 0 }}
+          animate={
+            isIntroComplete
+              ? isVisible
+                ? { y: 0, opacity: 1 }
+                : { y: -60, opacity: 0 }
+              : { y: -40, opacity: 0 }
+          }
           transition={{ duration: 0.8, delay: isIntroComplete && !hasPlayedIntro ? 0.9 : 0, ease: [0.34, 1.56, 0.64, 1] }}
           className={`fixed top-6 left-6 md:left-10 z-50 cursor-pointer flex items-center justify-center ${isIntroComplete && !hasPlayedIntro ? 'hero-logo-animated' : ''}`}
           onClick={() => {

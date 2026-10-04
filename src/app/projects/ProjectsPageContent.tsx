@@ -259,7 +259,10 @@ export default function ProjectsPageContent({ projects }: ProjectsPageContentPro
     return set.size;
   }, [projects]);
 
-  const liveCount = useMemo(() => projects.filter((p) => hasLink(p.liveUrl)).length, [projects]);
+  const liveCount = useMemo(
+    () => projects.filter((p) => hasLink(p.liveUrl) && !/github\.com/i.test(p.liveUrl ?? '')).length,
+    [projects]
+  );
 
   const filteredProjects = useMemo(() => {
     const q = query.trim().toLowerCase();
