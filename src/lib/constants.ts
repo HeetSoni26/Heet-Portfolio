@@ -22,7 +22,7 @@ export const SEO_KEYWORDS = [
   'TrafficIQ project',
   'EcoSphere project',
   'Next.js portfolio',
-  'MERN Stack Developer',
+  'AI Engineer portfolio',
   'JavaScript Developer India',
   'Hire AI Developer',
   'Hire Full Stack Developer',

@@ -449,7 +449,7 @@ export default function ExpertiseShowcase() {
         ],
         highlights: [
           'Production Next.js (App Router) & React architectures',
-          'Responsive MERN & Next.js layouts',
+          'Responsive Next.js & React layouts',
           'Fluid transition animations & page fades',
           'Performance optimization (Lighthouse audits)',
           'Zero-layout-shift responsive components',

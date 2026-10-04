@@ -29,7 +29,7 @@ export default function StructuredData() {
       "Web Development",
       "Frontend Development",
       "Backend Development",
-      "MERN Stack",
+      "AI & Machine Learning",
       "UI/UX Design"
     ],
     "hasOccupation": {
