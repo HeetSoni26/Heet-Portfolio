@@ -1,0 +1,11 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+Allow: /resume
+Allow: /contact
+Allow: /projects/
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://heet-portfolio-two.vercel.app/sitemap.xml
+Host: https://heet-portfolio-two.vercel.app
