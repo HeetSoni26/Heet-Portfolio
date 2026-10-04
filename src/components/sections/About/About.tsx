@@ -110,7 +110,7 @@ export default function About() {
       <meta itemProp="knowsAbout" content="Node.js" />
       <meta itemProp="knowsAbout" content="Full Stack Development" />
       <meta itemProp="knowsAbout" content="Web Development" />
-      <meta itemProp="knowsAbout" content="MERN Stack" />
+      <meta itemProp="knowsAbout" content="Next.js and React Development" />
       <meta itemProp="knowsAbout" content="RESTful API" />
       <meta itemProp="knowsAbout" content="Database Design" />
 
