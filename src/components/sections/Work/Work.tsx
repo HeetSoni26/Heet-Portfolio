@@ -32,6 +32,11 @@ const Counter = memo(function Counter({ value, duration = 1.8 }: { value: number
 
 // Memoized stats component
 const Stats = memo(function Stats() {
+  const aiCount = projects.filter(
+    (p) => p.category.includes('AI') || p.category.includes('Machine Learning') || p.category.includes('LLM')
+  ).length;
+  const techCount = new Set(projects.flatMap((p) => p.techStack)).size;
+
   return (
     <div className="flex items-center justify-center gap-6 xs:gap-8 sm:gap-14 md:gap-16 mt-8 sm:mt-10 md:mt-12 select-none">
       <div className="text-center">
@@ -47,7 +52,7 @@ const Stats = memo(function Stats() {
       
       <div className="text-center">
         <span className="block text-4xl xs:text-5xl sm:text-6xl font-black font-outfit text-white tracking-tight leading-none mb-1.5 sm:mb-2">
-          <Counter value={4} />
+          <Counter value={aiCount} />
         </span>
         <span className="text-[10px] sm:text-xs text-white/40 uppercase tracking-widest font-bold">
           AI Systems
@@ -58,7 +63,7 @@ const Stats = memo(function Stats() {
       
       <div className="text-center">
         <span className="block text-4xl xs:text-5xl sm:text-6xl font-black font-outfit text-white tracking-tight leading-none mb-1.5 sm:mb-2">
-          <Counter value={20} />+
+          <Counter value={techCount} />+
         </span>
         <span className="text-[10px] sm:text-xs text-white/40 uppercase tracking-widest font-bold">
           Tech Stack

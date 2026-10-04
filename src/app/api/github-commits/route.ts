@@ -60,75 +60,14 @@ export async function GET() {
       }
     }
 
-    // If no commits fetched (due to API failure, rate limits, or no pushes recently)
+    // No commits fetched (API failure, rate limits, or no pushes recently) — return empty
     if (commits.length === 0) {
-      return NextResponse.json(getMockCommits());
+      return NextResponse.json([]);
     }
 
     return NextResponse.json(commits);
   } catch (error) {
     console.error('Error in github-commits api route:', error);
-    return NextResponse.json(getMockCommits());
+    return NextResponse.json([]);
   }
-}
-
-function getMockCommits(): GitCommit[] {
-  const today = new Date();
-  const getPastDateStr = (daysAgo: number) => {
-    const d = new Date(today);
-    d.setDate(today.getDate() - daysAgo);
-    return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-  };
-
-  return [
-    {
-      sha: 'f7d29a1',
-      message: 'feat: add interactive retro developer sandbox CLI console 🚀',
-      repo: 'Heet-Portfolio',
-      date: getPastDateStr(0),
-      url: 'https://github.com/HeetSoni26/Heet-Portfolio',
-    },
-    {
-      sha: '8a9c3e2',
-      message: 'style: enhance iOS chatbot bubble gradients and message layouts',
-      repo: 'Heet-Portfolio',
-      date: getPastDateStr(1),
-      url: 'https://github.com/HeetSoni26/Heet-Portfolio',
-    },
-    {
-      sha: '3b8d4e1',
-      message: 'perf: optimize Three.js NeuralSphere rendering performance and inertia calculations',
-      repo: 'Heet-Portfolio',
-      date: getPastDateStr(2),
-      url: 'https://github.com/HeetSoni26/Heet-Portfolio',
-    },
-    {
-      sha: '9c2f4d8',
-      message: 'fix: handle visitor tracker edge-cases with Redis connection dropouts',
-      repo: 'Heet-Portfolio',
-      date: getPastDateStr(4),
-      url: 'https://github.com/HeetSoni26/Heet-Portfolio',
-    },
-    {
-      sha: 'e5a1b7c',
-      message: 'chore: implement structured metadata and microdata schemas for standard SEO',
-      repo: 'Heet-Portfolio',
-      date: getPastDateStr(5),
-      url: 'https://github.com/HeetSoni26/Heet-Portfolio',
-    },
-    {
-      sha: 'a6b2c9d',
-      message: 'feat: integrate email notification system using Nodemailer SMTP relay',
-      repo: 'Heet-Portfolio',
-      date: getPastDateStr(7),
-      url: 'https://github.com/HeetSoni26/Heet-Portfolio',
-    },
-    {
-      sha: 'd3f7e9a',
-      message: 'refactor: modularize codebase sections and lazy-load heavy subcomponents',
-      repo: 'Heet-Portfolio',
-      date: getPastDateStr(9),
-      url: 'https://github.com/HeetSoni26/Heet-Portfolio',
-    }
-  ];
 }

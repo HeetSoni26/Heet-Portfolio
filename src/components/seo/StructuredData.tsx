@@ -45,12 +45,12 @@ export default function StructuredData() {
       {
         "@type": "CreativeWork",
         "name": "OpenBeats",
-        "description": "A modern website solution focused on performance, business growth, and SEO-ready architecture."
+        "description": "Open-source, offline-first Android music player with a modern Material Design interface — ad-free and login-free."
       },
       {
         "@type": "CreativeWork",
-        "name": "Safecoast",
-        "description": "A coastal hazard intelligence platform focused on monitoring and risk awareness."
+        "name": "TrafficIQ",
+        "description": "Autonomous multi-agent traffic intelligence platform combining computer vision and AI-powered signal optimization."
       }
     ]
   };
@@ -120,7 +120,7 @@ export default function StructuredData() {
         "item": {
           "@type": "CreativeWork",
           "name": "OpenBeats",
-          "description": "Modern business website solution with performance and SEO-ready architecture."
+          "description": "Open-source, offline-first Android music player with a modern Material Design interface."
         }
       },
       {
@@ -128,8 +128,8 @@ export default function StructuredData() {
         "position": 2,
         "item": {
           "@type": "CreativeWork",
-          "name": "Safecoast",
-          "description": "Coastal hazard intelligence platform focused on monitoring and risk awareness."
+          "name": "TrafficIQ",
+          "description": "Autonomous multi-agent traffic intelligence platform using computer vision and AI-powered signal optimization."
         }
       }
     ]

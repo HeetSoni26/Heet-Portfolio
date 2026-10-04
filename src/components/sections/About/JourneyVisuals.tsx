@@ -645,7 +645,7 @@ function AISchematic() {
             <div className="text-blue-400/70 truncate">[0.12, -0.45, 0.89, ... +1533]</div>
             <div className="text-white/50">$ search_index(vector)</div>
             <div className="text-white/40 font-semibold">Scanning 4 index clusters...</div>
-            <div className="text-green-400 font-bold animate-pulse">MATCH FOUND: Devory</div>
+            <div className="text-green-400 font-bold animate-pulse">MATCH FOUND: VAJRA</div>
             <div className="text-green-400/80 font-mono">Similarity: 0.9852</div>
             <div className="text-green-400 font-extrabold flex items-center gap-0.5 mt-0.5">
               <span>➔ RESPONSE INJECTED</span>
@@ -776,7 +776,7 @@ function AISchematic() {
         </div>
         <div className="flex items-center gap-1.5">
           <Activity size={11} className="text-blue-400" />
-          <span>MODEL: Llama-3-Devory</span>
+          <span>MODEL: VAJRA-7B</span>
         </div>
       </div>
     </div>

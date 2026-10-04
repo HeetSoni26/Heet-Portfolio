@@ -430,7 +430,7 @@ export default function ExpertiseShowcase() {
           'AI Workflow Automation',
           'AI Research Prototypes',
         ],
-        stats: { projects: `8+ Projects`, experience: `10+ Tech` },
+        stats: { projects: `6+ Projects`, experience: `12+ Tech` },
         ctaText: "Let's build an intelligent AI product."
       },
       {
@@ -455,7 +455,7 @@ export default function ExpertiseShowcase() {
           'Zero-layout-shift responsive components',
           'Interactive UI & Motion Design',
         ],
-        stats: { projects: `6+ Projects`, experience: `12+ Tech` },
+        stats: { projects: `5+ Projects`, experience: `12+ Tech` },
         ctaText: "Want an unforgettable web experience?"
       },
       {
@@ -480,7 +480,7 @@ export default function ExpertiseShowcase() {
           'Performance Optimization',
           'Scalable Services',
         ],
-        stats: { projects: `5+ Projects`, experience: `8+ Tech` },
+        stats: { projects: `4+ Projects`, experience: `8+ Tech` },
         ctaText: "Need scalable backend infrastructure?"
       },
       {
@@ -505,7 +505,7 @@ export default function ExpertiseShowcase() {
           'Scheduled Tasks',
           'Integrations',
         ],
-        stats: { projects: `4+ Projects`, experience: `8+ Tech` },
+        stats: { projects: `3+ Projects`, experience: `6+ Tech` },
         ctaText: "Ready to automate your workflow?"
       },
       {
@@ -530,7 +530,7 @@ export default function ExpertiseShowcase() {
           'Local Storage',
           'Play Protect Ready',
         ],
-        stats: { projects: `3+ Projects`, experience: `5+ Tech` },
+        stats: { projects: `1 Project`, experience: `3+ Tech` },
         ctaText: "Have an app idea?"
       },
     ];
@@ -636,13 +636,13 @@ export default function ExpertiseShowcase() {
               <div className="flex items-center gap-2 px-3.5 py-2.5 rounded-[16px] bg-[#0E0D0D] border border-white/[0.03] flex-1 justify-center lg:justify-start">
                 <Target className="w-3.5 h-3.5 text-[#C2EF3A]" />
                 <span className="text-[10px] font-bold font-mono text-white/55 uppercase tracking-wide whitespace-nowrap">
-                  8+ Projects
+                  14 Projects
                 </span>
               </div>
               <div className="flex items-center gap-2 px-3.5 py-2.5 rounded-[16px] bg-[#0E0D0D] border border-white/[0.03] flex-1 justify-center lg:justify-start">
                 <Code2 className="w-3.5 h-3.5 text-[#C2EF3A]" />
                 <span className="text-[10px] font-bold font-mono text-white/55 uppercase tracking-wide whitespace-nowrap">
-                  20+ Technologies
+                  30+ Technologies
                 </span>
               </div>
             </div>

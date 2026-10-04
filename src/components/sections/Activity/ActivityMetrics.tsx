@@ -94,8 +94,8 @@ const NotificationIsland = memo(function NotificationIsland() {
             <span className="w-1.5 h-1.5 rounded-full bg-[#C2EF3A] animate-pulse" />
             <span className="text-[8px] font-bold text-[#C2EF3A] tracking-wider uppercase">INGEST</span>
           </div>
-          <p className="text-[10px] font-black text-white/90 truncate leading-tight mt-0.5">Safecoast Sync</p>
-          <span className="text-[8px] text-white/40 block mt-0.5 leading-none">OpenWeather API • Just now</span>
+          <p className="text-[10px] font-black text-white/90 truncate leading-tight mt-0.5">TrafficIQ Feed</p>
+          <span className="text-[8px] text-white/40 block mt-0.5 leading-none">YOLOv8 • Just now</span>
         </div>
       </motion.div>
     </div>

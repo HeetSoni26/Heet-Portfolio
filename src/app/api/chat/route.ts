@@ -40,8 +40,6 @@ const QUICK_RESPONSE_INTENTS: Record<string, string> = {
   // Projects
   'show me your projects': 'projects', 'what projects have you built': 'projects',
   'your work': 'projects', 'portfolio': 'projects', 'what have you built': 'projects',
-  'tell me about devory': 'devory', 'what is devory': 'devory',
-  'tell me about safecoast': 'safecoast', 'tell me about thinkverse': 'thinkverse',
 
   // Services
   'what services do you offer': 'services', 'services': 'services',
@@ -317,68 +315,12 @@ function generateResponse(intents: string[], message: string): string {
       break;
     }
 
-    case 'devory': {
-      const devory = CHATBOT_CONTEXT.projects.find(p => p.name === 'Devory');
-      if (devory) {
-        responses.push(
-          `**🚀 Devory - AI-Powered Student Project Platform**\n\n` +
-          `${devory.longDescription || devory.description}\n\n` +
-          `**Tech Stack:** ${devory.techStack.join(', ')}\n\n` +
-          `**Key Features:**\n${devory.features.map(f => `• ${f}`).join('\n')}\n\n` +
-          `**Status:** ${devory.status}`
-        );
-      }
-      break;
-    }
-
-    case 'safecoast': {
-      const project = CHATBOT_CONTEXT.projects.find(p => p.name === 'Safecoast');
-      if (project) {
-        responses.push(
-          `**🌊 Safecoast - Coastal Hazard Intelligence Platform**\n\n` +
-          `${project.longDescription || project.description}\n\n` +
-          `**Tech Stack:** ${project.techStack.join(', ')}\n\n` +
-          `**Key Features:**\n${project.features.map(f => `• ${f}`).join('\n')}\n\n` +
-          `**Status:** ${project.status}`
-        );
-      }
-      break;
-    }
-
-    case 'thinkverse': {
-      const project = CHATBOT_CONTEXT.projects.find(p => p.name === 'ThinkVerse');
-      if (project) {
-        responses.push(
-          `**💡 ThinkVerse - Idea Management Platform**\n\n` +
-          `${project.longDescription || project.description}\n\n` +
-          `**Tech Stack:** ${project.techStack.join(', ')}\n\n` +
-          `**Key Features:**\n${project.features.map(f => `• ${f}`).join('\n')}\n\n` +
-          `**Status:** ${project.status}`
-        );
-      }
-      break;
-    }
-
     case 'spam': {
-      const project = CHATBOT_CONTEXT.projects.find(p => p.name === 'Spam Message Detection');
+      const project = CHATBOT_CONTEXT.projects.find(p => p.name === 'Spam Email Classifier');
       if (project) {
         responses.push(
           `**📱 Spam Message Detection - ML Project**\n\n` +
           `${project.longDescription || project.description}\n\n` +
-          `**Tech Stack:** ${project.techStack.join(', ')}\n\n` +
-          `**Key Features:**\n${project.features.map(f => `• ${f}`).join('\n')}\n\n` +
-          `**Status:** ${project.status}`
-        );
-      }
-      break;
-    }
-
-    case 'ecommerce': {
-      const project = CHATBOT_CONTEXT.projects.find(p => p.name === 'Moungiri Store');
-      if (project) {
-        responses.push(
-          `**🛒 Moungiri Store - E-Commerce Platform**\n\n` +
-          `${project.description}\n\n` +
           `**Tech Stack:** ${project.techStack.join(', ')}\n\n` +
           `**Key Features:**\n${project.features.map(f => `• ${f}`).join('\n')}\n\n` +
           `**Status:** ${project.status}`
