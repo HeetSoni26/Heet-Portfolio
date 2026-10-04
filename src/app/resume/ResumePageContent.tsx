@@ -2,11 +2,10 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { 
-  ArrowLeft, 
-  Download, 
-  ExternalLink, 
-  FileText, 
+import {
+  ArrowLeft,
+  Download,
+  ExternalLink,
   Sparkles,
 } from 'lucide-react';
 import Container from '@/components/layout/Container';
@@ -128,22 +127,18 @@ export default function ResumePageContent() {
               <span className="ml-2 font-semibold text-white/60">RESUME_VIEWER.PDF</span>
             </div>
             <div className="hidden sm:flex items-center gap-3">
-              <span className="px-2 py-0.5 rounded bg-white/[0.04] border border-white/[0.08] text-white/60">PDF / 1 PAGE</span>
+              <span className="px-2 py-0.5 rounded bg-white/[0.04] border border-white/[0.08] text-white/60">PDF / 2 PAGES</span>
               <span>•</span>
-              <span className="text-white/40">247 KB</span>
+              <span className="text-white/40">312 KB</span>
             </div>
           </div>
 
-          {/* Temporary placeholder since Resume is removed */}
-          <div className="flex flex-col items-center justify-center py-32 px-6 text-center rounded-2xl border border-dashed border-white/10 bg-white/[0.01]">
-            <div className="w-16 h-16 rounded-full bg-white/[0.03] border border-white/[0.08] flex items-center justify-center text-white/40 mb-6">
-              <FileText className="w-8 h-8 text-[#FF8C00]" />
-            </div>
-            <h3 className="text-2xl font-bold text-white mb-2">In Progress, Developer are busy</h3>
-            <p className="text-sm text-white/50 max-w-md leading-relaxed">
-              Please check back later for the updated resume.
-            </p>
-          </div>
+          {/* Embedded resume viewer */}
+          <iframe
+            src="/Resume/Heet_Soni_Resume.pdf#toolbar=0&view=FitH"
+            title="Heet Soni Resume"
+            className="w-full h-[85vh] min-h-[700px] rounded-2xl border border-white/[0.06] bg-white"
+          />
         </div>
 
         {/* Footer info/credentials */}
