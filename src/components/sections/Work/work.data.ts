@@ -74,7 +74,7 @@ export const projects: Project[] = [
     longDescription: "Secure voting platform inspired by blockchain principles with transparent workflows and modern responsive interface.",
     role: "Full Stack Developer",
     timeline: "Completed",
-    category: "Research • Decentralized Application",
+    category: "Software • Decentralized Application",
     challenges: "Ensuring ballot secrecy while maintaining verifiability.",
     solution: "Implemented cryptographic commitments and zero-knowledge proofs.",
     metrics: ["Security Audit: Passed"],
@@ -82,34 +82,6 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    title: "Spam Email Classifier",
-    tagline: "ML TEXT CLASSIFICATION",
-    statusBadge: "🧠 AI",
-    description: "Developed a machine learning-based spam detection system to classify emails as spam or legitimate using NLP techniques.",
-    features: [
-      "Text preprocessing with NLP",
-      "Trained ML models for classification",
-      "Probability scoring"
-    ],
-    techStack: ["Python", "Scikit-learn", "Pandas", "NLTK"],
-    image: "/images/projects/spam_classifier_hero.png",
-    hoverImage: "/images/projects/spam_classifier_hover.png",
-    liveUrl: "https://github.com/HeetSoni26/Spam-Email-Classifier",
-    githubUrl: "https://github.com/HeetSoni26/Spam-Email-Classifier",
-    primaryButtonText: "Live Demo",
-    secondaryButtonText: "GitHub",
-    color: "220, 53, 69",
-    longDescription: "Developed a machine learning-based spam detection system using Python to classify SMS and text messages as spam or legitimate.",
-    role: "Machine Learning Engineer",
-    timeline: "Completed",
-    category: "AI • Machine Learning",
-    challenges: "Handling adversarial spelling adaptations.",
-    solution: "Designed a clean preprocessing wrapper utilizing NLTK for stem extraction.",
-    metrics: ["Accuracy: 99.2%"],
-    screenshots: []
-  },
-  {
-    id: 4,
     title: "TrafficIQ",
     tagline: "FLAGSHIP AI RESEARCH PROJECT",
     statusBadge: "🔬 Research",
@@ -130,14 +102,14 @@ export const projects: Project[] = [
     longDescription: "An offline autonomous traffic intelligence platform combining Computer Vision, Multi-Agent Systems, and AI-powered signal optimization.",
     role: "AI Researcher & Lead Engineer",
     timeline: "Ongoing",
-    category: "Research • Computer Vision • Multi-Agent Systems",
+    category: "Software • Computer Vision • Multi-Agent Systems",
     challenges: "Handling real-time multi-agent communication under heavy loads.",
     solution: "Used ZeroMQ and WebSockets for low-latency decentralized message passing.",
     metrics: ["Inference Time: <20ms", "Accuracy: 98%"],
     screenshots: []
   },
   {
-    id: 5,
+    id: 4,
     title: "EcoSphere",
     tagline: "SUSTAINABILITY PLATFORM",
     statusBadge: "🟢 Production",
@@ -158,14 +130,14 @@ export const projects: Project[] = [
     longDescription: "Interactive environmental awareness platform promoting sustainability through educational content and engaging user experience.",
     role: "Frontend Developer",
     timeline: "Completed",
-    category: "Research • Sustainability Platform",
+    category: "AI • Sustainability Platform",
     challenges: "Designing engaging gamification elements.",
     solution: "Iterated with user feedback to refine the gamification loops.",
     metrics: ["Active Users: 5k+"],
     screenshots: []
   },
   {
-    id: 6,
+    id: 5,
     title: "RAGChat",
     tagline: "GENERATIVE AI",
     statusBadge: "🧠 AI",
@@ -193,35 +165,7 @@ export const projects: Project[] = [
     screenshots: []
   },
   {
-    id: 7,
-    title: "Novabridge",
-    tagline: "AI PLATFORM",
-    statusBadge: "🧠 AI",
-    description: "An advanced platform designed to bridge the gap between complex AI models and intuitive user interfaces.",
-    features: [
-      "Intuitive AI integration",
-      "Seamless data pipelines",
-      "Scalable model deployment"
-    ],
-    techStack: ["Python", "Next.js", "Machine Learning"],
-    image: "/images/projects/novabridge1.png",
-    hoverImage: "/images/projects/novabridge2.png",
-    liveUrl: "https://novabridge-sigma.vercel.app/",
-    githubUrl: "https://github.com/HeetSoni26/Novabridge",
-    primaryButtonText: "Live Demo",
-    secondaryButtonText: "GitHub",
-    color: "34, 197, 94",
-    longDescription: "An advanced platform designed to bridge the gap between complex AI models and intuitive user interfaces, providing developers with scalable deployment pipelines.",
-    role: "AI & Full Stack Developer",
-    timeline: "Completed",
-    category: "AI • Machine Learning",
-    challenges: "Building scalable model inference endpoints.",
-    solution: "Utilized modern serverless edge computing techniques.",
-    metrics: ["API Latency: <100ms"],
-    screenshots: []
-  },
-  {
-    id: 8,
+    id: 6,
     title: "CivicIQ",
     tagline: "ELECTION EDUCATION PLATFORM",
     statusBadge: "🧠 AI",
@@ -249,7 +193,7 @@ export const projects: Project[] = [
     screenshots: []
   },
   {
-    id: 9,
+    id: 7,
     title: "Digit Recognizer",
     tagline: "COMPUTER VISION MODEL",
     statusBadge: "🧠 AI",
@@ -277,7 +221,7 @@ export const projects: Project[] = [
     screenshots: []
   },
   {
-    id: 10,
+    id: 8,
     title: "OpenBeats",
     tagline: "OPEN SOURCE ANDROID APP",
     statusBadge: "🚀 Open Source",
@@ -292,7 +236,7 @@ export const projects: Project[] = [
     hoverImage: "/images/projects/openbeats-whatsapp2.jpeg",
     liveUrl: "https://github.com/HeetSoni26/Openbeats/releases/download/v1.0.0-debug/OpenBeats.apk",
     githubUrl: "https://github.com/HeetSoni26/Openbeats",
-    primaryButtonText: "Live Demo",
+    primaryButtonText: "Download APK",
     secondaryButtonText: "GitHub",
     color: "138, 43, 226",
     longDescription: "Lightweight offline Android music player delivering an ad-free, login-free listening experience with modern Material Design and smooth native performance.",
@@ -305,7 +249,7 @@ export const projects: Project[] = [
     screenshots: []
   },
   {
-    id: 11,
+    id: 9,
     title: "Aurum Salon",
     tagline: "PREMIUM FRONTEND WEBSITE",
     statusBadge: "🟢 Production",
@@ -333,7 +277,7 @@ export const projects: Project[] = [
     screenshots: []
   },
   {
-    id: 12,
+    id: 10,
     title: "Taste of Heaven",
     tagline: "RESTAURANT WEB PLATFORM",
     statusBadge: "🟢 Production",
@@ -361,7 +305,7 @@ export const projects: Project[] = [
     screenshots: []
   },
   {
-    id: 13,
+    id: 11,
     title: "Fox-Awakens",
     tagline: "INTERACTIVE WEB EXPERIENCE",
     statusBadge: "🚀 Published",
@@ -389,7 +333,7 @@ export const projects: Project[] = [
     screenshots: []
   },
   {
-    id: 14,
+    id: 12,
     title: "Dental Clinic",
     tagline: "HEALTHCARE PLATFORM",
     statusBadge: "🟡 Active Development",

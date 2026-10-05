@@ -315,20 +315,6 @@ function generateResponse(intents: string[], message: string): string {
       break;
     }
 
-    case 'spam': {
-      const project = CHATBOT_CONTEXT.projects.find(p => p.name === 'Spam Email Classifier');
-      if (project) {
-        responses.push(
-          `**📱 Spam Message Detection - ML Project**\n\n` +
-          `${project.longDescription || project.description}\n\n` +
-          `**Tech Stack:** ${project.techStack.join(', ')}\n\n` +
-          `**Key Features:**\n${project.features.map(f => `• ${f}`).join('\n')}\n\n` +
-          `**Status:** ${project.status}`
-        );
-      }
-      break;
-    }
-
     case 'experience': {
       const { journey } = CHATBOT_CONTEXT;
       const journeyText = journey

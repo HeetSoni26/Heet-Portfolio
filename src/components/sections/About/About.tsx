@@ -163,7 +163,7 @@ export default function About() {
               </ul>
               <h3>Heet Soni - Professional Experience</h3>
               <p>
-                Heet Soni has hands-on development experience since 2022, having built 14+ production-grade projects
+                Heet Soni has hands-on development experience since 2022, having built 12+ production-grade projects
                 across AI, web, and Android. Notable projects by Heet Soni include OpenBeats (open-source Android music player) and TrafficIQ (AI-powered traffic intelligence system).
               </p>
               <h3>Achievements</h3>
