@@ -7,7 +7,7 @@ import { projects } from './work.data';
 import ProjectCard from './ProjectCard';
 
 const INITIAL_PROJECTS_COUNT = 3;
-const categories = ['All', 'AI', 'Research', 'Android', 'Web'] as const;
+const categories = ['All', 'AI', 'Software', 'Android', 'Web'] as const;
 type Category = typeof categories[number];
 
 // Scroll-triggered counter helper component
@@ -160,7 +160,7 @@ const statsContainerVariants = {
 };
 
 const projectHeadings = [
-  "Projects Built Around AI, Research & Software Engineering",
+  "Projects Built Around AI & Software Engineering",
   "AI Systems & Software Engineering Projects"
 ];
 
@@ -189,8 +189,8 @@ export default function Work() {
       if (activeCategory === 'AI') {
         return project.category.includes('AI') || project.category.includes('Machine Learning') || project.category.includes('LLM');
       }
-      if (activeCategory === 'Research') {
-        return project.category.includes('Research') || project.category.includes('Computer Vision');
+      if (activeCategory === 'Software') {
+        return project.category.includes('Software');
       }
       if (activeCategory === 'Android') {
         return project.category.includes('Android');
