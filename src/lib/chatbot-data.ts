@@ -489,7 +489,7 @@ export const INTENT_KEYWORDS: Record<string, string[]> = {
   // Experience
   experience: ["experience", "years", "background", "career", "journey", "history", "timeline", "story", "how long", "worked"],
   education: ["education", "study", "studying", "college", "degree", "university", "btech", "b.tech", "academic", "school", "learning"],
-  futureplans: ["future plans", "future goal", "masters", "master's", "ms abroad", "higher studies", "study abroad", "after graduation", "long term goal", "what next"],
+  futureplans: ["future plans", "future goal", "plans", "planning", "masters", "master's", "ms abroad", "higher studies", "study abroad", "after graduation", "long term goal", "what next"],
   achievements: ["achievements", "accomplishments", "awards", "recognition", "milestones", "success"],
 
   // Contact & Hire
