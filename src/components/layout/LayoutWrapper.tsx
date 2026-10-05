@@ -2,14 +2,17 @@
 
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
+import dynamic from 'next/dynamic';
 import Navbar from "@/components/layout/Navbar/Navbar";
 import Footer from "@/components/layout/Footer/Footer";
-import Chatbot from "@/components/ui/Chatbot";
-import TerminalSandbox from "@/components/ui/TerminalSandbox";
-import MatrixRain from "@/components/ui/MatrixRain";
 import { useIntroAnimation } from '@/context/IntroAnimationContext';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+// Post-intro widgets load in separate chunks so they never slow the first paint
+const Chatbot = dynamic(() => import("@/components/ui/Chatbot"), { ssr: false });
+const TerminalSandbox = dynamic(() => import("@/components/ui/TerminalSandbox"), { ssr: false });
+const MatrixRain = dynamic(() => import("@/components/ui/MatrixRain"), { ssr: false });
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);

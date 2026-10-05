@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Bebas_Neue, Playfair_Display, Plus_Jakarta_Sans, Space_Grotesk, Instrument_Serif, Outfit } from "next/font/google";
+import { Geist, Geist_Mono, Bebas_Neue, Playfair_Display, Plus_Jakarta_Sans, Space_Grotesk, Instrument_Serif, Outfit, Mea_Culpa, Felipa } from "next/font/google";
 import "./globals.css";
 import "../styles/theme.css";
 import "./animations.css";
@@ -7,7 +7,6 @@ import LayoutWrapper from "@/components/layout/LayoutWrapper";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import SmoothScrollWrapper from "@/components/layout/SmoothScrollWrapper";
 import { IntroAnimationProvider } from "@/context/IntroAnimationContext";
-import SuppressThreeWarnings from "@/components/utils/SuppressThreeWarnings";
 import { generateSEO } from "@/lib/seo";
 
 const geistSans = Geist({
@@ -64,6 +63,22 @@ const instrumentSerif = Instrument_Serif({
 
 const outfit = Outfit({
   variable: "--font-outfit",
+  subsets: ["latin"],
+  display: 'swap',
+  preload: true,
+});
+
+const meaCulpa = Mea_Culpa({
+  variable: "--font-mea-culpa",
+  weight: "400",
+  subsets: ["latin"],
+  display: 'swap',
+  preload: true,
+});
+
+const felipa = Felipa({
+  variable: "--font-felipa",
+  weight: "400",
   subsets: ["latin"],
   display: 'swap',
   preload: true,
@@ -187,25 +202,15 @@ export default function RootLayout({
         <meta name="msapplication-TileImage" content="/android-chrome-512x512.png" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
 
-        {/* Preconnect to external domains for performance */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Felipa&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap" rel="stylesheet" />
-
-        {/* DNS Prefetch for faster resource loading */}
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-
         {/* Theme Color for mobile browsers */}
         <meta name="theme-color" content="#0F0E0E" />
         {/* Viewport optimization */}
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${bebasNeue.variable} ${playfairDisplay.variable} ${plusJakartaSans.variable} ${spaceGrotesk.variable} ${instrumentSerif.variable} ${outfit.variable} antialiased overflow-visible`}
+        className={`${geistSans.variable} ${geistMono.variable} ${bebasNeue.variable} ${playfairDisplay.variable} ${plusJakartaSans.variable} ${spaceGrotesk.variable} ${instrumentSerif.variable} ${outfit.variable} ${meaCulpa.variable} ${felipa.variable} antialiased overflow-visible`}
       >
         <IntroAnimationProvider>
-          <SuppressThreeWarnings />
           <SmoothScrollWrapper>
             <LayoutWrapper>{children}</LayoutWrapper>
           </SmoothScrollWrapper>

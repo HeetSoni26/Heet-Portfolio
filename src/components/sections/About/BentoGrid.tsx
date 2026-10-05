@@ -299,7 +299,7 @@ export default function BentoGrid() {
               alt="Heet Soni"
               fill
               className="object-cover"
-              sizes="(max-w-96px) 100vw, 96px"
+              sizes="144px"
               priority
             />
           </div>

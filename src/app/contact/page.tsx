@@ -313,7 +313,7 @@ export default function ContactPage() {
                       alt={PERSONAL_INFO.name}
                       fill
                       className="object-cover"
-                      sizes="(max-w-96px) 100vw, 96px"
+                      sizes="96px"
                       priority
                     />
                   </div>
