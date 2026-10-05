@@ -77,7 +77,7 @@ export const projects: Project[] = [
     category: "Software • Decentralized Application",
     challenges: "Ensuring ballot secrecy while maintaining verifiability.",
     solution: "Implemented cryptographic commitments and zero-knowledge proofs.",
-    metrics: ["Security Audit: Passed"],
+    metrics: ["Cryptographic Workflows: 100%", "Transparent Records: 100%"],
     screenshots: []
   },
   {
@@ -133,7 +133,7 @@ export const projects: Project[] = [
     category: "AI • Sustainability Platform",
     challenges: "Designing engaging gamification elements.",
     solution: "Iterated with user feedback to refine the gamification loops.",
-    metrics: ["Active Users: 5k+"],
+    metrics: ["Fully Responsive: 100%", "Real-time Content Updates"],
     screenshots: []
   },
   {
@@ -245,7 +245,7 @@ export const projects: Project[] = [
     category: "Android • Mobile",
     challenges: "Optimizing media playback for older Android devices.",
     solution: "Implemented efficient background services and memory management.",
-    metrics: ["Downloads: 10k+"],
+    metrics: ["Offline Playback: 100%", "Ad-Free Experience: 100%"],
     screenshots: []
   },
   {
@@ -301,7 +301,7 @@ export const projects: Project[] = [
     category: "Web • Full Stack",
     challenges: "Managing real-time order states.",
     solution: "Integrated WebSockets for instant order updates.",
-    metrics: ["Uptime: 99.9%"],
+    metrics: ["Live Order Updates: Real-time", "Deployed on Vercel"],
     screenshots: []
   },
   {
@@ -329,7 +329,7 @@ export const projects: Project[] = [
     category: "Web • Creative",
     challenges: "Synchronizing complex animation sequences.",
     solution: "Built a custom animation orchestrator hook.",
-    metrics: ["Performance: A+"],
+    metrics: ["Pure CSS Animations", "Optimized Asset Loading"],
     screenshots: []
   },
   {
@@ -357,7 +357,7 @@ export const projects: Project[] = [
     category: "Web • Platform",
     challenges: "Ensuring HIPAA-compliant data storage principles.",
     solution: "Implemented stringent data validation and encryption patterns.",
-    metrics: ["Security Audit: Passed"],
+    metrics: ["Data Validation: Strict", "Encrypted Storage Patterns: 100%"],
     screenshots: []
   }
 ];
