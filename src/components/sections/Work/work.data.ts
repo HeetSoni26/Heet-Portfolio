@@ -249,6 +249,34 @@ export const projects: Project[] = [
     screenshots: []
   },
   {
+    id: 13,
+    title: "Muscle Map",
+    tagline: "OFFLINE GYM TRACKER",
+    statusBadge: "🚀 Open Source",
+    description: "Offline gym log for Android — tap the muscles you want to train, log your sets, and watch your numbers climb. No account, no ads, no internet permission.",
+    features: [
+      "Interactive muscle map workout targeting",
+      "Offline set logging with progress charts",
+      "No account, no ads, no internet permission"
+    ],
+    techStack: ["Flutter", "Dart", "Kotlin"],
+    image: "/images/projects/musclemap1.png",
+    hoverImage: "/images/projects/musclemap2.png",
+    liveUrl: "https://github.com/HeetSoni26/MuscleMap/releases/download/v1.0.0/MuscleMap-v1.0.0.apk",
+    githubUrl: "https://github.com/HeetSoni26/MuscleMap",
+    primaryButtonText: "Download APK",
+    secondaryButtonText: "GitHub",
+    color: "20, 184, 166",
+    longDescription: "MuscleMap is an offline-first gym tracker built with Flutter. Pick the muscles you want to train on an interactive body map, log every set, and follow your progress with built-in charts — all stored locally with zero internet permission.",
+    role: "Flutter Developer",
+    timeline: "Completed",
+    category: "Android • Mobile",
+    challenges: "Keeping every feature fully offline with zero internet permission.",
+    solution: "Local-first storage architecture — all logs, settings, and charts stay on the device.",
+    metrics: ["Offline-first: 100%", "Zero Ads & Tracking: 100%"],
+    screenshots: []
+  },
+  {
     id: 9,
     title: "Aurum Salon",
     tagline: "PREMIUM FRONTEND WEBSITE",
