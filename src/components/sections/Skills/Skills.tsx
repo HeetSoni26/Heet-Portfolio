@@ -298,8 +298,6 @@ export default function Skills() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="space-y-8 sm:space-y-12 md:space-y-16"
-          role="list"
-          aria-label="Technology skills showcase"
         >
           {/* Top Row - Left to Right */}
           <MarqueeRow skills={topRowSkills} speed={15} />

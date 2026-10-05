@@ -91,6 +91,8 @@ const SkillCard = memo(function SkillCard({ skill, index, onHover, isHovered }: 
         {/* Icon container with glow */}
         <div className="relative" style={glowStyle}>
           <Icon
+            role="presentation"
+            aria-hidden="true"
             className="text-4xl sm:text-5xl"
             style={{ 
               color: skill.color,

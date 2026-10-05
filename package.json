@@ -9,8 +9,6 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@tsparticles/engine": "^3.9.1",
-    "@tsparticles/react": "^3.0.0",
     "@upstash/redis": "^1.36.3",
     "framer-motion": "^12.34.3",
     "gsap": "^3.15.0",

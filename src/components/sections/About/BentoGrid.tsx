@@ -445,7 +445,7 @@ export default function BentoGrid() {
                     key={skill.name}
                     className="flex items-center gap-1 px-1.5 sm:px-2 py-0.5 rounded-full bg-white/[0.03] border border-white/[0.06] hover:bg-white/[0.08] hover:border-white/[0.12] transition-all duration-300"
                   >
-                    <IconComponent className="w-2.5 h-2.5 sm:w-3 sm:h-3 flex-shrink-0" style={{ color: skill.color }} />
+                    <IconComponent role="presentation" aria-hidden="true" className="w-2.5 h-2.5 sm:w-3 sm:h-3 flex-shrink-0" style={{ color: skill.color }} />
                     <span className="text-[8px] sm:text-[9px] text-white/60 font-medium font-jakarta">{skill.name}</span>
                   </div>
                 );

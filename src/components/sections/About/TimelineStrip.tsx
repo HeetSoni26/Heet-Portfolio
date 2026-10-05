@@ -169,12 +169,12 @@ const TimelineItem = memo(function TimelineItem({
 
               {/* Title with icon */}
               <div className="flex items-center justify-end gap-3 mb-2">
-                <h4
+                <h3
                   className="text-lg font-bold text-white group-hover:text-[#BF5AF2] transition-colors duration-300"
                   style={{ fontFamily: 'var(--font-jakarta)' }}
                 >
                   {milestone.title}
-                </h4>
+                </h3>
                 <div className="w-9 h-9 rounded-lg bg-[#BF5AF2]/10 border border-[#BF5AF2]/20 flex items-center justify-center group-hover:bg-[#BF5AF2]/20 group-hover:border-[#BF5AF2]/40 transition-all duration-300">
                   <Icon size={18} className="text-[#BF5AF2]" strokeWidth={1.5} />
                 </div>
@@ -224,12 +224,12 @@ const TimelineItem = memo(function TimelineItem({
                 <div className="w-9 h-9 rounded-lg bg-[#BF5AF2]/10 border border-[#BF5AF2]/20 flex items-center justify-center group-hover:bg-[#BF5AF2]/20 group-hover:border-[#BF5AF2]/40 transition-all duration-300">
                   <Icon size={18} className="text-[#BF5AF2]" strokeWidth={1.5} />
                 </div>
-                <h4
+                <h3
                   className="text-lg font-bold text-white group-hover:text-[#BF5AF2] transition-colors duration-300"
                   style={{ fontFamily: 'var(--font-jakarta)' }}
                 >
                   {milestone.title}
-                </h4>
+                </h3>
               </div>
 
               {/* Description */}
@@ -270,12 +270,12 @@ const TimelineItem = memo(function TimelineItem({
             <div className="w-7 h-7 rounded-md bg-[#BF5AF2]/10 border border-[#BF5AF2]/20 flex items-center justify-center">
               <Icon size={14} className="text-[#BF5AF2]" strokeWidth={1.5} />
             </div>
-            <h4
+            <h3
               className="text-base font-bold text-white"
               style={{ fontFamily: 'var(--font-jakarta)' }}
             >
               {milestone.title}
-            </h4>
+            </h3>
           </div>
 
           {/* Description */}
