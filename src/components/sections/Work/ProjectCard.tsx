@@ -41,7 +41,7 @@ import {
 import { TbApi } from 'react-icons/tb';
 
 // Brand color configurations for icons
-export const techConfig: Record<string, { icon: React.ComponentType<{ size?: number; style?: React.CSSProperties; className?: string }>; color: string }> = {
+export const techConfig: Record<string, { icon: React.ComponentType<{ size?: number; style?: React.CSSProperties; className?: string; role?: string; 'aria-hidden'?: boolean | 'true' | 'false' }>; color: string }> = {
   'Next.js': { icon: SiNextdotjs, color: '#FFFFFF' },
   'Next.js (App Router)': { icon: SiNextdotjs, color: '#FFFFFF' },
   'React': { icon: SiReact, color: '#61DAFB' },
@@ -237,6 +237,8 @@ const ProjectCard = memo(function ProjectCard({ project, index }: ProjectCardPro
                 >
                   {Icon && (
                     <Icon
+                      role="presentation"
+                      aria-hidden="true"
                       size={11}
                       style={{ color: iconColor }}
                       className="flex-shrink-0"
