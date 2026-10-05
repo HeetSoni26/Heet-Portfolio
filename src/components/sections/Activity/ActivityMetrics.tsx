@@ -31,7 +31,7 @@ const ActivityBarChart = memo(function ActivityBarChart() {
     <div className="relative w-full h-24 bg-[#0E0D0D] border border-white/[0.03] rounded-2xl p-4 flex flex-col justify-between overflow-hidden shadow-inner mb-4">
       {/* Growth title */}
       <div className="flex justify-between items-center z-10">
-        <span className="text-[9px] uppercase tracking-wider text-white/40 font-semibold font-mono">Growth</span>
+        <span className="text-[9px] uppercase tracking-wider text-white/60 font-semibold font-mono">Growth</span>
       </div>
 
       {/* Bars container */}
@@ -53,7 +53,7 @@ const ActivityBarChart = memo(function ActivityBarChart() {
       </div>
 
       {/* Date labels at bottom */}
-      <div className="flex justify-between items-center text-[8px] font-semibold text-white/20 uppercase tracking-widest px-0.5 relative z-10">
+      <div className="flex justify-between items-center text-[8px] font-semibold text-white/60 uppercase tracking-widest px-0.5 relative z-10">
         <span>Nov 10</span>
         <span>Nov 11</span>
         <span>Today</span>
@@ -95,7 +95,7 @@ const NotificationIsland = memo(function NotificationIsland() {
             <span className="text-[8px] font-bold text-[#C2EF3A] tracking-wider uppercase">INGEST</span>
           </div>
           <p className="text-[10px] font-black text-white/90 truncate leading-tight mt-0.5">TrafficIQ Feed</p>
-          <span className="text-[8px] text-white/40 block mt-0.5 leading-none">YOLOv8 • Just now</span>
+          <span className="text-[8px] text-white/60 block mt-0.5 leading-none">YOLOv8 • Just now</span>
         </div>
       </motion.div>
     </div>
@@ -157,7 +157,7 @@ const SmoothLineChart = memo(function SmoothLineChart() {
       </div>
 
       <div className="flex justify-between items-center z-20">
-        <span className="text-[9px] uppercase tracking-wider text-white/40 font-semibold font-mono">Performance</span>
+        <span className="text-[9px] uppercase tracking-wider text-white/60 font-semibold font-mono">Performance</span>
       </div>
     </div>
   );
@@ -215,7 +215,7 @@ const TrackerVisual = memo(function TrackerVisual() {
         </div>
         <div className="flex items-center gap-1.5 bg-white/[0.01] border border-white/[0.03] rounded-md px-1.5 py-0.5">
           <span className="w-2.5 h-2.5 rounded-full bg-[#C2EF3A]/10 border border-[#C2EF3A]/20 flex items-center justify-center text-[8px] text-[#C2EF3A] font-bold animate-pulse">•</span>
-          <span className="text-[8px] text-white/40 font-mono tracking-tight truncate">Peer Review...</span>
+          <span className="text-[8px] text-white/60 font-mono tracking-tight truncate">Peer Review...</span>
         </div>
       </div>
 
@@ -327,7 +327,7 @@ export default function ActivityMetrics() {
             >
               <ActivityBarChart />
               <div>
-                <span className="text-[9px] font-mono font-bold tracking-[0.15em] text-white/30 uppercase block mb-1">
+                <span className="text-[9px] font-mono font-bold tracking-[0.15em] text-white/60 uppercase block mb-1">
                   WEB DEVELOPMENT
                 </span>
                 <h3 className="text-base sm:text-lg font-bold text-white tracking-tight leading-snug font-jakarta">
@@ -355,7 +355,7 @@ export default function ActivityMetrics() {
             >
               <NotificationIsland />
               <div>
-                <span className="text-[9px] font-mono font-bold tracking-[0.15em] text-white/30 uppercase block mb-1">
+                <span className="text-[9px] font-mono font-bold tracking-[0.15em] text-white/60 uppercase block mb-1">
                   SOFTWARE DEVELOPMENT
                 </span>
                 <h3 className="text-base sm:text-lg font-bold text-white tracking-tight leading-snug font-jakarta">
@@ -383,7 +383,7 @@ export default function ActivityMetrics() {
             >
               <SmoothLineChart />
               <div>
-                <span className="text-[9px] font-mono font-bold tracking-[0.15em] text-white/30 uppercase block mb-1">
+                <span className="text-[9px] font-mono font-bold tracking-[0.15em] text-white/60 uppercase block mb-1">
                   AUTOMATION
                 </span>
                 <h3 className="text-base sm:text-lg font-bold text-white tracking-tight leading-snug font-jakarta">
@@ -415,7 +415,7 @@ export default function ActivityMetrics() {
               className="p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 h-full w-full relative z-10"
             >
               <div className="flex-1 min-w-0 pr-2">
-                <span className="text-[9px] font-mono font-bold tracking-[0.15em] text-white/30 uppercase block mb-1">
+                <span className="text-[9px] font-mono font-bold tracking-[0.15em] text-white/60 uppercase block mb-1">
                   ARTIFICIAL INTELLIGENCE
                 </span>
                 <h3 className="text-base sm:text-lg font-bold text-white tracking-tight leading-snug font-jakarta">
@@ -443,7 +443,7 @@ export default function ActivityMetrics() {
               className="p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 h-full w-full relative z-10"
             >
               <div className="flex-1 min-w-0 pr-2">
-                <span className="text-[9px] font-mono font-bold tracking-[0.15em] text-white/30 uppercase block mb-1">
+                <span className="text-[9px] font-mono font-bold tracking-[0.15em] text-white/60 uppercase block mb-1">
                   MOBILE DEVELOPMENT
                 </span>
                 <h3 className="text-base sm:text-lg font-bold text-white tracking-tight leading-snug font-jakarta">

@@ -204,7 +204,7 @@ const ContributionCell = memo(function ContributionCell({ day }: { day: Contribu
       <div className="hidden xs:block absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 xs:px-3 py-1.5 xs:py-2 rounded-md xs:rounded-lg bg-black/90 border border-white/20 text-[10px] xs:text-xs text-white whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-20">
         <div className="font-semibold">{day.contributionCount} contributions</div>
         <div className="text-white/60">{formattedDate}</div>
-        <div className="text-white/40 text-[9px] xs:text-[10px] mt-0.5 xs:mt-1">{levelStr}</div>
+        <div className="text-white/60 text-[9px] xs:text-[10px] mt-0.5 xs:mt-1">{levelStr}</div>
       </div>
     </motion.div>
   );
@@ -362,7 +362,7 @@ export default function GitHubContributions() {
                       new Date(stats.weeks[weekIndex - 1].contributionDays[0].date).getMonth() !== month;
                     
                     return (
-                      <div key={weekIndex} className="w-[10px] xs:w-3 text-[9px] xs:text-[10px] sm:text-xs text-white/40">
+                      <div key={weekIndex} className="w-[10px] xs:w-3 text-[9px] xs:text-[10px] sm:text-xs text-white/60">
                         {isFirstWeekOfMonth && (
                           <span className="inline-block -ml-1 xs:-ml-2">
                             {monthLabels[month]}
@@ -376,7 +376,7 @@ export default function GitHubContributions() {
                 {/* Grid container */}
                 <div className="flex gap-[3px] xs:gap-1">
                   {/* Day labels */}
-                  <div className="flex flex-col gap-[3px] xs:gap-1 pr-1 xs:pr-1.5 sm:pr-2 justify-around text-[8px] xs:text-[10px] sm:text-xs text-white/40">
+                  <div className="flex flex-col gap-[3px] xs:gap-1 pr-1 xs:pr-1.5 sm:pr-2 justify-around text-[8px] xs:text-[10px] sm:text-xs text-white/60">
                     {dayLabels.map((day, i) => (
                       i % 2 === 1 && <div key={day} className="h-[10px] xs:h-3 flex items-center">{day}</div>
                     ))}

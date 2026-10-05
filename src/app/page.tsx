@@ -1,52 +1,27 @@
 'use client';
 
 import { useEffect } from 'react';
-import dynamic from 'next/dynamic';
 import Hero from '@/components/sections/Hero/Hero';
 import IntroScreen from '@/components/sections/Hero/IntroScreen';
 import { useIntroAnimation } from '@/context/IntroAnimationContext';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+// Sections are statically imported: every section renders into the initial
+// HTML and hydrates in one pass. next/dynamic with ssr:true split them into
+// streamed Suspense boundaries whose completion was deferred until idle,
+// leaving sections invisible for seconds after load on slower devices.
+import About from '@/components/sections/About/About';
+import Skills from '@/components/sections/Skills/Skills';
+import Work from '@/components/sections/Work/Work';
+import ActivityMetrics from '@/components/sections/Activity/ActivityMetrics';
+import GitHubContributions from '@/components/sections/GitHub/GitHubContributions';
+import Contact from '@/components/sections/Contact/Contact';
+import MarqueeBanner from '@/components/sections/About/MarqueeBanner';
+
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
 }
-
-// Lazy load sections that are below the fold
-const About = dynamic(() => import('@/components/sections/About/About'), {
-  loading: () => <div className="min-h-screen bg-[#0F0E0E]" />,
-  ssr: true, // Still render on server for SEO
-});
-
-const Skills = dynamic(() => import('@/components/sections/Skills/Skills'), {
-  loading: () => <div className="min-h-screen bg-[#0F0E0E]" />,
-  ssr: true,
-});
-
-const Work = dynamic(() => import('@/components/sections/Work/Work'), {
-  loading: () => <div className="min-h-screen bg-[#0F0E0E]" />,
-  ssr: true,
-});
-
-const ActivityMetrics = dynamic(() => import('@/components/sections/Activity/ActivityMetrics'), {
-  loading: () => <div className="min-h-screen bg-[#0F0E0E]" />,
-  ssr: true,
-});
-
-const GitHubContributions = dynamic(() => import('@/components/sections/GitHub/GitHubContributions'), {
-  loading: () => <div className="min-h-96 bg-[#0F0E0E]" />,
-  ssr: true,
-});
-
-const Contact = dynamic(() => import('@/components/sections/Contact/Contact'), {
-  loading: () => <div className="min-h-screen bg-[#0F0E0E]" />,
-  ssr: true,
-});
-
-const MarqueeBanner = dynamic(() => import('@/components/sections/About/MarqueeBanner'), {
-  loading: () => <div className="h-screen bg-[#0F0E0E]" />,
-  ssr: true,
-});
 
 export default function Home() {
   const { isIntroComplete } = useIntroAnimation();
@@ -114,7 +89,7 @@ export default function Home() {
         {/* Hero Section */}
         <Hero />
 
-        {/* Below sections - Lazy loaded */}
+        {/* Below-fold sections */}
         <About />
         <Skills />
         <Work />
