@@ -229,7 +229,7 @@ export default function IntroScreen() {
           <div
             className="text-white select-none pointer-events-none"
             style={{
-              fontFamily: "'Mea Culpa', cursive",
+              fontFamily: "var(--font-mea-culpa), 'Mea Culpa', cursive",
               fontSize: "clamp(3.5rem, 12vw, 8rem)",
               whiteSpace: "nowrap",
             }}

@@ -853,7 +853,7 @@ html {
 }
 
 .splash-logo {
-  font-family: 'Mea Culpa', cursive;
+  font-family: var(--font-mea-culpa), 'Mea Culpa', cursive;
   font-size: clamp(3rem, 12vw, 10rem);
   color: #ffffff;
   transform: scale(0.2);
@@ -900,7 +900,7 @@ html {
 }
 
 .felipa-regular {
-  font-family: "Felipa", serif;
+  font-family: var(--font-felipa), "Felipa", serif;
   font-weight: 400;
   font-style: normal;
 }
