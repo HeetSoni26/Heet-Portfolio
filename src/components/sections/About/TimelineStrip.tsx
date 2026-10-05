@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef, memo } from 'react';
-import { Code2, Briefcase, GraduationCap, Rocket, Award, Brain, Bot, Microscope, Laptop, LucideIcon } from 'lucide-react';
+import { Code2, Briefcase, GraduationCap, Rocket, Award, Brain, Bot, Laptop, LucideIcon } from 'lucide-react';
 
 interface Milestone {
   year: string;
@@ -46,9 +46,9 @@ const milestones: Milestone[] = [
   },
   {
     year: '2027',
-    title: 'Research & Graduate Journey',
-    description: 'Preparing for thesis-based graduate studies, AI research publications and building advanced intelligent systems with real-world impact.',
-    icon: Microscope,
+    title: 'The Next Chapter',
+    description: 'Graduating with a B.Tech in AI & Data Science, kicking off an industry internship, and freelancing on real client projects — while preparing for a Master\'s in AI abroad.',
+    icon: GraduationCap,
   },
 ];
 
