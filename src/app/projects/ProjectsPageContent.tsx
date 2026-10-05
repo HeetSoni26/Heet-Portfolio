@@ -4,10 +4,6 @@ import { useState, useMemo, useCallback, useEffect, useRef, memo } from 'react';
 import {
   motion,
   AnimatePresence,
-  useMotionValue,
-  useTransform,
-  animate,
-  useInView,
 } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -182,23 +178,6 @@ function timelineToTime(timeline: string): number {
   const raw = match ? match[1] : timeline;
   const parsed = Date.parse(raw);
   return Number.isNaN(parsed) ? 0 : parsed;
-}
-
-// Scroll-triggered animated counter
-function Counter({ value, duration = 1.6 }: { value: number; duration?: number }) {
-  const count = useMotionValue(0);
-  const rounded = useTransform(count, (latest) => Math.round(latest));
-  const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, margin: '-10%' });
-
-  useEffect(() => {
-    if (inView) {
-      const controls = animate(count, value, { duration, ease: 'easeOut' });
-      return () => controls.stop();
-    }
-  }, [inView, count, value, duration]);
-
-  return <motion.span ref={ref}>{rounded}</motion.span>;
 }
 
 // Editorial line reveal (mask + slide-up)
@@ -394,8 +373,7 @@ export default function ProjectsPageContent({ projects }: ProjectsPageContentPro
             ].map((stat) => (
               <div key={stat.label} className="flex flex-col">
                 <span className="text-4xl sm:text-5xl font-black font-jakarta text-white leading-none [text-shadow:0_0_20px_rgba(255,255,255,0.15)]">
-                  <Counter value={stat.value} />
-                  {stat.suffix}
+                  {stat.value}{stat.suffix}
                 </span>
                 <span className="text-[11px] mt-2 uppercase tracking-[0.12em] font-semibold text-white/45 font-outfit">
                   {stat.label}
