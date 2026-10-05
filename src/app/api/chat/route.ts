@@ -152,9 +152,20 @@ function detectIntent(message: string): string[] {
       if (words.includes(keyword)) {
         score += 3;
       }
-      // Partial match (keyword is in message)
+      // Partial match (keyword is in message) — multi-word phrases must end
+      // at a word boundary so greedy phrases like "what are you" don't match
+      // inside "what are your future plans"
       else if (lowerMessage.includes(keyword)) {
-        score += keyword.split(' ').length > 1 ? 4 : 2; // Multi-word phrases score higher
+        const wordCount = keyword.split(' ').length;
+        if (wordCount > 1) {
+          const idx = lowerMessage.indexOf(keyword);
+          const after = lowerMessage[idx + keyword.length];
+          if (after === undefined || /[^a-z0-9']/.test(after)) {
+            score += 4;
+          }
+        } else {
+          score += 2;
+        }
       }
     }
 
