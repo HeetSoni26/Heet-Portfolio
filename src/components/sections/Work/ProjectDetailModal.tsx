@@ -178,7 +178,7 @@ const fadeUpSpring: Variants = {
 export default function ProjectDetailModal({ project, onClose }: ProjectDetailModalProps) {
   const [scrollY, setScrollY] = useState(0);
   const [isHeaderScrolled, setIsHeaderScrolled] = useState(false);
-  const [viewportMode, setViewportMode] = useState<'desktop' | 'mobile'>('desktop');
+  const isMobileApp = project.category.includes('Android');
   const [activeImageIdx, setActiveImageIdx] = useState(0);
   const [copiedCmd, setCopiedCmd] = useState(false);
 
@@ -688,36 +688,19 @@ export default function ProjectDetailModal({ project, onClose }: ProjectDetailMo
                 Interface Gallery
               </h3>
               
-              {/* Viewport Switcher Tabs */}
-              <div className="bg-white/[0.04] p-1 rounded-full border border-white/[0.08] flex items-center gap-1">
-                <button
-                  onClick={() => {
-                    setViewportMode('desktop');
-                    setActiveImageIdx(0);
-                  }}
-                  className={`px-4 py-1.5 rounded-full text-xs font-bold font-outfit transition-all flex items-center gap-1.5 select-none cursor-pointer ${
-                    viewportMode === 'desktop'
-                      ? 'bg-white text-black shadow-md'
-                      : 'text-white/60 hover:text-white'
-                  }`}
-                >
-                  <Laptop size={13} />
-                  <span>Desktop View</span>
-                </button>
-                <button
-                  onClick={() => {
-                    setViewportMode('mobile');
-                    setActiveImageIdx(1 % imagesToDisplay.length);
-                  }}
-                  className={`px-4 py-1.5 rounded-full text-xs font-bold font-outfit transition-all flex items-center gap-1.5 select-none cursor-pointer ${
-                    viewportMode === 'mobile'
-                      ? 'bg-white text-black shadow-md'
-                      : 'text-white/60 hover:text-white'
-                  }`}
-                >
-                  <Smartphone size={13} />
-                  <span>Mobile View</span>
-                </button>
+              {/* Viewport Type Label — Android apps show mobile view, everything else desktop */}
+              <div className="bg-white/[0.04] px-4 py-1.5 rounded-full border border-white/[0.08] flex items-center gap-1.5">
+                {isMobileApp ? (
+                  <>
+                    <Smartphone size={13} className="text-white/60" />
+                    <span className="text-xs font-bold font-outfit text-white/60 select-none">Mobile View</span>
+                  </>
+                ) : (
+                  <>
+                    <Laptop size={13} className="text-white/60" />
+                    <span className="text-xs font-bold font-outfit text-white/60 select-none">Desktop View</span>
+                  </>
+                )}
               </div>
             </div>
             
@@ -725,7 +708,7 @@ export default function ProjectDetailModal({ project, onClose }: ProjectDetailMo
               {/* Viewport Mockup Render */}
               <div className="w-full flex items-center justify-center relative min-h-[220px] sm:min-h-[320px] md:min-h-[380px]">
                 
-                {viewportMode === 'desktop' ? (
+                {!isMobileApp ? (
                   /* MacBook Bezel Mockup Frame */
                   <div className="relative w-full max-w-[620px] group">
                     <div className="relative aspect-[16/10] w-full rounded-t-[20px] border-[8px] border-[#222224] bg-[#0c0c0d] overflow-hidden shadow-2xl relative">
