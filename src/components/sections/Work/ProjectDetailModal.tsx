@@ -500,7 +500,7 @@ export default function ProjectDetailModal({ project, onClose }: ProjectDetailMo
                       return (
                         <div key={idx} className="relative z-10 flex items-start gap-4 pl-1">
                           <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#121115] border border-[#FF8C00]/40 flex items-center justify-center text-[#FF8C00] flex-shrink-0 shadow-sm">
-                            <Icon size={14} />
+                            <Icon role="presentation" aria-hidden="true" size={14} />
                           </div>
                           <div className="flex-1 min-w-0 pt-0.5">
                             <div className="flex items-center gap-2 mb-1">
@@ -861,7 +861,7 @@ export default function ProjectDetailModal({ project, onClose }: ProjectDetailMo
             rel="noopener noreferrer"
             className="flex-1 border border-white/10 hover:bg-white/[0.08] hover:border-white/20 text-white font-semibold font-outfit text-xs py-3 px-4 rounded-full transition-all flex items-center justify-center gap-2 select-none cursor-pointer active:scale-95"
           >
-            <Github size={13} className="text-white/80" />
+            <Github role="presentation" aria-hidden="true" size={13} className="text-white/80" />
             <span>Source Code</span>
           </a>
         ) : (
@@ -869,7 +869,7 @@ export default function ProjectDetailModal({ project, onClose }: ProjectDetailMo
             disabled
             className="flex-1 border border-white/[0.04] text-white/30 bg-white/[0.01] font-semibold font-outfit text-xs py-3 rounded-full flex items-center justify-center gap-2 cursor-not-allowed"
           >
-            <Github size={13} className="text-white/20" />
+            <Github role="presentation" aria-hidden="true" size={13} className="text-white/20" />
             <span>Private Repo</span>
           </button>
         )}

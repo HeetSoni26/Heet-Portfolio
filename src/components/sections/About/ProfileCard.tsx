@@ -134,7 +134,7 @@ const ProfileCard = memo(function ProfileCard() {
               className="w-7 h-7 xs:w-8 xs:h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full bg-white/[0.04] hover:bg-white/[0.1] border border-white/[0.06] hover:border-white/[0.15] transition-all duration-300 flex items-center justify-center group"
               aria-label={label}
             >
-              <Icon className="w-3 h-3 xs:w-3.5 xs:h-3.5 sm:w-4 sm:h-4 text-white/40 group-hover:text-white/80 transition-colors" />
+              <Icon role="presentation" aria-hidden="true" className="w-3 h-3 xs:w-3.5 xs:h-3.5 sm:w-4 sm:h-4 text-white/40 group-hover:text-white/80 transition-colors" />
             </a>
           ))}
         </div>
@@ -156,7 +156,7 @@ const ProfileCard = memo(function ProfileCard() {
                 key={skill.name}
                 className="flex items-center gap-1 xs:gap-1.5 px-1.5 xs:px-2 sm:px-2.5 md:px-3 py-1 xs:py-1.5 sm:py-2 rounded-full bg-white/[0.03] border border-white/[0.06] hover:bg-white/[0.08] hover:border-white/[0.12] transition-all duration-300"
               >
-                <IconComponent className="w-2.5 h-2.5 xs:w-3 xs:h-3 sm:w-3.5 sm:h-3.5 flex-shrink-0" style={{ color: skill.color }} />
+                <IconComponent role="presentation" aria-hidden="true" className="w-2.5 h-2.5 xs:w-3 xs:h-3 sm:w-3.5 sm:h-3.5 flex-shrink-0" style={{ color: skill.color }} />
                 <span className="text-[8px] xs:text-[9px] sm:text-[10px] md:text-xs text-white/55 font-medium">{skill.name}</span>
               </div>
             );
