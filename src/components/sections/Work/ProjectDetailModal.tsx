@@ -597,7 +597,7 @@ export default function ProjectDetailModal({ project, onClose }: ProjectDetailMo
                         key={idx}
                         className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-[11px] font-outfit text-white/80 transition-all hover:bg-white/[0.08] hover:text-white select-none"
                       >
-                        {Icon && <Icon size={12} style={{ color: iconColor }} />}
+                        {Icon && <Icon role="presentation" aria-hidden="true" size={12} style={{ color: iconColor }} />}
                         <span>{tech}</span>
                       </span>
                     );
