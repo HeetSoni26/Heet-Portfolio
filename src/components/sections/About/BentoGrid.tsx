@@ -505,7 +505,7 @@ export default function BentoGrid() {
                   key={idx}
                   className="flex items-center gap-1.5 px-2 py-1 rounded-xl bg-white/[0.02] border border-white/[0.04] hover:bg-white/[0.05] hover:border-white/[0.08] transition-colors duration-300"
                 >
-                  <Icon className="w-3 h-3 flex-shrink-0" style={{ color: item.color }} />
+                  <Icon role="presentation" aria-hidden="true" className="w-3 h-3 flex-shrink-0" style={{ color: item.color }} />
                   <span className="text-[9px] sm:text-[10px] text-white/70 font-semibold font-jakarta leading-none">{item.label}</span>
                 </div>
               );

@@ -191,7 +191,7 @@ const ToolBadgeCloud = memo(function ToolBadgeCloud() {
               willChange: 'transform'
             }}
           >
-            <IconComponent className="w-4.5 h-4.5" style={{ color: tool.color }} />
+            <IconComponent role="presentation" aria-hidden="true" className="w-4.5 h-4.5" style={{ color: tool.color }} />
           </div>
         );
       })}

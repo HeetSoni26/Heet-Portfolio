@@ -236,8 +236,8 @@ const ProjectCard = memo(function ProjectCard({ project, index }: ProjectCardPro
                   className="inline-flex items-center gap-1.5 px-2.5 py-1 text-[10px] rounded-full bg-white/[0.04] border border-white/[0.06] text-white/70 font-outfit font-semibold transition-all duration-200 hover:bg-white/[0.08] hover:text-white"
                 >
                   {Icon && (
-                    <Icon 
-                      size={11} 
+                    <Icon
+                      size={11}
                       style={{ color: iconColor }}
                       className="flex-shrink-0"
                     />
