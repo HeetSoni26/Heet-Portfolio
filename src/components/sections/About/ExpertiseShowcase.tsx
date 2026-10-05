@@ -530,7 +530,7 @@ export default function ExpertiseShowcase() {
           'Local Storage',
           'Play Protect Ready',
         ],
-        stats: { projects: `1 Project`, experience: `3+ Tech` },
+        stats: { projects: `2 Projects`, experience: `3+ Tech` },
         ctaText: "Have an app idea?"
       },
     ];
