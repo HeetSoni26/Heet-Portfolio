@@ -332,10 +332,22 @@ function generateResponse(intents: string[], message: string): string {
     case 'education': {
       responses.push(
         `**Education:**\n\n` +
-        `🎓 **B.Tech in Information Technology** (Currently pursuing)\n\n` +
+        `🎓 **B.Tech in Artificial Intelligence & Data Science** — A. D. Patel Institute of Technology (ADIT), CVM University (Expected 2027)\n\n` +
         `Heet started coding in 2022 and has been continuously learning and building since then. ` +
         `He believes in learning by doing - every project teaches something new.\n\n` +
-        `**Self-Learning:** Online courses, documentation, open source, and building real projects.`
+        `**Self-Learning:** Online courses (Google ML Crash Course, DeepMind SLM course), documentation, open source, and building real projects.`
+      );
+      break;
+    }
+
+    case 'futureplans': {
+      responses.push(
+        `**What's Next for Heet:**\n\n` +
+        `🎓 **Graduation** — B.Tech in AI & Data Science (Expected 2027)\n` +
+        `💼 **Industry Internship** — kicking off in 2027\n` +
+        `🧑‍💻 **Freelancing** — building real client projects alongside studies\n` +
+        `🌍 **Master's in Computer Science abroad** — the big goal after graduation\n\n` +
+        `Right now he's focused on shipping AI products and gaining industry experience!`
       );
       break;
     }

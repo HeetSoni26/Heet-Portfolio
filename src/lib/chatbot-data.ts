@@ -23,7 +23,7 @@ export const CHATBOT_CONTEXT = {
     technologiesUsed: "35+",
     availableForWork: true,
     workPreference: ["Remote", "Freelance", "Contract", "Full-time"],
-    responseTime: "Usually within 24 hours",
+    responseTime: "24 hours",
   },
 
   // Detailed Skills
@@ -308,7 +308,7 @@ export const QUICK_RESPONSES: Record<string, string> = {
   'what is your name': `I'm **${CHATBOT_CONTEXT.personal.name}'s AI assistant**. ${CHATBOT_CONTEXT.personal.name} is a ${CHATBOT_CONTEXT.personal.jobTitle}.`,
 
   // About Questions
-  'who are you': `I'm an AI assistant for **Heet Soni**, an ${CHATBOT_CONTEXT.personal.jobTitle} based in ${CHATBOT_CONTEXT.personal.location}. I can tell you about his skills, projects, and research ambitions!`,
+  'who are you': `I'm an AI assistant for **Heet Soni**, an ${CHATBOT_CONTEXT.personal.jobTitle} based in ${CHATBOT_CONTEXT.personal.location}. I can tell you about his skills, projects, journey, and future plans!`,
   'who is Heet': `**Heet Soni** is an ${CHATBOT_CONTEXT.personal.jobTitle}. ${CHATBOT_CONTEXT.personal.bio}`,
   'tell me about yourself': `**Heet Soni** is an ${CHATBOT_CONTEXT.personal.jobTitle} based in ${CHATBOT_CONTEXT.personal.location}.\n\n${CHATBOT_CONTEXT.personal.bio}\n\nHe is ${CHATBOT_CONTEXT.personal.currentStatus}\n\n📊 **Quick Stats:**\n• B.Tech AI & Data Science (Expected 2027)\n• AI-focused portfolio\n• ${CHATBOT_CONTEXT.personal.projectsBuilt} projects\n• ${CHATBOT_CONTEXT.personal.technologiesUsed} technologies`,
   'tell me about Heet': `**Heet Soni** is a passionate ${CHATBOT_CONTEXT.personal.jobTitle} focused on building practical AI products, open-source projects, and intelligent systems with real-world impact.\n\n${CHATBOT_CONTEXT.personal.bio}`,
@@ -489,6 +489,7 @@ export const INTENT_KEYWORDS: Record<string, string[]> = {
   // Experience
   experience: ["experience", "years", "background", "career", "journey", "history", "timeline", "story", "how long", "worked"],
   education: ["education", "study", "studying", "college", "degree", "university", "btech", "b.tech", "academic", "school", "learning"],
+  futureplans: ["future plans", "future goal", "masters", "master's", "ms abroad", "higher studies", "study abroad", "after graduation", "long term goal", "what next"],
   achievements: ["achievements", "accomplishments", "awards", "recognition", "milestones", "success"],
 
   // Contact & Hire
