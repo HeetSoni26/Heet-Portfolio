@@ -380,6 +380,7 @@ export const QUICK_RESPONSES: Record<string, string> = {
   'your journey': `**Heet's Journey:**\n\n2022 - The Curiosity Phase\n2023 - Engineering Foundation (B.Tech AI & Data Science)\n2024 - Full-Stack Developer\n2025 - AI Exploration\n2026 - AI Product Development\n2027 - The Next Chapter (Graduation, Internship & MS in Computer Science Abroad)`,
 
   // Education
+  'how did you start coding': `Heet started coding in **2022** — the curiosity phase! 🚀\n\nIt began with HTML, CSS, and JavaScript fundamentals and first static websites, grew into full-stack development with React and Node.js, and evolved into today's AI engineering work — LLMs, computer vision, and intelligent systems.`,
   'education': `**Education:**\n\n🎓 B.Tech in Artificial Intelligence & Data Science (CVM University, Expected 2027)\n\nHeet is preparing for a Master's in Computer Science abroad and believes in learning by building impactful AI products!`,
   'tell me about education': `**Education:**\n\n🎓 B.Tech in Artificial Intelligence & Data Science (CVM University, Expected 2027)\n\nHeet is preparing for a Master's in Computer Science abroad and believes in learning by building impactful AI products!`,
   'where did you study': `🎓 Heet is pursuing a **B.Tech in Artificial Intelligence & Data Science** at CVM University.\n\nAfter graduating in 2027, he plans to pursue a Master's in Computer Science abroad!`,
