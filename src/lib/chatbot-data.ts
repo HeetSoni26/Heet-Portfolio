@@ -381,6 +381,7 @@ export const QUICK_RESPONSES: Record<string, string> = {
 
   // Education
   'education': `**Education:**\n\n🎓 B.Tech in Artificial Intelligence & Data Science (CVM University, Expected 2027)\n\nHeet is preparing for a Master's in Computer Science abroad and believes in learning by building impactful AI products!`,
+  'tell me about education': `**Education:**\n\n🎓 B.Tech in Artificial Intelligence & Data Science (CVM University, Expected 2027)\n\nHeet is preparing for a Master's in Computer Science abroad and believes in learning by building impactful AI products!`,
   'where did you study': `🎓 Heet is pursuing a **B.Tech in Artificial Intelligence & Data Science** at CVM University.\n\nAfter graduating in 2027, he plans to pursue a Master's in Computer Science abroad!`,
   'your qualification': `**Qualifications:**\n\n🎓 B.Tech in AI & Data Science (Expected 2027)\n🤖 AI-focused portfolio\n🚀 ${CHATBOT_CONTEXT.personal.projectsBuilt} production projects`,
 
