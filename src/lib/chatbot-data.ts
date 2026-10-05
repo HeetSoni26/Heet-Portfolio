@@ -18,7 +18,7 @@ export const CHATBOT_CONTEXT = {
     languages: ["English", "Hindi", "Gujarati"],
     bio: "Heet specializes in Artificial Intelligence, Machine Learning, Computer Vision, LLM-powered applications, backend engineering, and modern full-stack development. He builds intelligent software ranging from AI assistants and automation systems to scalable web applications and Android apps.",
     shortBio: "AI Engineer & Full-Stack Software Developer.",
-    currentStatus: "Pursuing a B.Tech in Artificial Intelligence & Data Science at CVM University (Expected 2027) while preparing for a research-focused Master's in Computer Science.",
+    currentStatus: "Pursuing a B.Tech in Artificial Intelligence & Data Science at CVM University (Expected 2027), freelancing on client projects, and preparing for a Master's in AI abroad.",
     projectsBuilt: "14+",
     technologiesUsed: "35+",
     availableForWork: true,
@@ -132,10 +132,10 @@ export const CHATBOT_CONTEXT = {
     },
     {
       year: "2027",
-      title: "Research & Graduate Journey",
-      description: "Preparing for thesis-based graduate studies in computer science while building production-grade AI systems. Goal: contribute to AI research and open-source communities.",
-      achievements: ["Graduate studies preparation", "AI research publications goal", "Open source contributions"],
-      skills_learned: ["System Architecture", "Research Writing", "Open Source"],
+      title: "The Next Chapter",
+      description: "Graduating with a B.Tech in AI & Data Science, kicking off an industry internship, and freelancing on real client projects — while preparing for a Master's in AI abroad.",
+      achievements: ["B.Tech graduation", "Industry internship", "Freelance client projects", "Master's abroad preparation"],
+      skills_learned: ["Production Engineering", "Client Communication", "System Architecture"],
     },
   ],
 
@@ -313,7 +313,7 @@ export const QUICK_RESPONSES: Record<string, string> = {
   'tell me about yourself': `**Heet Soni** is an ${CHATBOT_CONTEXT.personal.jobTitle} based in ${CHATBOT_CONTEXT.personal.location}.\n\n${CHATBOT_CONTEXT.personal.bio}\n\nHe is ${CHATBOT_CONTEXT.personal.currentStatus}\n\n📊 **Quick Stats:**\n• B.Tech AI & Data Science (Expected 2027)\n• AI-focused portfolio\n• ${CHATBOT_CONTEXT.personal.projectsBuilt} projects\n• ${CHATBOT_CONTEXT.personal.technologiesUsed} technologies`,
   'tell me about Heet': `**Heet Soni** is a passionate ${CHATBOT_CONTEXT.personal.jobTitle} focused on building practical AI products, open-source projects, and intelligent systems with real-world impact.\n\n${CHATBOT_CONTEXT.personal.bio}`,
   'introduce yourself': `Hi! I'm the AI assistant for **Heet Soni**. Heet is an ${CHATBOT_CONTEXT.personal.jobTitle} who specializes in building modern web applications, AI solutions, and intelligent systems. I can help you learn about his skills, projects, and how to work with him!`,
-  'what do you do': `Heet is an **${CHATBOT_CONTEXT.personal.jobTitle}** who builds:\n\n• AI-powered applications & intelligent automation systems\n• Computer Vision projects\n• Full-stack SaaS platforms\n• Android applications & backend APIs\n\nHis long-term goal is to pursue a thesis-based Master's in Computer Science and contribute to AI research.`,
+  'what do you do': `Heet is an **${CHATBOT_CONTEXT.personal.jobTitle}** who builds:\n\n• AI-powered applications & intelligent automation systems\n• Computer Vision projects\n• Full-stack SaaS platforms\n• Android applications & backend APIs\n\nHe also freelances on client projects and is preparing for a Master's in AI abroad after graduating in 2027.`,
 
   // Contact Questions
   'email': `📧 You can reach Heet at: **${CHATBOT_CONTEXT.personal.email}**`,
@@ -377,11 +377,11 @@ export const QUICK_RESPONSES: Record<string, string> = {
   'experience': `**Heet's Background:**\n\n🚀 ${CHATBOT_CONTEXT.personal.projectsBuilt} projects shipped\n🤖 Building AI products and intelligent software\n🎓 B.Tech in AI & Data Science (Pursuing)\n\n👉 [View Journey](#journey)`,
   'how much experience': `Heet has built **${CHATBOT_CONTEXT.personal.projectsBuilt} production projects** focusing heavily on full-stack development and AI/ML. He is currently pursuing a B.Tech in Artificial Intelligence & Data Science (Expected 2027).`,
   'years of experience': `Heet has built a strong AI-focused portfolio with **${CHATBOT_CONTEXT.personal.projectsBuilt} production projects** using ${CHATBOT_CONTEXT.personal.technologiesUsed} technologies!`,
-  'your journey': `**Heet's Journey:**\n\n2022 - The Curiosity Phase\n2023 - Engineering Foundation (B.Tech AI & Data Science)\n2024 - Full-Stack Developer\n2025 - AI Exploration\n2026 - AI Product Development\n2027 - Research & Graduate Journey`,
+  'your journey': `**Heet's Journey:**\n\n2022 - The Curiosity Phase\n2023 - Engineering Foundation (B.Tech AI & Data Science)\n2024 - Full-Stack Developer\n2025 - AI Exploration\n2026 - AI Product Development\n2027 - The Next Chapter (Graduation, Internship & Master's Abroad)`,
 
   // Education
-  'education': `**Education:**\n\n🎓 B.Tech in Artificial Intelligence & Data Science (CVM University, Expected 2027)\n\nHeet is preparing for a research-focused Master's in Computer Science and believes in learning by building impactful AI products!`,
-  'where did you study': `🎓 Heet is pursuing a **B.Tech in Artificial Intelligence & Data Science** at CVM University.\n\nHis long-term goal is to pursue a thesis-based Master's in Computer Science!`,
+  'education': `**Education:**\n\n🎓 B.Tech in Artificial Intelligence & Data Science (CVM University, Expected 2027)\n\nHeet is preparing for a Master's in AI abroad and believes in learning by building impactful AI products!`,
+  'where did you study': `🎓 Heet is pursuing a **B.Tech in Artificial Intelligence & Data Science** at CVM University.\n\nAfter graduating in 2027, he plans to pursue a Master's in AI abroad!`,
   'your qualification': `**Qualifications:**\n\n🎓 B.Tech in AI & Data Science (Expected 2027)\n🤖 AI-focused portfolio\n🚀 ${CHATBOT_CONTEXT.personal.projectsBuilt} production projects`,
 
   // Pricing
