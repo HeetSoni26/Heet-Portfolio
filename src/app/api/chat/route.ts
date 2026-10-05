@@ -27,10 +27,6 @@ const QUICK_RESPONSE_INTENTS: Record<string, string> = {
   'location': 'location', 'where are you from': 'location', 'where do you live': 'location',
   'where are you located': 'location', 'which country': 'location', 'timezone': 'location',
 
-  // Education
-  'education': 'education', 'tell me about education': 'education', 'where did you study': 'education',
-  'your qualification': 'education', 'what did you study': 'education',
-
   // Availability & Hiring
   'available': 'availability', 'are you available': 'availability',
   'can i hire you': 'hire', 'how can i hire you': 'hire', 'hire': 'hire',
@@ -56,7 +52,8 @@ const QUICK_RESPONSE_INTENTS: Record<string, string> = {
   'how did you start coding': 'experience',
 
   // Education
-  'education': 'education', 'where did you study': 'education', 'your qualification': 'education',
+  'education': 'education', 'tell me about education': 'education', 'where did you study': 'education',
+  'your qualification': 'education', 'what did you study': 'education',
 
   // Pricing
   'pricing': 'pricing', 'how much do you charge': 'pricing', 'rates': 'pricing', 'your rate': 'pricing',
