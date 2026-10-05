@@ -90,7 +90,7 @@ export const CHATBOT_CONTEXT = {
     github: p.githubUrl || ''
   })),
 
-  featuredProjects: ["Developer Portfolio", "Novabridge"],
+  featuredProjects: ["Developer Portfolio", "TrafficIQ"],
 
   // Journey/Timeline with more details
   journey: [
@@ -353,11 +353,11 @@ export const QUICK_RESPONSES: Record<string, string> = {
   'what are you best at': "Heet is best at:\n\n🥇 **Artificial Intelligence & Machine Learning**\n🥈 **Full-Stack Software Development**\n🥉 **Intelligent Automation & Computer Vision**\n\nHe's shipped 8+ production AI products and web platforms!",
 
   // Project Questions
-  'show me your projects': `**Heet's Projects:**\n\n🎵 **OpenBeats** - Open-source Music Player\n🚗 **TrafficIQ** - Autonomous Traffic Intelligence\n🌍 **EcoSphere** - Environmental Tracking Platform\n🤖 **RAGChat** - AI Document Chat Assistant\n📱 **Spam Email Classifier** - ML Detection System\n\n👉 [View All Projects](#projects)`,
-  'what projects have you built': `**Projects Built by Heet:**\n\n1. **OpenBeats** - Open-source Music Player\n2. **TrafficIQ** - Autonomous Traffic Intelligence\n3. **EcoSphere** - Environmental Tracking Platform\n4. **RAGChat** - AI Document Chat Assistant\n5. **Spam Email Classifier** - ML Detection System\n\n👉 [View All Projects](#projects)`,
+  'show me your projects': `**Heet's Projects:**\n\n🎵 **OpenBeats** - Open-source Music Player\n🚗 **TrafficIQ** - Autonomous Traffic Intelligence\n🌍 **EcoSphere** - Environmental Tracking Platform\n🤖 **RAGChat** - AI Document Chat Assistant\n\n👉 [View All Projects](#projects)`,
+  'what projects have you built': `**Projects Built by Heet:**\n\n1. **OpenBeats** - Open-source Music Player\n2. **TrafficIQ** - Autonomous Traffic Intelligence\n3. **EcoSphere** - Environmental Tracking Platform\n4. **RAGChat** - AI Document Chat Assistant\n\n👉 [View All Projects](#projects)`,
   'your work': `**Heet's Work:**\n\nHe has built ${CHATBOT_CONTEXT.personal.projectsBuilt} production projects including AI applications and full-stack web products.\n\n**Featured:** OpenBeats, TrafficIQ\n\n👉 [View Projects](#projects)`,
   'portfolio': `**Heet's Portfolio:**\n\nIncludes ${CHATBOT_CONTEXT.personal.projectsBuilt} projects ranging from AI-powered applications to web platforms.\n\n👉 [View All Projects](#projects)`,
-  'what have you built': `**What Heet Has Built:**\n\n🎵 Mobile apps (OpenBeats)\n🚗 AI Systems (TrafficIQ)\n🌍 Web platforms (EcoSphere)\n🤖 AI assistants (RAGChat)\n📱 ML models (Spam Email Classifier)\n\n👉 [View Projects](#projects)`,
+  'what have you built': `**What Heet Has Built:**\n\n🎵 Mobile apps (OpenBeats)\n🚗 AI Systems (TrafficIQ)\n🌍 Web platforms (EcoSphere)\n🤖 AI assistants (RAGChat)\n\n👉 [View Projects](#projects)`,
 
   // Specific Projects
   'tell me about openbeats': `**🎵 OpenBeats - Open-source Music Player**\n\nA beautiful music player app for Android.\n\n**Tech:** Kotlin, Android SDK\n**Status:** Completed\n\n👉 [View Projects](#projects)`,
@@ -485,7 +485,6 @@ export const INTENT_KEYWORDS: Record<string, string[]> = {
 
   // Projects
   projects: ["projects", "work", "portfolio", "built", "created", "developed", "apps", "applications", "showcase", "examples", "case studies", "what have you built", "show me"],
-  spam: ["spam", "spam detection", "spam classifier", "email classification", "sms", "classification", "ml project"],
 
   // Experience
   experience: ["experience", "years", "background", "career", "journey", "history", "timeline", "story", "how long", "worked"],
@@ -554,7 +553,6 @@ export const SUGGESTION_CHAINS: Record<string, string[]> = {
   trafficiq: ["Tell me about OpenBeats", "Tell me about EcoSphere", "What are your skills?"],
   ecosphere: ["Tell me about OpenBeats", "Show me your projects", "How can I hire you?"],
   ragchat: ["What other projects?", "Do you work with AI?", "How can I hire you?"],
-  spam: ["What other projects?", "Do you work with AI?", "How can I hire you?"],
   ecommerce: ["Show me your projects", "What services do you offer?", "How can I contact you?"],
 
   // After experience/journey response

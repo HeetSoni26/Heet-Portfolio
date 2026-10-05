@@ -193,7 +193,7 @@ export default function Contact() {
         <h3>Why Work With Me</h3>
         <ul>
           <li>4+ years of hands-on development experience</li>
-          <li>14+ shipped projects across AI, full-stack web, and Android</li>
+          <li>12+ shipped projects across AI, full-stack web, and Android</li>
           <li>AI-first approach with LLMs, Computer Vision, and RAG systems</li>
           <li>Expertise in modern JavaScript ecosystem</li>
           <li>Strong focus on code quality and best practices</li>
