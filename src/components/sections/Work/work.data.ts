@@ -98,7 +98,7 @@ export const projects: Project[] = [
     techStack: ["Python", "YOLOv8", "ByteTrack", "OpenCV", "FastAPI", "ZeroMQ"],
     image: "/images/projects/trafficiq_hero.png",
     hoverImage: "/images/projects/trafficiq_hover.png",
-    liveUrl: "https://github.com/HeetSoni26/Autonomous-Traffic-Intelligence-System",
+    liveUrl: "https://heetsoni26-trafficiq.hf.space",
     githubUrl: "https://github.com/HeetSoni26/Autonomous-Traffic-Intelligence-System",
     primaryButtonText: "Live Demo",
     secondaryButtonText: "GitHub Repository",
