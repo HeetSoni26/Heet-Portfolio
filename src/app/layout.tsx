@@ -154,8 +154,8 @@ export default function RootLayout({
       },
       {
         "@type": "CreativeWork",
-        "name": "RAGChat",
-        "description": "AI-powered document chat assistant enabling interactive conversations with uploaded PDFs and texts.",
+        "name": "Vajra",
+        "description": "Open-source foundation language model framework for training, evaluating, and packaging decoder-only Transformer LLMs from scratch.",
       }
     ]
   };

@@ -182,11 +182,15 @@ export default function ProjectDetailModal({ project, onClose }: ProjectDetailMo
   const [activeImageIdx, setActiveImageIdx] = useState(0);
   const [copiedCmd, setCopiedCmd] = useState(false);
 
+  const hasLiveLink = !!project.liveUrl && project.liveUrl.trim() !== '' && !project.liveUrl.includes('demo-link');
+  const hasRepo = !!project.githubUrl && project.githubUrl.trim() !== '' && !project.githubUrl.includes('yourusername');
+
   const imagesToDisplay = useMemo(() => {
+    if (project.logo) return [project.logo];
     return project.screenshots && project.screenshots.length > 0
       ? project.screenshots
       : [project.image, project.hoverImage];
-  }, [project.screenshots, project.image, project.hoverImage]);
+  }, [project.logo, project.screenshots, project.image, project.hoverImage]);
 
   useEffect(() => {
     let ticking = false;
@@ -242,8 +246,9 @@ export default function ProjectDetailModal({ project, onClose }: ProjectDetailMo
   const restOfText = project.longDescription.slice(1);
 
   const cloneCommand = useMemo(() => {
+    if (project.localSetup) return project.localSetup;
     return `git clone ${project.githubUrl || 'https://github.com/HeetSoni26/Heet-Portfolio.git'}\ncd ${project.title.toLowerCase().replace(/\s+/g, '-')}\nnpm install\nnpm run dev`;
-  }, [project.githubUrl, project.title]);
+  }, [project.localSetup, project.githubUrl, project.title]);
 
   const handleCopyCommand = useCallback(() => {
     navigator.clipboard.writeText(cloneCommand);
@@ -685,30 +690,50 @@ export default function ProjectDetailModal({ project, onClose }: ProjectDetailMo
           >
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <h3 className="text-xs font-bold uppercase tracking-widest text-white/40 font-outfit">
-                Interface Gallery
+                {project.logo ? 'Project Logo' : 'Interface Gallery'}
               </h3>
-              
+
               {/* Viewport Type Label — Android apps show mobile view, everything else desktop */}
-              <div className="bg-white/[0.04] px-4 py-1.5 rounded-full border border-white/[0.08] flex items-center gap-1.5">
-                {isMobileApp ? (
-                  <>
-                    <Smartphone size={13} className="text-white/60" />
-                    <span className="text-xs font-bold font-outfit text-white/60 select-none">Mobile View</span>
-                  </>
-                ) : (
-                  <>
-                    <Laptop size={13} className="text-white/60" />
-                    <span className="text-xs font-bold font-outfit text-white/60 select-none">Desktop View</span>
-                  </>
-                )}
-              </div>
+              {!project.logo && (
+                <div className="bg-white/[0.04] px-4 py-1.5 rounded-full border border-white/[0.08] flex items-center gap-1.5">
+                  {isMobileApp ? (
+                    <>
+                      <Smartphone size={13} className="text-white/60" />
+                      <span className="text-xs font-bold font-outfit text-white/60 select-none">Mobile View</span>
+                    </>
+                  ) : (
+                    <>
+                      <Laptop size={13} className="text-white/60" />
+                      <span className="text-xs font-bold font-outfit text-white/60 select-none">Desktop View</span>
+                    </>
+                  )}
+                </div>
+              )}
             </div>
-            
+
             <div className="flex flex-col items-center justify-center bg-[#121115] border border-white/[0.08] p-6 sm:p-12 md:p-14 rounded-[32px] relative overflow-hidden shadow-xl">
               {/* Viewport Mockup Render */}
               <div className="w-full flex items-center justify-center relative min-h-[220px] sm:min-h-[320px] md:min-h-[380px]">
-                
-                {!isMobileApp ? (
+
+                {project.logo ? (
+                  /* Logo-only projects: framed official logo, no device mockup */
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.96 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.35, ease: "easeInOut" }}
+                    className="w-full max-w-[680px] overflow-hidden rounded-[24px] border border-white/[0.08] shadow-2xl"
+                  >
+                    <Image
+                      src={project.logo}
+                      alt={`${project.title} official logo`}
+                      width={1200}
+                      height={498}
+                      sizes="(max-width: 768px) 100vw, 680px"
+                      className="w-full h-auto object-contain select-none"
+                      priority
+                    />
+                  </motion.div>
+                ) : !isMobileApp ? (
                   /* MacBook Bezel Mockup Frame */
                   <div className="relative w-full max-w-[620px] group">
                     <div className="relative aspect-[16/10] w-full rounded-t-[20px] border-[8px] border-[#222224] bg-[#0c0c0d] overflow-hidden shadow-2xl relative">
@@ -835,7 +860,7 @@ export default function ProjectDetailModal({ project, onClose }: ProjectDetailMo
         transition={{ type: "spring", stiffness: 80, damping: 15, delay: 0.4 }}
         className="fixed bottom-6 left-1/2 z-50 w-[90%] max-w-md p-2.5 bg-[#121115]/95 border border-white/[0.12] backdrop-blur-2xl rounded-full shadow-[0_20px_50px_rgba(0,0,0,0.85)] flex items-center justify-between gap-3"
       >
-        {project.liveUrl && project.liveUrl.trim() !== '' && !project.liveUrl.includes('demo-link') ? (
+        {hasLiveLink ? (
           <a
             href={project.liveUrl}
             target="_blank"
@@ -844,6 +869,16 @@ export default function ProjectDetailModal({ project, onClose }: ProjectDetailMo
           >
             <span>Explore App</span>
             <ExternalLink size={13} />
+          </a>
+        ) : hasRepo ? (
+          <a
+            href={project.githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 text-center font-bold font-outfit text-xs py-3 px-5 rounded-full transition-all duration-200 text-white select-none hover:opacity-90 flex items-center justify-center gap-2 cursor-pointer bg-gradient-to-r from-[#FF8C00] to-[#F43F5E] shadow-[0_4px_16px_rgba(244,63,94,0.4)] active:scale-95"
+          >
+            <span>View Repository</span>
+            <Github role="presentation" aria-hidden="true" size={13} className="text-white/80" />
           </a>
         ) : (
           <button
@@ -854,7 +889,7 @@ export default function ProjectDetailModal({ project, onClose }: ProjectDetailMo
           </button>
         )}
 
-        {project.githubUrl && project.githubUrl.trim() !== '' && !project.githubUrl.includes('yourusername') ? (
+        {hasLiveLink ? (
           <a
             href={project.githubUrl}
             target="_blank"
@@ -864,7 +899,7 @@ export default function ProjectDetailModal({ project, onClose }: ProjectDetailMo
             <Github role="presentation" aria-hidden="true" size={13} className="text-white/80" />
             <span>Source Code</span>
           </a>
-        ) : (
+        ) : !hasRepo && (
           <button
             disabled
             className="flex-1 border border-white/[0.04] text-white/30 bg-white/[0.01] font-semibold font-outfit text-xs py-3 rounded-full flex items-center justify-center gap-2 cursor-not-allowed"

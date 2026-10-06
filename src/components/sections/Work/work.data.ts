@@ -21,6 +21,10 @@ export interface Project {
   solution: string;
   metrics: string[];
   screenshots: string[];
+  /** Standalone project logo — when set, cards and the detail gallery show the logo instead of device mockups */
+  logo?: string;
+  /** Repo-only projects can override the generated npm-based local setup block */
+  localSetup?: string;
 }
 
 export const projects: Project[] = [
@@ -137,31 +141,31 @@ export const projects: Project[] = [
     screenshots: []
   },
   {
-    id: 5,
-    title: "RAGChat",
-    tagline: "GENERATIVE AI",
-    statusBadge: "🧠 AI",
-    description: "Retrieval-Augmented Generation chatbot capable of intelligent document conversations using semantic search, knowledge retrieval and LLMs.",
+    id: 14,
+    title: "Vajra",
+    tagline: "OPEN SOURCE LLM FRAMEWORK",
+    statusBadge: "🚀 Open Source",
+    description: "Open-source, production-grade framework for training, evaluating, and packaging decoder-only Transformer LLMs from scratch.",
     features: [
-      "Semantic document search",
-      "Knowledge retrieval pipeline",
-      "LLM-powered conversational responses"
+      "LLaMA-style architecture with RoPE, RMSNorm, SwiGLU and GQA",
+      "Distributed pretraining with PyTorch Lightning and DDP",
+      "Deterministic release packaging with Hugging Face export"
     ],
-    techStack: ["Python", "OpenAI API", "Vector Search", "FastAPI"],
-    image: "/images/projects/ragchat_hero.png",
-    hoverImage: "/images/projects/ragchat_hover.png",
-    liveUrl: "https://github.com/HeetSoni26/RAGchat",
-    githubUrl: "https://github.com/HeetSoni26/RAGchat",
-    primaryButtonText: "Live Demo",
-    secondaryButtonText: "GitHub",
-    color: "0, 119, 182",
-    longDescription: "Retrieval-Augmented Generation chatbot capable of intelligent document conversations using semantic search, knowledge retrieval and LLM-powered responses.",
-    role: "AI Engineer",
-    timeline: "Completed",
-    category: "AI • LLM • Machine Learning",
-    challenges: "Improving retrieval accuracy for complex documents.",
-    solution: "Implemented hybrid search combining sparse and dense vector representations.",
-    metrics: ["Retrieval Accuracy: 95%"],
+    techStack: ["Python", "PyTorch", "Hugging Face", "FastAPI", "Docker"],
+    image: "/images/projects/vajra1.png",
+    hoverImage: "/images/projects/vajra2.png",
+    logo: "/images/projects/vajra-logo.png",
+    githubUrl: "https://github.com/HeetSoni26/Vajra",
+    primaryButtonText: "View Repository",
+    color: "99, 102, 241",
+    localSetup: "git clone https://github.com/HeetSoni26/Vajra.git\ncd Vajra\npip install -e .",
+    longDescription: "Vajra is an open-source, production-grade foundation language model framework engineered for training, evaluating, and packaging high-performance decoder-only Transformer models from scratch. It spans the complete lifecycle — custom BPE tokenizer training, sharded dataset engineering, distributed pretraining, and benchmark evaluation — through deterministic, cryptographically verified release packaging with Hugging Face format export.",
+    role: "Creator & AI Engineer",
+    timeline: "Ongoing",
+    category: "AI • Open Source Framework",
+    challenges: "Bridging experimental language model research and deterministic, reproducible release pipelines for production AI.",
+    solution: "Engineered an end-to-end framework with byte-for-byte reproducible builds, SHA-256 manifest verification, and automated model card generation.",
+    metrics: ["Tests Passing: 248", "Reproducible Builds: 100%"],
     screenshots: []
   },
   {
@@ -190,34 +194,6 @@ export const projects: Project[] = [
     challenges: "Processing large civic datasets.",
     solution: "Implemented scalable data processing pipelines.",
     metrics: ["Data Processed: 1M+ Records"],
-    screenshots: []
-  },
-  {
-    id: 7,
-    title: "Digit Recognizer",
-    tagline: "COMPUTER VISION MODEL",
-    statusBadge: "🧠 AI",
-    description: "Deep learning model capable of accurately recognizing handwritten digits using convolutional neural networks.",
-    features: [
-      "Image processing and normalization",
-      "CNN architecture design",
-      "High accuracy inference"
-    ],
-    techStack: ["Python", "TensorFlow", "Keras", "NumPy"],
-    image: "/images/projects/digitclassifier1.png",
-    hoverImage: "/images/projects/digitclassifier2.png",
-    liveUrl: "https://digit-classifier-eight.vercel.app/",
-    githubUrl: "https://github.com/HeetSoni26/Handwritten-Digit-Recognizer",
-    primaryButtonText: "Live Demo",
-    secondaryButtonText: "GitHub",
-    color: "255, 99, 71",
-    longDescription: "Deep learning model capable of accurately recognizing handwritten digits using convolutional neural networks.",
-    role: "ML Researcher",
-    timeline: "Completed",
-    category: "AI • Computer Vision",
-    challenges: "Optimizing the network for fast inference.",
-    solution: "Tuned hyperparameters and utilized efficient CNN layers.",
-    metrics: ["Inference Time: <10ms"],
     screenshots: []
   },
   {

@@ -36,7 +36,9 @@ import {
   SiMysql,
   SiAxios,
   SiSupabase,
-  SiOpenai
+  SiOpenai,
+  SiPytorch,
+  SiHuggingface
 } from 'react-icons/si';
 import { TbApi } from 'react-icons/tb';
 
@@ -54,6 +56,8 @@ export const techConfig: Record<string, { icon: React.ComponentType<{ size?: num
   'FastAPI': { icon: SiFastapi, color: '#009688' },
   'GraphQL': { icon: SiGraphql, color: '#E10098' },
   'TensorFlow': { icon: SiTensorflow, color: '#FF6F00' },
+  'PyTorch': { icon: SiPytorch, color: '#EE4C2C' },
+  'Hugging Face': { icon: SiHuggingface, color: '#FFD21E' },
   'PostgreSQL': { icon: SiPostgresql, color: '#4169E1' },
   'MySQL': { icon: SiMysql, color: '#4479A1' },
   'MongoDB': { icon: SiMongodb, color: '#47A248' },
@@ -134,6 +138,9 @@ const ProjectCard = memo(function ProjectCard({ project, index }: ProjectCardPro
       type: 'info'
     });
   }, [project.tagline, project.description]);
+
+  const hasLiveLink = !!project.liveUrl && project.liveUrl.trim() !== '' && !project.liveUrl.includes('demo-link');
+  const hasRepo = !!project.githubUrl && project.githubUrl.trim() !== '' && !project.githubUrl.includes('yourusername');
 
   return (
     <motion.article
@@ -255,24 +262,46 @@ const ProjectCard = memo(function ProjectCard({ project, index }: ProjectCardPro
         <div>
           <div className="w-full h-px bg-white/[0.06] mb-3.5" />
           <nav className="flex items-center gap-2.5" aria-label="Project actions">
-            {/* Orange to Red Gradient Live App Button */}
-            <motion.button
-              whileTap={{ scale: 0.95 }}
-              onClick={handleLiveClick}
-              className="flex-1 bg-gradient-to-r from-[#FF8C00] to-[#F43F5E] hover:opacity-90 active:scale-95 text-white font-bold font-outfit text-xs py-2 px-4 rounded-full transition-all duration-200 select-none text-center cursor-pointer shadow-[0_4px_16px_rgba(244,63,94,0.35)]"
-            >
-              {project.primaryButtonText || "Live App"}
-            </motion.button>
+            {hasLiveLink ? (
+              /* Orange to Red Gradient Live App Button */
+              <motion.button
+                whileTap={{ scale: 0.95 }}
+                onClick={handleLiveClick}
+                className="flex-1 bg-gradient-to-r from-[#FF8C00] to-[#F43F5E] hover:opacity-90 active:scale-95 text-white font-bold font-outfit text-xs py-2 px-4 rounded-full transition-all duration-200 select-none text-center cursor-pointer shadow-[0_4px_16px_rgba(244,63,94,0.35)]"
+              >
+                {project.primaryButtonText || "Live App"}
+              </motion.button>
+            ) : hasRepo ? (
+              /* Repo-only projects get a single gradient repository button */
+              <motion.button
+                whileTap={{ scale: 0.95 }}
+                onClick={handleGithubClick}
+                className="flex-1 bg-gradient-to-r from-[#FF8C00] to-[#F43F5E] hover:opacity-90 active:scale-95 text-white font-bold font-outfit text-xs py-2 px-4 rounded-full transition-all duration-200 flex items-center justify-center gap-1.5 select-none cursor-pointer shadow-[0_4px_16px_rgba(244,63,94,0.35)]"
+              >
+                <Github size={13} className="text-white/80" />
+                <span>{project.primaryButtonText || "GitHub Repository"}</span>
+              </motion.button>
+            ) : (
+              <motion.button
+                whileTap={{ scale: 0.95 }}
+                onClick={handleLiveClick}
+                className="flex-1 bg-gradient-to-r from-[#FF8C00] to-[#F43F5E] hover:opacity-90 active:scale-95 text-white font-bold font-outfit text-xs py-2 px-4 rounded-full transition-all duration-200 select-none text-center cursor-pointer shadow-[0_4px_16px_rgba(244,63,94,0.35)]"
+              >
+                {project.primaryButtonText || "Live App"}
+              </motion.button>
+            )}
 
-            {/* iOS Secondary Frosted Code Button */}
-            <motion.button
-              whileTap={{ scale: 0.95 }}
-              onClick={handleGithubClick}
-              className="flex-1 bg-white/[0.06] hover:bg-white/[0.12] border border-white/[0.08] text-white/90 font-semibold font-outfit text-xs py-2 px-4 rounded-full transition-all duration-200 flex items-center justify-center gap-1.5 select-none cursor-pointer"
-            >
-              <Github size={13} className="text-white/80" />
-              <span>{project.secondaryButtonText || "Source"}</span>
-            </motion.button>
+            {(hasLiveLink || !hasRepo) && (
+              /* iOS Secondary Frosted Code Button */
+              <motion.button
+                whileTap={{ scale: 0.95 }}
+                onClick={handleGithubClick}
+                className="flex-1 bg-white/[0.06] hover:bg-white/[0.12] border border-white/[0.08] text-white/90 font-semibold font-outfit text-xs py-2 px-4 rounded-full transition-all duration-200 flex items-center justify-center gap-1.5 select-none cursor-pointer"
+              >
+                <Github size={13} className="text-white/80" />
+                <span>{project.secondaryButtonText || "Source"}</span>
+              </motion.button>
+            )}
           </nav>
         </div>
       </div>
