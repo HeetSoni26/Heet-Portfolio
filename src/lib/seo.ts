@@ -50,7 +50,7 @@ export function generateSEO(
     'OpenBeats',
     'TrafficIQ',
     'EcoSphere',
-    'RAGChat',
+    'Vajra',
     'VAJRA language model',
     'OpenBeats music player',
     'TrafficIQ traffic intelligence',
