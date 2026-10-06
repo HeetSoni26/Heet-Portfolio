@@ -3,9 +3,9 @@ import { projects } from '@/components/sections/Work/work.data';
 import ProjectsPageContent from './ProjectsPageContent';
 
 export const metadata: Metadata = {
-  title: 'All Projects | Heet Soni — Full Stack & AI Developer',
+  title: 'All Projects | Heet Soni | Full Stack & AI Developer',
   description:
-    'Browse the complete portfolio of Heet Soni — full-stack, AI/ML, and web application projects including OpenBeats, TrafficIQ, EcoSphere, the Vajra LLM framework and MoodLens emotion AI. Filter by category, search, and explore detailed case studies.',
+    'Browse the complete portfolio of Heet Soni: full-stack, AI/ML, and web application projects including OpenBeats, TrafficIQ, EcoSphere, the Vajra LLM framework and MoodLens emotion AI. Filter by category, search, and explore detailed case studies.',
   keywords: [
     'Heet Soni projects',
     'full stack developer projects',
@@ -45,7 +45,7 @@ export default function ProjectsPage() {
   const itemListSchema = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'Heet Soni — Projects',
+    name: 'Heet Soni | Projects',
     description:
       'Complete list of full-stack and AI-focused web development projects.',
     numberOfItems: projects.length,

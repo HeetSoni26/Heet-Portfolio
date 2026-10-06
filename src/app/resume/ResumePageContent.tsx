@@ -133,7 +133,7 @@ export default function ResumePageContent() {
             </div>
           </div>
 
-          {/* Embedded resume viewer — images on mobile (browsers don't render PDFs in iframes), PDF embed on desktop */}
+          {/* Embedded resume viewer, images on mobile (browsers don't render PDFs in iframes), PDF embed on desktop */}
           {isMobile ? (
             <div className="flex flex-col gap-4">
               <img

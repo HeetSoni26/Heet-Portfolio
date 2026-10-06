@@ -160,7 +160,7 @@ export default function RootLayout({
       {
         "@type": "CreativeWork",
         "name": "MoodLens",
-        "description": "Real-time multi-modal emotion AI reading seven emotions from face, text, photos, video and voice — running entirely on-device in the browser.",
+        "description": "Real-time multi-modal emotion AI reading seven emotions from face, text, photos, video and voice, running entirely on-device in the browser.",
       }
     ]
   };

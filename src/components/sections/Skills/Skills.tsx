@@ -266,7 +266,16 @@ export default function Skills() {
                 </motion.span>
               </span>
             ))}
-            <span className="inline-flex justify-start overflow-hidden py-1 pr-6 relative w-[185px] xs:w-[215px] sm:w-[270px] md:w-[325px] lg:w-[380px] text-left">
+            <span className="relative inline-flex justify-start overflow-hidden py-1 pr-2 text-left">
+              {/* Invisible sizer guarantees the box always fits the longest
+                  word ("orchestrate") so no letter is clipped at any width */}
+              <span
+                className="invisible pr-1"
+                style={{ fontFamily: '"Plus Jakarta Sans", sans-serif', fontWeight: 800 }}
+                aria-hidden="true"
+              >
+                orchestrate
+              </span>
               <AnimatePresence mode="wait">
                 <motion.span
                   key={changingWords[wordIndex]}
@@ -274,7 +283,7 @@ export default function Skills() {
                   initial="enter"
                   animate="center"
                   exit="exit"
-                  className="inline-block origin-left text-white"
+                  className="absolute inset-0 inline-block origin-left text-white"
                   style={{ fontFamily: '"Plus Jakarta Sans", sans-serif', fontWeight: 800 }}
                 >
                   {changingWords[wordIndex]}

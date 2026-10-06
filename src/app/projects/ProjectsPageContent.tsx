@@ -34,10 +34,10 @@ const sortOptions: { id: SortMode; label: string }[] = [
   { id: 'featured', label: 'Featured' },
   { id: 'newest', label: 'Newest' },
   { id: 'oldest', label: 'Oldest' },
-  { id: 'az', label: 'A – Z' },
+  { id: 'az', label: 'A-Z' },
 ];
 
-// Glass surface style — "Obsidian Glassmorphism"
+// Glass surface style: Obsidian Glassmorphism
 const glassStyle: React.CSSProperties = {
   background: 'rgba(25, 25, 25, 0.55)',
   backdropFilter: 'blur(20px)',
@@ -149,7 +149,7 @@ const ProjectListItem = memo(function ProjectListItem({ project, index }: { proj
   );
 });
 
-// Shared category matcher — mirrors the logic used in the Work section
+// Shared category matcher, mirrors the logic used in the Work section
 function matchesCategory(project: Project, category: Category): boolean {
   if (category === 'All') return true;
   if (category === 'AI') {
@@ -355,11 +355,11 @@ export default function ProjectsPageContent({ projects }: ProjectsPageContentPro
               className="text-base sm:text-lg text-white/55 leading-relaxed max-w-2xl font-outfit"
             >
               A curated selection of high-performance web applications, intelligent systems, and
-              digital experiences — built with precision and modern aesthetics.
+              digital experiences, built with precision and modern aesthetics.
             </motion.p>
           </div>
 
-          {/* Stats — right aligned, bottom */}
+          {/* Stats, right aligned, bottom */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

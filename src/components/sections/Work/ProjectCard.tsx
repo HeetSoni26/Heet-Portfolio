@@ -137,7 +137,7 @@ const ProjectCard = memo(function ProjectCard({ project, index }: ProjectCardPro
   const handleInfoClick = useCallback((e: React.MouseEvent) => {
     e.stopPropagation();
     setToast({
-      message: `${project.tagline} — ${project.description}`,
+      message: `${project.tagline}. ${project.description}`,
       type: 'info'
     });
   }, [project.tagline, project.description]);

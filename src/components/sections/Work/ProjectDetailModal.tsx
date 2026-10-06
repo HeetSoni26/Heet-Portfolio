@@ -657,7 +657,7 @@ export default function ProjectDetailModal({ project, onClose }: ProjectDetailMo
                       <span className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
                       <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
                       <span className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
-                      <span className="text-[10px] text-white/40 ml-2 font-mono">bash — setup</span>
+                      <span className="text-[10px] text-white/40 ml-2 font-mono">bash: setup</span>
                     </div>
 
                     <button
@@ -693,7 +693,7 @@ export default function ProjectDetailModal({ project, onClose }: ProjectDetailMo
                 {project.logo ? 'Project Logo' : 'Interface Gallery'}
               </h3>
 
-              {/* Viewport Type Label — Android apps show mobile view, everything else desktop */}
+              {/* Viewport Type Label: Android apps show mobile view, everything else desktop */}
               {!project.logo && (
                 <div className="bg-white/[0.04] px-4 py-1.5 rounded-full border border-white/[0.08] flex items-center gap-1.5">
                   {isMobileApp ? (

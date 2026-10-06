@@ -45,7 +45,7 @@ export default function StructuredData() {
       {
         "@type": "CreativeWork",
         "name": "OpenBeats",
-        "description": "Open-source, offline-first Android music player with a modern Material Design interface — ad-free and login-free."
+        "description": "Open-source, offline-first Android music player with a modern Material Design interface, ad-free and login-free."
       },
       {
         "@type": "CreativeWork",

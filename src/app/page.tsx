@@ -74,10 +74,10 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#0F0E0E]" style={{ willChange: 'auto' }}>
-      {/* Cinematic Intro Screen — plays once per session, then unmounts */}
+      {/* Cinematic Intro Screen, plays once per session, then unmounts */}
       {!isIntroComplete && <IntroScreen />}
 
-      {/* Page Content (Hero & Below Sections) — Smoothly fades in in 0.9s after intro completes */}
+      {/* Page Content (Hero & Below Sections), smoothly fades in in 0.9s after intro completes */}
       <div
         className="w-full transition-opacity duration-900 ease-in-out"
         style={{

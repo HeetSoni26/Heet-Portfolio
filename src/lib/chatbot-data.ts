@@ -111,29 +111,29 @@ export const CHATBOT_CONTEXT = {
     {
       year: "2024",
       title: "Engineering Foundation",
-      description: "Deep in the B.Tech curriculum — data structures, algorithms, and machine learning foundations — while building full-stack applications with React, Node.js, and databases.",
+      description: "Deep in the B.Tech curriculum: data structures, algorithms, and machine learning foundations, while building full-stack applications with React, Node.js, and databases.",
       achievements: ["AI & DS coursework", "Built multiple production apps", "First hackathon experience"],
       skills_learned: ["DSA", "Machine Learning", "TypeScript", "PostgreSQL"],
     },
     {
       year: "2025",
       title: "Full-Stack Developer",
-      description: "Shipped 5+ full-stack web products for real use cases — business platforms, client sites, and this portfolio. Went deep into React, Next.js, TypeScript, and backend engineering.",
+      description: "Shipped 5+ full-stack web products for real use cases: business platforms, client sites, and this portfolio. Went deep into React, Next.js, TypeScript, and backend engineering.",
       achievements: ["Shipped 5+ full-stack projects", "Built this AI-powered portfolio", "Open-source contributions"],
       skills_learned: ["Next.js", "TypeScript", "PostgreSQL", "System Design"],
     },
     {
       year: "2026",
       title: "AI Engineering & Internships",
-      description: "AI intern at Codec Technologies — implemented ML models from scratch (MLPs, NLP spam classification). Built VAJRA, an open-source foundation LLM framework, and TrafficIQ, a multi-agent traffic intelligence system. Completed Google's ML Crash Course and Google DeepMind's Small Language Model course.",
-      achievements: ["AI Intern @ Codec Technologies", "Building VAJRA — foundation LLM framework", "Top 0.2% in PromptWars AI challenge"],
+      description: "AI intern at Codec Technologies: implemented ML models from scratch (MLPs, NLP spam classification). Built VAJRA, an open-source foundation LLM framework, and TrafficIQ, a multi-agent traffic intelligence system. Completed Google's ML Crash Course and Google DeepMind's Small Language Model course.",
+      achievements: ["AI Intern @ Codec Technologies", "Building VAJRA (foundation LLM framework)", "Top 0.2% in PromptWars AI challenge"],
       skills_learned: ["PyTorch", "LangGraph", "FastAPI", "Computer Vision", "RAG"],
       isCurrent: true,
     },
     {
       year: "2027",
       title: "The Next Chapter",
-      description: "Graduating with a B.Tech in AI & Data Science, kicking off an industry internship, and freelancing on real client projects — while preparing for a Master's in Computer Science abroad.",
+      description: "Graduating with a B.Tech in AI & Data Science, kicking off an industry internship, and freelancing on real client projects while preparing for a Master's in Computer Science abroad.",
       achievements: ["B.Tech graduation", "Industry internship", "Freelance client projects", "Master's in CS abroad preparation"],
       skills_learned: ["Production Engineering", "Client Communication", "System Architecture"],
     },
@@ -364,8 +364,8 @@ export const QUICK_RESPONSES: Record<string, string> = {
   'what is openbeats': `**OpenBeats** is Heet's Android app - a beautiful, open-source music player.\n\n**Features:**\n• Local playback\n• Clean UI\n• Responsive design\n\n👉 [View Projects](#projects)`,
   'tell me about trafficiq': `**🚗 TrafficIQ - Autonomous Traffic Intelligence**\n\nAn AI-powered system that optimizes traffic lights based on real-time vehicle density.\n\n**Tech:** Python, YOLOv8, OpenCV\n**Status:** Completed\n\n👉 [View Projects](#projects)`,
   'tell me about ecosphere': `**🌍 EcoSphere - Environmental Tracking Platform**\n\nA comprehensive platform for tracking and visualizing environmental data and metrics.\n\n**Tech:** React, Tailwind CSS\n**Status:** Launched\n\n👉 [View Projects](#projects)`,
-  'tell me about vajra': `**⚡ Vajra - Open Source LLM Framework**\n\nA production-grade framework for training, evaluating, and packaging decoder-only Transformer LLMs from scratch.\n\n**Tech:** Python, PyTorch, Hugging Face, FastAPI\n**Status:** Ongoing — v1.0.0 released\n\n👉 [View on GitHub](https://github.com/HeetSoni26/Vajra)`,
-  'tell me about moodlens': `**🎭 MoodLens - Real-Time Emotion AI**\n\nA multi-modal emotion AI that reads seven emotions from your face, words, photos, videos and voice — running 100% in your browser with zero uploads.\n\n**Tech:** Next.js, TensorFlow.js, ONNX Runtime, TypeScript\n**Status:** Live in production\n\n👉 [Try it live](https://mood-lens-rho.vercel.app)`,
+  'tell me about vajra': `**⚡ Vajra - Open Source LLM Framework**\n\nA production-grade framework for training, evaluating, and packaging decoder-only Transformer LLMs from scratch.\n\n**Tech:** Python, PyTorch, Hugging Face, FastAPI\n**Status:** Ongoing, v1.0.0 released\n\n👉 [View on GitHub](https://github.com/HeetSoni26/Vajra)`,
+  'tell me about moodlens': `**🎭 MoodLens - Real-Time Emotion AI**\n\nA multi-modal emotion AI that reads seven emotions from your face, words, photos, videos and voice, running 100% in your browser with zero uploads.\n\n**Tech:** Next.js, TensorFlow.js, ONNX Runtime, TypeScript\n**Status:** Live in production\n\n👉 [Try it live](https://mood-lens-rho.vercel.app)`,
 
   // Services Questions
   'what services do you offer': `**Services Heet Offers:**\n\n🌐 Full Stack Web Development\n🤖 AI/ML Integration\n📦 SaaS Platform Development\n🔗 API Design & Development\n🗄️ Database Design\n⚡ Performance Optimization\n🎨 UI/UX Development\n💬 Technical Consultation\n\n👉 [View Services](#services)`,
@@ -382,7 +382,7 @@ export const QUICK_RESPONSES: Record<string, string> = {
   'your journey': `**Heet's Journey:**\n\n2022 - The Curiosity Phase\n2023 - Engineering Foundation (B.Tech AI & Data Science)\n2024 - Full-Stack Developer\n2025 - AI Exploration\n2026 - AI Product Development\n2027 - The Next Chapter (Graduation, Internship & MS in Computer Science Abroad)`,
 
   // Education
-  'how did you start coding': `Heet started coding in **2022** — the curiosity phase! 🚀\n\nIt began with HTML, CSS, and JavaScript fundamentals and first static websites, grew into full-stack development with React and Node.js, and evolved into today's AI engineering work — LLMs, computer vision, and intelligent systems.`,
+  'how did you start coding': `Heet started coding in **2022**, the curiosity phase! 🚀\n\nIt began with HTML, CSS, and JavaScript fundamentals and first static websites, grew into full-stack development with React and Node.js, and evolved into today's AI engineering work: LLMs, computer vision, and intelligent systems.`,
   'education': `**Education:**\n\n🎓 B.Tech in Artificial Intelligence & Data Science (CVM University, Expected 2027)\n\nHeet is preparing for a Master's in Computer Science abroad and believes in learning by building impactful AI products!`,
   'tell me about education': `**Education:**\n\n🎓 B.Tech in Artificial Intelligence & Data Science (CVM University, Expected 2027)\n\nHeet is preparing for a Master's in Computer Science abroad and believes in learning by building impactful AI products!`,
   'where did you study': `🎓 Heet is pursuing a **B.Tech in Artificial Intelligence & Data Science** at CVM University.\n\nAfter graduating in 2027, he plans to pursue a Master's in Computer Science abroad!`,
