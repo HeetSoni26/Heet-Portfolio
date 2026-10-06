@@ -52,6 +52,8 @@ export function generateSEO(
     'EcoSphere',
     'Vajra',
     'VAJRA language model',
+    'MoodLens',
+    'emotion detection AI',
     'OpenBeats music player',
     'TrafficIQ traffic intelligence',
     'B.Tech AI Data Science',
