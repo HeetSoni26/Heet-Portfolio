@@ -353,8 +353,8 @@ export const QUICK_RESPONSES: Record<string, string> = {
   'what are you best at': "Heet is best at:\n\n🥇 **Artificial Intelligence & Machine Learning**\n🥈 **Full-Stack Software Development**\n🥉 **Intelligent Automation & Computer Vision**\n\nHe's shipped 8+ production AI products and web platforms!",
 
   // Project Questions
-  'show me your projects': `**Heet's Projects:**\n\n🎵 **OpenBeats** - Open-source Music Player\n💪 **Muscle Map** - Offline Gym Tracker\n🚗 **TrafficIQ** - Autonomous Traffic Intelligence\n🌍 **EcoSphere** - Environmental Tracking Platform\n⚡ **Vajra** - Open Source LLM Framework\n\n👉 [View All Projects](#projects)`,
-  'what projects have you built': `**Projects Built by Heet:**\n\n1. **OpenBeats** - Open-source Music Player\n2. **Muscle Map** - Offline Gym Tracker\n3. **TrafficIQ** - Autonomous Traffic Intelligence\n4. **EcoSphere** - Environmental Tracking Platform\n5. **Vajra** - Open Source LLM Framework\n\n👉 [View All Projects](#projects)`,
+  'show me your projects': `**Heet's Projects:**\n\n🎵 **OpenBeats** - Open-source Music Player\n💪 **Muscle Map** - Offline Gym Tracker\n🚗 **TrafficIQ** - Autonomous Traffic Intelligence\n🌍 **EcoSphere** - Environmental Tracking Platform\n⚡ **Vajra** - Open Source LLM Framework\n🎭 **MoodLens** - Real-Time Emotion AI\n\n👉 [View All Projects](#projects)`,
+  'what projects have you built': `**Projects Built by Heet:**\n\n1. **OpenBeats** - Open-source Music Player\n2. **Muscle Map** - Offline Gym Tracker\n3. **TrafficIQ** - Autonomous Traffic Intelligence\n4. **EcoSphere** - Environmental Tracking Platform\n5. **Vajra** - Open Source LLM Framework\n6. **MoodLens** - Real-Time Emotion AI\n\n👉 [View All Projects](#projects)`,
   'your work': `**Heet's Work:**\n\nHe has built ${CHATBOT_CONTEXT.personal.projectsBuilt} production projects including AI applications and full-stack web products.\n\n**Featured:** OpenBeats, TrafficIQ\n\n👉 [View Projects](#projects)`,
   'portfolio': `**Heet's Portfolio:**\n\nIncludes ${CHATBOT_CONTEXT.personal.projectsBuilt} projects ranging from AI-powered applications to web platforms.\n\n👉 [View All Projects](#projects)`,
   'what have you built': `**What Heet Has Built:**\n\n🎵 Mobile apps (OpenBeats)\n🚗 AI Systems (TrafficIQ)\n🌍 Web platforms (EcoSphere)\n⚡ LLM frameworks (Vajra)\n\n👉 [View Projects](#projects)`,
@@ -365,6 +365,7 @@ export const QUICK_RESPONSES: Record<string, string> = {
   'tell me about trafficiq': `**🚗 TrafficIQ - Autonomous Traffic Intelligence**\n\nAn AI-powered system that optimizes traffic lights based on real-time vehicle density.\n\n**Tech:** Python, YOLOv8, OpenCV\n**Status:** Completed\n\n👉 [View Projects](#projects)`,
   'tell me about ecosphere': `**🌍 EcoSphere - Environmental Tracking Platform**\n\nA comprehensive platform for tracking and visualizing environmental data and metrics.\n\n**Tech:** React, Tailwind CSS\n**Status:** Launched\n\n👉 [View Projects](#projects)`,
   'tell me about vajra': `**⚡ Vajra - Open Source LLM Framework**\n\nA production-grade framework for training, evaluating, and packaging decoder-only Transformer LLMs from scratch.\n\n**Tech:** Python, PyTorch, Hugging Face, FastAPI\n**Status:** Ongoing — v1.0.0 released\n\n👉 [View on GitHub](https://github.com/HeetSoni26/Vajra)`,
+  'tell me about moodlens': `**🎭 MoodLens - Real-Time Emotion AI**\n\nA multi-modal emotion AI that reads seven emotions from your face, words, photos, videos and voice — running 100% in your browser with zero uploads.\n\n**Tech:** Next.js, TensorFlow.js, ONNX Runtime, TypeScript\n**Status:** Live in production\n\n👉 [Try it live](https://mood-lens-rho.vercel.app)`,
 
   // Services Questions
   'what services do you offer': `**Services Heet Offers:**\n\n🌐 Full Stack Web Development\n🤖 AI/ML Integration\n📦 SaaS Platform Development\n🔗 API Design & Development\n🗄️ Database Design\n⚡ Performance Optimization\n🎨 UI/UX Development\n💬 Technical Consultation\n\n👉 [View Services](#services)`,
@@ -556,7 +557,8 @@ export const SUGGESTION_CHAINS: Record<string, string[]> = {
   openbeats: ["What tech did you use?", "Tell me about TrafficIQ", "How can I hire you?"],
   trafficiq: ["Tell me about OpenBeats", "Tell me about EcoSphere", "What are your skills?"],
   ecosphere: ["Tell me about OpenBeats", "Show me your projects", "How can I hire you?"],
-  vajra: ["What other projects?", "Do you work with AI?", "How can I hire you?"],
+  vajra: ["Tell me about MoodLens", "Do you work with AI?", "How can I hire you?"],
+  moodlens: ["What other projects?", "Do you work with AI?", "How can I hire you?"],
   ecommerce: ["Show me your projects", "What services do you offer?", "How can I contact you?"],
 
   // After experience/journey response

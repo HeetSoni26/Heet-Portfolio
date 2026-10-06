@@ -169,6 +169,34 @@ export const projects: Project[] = [
     screenshots: []
   },
   {
+    id: 15,
+    title: "MoodLens",
+    tagline: "REAL-TIME EMOTION AI",
+    statusBadge: "🟢 Production",
+    description: "Multi-modal emotion AI that reads seven emotions from your face, words, photos, videos and voice — running 100% in the browser with zero uploads.",
+    features: [
+      "Live webcam detection with multi-face tracking at 30+ FPS",
+      "Transformer NLP reads emotions from text and speech",
+      "Video emotion arcs with synced heat strip and CSV export"
+    ],
+    techStack: ["Next.js", "TypeScript", "TensorFlow.js", "ONNX Runtime", "Tailwind CSS"],
+    image: "/images/projects/moodlens1.png",
+    hoverImage: "/images/projects/moodlens2.png",
+    liveUrl: "https://mood-lens-rho.vercel.app",
+    githubUrl: "https://github.com/HeetSoni26/MoodLens",
+    primaryButtonText: "Live Demo",
+    secondaryButtonText: "GitHub",
+    color: "139, 92, 246",
+    longDescription: "MoodLens is a multi-modal emotion intelligence platform that reads seven core emotions — happy, neutral, sad, angry, fear, disgust and surprise — across five input senses: live webcam, photos, video, text and voice. Every neural network ships to the browser: face detection and expression recognition run on TensorFlow.js with WebGL acceleration, while a quantized DistilRoBERTa transformer powers text and speech analysis via ONNX Runtime WASM. Nothing is ever uploaded — privacy by architecture — and a session dashboard turns live reads into exportable mood reports.",
+    role: "Creator & AI Engineer",
+    timeline: "Completed",
+    category: "AI • Computer Vision • NLP",
+    challenges: "Making real multi-model AI run entirely client-side without servers, API keys or uploads.",
+    solution: "Quantized neural networks (TinyFaceDetector, FaceExpressionNet, DistilRoBERTa int8) executed in-browser via TensorFlow.js WebGL and ONNX Runtime WASM with lazy model loading.",
+    metrics: ["Privacy: 100%", "Emotion Classes: 7/7"],
+    screenshots: []
+  },
+  {
     id: 6,
     title: "CivicIQ",
     tagline: "ELECTION EDUCATION PLATFORM",

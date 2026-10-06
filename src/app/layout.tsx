@@ -156,6 +156,11 @@ export default function RootLayout({
         "@type": "CreativeWork",
         "name": "Vajra",
         "description": "Open-source foundation language model framework for training, evaluating, and packaging decoder-only Transformer LLMs from scratch.",
+      },
+      {
+        "@type": "CreativeWork",
+        "name": "MoodLens",
+        "description": "Real-time multi-modal emotion AI reading seven emotions from face, text, photos, video and voice — running entirely on-device in the browser.",
       }
     ]
   };

@@ -38,7 +38,8 @@ import {
   SiSupabase,
   SiOpenai,
   SiPytorch,
-  SiHuggingface
+  SiHuggingface,
+  SiOnnx
 } from 'react-icons/si';
 import { TbApi } from 'react-icons/tb';
 
@@ -56,6 +57,8 @@ export const techConfig: Record<string, { icon: React.ComponentType<{ size?: num
   'FastAPI': { icon: SiFastapi, color: '#009688' },
   'GraphQL': { icon: SiGraphql, color: '#E10098' },
   'TensorFlow': { icon: SiTensorflow, color: '#FF6F00' },
+  'TensorFlow.js': { icon: SiTensorflow, color: '#FF6F00' },
+  'ONNX Runtime': { icon: SiOnnx, color: '#FFFFFF' },
   'PyTorch': { icon: SiPytorch, color: '#EE4C2C' },
   'Hugging Face': { icon: SiHuggingface, color: '#FFD21E' },
   'PostgreSQL': { icon: SiPostgresql, color: '#4169E1' },
