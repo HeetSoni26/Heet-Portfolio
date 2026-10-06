@@ -397,7 +397,7 @@ export default function Work() {
         </motion.div>
       </div>
 
-      {/* Explore All Projects Button — navigates to the dedicated projects page */}
+      {/* Explore All Projects Button, navigates to the dedicated projects page */}
       <div className="container mx-auto px-4 sm:px-6 mt-16 sm:mt-20 md:mt-24 flex flex-col items-center justify-center">
         {/* Decorative divider */}
         <div

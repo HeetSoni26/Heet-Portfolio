@@ -585,7 +585,7 @@ export default function TerminalSandbox() {
               <div className="p-3.5 rounded-2xl bg-[#39d353]/[0.06] border border-[#39d353]/30 shadow-[0_0_20px_rgba(57,211,83,0.15)] my-2 font-mono">
                 <div className="flex items-center gap-2 text-[#39d353] font-bold text-xs mb-2 border-b border-[#39d353]/20 pb-1.5">
                   <Zap size={14} className="animate-pulse" />
-                  <span>DECRYPTION SUCCESSFUL — ACCESS GRANTED</span>
+                  <span>DECRYPTION SUCCESSFUL :: ACCESS GRANTED</span>
                 </div>
                 <div className="space-y-1 text-[11px] sm:text-xs text-white/90">
                   <p><span className="text-[#39d353] font-bold">NAME:</span> Heet Soni</p>

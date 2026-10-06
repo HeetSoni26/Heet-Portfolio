@@ -21,7 +21,7 @@ export interface Project {
   solution: string;
   metrics: string[];
   screenshots: string[];
-  /** Standalone project logo — when set, cards and the detail gallery show the logo instead of device mockups */
+  /** Standalone project logo: when set, cards and the detail gallery show the logo instead of device mockups */
   logo?: string;
   /** Repo-only projects can override the generated npm-based local setup block */
   localSetup?: string;
@@ -159,7 +159,7 @@ export const projects: Project[] = [
     primaryButtonText: "View Repository",
     color: "99, 102, 241",
     localSetup: "git clone https://github.com/HeetSoni26/Vajra.git\ncd Vajra\npip install -e .",
-    longDescription: "Vajra is an open-source, production-grade foundation language model framework engineered for training, evaluating, and packaging high-performance decoder-only Transformer models from scratch. It spans the complete lifecycle — custom BPE tokenizer training, sharded dataset engineering, distributed pretraining, and benchmark evaluation — through deterministic, cryptographically verified release packaging with Hugging Face format export.",
+    longDescription: "Vajra is an open-source, production-grade foundation language model framework engineered for training, evaluating, and packaging high-performance decoder-only Transformer models from scratch. It spans the complete lifecycle, from custom BPE tokenizer training and sharded dataset engineering to distributed pretraining and benchmark evaluation, through deterministic, cryptographically verified release packaging with Hugging Face format export.",
     role: "Creator & AI Engineer",
     timeline: "Ongoing",
     category: "AI • Open Source Framework",
@@ -173,7 +173,7 @@ export const projects: Project[] = [
     title: "MoodLens",
     tagline: "REAL-TIME EMOTION AI",
     statusBadge: "🟢 Production",
-    description: "Multi-modal emotion AI that reads seven emotions from your face, words, photos, videos and voice — running 100% in the browser with zero uploads.",
+    description: "Multi-modal emotion AI that reads seven emotions from your face, words, photos, videos and voice, running 100% in the browser with zero uploads.",
     features: [
       "Live webcam detection with multi-face tracking at 30+ FPS",
       "Transformer NLP reads emotions from text and speech",
@@ -187,7 +187,7 @@ export const projects: Project[] = [
     primaryButtonText: "Live Demo",
     secondaryButtonText: "GitHub",
     color: "139, 92, 246",
-    longDescription: "MoodLens is a multi-modal emotion intelligence platform that reads seven core emotions — happy, neutral, sad, angry, fear, disgust and surprise — across five input senses: live webcam, photos, video, text and voice. Every neural network ships to the browser: face detection and expression recognition run on TensorFlow.js with WebGL acceleration, while a quantized DistilRoBERTa transformer powers text and speech analysis via ONNX Runtime WASM. Nothing is ever uploaded — privacy by architecture — and a session dashboard turns live reads into exportable mood reports.",
+    longDescription: "MoodLens is a multi-modal emotion intelligence platform that reads seven core emotions (happy, neutral, sad, angry, fear, disgust and surprise) across five input senses: live webcam, photos, video, text and voice. Every neural network ships to the browser: face detection and expression recognition run on TensorFlow.js with WebGL acceleration, while a quantized DistilRoBERTa transformer powers text and speech analysis via ONNX Runtime WASM. Nothing is ever uploaded, and a session dashboard turns live reads into exportable mood reports.",
     role: "Creator & AI Engineer",
     timeline: "Completed",
     category: "AI • Computer Vision • NLP",
@@ -257,7 +257,7 @@ export const projects: Project[] = [
     title: "Muscle Map",
     tagline: "OFFLINE GYM TRACKER",
     statusBadge: "🚀 Open Source",
-    description: "Offline gym log for Android — tap the muscles you want to train, log your sets, and watch your numbers climb. No account, no ads, no internet permission.",
+    description: "Offline gym log for Android: tap the muscles you want to train, log your sets, and watch your numbers climb. No account, no ads, no internet permission.",
     features: [
       "Interactive muscle map workout targeting",
       "Offline set logging with progress charts",
@@ -271,12 +271,12 @@ export const projects: Project[] = [
     primaryButtonText: "Download APK",
     secondaryButtonText: "GitHub",
     color: "20, 184, 166",
-    longDescription: "MuscleMap is an offline-first gym tracker built with Flutter. Pick the muscles you want to train on an interactive body map, log every set, and follow your progress with built-in charts — all stored locally with zero internet permission.",
+    longDescription: "MuscleMap is an offline-first gym tracker built with Flutter. Pick the muscles you want to train on an interactive body map, log every set, and follow your progress with built-in charts, all stored locally with zero internet permission.",
     role: "Flutter Developer",
     timeline: "Completed",
     category: "Android • Mobile",
     challenges: "Keeping every feature fully offline with zero internet permission.",
-    solution: "Local-first storage architecture — all logs, settings, and charts stay on the device.",
+    solution: "Local-first storage architecture: all logs, settings, and charts stay on the device.",
     metrics: ["Offline-first: 100%", "Zero Ads & Tracking: 100%"],
     screenshots: []
   },

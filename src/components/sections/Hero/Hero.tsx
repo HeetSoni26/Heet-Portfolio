@@ -211,10 +211,10 @@ export default function Hero() {
         <div ref={heroInnerRef} className="absolute inset-0 w-full h-full" style={{ willChange: 'transform, opacity, filter' }}>
           <HeroBackground />
 
-          {/* Main content — uses SAME absolute inset-0 + flex center */}
+          {/* Main content, uses SAME absolute inset-0 + flex center */}
           <HeroContent />
 
-          {/* Docked Right Badge — Scoped strictly to Hero section */}
+          {/* Docked Right Badge, scoped strictly to Hero section */}
           <AvailableForWorkBadge />
         </div>
       </section>

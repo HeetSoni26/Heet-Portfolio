@@ -60,7 +60,7 @@ export async function GET() {
       }
     }
 
-    // No commits fetched (API failure, rate limits, or no pushes recently) — return empty
+    // No commits fetched (API failure, rate limits, or no pushes recently), return empty
     if (commits.length === 0) {
       return NextResponse.json([]);
     }

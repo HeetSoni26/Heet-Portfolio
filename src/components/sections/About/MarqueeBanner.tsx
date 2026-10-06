@@ -146,7 +146,7 @@ export default function MarqueeBanner() {
 
       {/* Strips Container */}
       <div className="relative w-full h-32 sm:h-40">
-        {/* Strip 1 — Primary (slides from right) */}
+        {/* Strip 1, Primary (slides from right) */}
         <motion.div
           className="marquee-strip absolute left-0 right-0 z-[2]"
           style={{ top: '50%', translateY: '-50%', rotate: -5, willChange: 'transform, opacity' }}
@@ -161,7 +161,7 @@ export default function MarqueeBanner() {
           </div>
         </motion.div>
 
-        {/* Strip 2 — Secondary (slides from left) */}
+        {/* Strip 2, Secondary (slides from left) */}
         <motion.div
           className="marquee-strip absolute left-0 right-0 z-[1]"
           style={{ top: '50%', translateY: '-50%', rotate: 5, willChange: 'transform, opacity' }}

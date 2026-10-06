@@ -47,7 +47,7 @@ const milestones: Milestone[] = [
   {
     year: '2027',
     title: 'The Next Chapter',
-    description: 'Graduating with a B.Tech in AI & Data Science, kicking off an industry internship, and freelancing on real client projects — while preparing for a Master\'s in Computer Science abroad.',
+    description: 'Graduating with a B.Tech in AI & Data Science, kicking off an industry internship, and freelancing on real client projects while preparing for a Master\'s in Computer Science abroad.',
     icon: GraduationCap,
   },
 ];

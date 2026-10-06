@@ -75,7 +75,7 @@ export default function IntroScreen() {
     return () => clearTimeout(timer);
   }, [isMounted]);
 
-  // Main GSAP Timeline — Runs once SVG is ready in the DOM
+  // Main GSAP Timeline, runs once SVG is ready in the DOM
   useEffect(() => {
     if (!isMounted || !isSvgLoaded || prefersReducedMotion) return;
     if (!overlayRef.current || !signatureContainerRef.current) return;
@@ -86,7 +86,7 @@ export default function IntroScreen() {
       });
       timelineRef.current = tl;
 
-      // Phase 1 — Setup (0 - 0.3s)
+      // Phase 1: Setup (0 - 0.3s)
       const revealState = { progress: 0 };
       const updateSoftMask = (progress: number) => {
         if (!signatureContainerRef.current) return;
@@ -127,7 +127,7 @@ export default function IntroScreen() {
         0
       );
 
-      // Phase 2 — Handwriting Reveal (0.3s - 2.5s) over 2.2s at constant smooth speed across SVG calligraphy
+      // Phase 2: Handwriting Reveal (0.3s - 2.5s) over 2.2s at constant smooth speed across SVG calligraphy
       tl.to(
         revealState,
         {
@@ -151,7 +151,7 @@ export default function IntroScreen() {
       );
 
       // ═══════════════════════════════════════════════════════════
-      // PHASE 3 — Signature Hold & Explosive Scale Zoom Portal Exit
+      // PHASE 3: Signature Hold & Explosive Scale Zoom Portal Exit
       // 1. Brief hold for 0.2s (2.5s - 2.7s)
       // 2. Signature text zooms extremely large towards viewer (scale: 1.0 -> 18.0)
       //    with motion blur and opacity fade (2.7s - 3.55s)
@@ -209,7 +209,7 @@ export default function IntroScreen() {
       }}
       aria-hidden="true"
     >
-      {/* Signature Wrapper — Centered on plane #0F0E0E background */}
+      {/* Signature Wrapper, centered on plane #0F0E0E background */}
       <div
         ref={signatureWrapperRef}
         className="absolute inset-0 flex flex-col items-center justify-center"

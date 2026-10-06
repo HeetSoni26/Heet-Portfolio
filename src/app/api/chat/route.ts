@@ -153,7 +153,7 @@ function detectIntent(message: string): string[] {
       if (words.includes(keyword)) {
         score += 3;
       }
-      // Partial match (keyword is in message) — multi-word phrases must end
+      // Partial match (keyword is in message), multi-word phrases must end
       // at a word boundary so greedy phrases like "what are you" don't match
       // inside "what are your future plans"
       else if (lowerMessage.includes(keyword)) {
@@ -344,7 +344,7 @@ function generateResponse(intents: string[], message: string): string {
     case 'education': {
       responses.push(
         `**Education:**\n\n` +
-        `🎓 **B.Tech in Artificial Intelligence & Data Science** — A. D. Patel Institute of Technology (ADIT), CVM University (Expected 2027)\n\n` +
+        `🎓 **B.Tech in Artificial Intelligence & Data Science** at A. D. Patel Institute of Technology (ADIT), CVM University (Expected 2027)\n\n` +
         `Heet started coding in 2022 and has been continuously learning and building since then. ` +
         `He believes in learning by doing - every project teaches something new.\n\n` +
         `**Self-Learning:** Online courses (Google ML Crash Course, DeepMind SLM course), documentation, open source, and building real projects.`
@@ -355,10 +355,10 @@ function generateResponse(intents: string[], message: string): string {
     case 'futureplans': {
       responses.push(
         `**What's Next for Heet:**\n\n` +
-        `🎓 **Graduation** — B.Tech in AI & Data Science (Expected 2027)\n` +
-        `💼 **Industry Internship** — kicking off in 2027\n` +
-        `🧑‍💻 **Freelancing** — building real client projects alongside studies\n` +
-        `🌍 **Master's in Computer Science abroad** — the big goal after graduation\n\n` +
+        `🎓 **Graduation**: B.Tech in AI & Data Science (Expected 2027)\n` +
+        `💼 **Industry Internship**: kicking off in 2027\n` +
+        `🧑‍💻 **Freelancing**: building real client projects alongside studies\n` +
+        `🌍 **Master's in Computer Science abroad**: the big goal after graduation\n\n` +
         `Right now he's focused on shipping AI products and gaining industry experience!`
       );
       break;

@@ -84,13 +84,13 @@ export default function HeroStrips() {
 
   return (
     <>
-      {/* Base dark background — always visible behind strips */}
+      {/* Base dark background, always visible behind strips */}
       <div
         className="absolute inset-0 z-0 bg-[#0F0E0E]"
         aria-hidden="true"
       />
 
-      {/* Light overlay — clean white backdrop during intro, fades out after */}
+      {/* Light overlay, clean white backdrop during intro, fades out after */}
       <motion.div
         className="absolute inset-0 z-0"
         initial={{ opacity: 1 }}
@@ -103,7 +103,7 @@ export default function HeroStrips() {
         aria-hidden="true"
       />
 
-      {/* 11 seamless vertical strips — pure CSS animation on GPU compositor */}
+      {/* 11 seamless vertical strips, pure CSS animation on GPU compositor */}
       <div
         className="absolute inset-0 z-[10] flex overflow-hidden"
         style={{ gap: 0, contain: 'strict' }}
