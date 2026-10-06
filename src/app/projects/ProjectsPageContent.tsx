@@ -26,7 +26,7 @@ interface ProjectsPageContentProps {
   projects: Project[];
 }
 
-const categories = ['All', 'AI', 'Software', 'Android', 'Web'] as const;
+const categories = ['All', 'AI', 'Full-Stack', 'Android', 'Web'] as const;
 type Category = (typeof categories)[number];
 
 type SortMode = 'featured' | 'newest' | 'oldest' | 'az';
@@ -155,8 +155,8 @@ function matchesCategory(project: Project, category: Category): boolean {
   if (category === 'AI') {
     return project.category.includes('AI') || project.category.includes('Machine Learning') || project.category.includes('LLM');
   }
-  if (category === 'Software') {
-    return project.category.includes('Software');
+  if (category === 'Full-Stack') {
+    return project.category.includes('Full-Stack');
   }
   if (category === 'Android') {
     return project.category.includes('Android');
