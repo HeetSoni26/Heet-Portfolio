@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local working clones, never part of the site
+TrafficIQ/
+rajpal-portfolio/
