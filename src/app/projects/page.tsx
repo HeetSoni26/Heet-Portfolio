@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: projects[0]?.image ?? '/og-image.png',
+        url: projects[0]?.image ?? '/og/og-cover.png',
         width: 1200,
         height: 630,
         alt: 'Heet Soni Projects',
