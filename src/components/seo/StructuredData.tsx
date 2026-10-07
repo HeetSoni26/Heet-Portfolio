@@ -106,7 +106,7 @@ export default function StructuredData() {
       "@type": "Person",
       "name": PERSONAL_INFO.name
     },
-    "primaryImageOfPage": `${SITE_URL}/og-image.png`
+    "primaryImageOfPage": `${SITE_URL}/og/og-cover.png`
   };
 
   const projectListSchema = {
