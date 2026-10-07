@@ -20,7 +20,7 @@ export function getOgImageUrl(imagePath?: string): string {
   if (imagePath) {
     return imagePath.startsWith('http') ? imagePath : `${SITE_URL}${imagePath}`;
   }
-  return `${SITE_URL}/og-image.png`;
+  return `${SITE_URL}/og/og-cover.png`;
 }
 
 /**
