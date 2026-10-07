@@ -9,7 +9,7 @@ export function generateSEO(
 ): Metadata {
   const pageTitle = title ? `${title} | ${SITE_NAME}` : SITE_NAME;
   const pageDescription = description || SITE_DESCRIPTION;
-  const pageImage = image || `${SITE_URL}/og-image.png`;
+  const pageImage = image || `${SITE_URL}/og/og-cover.png`;
   
   const defaultKeywords = [
     'Heet Soni',
@@ -83,7 +83,6 @@ export function generateSEO(
       author: 'Heet Soni',
       'geo.region': 'IN-GJ',
       'geo.placename': 'Anand',
-      'msvalidate.01': 'A4F4F3D017DCEE9D5C80CF87569E9623',
     },
     icons: {
       icon: '/icon.svg',
@@ -124,9 +123,6 @@ export function generateSEO(
         'max-image-preview': 'large',
         'max-snippet': -1,
       },
-    },
-    verification: {
-      google: 'ibL2p6r9xrTKR3U9o5zRTmVlFC4lAP_GheMlBWgOuGo',
     },
     manifest: '/site.webmanifest',
   };
