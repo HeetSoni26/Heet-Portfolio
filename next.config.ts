@@ -102,8 +102,10 @@ const nextConfig: NextConfig = {
         source: '/Resume/:path*',
         headers: [
           {
+            // Resume files are replaced in place on update — revalidate on
+            // every visit (ETag makes this cheap) instead of caching for a year
             key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
+            value: 'public, max-age=0, must-revalidate',
           },
         ],
       },
