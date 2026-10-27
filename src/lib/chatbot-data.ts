@@ -125,8 +125,8 @@ export const CHATBOT_CONTEXT = {
     {
       year: "2026",
       title: "AI Engineering & Internships",
-      description: "AI intern at Codec Technologies: implemented ML models from scratch (MLPs, NLP spam classification). Built VAJRA, an open-source foundation LLM framework, and TrafficIQ, a multi-agent traffic intelligence system. Completed Google's ML Crash Course and Google DeepMind's Small Language Model course.",
-      achievements: ["AI Intern @ Codec Technologies", "Building VAJRA (foundation LLM framework)", "Top 0.2% in PromptWars AI challenge"],
+      description: "Full-Stack Software Developer at XTIN Services LLP: built full-stack features spanning frontend, backend, databases, authentication, and payments. AI intern at Codec Technologies: implemented ML models from scratch (MLPs, NLP spam classification). Built VAJRA, an open-source foundation LLM framework, TrafficIQ, a multi-agent traffic intelligence system, and MoodLens, a browser-based multimodal emotion AI. Completed Google's ML Crash Course and Google DeepMind's Small Language Model course.",
+      achievements: ["Full-Stack Developer @ XTIN Services LLP", "AI Intern @ Codec Technologies", "Building VAJRA (foundation LLM framework)", "Top 0.2% in PromptWars AI challenge"],
       skills_learned: ["PyTorch", "LangGraph", "FastAPI", "Computer Vision", "RAG"],
       isCurrent: true,
     },

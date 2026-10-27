@@ -171,6 +171,7 @@ export default function About() {
                 <li>Top 0.2% in PromptWars AI challenge (43,260 participants)</li>
                 <li>Contributed to open-source projects including VAJRA</li>
                 <li>Completed Google ML Crash Course and Google DeepMind's Small Language Model course</li>
+                <li>Full-Stack Software Developer at XTIN Services LLP</li>
                 <li>AI Intern at Codec Technologies</li>
                 <li>B.Tech in Artificial Intelligence &amp; Data Science background</li>
               </ul>

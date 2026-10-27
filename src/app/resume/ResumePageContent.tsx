@@ -129,7 +129,7 @@ export default function ResumePageContent() {
             <div className="hidden sm:flex items-center gap-3">
               <span className="px-2 py-0.5 rounded bg-white/[0.04] border border-white/[0.08] text-white/60">PDF / 2 PAGES</span>
               <span>•</span>
-              <span className="text-white/40">312 KB</span>
+              <span className="text-white/40">192 KB</span>
             </div>
           </div>
 
